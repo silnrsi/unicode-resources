@@ -317,4 +317,4 @@ F269|&#x1DF08;|1DF08 LATIN SMALL LETTER TURNED R WITH LONG LEG AND HOOK|[L2/20-2
 
 <- [Back to Intro](https://github.com/silnrsi/silpua/) 
 
--> [Forward to Deprecated SIL Corporate PUA characters](pua-deprecated.md)]
+-> [Forward to SIL Corporate PUA characters that have not been added to Unicode](pua-nondeprecated.md)]
