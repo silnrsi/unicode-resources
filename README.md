@@ -12,7 +12,7 @@ Approximately 248 characters, supporting orthographies in many minority language
 - [Deprecated SIL Corporate PUA characters](docs/pua-deprecated.md)
 - [SIL Corporate PUA characters that have not been added to Unicode](docs/pua-nondeprecated.md)
 - [SIL Private Use Area - Frequently Asked Questions](docs/faq.md)
-- [A strategy for deprecating SIL PUA characters](docs/pua-deprecation-strategy)
+- [A strategy for deprecating SIL PUA characters](docs/pua-deprecation-strategy.md)
 
 ## Requesting Additions to SIL’s Private Use Area
 
@@ -20,7 +20,7 @@ We are no longer accepting characters into the PUA. We may be willing to work wi
 
 ## About the PUA and SIL 
 
-The [Private Use Area (PUA)](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#pua) is a range of codepoints that are reserved in the Unicode for private-use by software developers and end users who need a special set of characters for their own purposes. There are 6400 PUA code points available in the [Basic Multilingual Plane](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#bmp). Unicode also reserves the so-called “[supplementary planes](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#supplement)” 15 and 16 for private use. The supplementary planes consist of an additional 128K codepoints, but require twice as many bits of information to access them. Click here to go to the {link:PUA_FAQ SIL PUA Fact Page} for additional information.
+The [Private Use Area (PUA)](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#pua) is a range of codepoints that are reserved in the Unicode for private-use by software developers and end users who need a special set of characters for their own purposes. There are 6400 PUA code points available in the [Basic Multilingual Plane](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#bmp). Unicode also reserves the so-called “[supplementary planes](https://scripts.sil.org/cms/scripts/page.php?item_id=Glossary#supplement)” 15 and 16 for private use. The supplementary planes consist of an additional 128K codepoints, but require twice as many bits of information to access them. Click here to go to the [SIL Private Use Area - Frequently Asked Questions](docs/faq.md) for additional information.
 
 ## Background
 
@@ -30,7 +30,7 @@ Because of the far-reaching effects of its decisions, the NRSI requested that a 
 
 ## Fonts which support the characters in SIL's PUA
 
-Once PUA characters have been added to Unicode, our SIL fonts will add the new codepoint to the fonts and **deprecate** the PUA codepoint. See [Deprecated SIL Corporate PUA characters](pua-deprecated.md) for a list of the PUA codepoint and the official Unicode codepoint.
+Once PUA characters have been added to Unicode, our SIL fonts will add the new codepoint to the fonts and **deprecate** the PUA codepoint. See [Deprecated SIL Corporate PUA characters](docs/pua-deprecated.md) for a list of the PUA codepoint and the official Unicode codepoint.
 
 - [Andika](https://software.sil.org/andika/)
 - [Charis SIL](https://software.sil.org/charis/)

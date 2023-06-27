@@ -1,6 +1,6 @@
 # SIL Private Use Area - Assignments
 
-[Back to Intro](..\README.md) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/) 
 
 ## Background
 
@@ -31,8 +31,8 @@ F700..F8FF|(reserved)
 
 In preparing fonts to facilitate corporate transition to Unicode, WSTech has attempted to create a font that will meet the character needs of users working with Latin or Cyrillic scripts throughout the corporation. In order to achieve this, it was necessary to identify private-use character needs related to these scripts from all entities. Documented here are the code-points for each of the Private Use Area (PUA) characters which have been assigned to the corporate area of the PUA. The Unicode 15.0 standard includes 225 characters that were previously allocated to codepoints in the **Private Use Area** by SIL’s PUA committee. 
 
-- A [TECkit](http:/software.sil.org/teckit) mapping file for converting from PUA codepoints to Unicode codepoints is provided [here](https://github.com/silnrsi/wsresources/tree/master/scripts/Latn/mappings/sil-pua). 
-- [SIL Converters](http:/software.sil.org/silconverters) is an ideal tool to use with the TECKit mapping file to convert files from the PUA codepoint to the official Unicode codepoints.
+- A [TECkit](https:/software.sil.org/teckit) mapping file for converting from PUA codepoints to Unicode codepoints is provided [here](https://github.com/silnrsi/wsresources/tree/master/scripts/Latn/mappings/sil-pua). 
+- [SIL Converters](https:/software.sil.org/silconverters) is an ideal tool to use with the TECKit mapping file to convert files from the PUA codepoint to the official Unicode codepoints.
 
 Character properties are listed in the **UCD-SIL_PUA_-date-.xls** file which is included in the zip archive below. We have also included a worksheet (DeprecatedAssignments) to SIL's PUA UCD (Unicode Character Database) spreadsheet. This worksheet shows the history of every SIL PUA character: what PUA version it was added and what version, if any, it was deprecated. This will help implementers determine which PUA versions a specific keyboard, font, or mapping table supports. 
 
@@ -42,9 +42,9 @@ Also included is a pdf file (and the Word document) describing the PUA character
 
 ## SIL Ethiopia PUA assignments
 
-The **SIL field entities** range was used for the **Abyssinica SIL Ethiopic** font. Documentation for that range of characters is found in the [ethiopia](..\ethiopia) section of this repo.
+The **SIL field entities** range was used for the **Abyssinica SIL Ethiopic** font. Documentation for that range of characters is found in the [ethiopia](https://github.com/silnrsi/silpua/tree/main/ethiopia) section of this repo.
 
 
-[Back to Intro](..\README.md) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/) 
 
-[Forward to Deprecated SIL Corporate PUA characters](pua-deprecated.md)
+-> [Forward to Deprecated SIL Corporate PUA characters](pua-deprecated.md)

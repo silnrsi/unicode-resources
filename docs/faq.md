@@ -1,6 +1,6 @@
 # SIL Private Use Area - Frequently Asked Questions
 
-[Back to Intro](..\README.md) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/) 
 
 Authors: Kent Spielmann, Lorna Evans, Bob Hallissy
 
@@ -47,7 +47,7 @@ See [SIL Private Use Area - Assignments](pua-assignments.md) for a table listing
 
 ### *How do I add characters to my entity block?*
 
-First, check thoroughly that your character is not already in [Unicode](https://www.unicode.org) (See [collation charts](https://www.unicode.org/charts/collation/), {link:EncodingResources Unicode Encoding Resources} or [charts](http://www.unicode.org/charts) ) or within {link:SILPUAassignments SIL’s Corporate PUA Assignments}.  Second, if you do not find a suitable character contact your entity Unicode representative. 
+First, check thoroughly that your character is not already in [Unicode](https://www.unicode.org) (See [collation charts](https://www.unicode.org/charts/collation/), {link:EncodingResources Unicode Encoding Resources} or [charts](https://www.unicode.org/charts) ) or within {link:SILPUAassignments SIL’s Corporate PUA Assignments}.  Second, if you do not find a suitable character contact your entity Unicode representative. 
 
 ### *How do I submit characters for inclusion in the SIL corporate PUA (the corporation-wide block)?*
 
@@ -58,6 +58,6 @@ The SIL PUA committee is no longer accepting submissions.
 
 There was never an official relationship between the SIL PUA Committee and the UTC. The SIL PUA Committee operated within the guidelines as described in the “Private Use Area: U+E000–U+F8FF” section of [Special Areas and Format Characters](https://www.unicode.org/versions/latest/ch23.pdf#G19184] Unicode Consortium. 2022 _The Unicode Standard_.
 
-[Back to Intro](..\README.md) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/) 
 
-[Forward to A strategy for deprecating SIL PUA characters](pua-deprecation-strategy)
+-> [Forward to A strategy for deprecating SIL PUA characters](pua-deprecation-strategy)
