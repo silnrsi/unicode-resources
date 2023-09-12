@@ -1,6 +1,6 @@
 # Deprecated SIL Corporate PUA characters
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 These PUA characters have been added to Unicode and are being deprecated. This page lists those PUA characters along with the appropriate Unicode codepoints. Please use the Unicode codepoint instead of the PUA codepoint. Our SIL Unicode Roman fonts ({link:DoulosSIL Doulos SIL} and {link:CharisSIL Charis SIL}) will eventually stop supporting the PUA codepoints in order to encourage the use of the official Unicode codepoints.If you have data that contains these PUA codes, it should be updated by replacing each PUA character with its official Unicode counterpart. This will facilitate data interchange and the use of standard fonts and software. A [TECKit](https://software.sil.org/teckit/) mapping file is provided for this purpose here: [SIL-PUA mapping file](https://github.com/silnrsi/wsresources/tree/master/scripts/Latn/mappings/sil-pua).
 
@@ -315,6 +315,6 @@ F267|&#x1DF06;|1DF06 LATIN SMALL LETTER TURNED Y WITH BELT|[L2/20-266](https://w
 F268|&#x1DF04;|1DF04 LATIN LETTER SMALL CAPITAL L WITH BELT|[L2/20-266](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/20-266)
 F269|&#x1DF08;|1DF08 LATIN SMALL LETTER TURNED R WITH LONG LEG AND HOOK|[L2/20-266](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/20-266)
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 -> [Forward to SIL Corporate PUA characters that have not been added to Unicode](pua-nondeprecated.md)]

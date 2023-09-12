@@ -1,6 +1,6 @@
-# A strategy for deprecating SIL PUA characters 
+# A strategy for deprecating SIL PUA characters
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 ## Overview
 
@@ -12,7 +12,7 @@ This paper proposes elements of the strategy to transition to using the new code
 
 ## Background and rationale
 
-At present there are over 260 characters assigned to the SIL corporate PUA area of Unicode. The Doulos SIL font, along with various keyboards and mapping tables, implement support for these PUA characters. However, included in our PUA assignments are about 225 characters that are now in Unicode and one character that is in the pipeline for Unicode and is expected to be part of the Unicode 16.0 release. 
+At present there are over 260 characters assigned to the SIL corporate PUA area of Unicode. The Doulos SIL font, along with various keyboards and mapping tables, implement support for these PUA characters. However, included in our PUA assignments are about 225 characters that are now in Unicode and one character that is in the pipeline for Unicode and is expected to be part of the Unicode 16.0 release.
 
 We desire tools and procedures that facilitate and encourage the transition to using the official codepoints for such characters without unduly burdening existing projects for which it might be inappropriate to make this transition.
 
@@ -99,4 +99,4 @@ A PUA to Unicode mapping file is available here: [SIL-PUA mapping file](https://
 
 More information about versioning and deprecating can be found on [this page](https://scripts.sil.org/PUA_deprecation). Many of our original recommendations have changed, and we no longer ask people to track the PUA version in a font or keyboard.
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)

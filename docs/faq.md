@@ -1,6 +1,6 @@
 # SIL Private Use Area - Frequently Asked Questions
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 Authors: Kent Spielmann, Lorna Evans, Bob Hallissy
 
@@ -23,14 +23,14 @@ The PUA range in the [Basic Multilingual Plane](https://scripts.sil.org/Glossary
 
 Moreover, Unicode also assumes smart font technology in the software which uses it. This means that Unicode only needs to assign one codepoint for letters and symbols which may vary depending on context. For example, smart fonts will place an accent on a letter in the proper place, be it on a lower or uppercase, wide or thin letter. It will even use a _dotless i_ (or other letter variant) when appropriate.
 
-Codepoints in the 16 [Supplementary planes](https://scripts.sil.org/Glossary#supplement) may be represented using 5 or 6 hexadecimal digits. For example, the lowest codepoint in supplementary plane 15 is U+F0000, and the lowest codepoint in plane 16 is U+100000. 
+Codepoints in the 16 [Supplementary planes](https://scripts.sil.org/Glossary#supplement) may be represented using 5 or 6 hexadecimal digits. For example, the lowest codepoint in supplementary plane 15 is U+F0000, and the lowest codepoint in plane 16 is U+100000.
 
-The supplementary planes are not used in the current version of Unicode but have been provided for for future extensions. The [SIL PUA Strategy](https://scripts.sil.org/PUA_Corp) does include using the PUA supplementary planes for cross mapping between various entity allocations in the [Basic Multilingual Plane](https://scripts.sil.org/Glossary#bmp) PUA area. 
+The supplementary planes are not used in the current version of Unicode but have been provided for for future extensions. The [SIL PUA Strategy](https://scripts.sil.org/PUA_Corp) does include using the PUA supplementary planes for cross mapping between various entity allocations in the [Basic Multilingual Plane](https://scripts.sil.org/Glossary#bmp) PUA area.
 
 
 ### *What is SIL’s PUA assignment strategy?*
 
-SIL corporation-wide PUA usage uses the codepoint range U+F100–U+F8FF. Individual SIL field entities might also make independent PUA character assignments in the range U+E000–U+EFFF. 
+SIL corporation-wide PUA usage uses the codepoint range U+F100–U+F8FF. Individual SIL field entities might also make independent PUA character assignments in the range U+E000–U+EFFF.
 
 SIL’s corporate strategy is based on [PUA Corporate Strategy](https://scripts.sil.org/PUA_Corp). This document is no longer kept up-to-date as SIL is no longer adding characters to the PUA.
 
@@ -47,7 +47,7 @@ See [SIL Private Use Area - Assignments](pua-assignments.md) for a table listing
 
 ### *How do I add characters to my entity block?*
 
-First, check thoroughly that your character is not already in [Unicode](https://www.unicode.org) (See [collation charts](https://www.unicode.org/charts/collation/) or [charts](https://www.unicode.org/charts) ) or within [SIL Private Use Area - Assignments](pua-assignments.md).  Second, if you do not find a suitable character contact your entity Unicode representative. 
+First, check thoroughly that your character is not already in [Unicode](https://www.unicode.org) (See [collation charts](https://www.unicode.org/charts/collation/) or [charts](https://www.unicode.org/charts) ) or within [SIL Private Use Area - Assignments](pua-assignments.md).  Second, if you do not find a suitable character contact your entity Unicode representative.
 
 ### *How do I submit characters for inclusion in the SIL corporate PUA (the corporation-wide block)?*
 
@@ -58,6 +58,6 @@ The SIL PUA committee is no longer accepting submissions.
 
 There was never an official relationship between the SIL PUA Committee and the UTC. The SIL PUA Committee operated within the guidelines as described in the “Private Use Area: U+E000–U+F8FF” section of [Special Areas and Format Characters](https://www.unicode.org/versions/latest/ch23.pdf#G19184) Unicode Consortium. 2022 _The Unicode Standard_.
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/) 
+<- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 -> [Forward to A strategy for deprecating SIL PUA characters](pua-deprecation-strategy)
