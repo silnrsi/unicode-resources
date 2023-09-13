@@ -2,12 +2,15 @@
 * text=auto
 
 # Text files that should change line endings depending on the platform
+*.csv text
 *.md  text
 *.txt text
 
 # Declare all files that are truly binary and should not be modified.
 *.doc binary
+*.ods binary
 *.pdf binary
 *.ttf binary
 *.vfc binary
+*.xlsx binary
 *.zip binary
