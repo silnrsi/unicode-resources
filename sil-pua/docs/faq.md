@@ -1,6 +1,6 @@
 # SIL Private Use Area - Frequently Asked Questions
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 Authors: Kent Spielmann, Lorna Evans, Bob Hallissy
 
@@ -58,6 +58,6 @@ The SIL PUA committee is no longer accepting submissions.
 
 There was never an official relationship between the SIL PUA Committee and the UTC. The SIL PUA Committee operated within the guidelines as described in the “Private Use Area: U+E000–U+F8FF” section of [Special Areas and Format Characters](https://www.unicode.org/versions/latest/ch23.pdf#G19184) Unicode Consortium. 2022 _The Unicode Standard_.
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
--> [Forward to A strategy for deprecating SIL PUA characters](pua-deprecation-strategy)
+-> [Forward to A strategy for deprecating SIL PUA characters](pua-deprecation-strategy.md)

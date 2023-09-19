@@ -1,6 +1,6 @@
 # SIL Corporate PUA characters that have not been added to Unicode
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 PUA Code | Glyph | Unicode replacement | Proposal
 :--- | :--- | :--- | :---
@@ -26,6 +26,6 @@ F26E| &#xA7CB;|LATIN CAPITAL LETTER RAMS HORN|[L2/22-045](https://www.unicode.or
 F326| &#xF326;|CYRILLIC CAPITAL LETTER GHE WITH STROKE AND DESCENDER|(never proposed, U+04FA is the preferred character for Nivkh)
 F327| &#xF327;|CYRILLIC SMALL LETTER GHE WITH STROKE AND DESCENDER|(never proposed, U+04FB is the preferred character for Nivkh)
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 -> [Forward to SIL Private Use Area - Frequently Asked Questions](faq.md)

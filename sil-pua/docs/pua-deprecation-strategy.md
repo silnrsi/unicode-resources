@@ -1,6 +1,6 @@
 # A strategy for deprecating SIL PUA characters
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 ## Overview
 
@@ -99,4 +99,4 @@ A PUA to Unicode mapping file is available here: [SIL-PUA mapping file](https://
 
 More information about versioning and deprecating can be found on [this page](https://scripts.sil.org/PUA_deprecation). Many of our original recommendations have changed, and we no longer ask people to track the PUA version in a font or keyboard.
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)

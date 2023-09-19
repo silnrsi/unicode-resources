@@ -1,6 +1,6 @@
 # SIL Private Use Area - Assignments
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 ## Background
 
@@ -45,6 +45,6 @@ Also included is a pdf file (and the Word document) describing the PUA character
 The **SIL field entities** range was used for the **Abyssinica SIL Ethiopic** font. Documentation for that range of characters is found in the [ethiopia](https://github.com/silnrsi/silpua/tree/main/ethiopia) section of this repo.
 
 
-<- [Back to Intro](https://github.com/silnrsi/silpua/)
+<- [Back to Intro](https://github.com/silnrsi/unicode-resources/tree/main/sil-pua)
 
 -> [Forward to Deprecated SIL Corporate PUA characters](pua-deprecated.md)

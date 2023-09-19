@@ -6,7 +6,7 @@ These PUA characters have been added to Unicode and are being deprecated. This p
 
 More extensive information is available in the pdf document found in this zip archive: [SILCorpPUAAssign](SILCorpPUAAssign.zip).
 
-See also: [Deprecated SIL Corporate PUA characters](pua-deprecated).
+See also: [Deprecated SIL Corporate PUA characters](pua-deprecated.md).
 
 
 ## PUA characters added to Unicode 1.1 (added to PUA erroneously)
