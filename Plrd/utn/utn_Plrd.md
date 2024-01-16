@@ -2,9 +2,9 @@
 title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 ---
 
-- <a href="#overview">Overview</a>
+- <a href="#over">Overview</a>
    - <a href="#store">Character storage</a>
-   - <a href="#punct">Punctuation</a>
+   - <a href="#punct">Punctuation and Digits</a>
    - <a href="#break">Line breaking and word breaking</a>
    - <a href="#rend">Rendering</a>
       - <a href="#tone">Tone mark positioning</a>
@@ -27,33 +27,41 @@ title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
    - <a href="#yna">Gan Yi / Aluo &#x005B;yna&#x005D;</a>
 - <a href="#ref">References</a>
 
-## <a id="overview"></a>Overview
-
-Characters in red are glyph variants.
+## <a id="over"></a>Overview
 
 ### <a id="store"></a>Character storage
 
 Each syllable is divided into an initial and a final. The initial is the initial consonant and the final consists of the vowel cluster and the tone. The positioning of the vowels indicates the tone of a syllable. Nasalization and voicing are considered as initial rather than final.
 
-The syllable structure is: (N)C(M)V(V(V))(S/T), where N is the nasalizer (U+16F50), C is the obligatory consonant (U+16F00.U+16F4A), M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks), V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87), S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92), and T (U+16F93..U+16F9F) is a tone mark; S and T do not co-occur on a syllable.
+The syllable structure is: (N)C(M)V(V(V))(S/T), where N is the nasalizer (U+16F50), C is the obligatory consonant (U+16F00.0U+16F4A), M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks), V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87), S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92), and T (U+16F93..U+16F9F) is a tone mark; **S and T do not co-occur on a syllable.**
 
-**Example**
+**Rendering Example**
 
 Setting        | Sample 
 :--- | :--------------- 
-default | <span class='shim-R normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91;&#x16F50;&#x16F2E;&#x16F54;&#x16F91;&#x16F07;&#x16F79;&#x16F26;&#x16F58;&#x16F8F;&#x16F28;&#x16F51;&#x16F7B;&#x16F43;&#x16F66;&#x16F91;&#x16F3B;&#x16F7A;&#x16F90;&#x16F1E;&#x16F59;&#x16F7E;&#x16F91;&#x16F21;&#x16F60;&#x16F1A;&#x16F5C;&#x16F91;&#x16F16;&#x16F73;&#x16F90;&#x16F18;&#x16F61;&#x16F90;&#x16F04;&#x16F77;&#x16F10;&#x16F75;&#x16F91;&#x16F23;&#x16F71;&#x16F90;&#x16F00;&#x16F6A;&#x16F8F;&#x16F35;&#x16F62;&#x16F91;&#x16F3A;&#x16F6B;&#x16F90;&#x16F33;&#x16F68;&#x16F0A;&#x16F6A;&#x16F57;&#x16F91;&#x16F0E;&#x16F5E;&#x16F8F;&#x16F37;&#x16F5F;&#x16F42;&#x16F61;&#x16F79;&#x16F91;&#x16F08;&#x16F64;&#x16F3D;&#x16F61;&#x16F7B;&#x16F91;&#x16F2F;&#x16F61;&#x16F5D;&#x16F8F;&#x16F1F;&#x16F61;&#x16F73;&#x16F91;&#x16F01;&#x16F6A;&#x16F90;&#x16F0B;&#x16F6A;&#x16F58;&#x16F91;&#x16F38;&#x16F6A;&#x16F5E; </span>
+default | <span class='shim normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91;&#x16F50;&#x16F2E;&#x16F54;&#x16F91;&#x16F07;&#x16F79;&#x16F26;&#x16F58;&#x16F8F;&#x16F28;&#x16F51;&#x16F7B;&#x16F43;&#x16F66;&#x16F91;&#x16F3B;&#x16F7A;&#x16F90;&#x16F1E;&#x16F59;&#x16F7E;&#x16F91;&#x16F21;&#x16F60;&#x16F1A;&#x16F5C;&#x16F91;&#x16F16;&#x16F73;&#x16F90;&#x16F18;&#x16F61;&#x16F90;&#x16F04;&#x16F77;&#x16F10;&#x16F75;&#x16F91;&#x16F23;&#x16F71;&#x16F90;&#x16F00;&#x16F6A;&#x16F8F;&#x16F35;&#x16F62;&#x16F91;&#x16F3A;&#x16F6B;&#x16F90;&#x16F33;&#x16F68;&#x16F0A;&#x16F6A;&#x16F57;&#x16F91;&#x16F0E;&#x16F5E;&#x16F8F;&#x16F37;&#x16F5F;&#x16F42;&#x16F61;&#x16F79;&#x16F91;&#x16F08;&#x16F64;&#x16F3D;&#x16F61;&#x16F7B;&#x16F91;&#x16F2F;&#x16F61;&#x16F5D;&#x16F8F;&#x16F1F;&#x16F61;&#x16F73;&#x16F91;&#x16F01;&#x16F6A;&#x16F90;&#x16F0B;&#x16F6A;&#x16F58;&#x16F91;&#x16F38;&#x16F6A;&#x16F5E; </span>
 USV | <span class='affects'>U+16F10 U+16F4F U+16F7B U+16F91 U+16F50 U+16F2E U+16F54 U+16F91 U+16F07 U+16F79 U+16F26 U+16F58 U+16F8F U+16F28 U+16F51 U+16F7B U+16F43 U+16F66 U+16F91 U+16F3B U+16F7A U+16F90 U+16F1E U+16F59 U+16F7E U+16F91 U+16F21 U+16F60 U+16F1A U+16F5C U+16F91 U+16F16 U+16F73 U+16F90 U+16F18 U+16F61 U+16F90 U+16F04 U+16F77 U+16F10 U+16F75 U+16F91 U+16F23 U+16F71 U+16F90 U+16F00 U+16F6A U+16F8F U+16F35 U+16F62 U+16F91 U+16F3A U+16F6B U+16F90 U+16F33 U+16F68 U+16F0A U+16F6A U+16F57 U+16F91 U+16F0E U+16F5E U+16F8F U+16F37 U+16F5F U+16F42 U+16F61 U+16F79 U+16F91 U+16F08 U+16F64; U+16F3D U+16F61 U+16F7B U+16F91 U+16F2F U+16F61 U+16F5D U+16F8F U+16F1F U+16F61 U+16F73 U+16F91 U+16F01 U+16F6A U+16F90 U+16F0B U+16F6A U+16F58 U+16F91 U+16F38 U+16F6A U+16F5E </span>
 
-### <a id="punct"></a>Punctuation
+### <a id="punct"></a>Punctuation and Digits
 
-Users of the Miao script freely use the same punctuation marks as Chinese and Latin. Often texts use underlines, double underlines, and wavy underlines to distinguish names of people, place names and book titles.
+Users of the Miao script freely use the same punctuation marks as Chinese and Latin. 
+
+All languages use these: . , / " = + - ( ) 
+
+Most Miao script users seem to follow the Chinese convention for indicating proper nouns:
+
+- names of people -- single underline
+- names of places -- double underline
+- book titles -- wavy underline
+
+Miao script users use Western-style digits 0-9.
 
 ### <a id="break"></a>Line breaking and word breaking
 
 Word breaking occurs only before an initial consonant. Syllables of consonant, vowels and tone are never split. Line breaks at spaces or after punctuation. A line break may not be inserted
 between any syllable, or before punctuation.
 
-When the Big Flowery Miao &#x005B;hmd&#x005D; Bible was typeset, the translation team introduced word breaks. Earlier texts were written without word breaks, and this caused problems in typesetting. Word breaks were introduced in trial editions and were well accepted. Based on this positive feedback, the team included word breaks in the Miao Bible. (YU SUEE YAN)
+When the Big Flowery Miao &#x005B;hmd&#x005D; Bible was typeset, the translation team introduced word breaks. Earlier texts were written without word breaks, and this caused problems in typesetting. Word breaks were introduced in trial editions and were well accepted. Based on this positive feedback, the team included word breaks in the Miao Bible (YU SUEE YAN).
 
 ### <a id="rend"></a>Rendering
 
@@ -63,17 +71,17 @@ Four positioning tone marks are encoded. The default position for the vowels and
 
 Setting | Sample 
 :---    | :--------------- 
-default | <span class='shim-R normal'>&#x16F23;&#x16F6A;&#x16F57;</span>
-<span class='affects'>U+16F8F MIAO TONE RIGHT</span> | <span class='shim-R normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F8F; </span>
-<span class='affects'>U+16F90 MIAO TONE TOP RIGHT</span> | <span class='shim-R normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F90; </span>
-<span class='affects'>U+16F91 MIAO TONE ABOVE</span> | <span class='shim-R normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F91; </span>
-<span class='affects'>U+16F92 MIAO TONE BELOW</span> | <span class='shim-R normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F92; </span>
+default | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;</span>
+<span class='affects'>U+16F8F MIAO TONE RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F8F; </span>
+<span class='affects'>U+16F90 MIAO TONE TOP RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F90; </span>
+<span class='affects'>U+16F91 MIAO TONE ABOVE</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F91; </span>
+<span class='affects'>U+16F92 MIAO TONE BELOW</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F92; </span>
 
 However, for Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D; the four tone positions are used right of initial.
 
 USV       | default | sfm variant 
 :------------- | :--- | :--- 
-<span class='affects'>U+16F90, U+16F8F, U+16F92, none</span> | <span class='shim-R normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> |<span class='shim-R normal' lang='sfm'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> 
+<span class='affects'>U+16F90, U+16F8F, U+16F92, none</span> | <span class='shim normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> |<span class='sfm normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> 
 
 **<a id="lig"></a>Ligatures**
 
@@ -81,20 +89,20 @@ Sinicized Miao &#x005B;hmz&#x005D;, Xiaohua Miao / Small Flowery Miao &#x005B;sf
 
 Setting        | default | hmz, sfm, hmd
 :------------- | :--- | :---
-<span class='affects'>U+16F04 U+16F51</span> | <span class='shim-R normal'>&#x16F04;&#x16F51;</span> | <span class='shim-R normal' lang='hmz'>&#x16F04;&#x16F51;</span>
-<span class='affects'>U+16F10 U+16F51</span> | <span class='shim-R normal'>&#x16F10;&#x16F51;</span> | <span class='shim-R normal' lang='hmz'>&#x16F10;&#x16F51;</span>
-<span class='affects'>U+16F23 U+16F51</span> | <span class='shim-R normal'>&#x16F23;&#x16F51;</span> | <span class='shim-R normal' lang='hmz'>&#x16F23;&#x16F51;</span>
+<span class='affects'>U+16F04 U+16F51</span> | <span class='shim normal'>&#x16F04;&#x16F51;</span> | <span class='hmz normal'>&#x16F04;&#x16F51;</span>
+<span class='affects'>U+16F10 U+16F51</span> | <span class='shim normal'>&#x16F10;&#x16F51;</span> | <span class='hmz normal'>&#x16F10;&#x16F51;</span>
+<span class='affects'>U+16F23 U+16F51</span> | <span class='shim normal'>&#x16F23;&#x16F51;</span> | <span class='hmz normal'>&#x16F23;&#x16F51;</span>
 
 **<a id="kern"></a>Kerning**
 
 In general, aspiration and finals are kerned into the initial. Additionally, finals are usually kerned under aspiration. There are some languages which do not follow this behavior. These are listed in the table below.
 
 Setting        | default | variant | language
-:------------- | :--- | :--- | :---
-<span class='affects'>Final not kerned into initial</span> | <span class='shim-R normal'>&#x16F19;&#x16F66;&#x16F90; &#x16F32;&#x16F6B;&#x16F8F; &#x16F32;&#x16F6B;&#x16F92; &#x16F07;&#x16F68; &#x16F37;&#x16F6A; &#x16F0A;&#x16F71; &#x16F08;&#x16F7B; &#x16F43;&#x16F61;</span> |<span class='shim-R normal' lang='sfm'>&#x16F19;&#x16F66;&#x16F90; &#x16F32;&#x16F6B;&#x16F8F; &#x16F32;&#x16F6B;&#x16F92; &#x16F07;&#x16F68; &#x16F37;&#x16F6A; &#x16F0A;&#x16F71; &#x16F08;&#x16F7B; &#x16F43;&#x16F61;</span> | <span class='affects'>hmd normalised, sfm, ygp</span>
-<span class='affects'>Final not kerned into aspiration</span> | <span class='shim-R normal'>&#x16F2E;&#x16F51;&#x16F59; &#x16F20;&#x16F51;&#x16F5F;</span> |<span class='shim-R normal' lang='sfm'>&#x16F2E;&#x16F51;&#x16F59; &#x16F20;&#x16F51;&#x16F5F;</span> | <span class='affects'>sfm, ygp</span>
-<span class='affects'>Aspiration not kerned into initial</span> | <span class='shim-R normal'>&#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51; &#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51; &#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>Single final at foot position right-aligned with aspiration if enough space</span> | <span class='shim-R normal'>&#x16F37;&#x16F51;&#x16F6A; &#x16F0A;&#x16F51;&#x16F71;</span> |<span class='shim-R normal' lang='yna'>&#x16F37;&#x16F51;&#x16F6A; &#x16F0A;&#x16F51;&#x16F71;</span> | <span class='affects'>hmd, yna</span>
+:--- | :--- | :--- | :---
+<span class='affects'>Final not kerned into initial</span> | <span class='shim normal'>&#x16F19;&#x16F66;&#x16F90; &#x16F32;&#x16F6B;&#x16F8F; &#x16F32;&#x16F6B;&#x16F92; &#x16F07;&#x16F68; &#x16F37;&#x16F6A; &#x16F0A;&#x16F71; &#x16F08;&#x16F7B; &#x16F43;&#x16F61;</span> |<span class='sfm normal'>&#x16F19;&#x16F66;&#x16F90; &#x16F32;&#x16F6B;&#x16F8F; &#x16F32;&#x16F6B;&#x16F92; &#x16F07;&#x16F68; &#x16F37;&#x16F6A; &#x16F0A;&#x16F71; &#x16F08;&#x16F7B; &#x16F43;&#x16F61;</span> | <span class='affects'>hmd normalised, sfm, ygp</span>
+<span class='affects'>Final not kerned into aspiration</span> | <span class='shim normal'>&#x16F2E;&#x16F51;&#x16F59; &#x16F20;&#x16F51;&#x16F5F;</span> |<span class='sfm normal'>&#x16F2E;&#x16F51;&#x16F59; &#x16F20;&#x16F51;&#x16F5F;</span> | <span class='affects'>sfm, ygp</span>
+<span class='affects'>Aspiration not kerned into initial</span> | <span class='shim normal'>&#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51; &#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51;</span> |<span class='hmdd normal'>&#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51; &#x16F16;&#x16F51; &#x16F18;&#x16F51; &#x16F3D;&#x16F51; &#x16F1A;&#x16F51;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>Single final at foot position right-aligned with aspiration if enough space</span> | <span class='shim normal'>&#x16F37;&#x16F51;&#x16F6A; &#x16F0A;&#x16F51;&#x16F71;</span> |<span class='yna normal'>&#x16F37;&#x16F51;&#x16F6A; &#x16F0A;&#x16F51;&#x16F71;</span> | <span class='affects'>hmd, yna</span>
 
 **<a id="glyph"></a>Glyph variants**
 
@@ -102,37 +110,41 @@ Setting        | default | variant | language
 
 Setting        | default | variant | language
 :------------- | :--- | :--- | :---
-<span class='affects'>U+3001</span> | <span class='shim-R normal'>&#x3001;</span> |<span class='shim-R normal' lang='lpo'>&#x3001;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F02</span> | <span class='shim-R normal'>&#x16F02;</span> |<span class='shim-R normal' lang='ygp'>&#x16F02;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F04</span> | <span class='shim-R normal'>&#x16F04;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F04;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F04</span> | <span class='shim-R normal'>&#x16F04;</span> |<span class='shim-R normal' lang='lpo'>&#x16F04;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F04</span> | <span class='shim-R normal'>&#x16F04;</span> | <span class='shim-R normal' lang='ygp'>&#x16F04;</span> | <span class='affects'>ygp, ywq normalized</span>
-<span class='affects'>U+16F05</span> | <span class='shim-R normal'>&#x16F05;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F05;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F10</span> | <span class='shim-R normal'>&#x16F10;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F10;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F10</span> | <span class='shim-R normal'>&#x16F10;</span> |<span class='shim-R normal' lang='lpo'>&#x16F10;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F10</span> | <span class='shim-R normal'>&#x16F10;</span> | <span class='shim-R normal' lang='ygp'>&#x16F10;</span> | <span class='affects'>ygp, ywq normalized</span>
-<span class='affects'>U+16F11</span> | <span class='shim-R normal'>&#x16F11;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F11;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F14</span> | <span class='shim-R normal'>&#x16F14;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F14;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F14</span> | <span class='shim-R normal'>&#x16F14;</span> |<span class='shim-R normal' lang='ygp'>&#x16F14;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F15</span> | <span class='shim-R normal'>&#x16F15;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F15;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F23</span> | <span class='shim-R normal'>&#x16F23;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F23;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F23</span> | <span class='shim-R normal'>&#x16F23;</span> |<span class='shim-R normal' lang='lpo'>&#x16F23;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F23</span> | <span class='shim-R normal'>&#x16F23;</span> |<span class='shim-R normal' lang='ygp'>&#x16F23;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F24</span> | <span class='shim-R normal'>&#x16F24;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F24;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F2F</span> | <span class='shim-R normal'>&#x16F2F;</span> | <span class='shim-R normal'  style='font-feature-settings: "ss04" 1'>&#x16F2F;</span> | <span class='affects'>ywq normalized</span>
-<span class='affects'>U+16F33</span> | <span class='shim-R normal'>&#x16F33;</span> |<span class='shim-R normal' lang='lpo'>&#x16F33;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F35</span> | <span class='shim-R normal'>&#x16F35;</span> | <span class='shim-R normal'   style='font-feature-settings: "ss04" 1'>&#x16F35;</span> | <span class='affects'>ywq normalized</span>
+<span class='affects'>U+3001</span> | <span class='shim normal'>&#x3001;</span> |<span class='lpo normal'>&#x3001;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F02</span> | <span class='shim normal'>&#x16F02;</span> |<span class='ygp normal'>&#x16F02;</span> | <span class='affects'>ygp</span>
+<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='hmdd normal'>&#x16F04;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='lpo normal'>&#x16F04;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> | <span class='ygp normal'>&#x16F04;</span> | <span class='affects'>ygp, ywq normalized</span>
+<span class='affects'>U+16F05</span> | <span class='shim normal'>&#x16F05;</span> |<span class='hmdd normal'>&#x16F05;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='hmdd normal'>&#x16F10;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='lpo normal'>&#x16F10;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> | <span class='ygp normal'>&#x16F10;</span> | <span class='affects'>ygp, ywq normalized</span>
+<span class='affects'>U+16F11</span> | <span class='shim normal'>&#x16F11;</span> |<span class='hmdd normal'>&#x16F11;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='hmdd normal'>&#x16F14;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='ygp normal'>&#x16F14;</span> | <span class='affects'>ygp</span>
+<span class='affects'>U+16F15</span> | <span class='shim normal'>&#x16F15;</span> |<span class='hmdd normal'>&#x16F15;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='hmdd normal'>&#x16F23;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='lpo normal'>&#x16F23;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='ygp normal'>&#x16F23;</span> | <span class='affects'>ygp</span>
+<span class='affects'>U+16F24</span> | <span class='shim normal'>&#x16F24;</span> |<span class='hmdd normal'>&#x16F24;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F2F</span> | <span class='shim normal'>&#x16F2F;</span> | <span class='ywqa normal'>&#x16F2F;</span> | <span class='affects'>ywq normalized</span>
+<span class='affects'>U+16F33</span> | <span class='shim normal'>&#x16F33;</span> |<span class='lpo normal'>&#x16F33;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F35</span> | <span class='shim normal'>&#x16F35;</span> | <span class='ywqa normal'>&#x16F35;</span> | <span class='affects'>ywq normalized</span>
+
+_Currently there is a question of whether the default glyph in the codecharts should be the one in the **default** column here. It is the author's belief that this should be changed as most languages use that form._
+
+_There is a request to encode the glyph found in the **variant** column for U+16F35. Although both glyphs represent the same character, this is a significant variant, and that request should at least be considered._
 
 Setting        | default | variant | language
 :------------- | :--- | :--- | :---
-<span class='affects'>U+16F57</span> | <span class='shim-R normal'>&#x16F57;</span> | <span class='shim-R normal'   lang='hmd'>&#x16F57;</span> (flat bottom) | <span class='affects'>hmd traditional, hmd normalized, hmz, lpo</span>
-<span class='affects'>U+16F58</span> | <span class='shim-R normal'>&#x16F58;</span> | <span class='shim-R normal'   lang='lpo'>&#x16F58;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F5C</span> | <span class='shim-R normal'>&#x16F5C;</span> | <span class='shim-R normal' lang='ygp'>&#x16F5C;</span> (near-centre stem)| <span class='affects'>ygp</span>
-<span class='affects'>U+16F5E</span> | <span class='shim-R normal'>&#x16F5E;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F5E;</span> (flat top)| <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F5F</span> | <span class='shim-R normal'>&#x16F5F;</span> |<span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F5F;</span> (flat top)| <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F60</span> | <span class='shim-R normal'>&#x16F60;</span> | <span class='shim-R normal' lang='ygp'>&#x16F60;</span> (near-centre stem) | <span class='affects'>ygp</span>
-<span class='affects'>U+16F73</span> | <span class='shim-R normal'>&#x16F73;</span> | <span class='shim-R normal' lang='ygp'>&#x16F73;</span> (near-centre stem) | <span class='affects'>ygp</span>
-<span class='affects'>U+16F7A</span> | <span class='shim-R normal'>&#x16F7A;</span> | <span class='shim-R normal' lang='hmd'>&#x16F7A;</span> (pointed hook) | <span class='affects'>hmd traditional, hmd normalized, hmz, sfm</span>
+<span class='affects'>U+16F57</span> | <span class='shim normal'>&#x16F57;</span> | <span class='shim normal'   lang='hmd'>&#x16F57;</span> (flat bottom) | <span class='affects'>hmd traditional, hmd normalized, hmz, lpo</span>
+<span class='affects'>U+16F58</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'   lang='lpo'>&#x16F58;</span> | <span class='affects'>lpo</span>
+<span class='affects'>U+16F5C</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5C;</span> (near-centre stem)| <span class='affects'>ygp</span>
+<span class='affects'>U+16F5E</span> | <span class='shim normal'>&#x16F5E;</span> |<span class='hmdd normal'>&#x16F5E;</span> (flat top)| <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F5F</span> | <span class='shim normal'>&#x16F5F;</span> |<span class='hmdd normal'>&#x16F5F;</span> (flat top)| <span class='affects'>hmd normalised</span>
+<span class='affects'>U+16F60</span> | <span class='shim normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F60;</span> (near-centre stem) | <span class='affects'>ygp</span>
+<span class='affects'>U+16F73</span> | <span class='shim normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F73;</span> (near-centre stem) | <span class='affects'>ygp</span>
+<span class='affects'>U+16F7A</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='hmd normal'>&#x16F7A;</span> (pointed hook) | <span class='affects'>hmd traditional, hmd normalized, hmz, sfm</span>
 
 **<a id="wart"></a>“wart” vs “dot”**
 
@@ -142,8 +154,8 @@ Some Miao consonants appear in the code charts with a “wart” attached to the
 
 Setting         | Sample          
 :-------------   | :---------------  
-default (wart)  | <span class='shim-R normal'>&#x16F01; &#x16F05; &#x16F09; &#x16F0B; &#x16F0F; &#x16F11; &#x16F15; &#x16F17; &#x16F19; &#x16F1B; &#x16F1D; &#x16F1F; &#x16F22; &#x16F24; &#x16F29; &#x16F2B; &#x16F2D; &#x16F2F; &#x16F36; &#x16F38; &#x16F3C; &#x16F3E; &#x16F41; &#x16F44; &#x16F45; &#x16F46; &#x16F47;</span> 
-alternate (dot) | <span class='shim-R normal' style='font-feature-settings: "ss02" 1'>&#x16F01; &#x16F05; &#x16F09; &#x16F0B; &#x16F0F; &#x16F11; &#x16F15; &#x16F17; &#x16F19; &#x16F1B; &#x16F1D; &#x16F1F; &#x16F22; &#x16F24; &#x16F29; &#x16F2B; &#x16F2D; &#x16F2F; &#x16F36; &#x16F38; &#x16F3C; &#x16F3E; &#x16F41; &#x16F44; &#x16F45; &#x16F46; &#x16F47;</span>
+default (wart)  | <span class='shim normal'>&#x16F01; &#x16F05; &#x16F09; &#x16F0B; &#x16F0F; &#x16F11; &#x16F15; &#x16F17; &#x16F19; &#x16F1B; &#x16F1D; &#x16F1F; &#x16F22; &#x16F24; &#x16F29; &#x16F2B; &#x16F2D; &#x16F2F; &#x16F36; &#x16F38; &#x16F3C; &#x16F3E; &#x16F41; &#x16F44; &#x16F45; &#x16F46; &#x16F47;</span> 
+alternate (dot) | <span class='hmdd normal'>&#x16F01; &#x16F05; &#x16F09; &#x16F0B; &#x16F0F; &#x16F11; &#x16F15; &#x16F17; &#x16F19; &#x16F1B; &#x16F1D; &#x16F1F; &#x16F22; &#x16F24; &#x16F29; &#x16F2B; &#x16F2D; &#x16F2F; &#x16F36; &#x16F38; &#x16F3C; &#x16F3E; &#x16F41; &#x16F44; &#x16F45; &#x16F46; &#x16F47;</span>
 
 ## <a id="lang"></a>Languages currently using Miao/Pollard script
 
@@ -167,37 +179,35 @@ _Font:_ [Shimenkan Guifan](https://software.sil.org/shimenkan/) - normalised ort
 
 **Character set**
 
-_The keyboard includes U+16F20_ <span class='shim-R normal' lang='hmd'>&#x16F20;</span> _instead of the similarly looking U+16F21_ <span class='shim-R normal' lang='hmd'>&#x16F21;</span>_. The keyboard also does not include support for warted characters, but Figure 1 [L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf) demonstrates warted characters and U+16F20 does not have a matching warted character. Thus, U+16F0E was chosen._
-
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='hmd'>&#x16F00;</span> | <span class='shim-R normal' lang='hmd'>&#x16F01;</span> | <span class='shim-R normal' lang='hmd'>&#x16F04;</span> | <span class='shim-R normal' lang='hmd'>&#x16F05;</span> | <span class='shim-R normal' lang='hmd'>&#x16F07;</span> | <span class='shim-R normal' lang='hmd'>&#x16F08;</span> | <span class='shim-R normal' lang='hmd'>&#x16F09;</span> | <span class='shim-R normal' lang='hmd'>&#x16F0A;</span> | <span class='shim-R normal' lang='hmd'>&#x16F0B;</span> | <span class='shim-R normal' lang='hmd'>&#x16F0E;</span>     
+<span class='hmd normal'>&#x16F00;</span> | <span class='hmd normal'>&#x16F01;</span> | <span class='hmd normal'>&#x16F04;</span> | <span class='hmd normal'>&#x16F05;</span> | <span class='hmd normal'>&#x16F07;</span> | <span class='hmd normal'>&#x16F08;</span> | <span class='hmd normal'>&#x16F09;</span> | <span class='hmd normal'>&#x16F0A;</span> | <span class='hmd normal'>&#x16F0B;</span> | <span class='hmd normal'>&#x16F0E;</span>     
 16F00 | 16F01 | 16F04 | 16F05 | 16F07 | 16F08 | 16F09 | 16F0A | 16F0B | 16F0E
-<span class='shim-R normal' lang='hmd'>&#x16F0F;</span> | <span class='shim-R normal' lang='hmd'>&#x16F10;</span> | <span class='shim-R normal' lang='hmd'>&#x16F11;</span> | <span class='shim-R normal' lang='hmd'>&#x16F14;</span> | <span class='shim-R normal' lang='hmd'>&#x16F15;</span> | <span class='shim-R normal' lang='hmd'>&#x16F16;</span> | <span class='shim-R normal' lang='hmd'>&#x16F17;</span> | <span class='shim-R normal' lang='hmd'>&#x16F18;</span> | <span class='shim-R normal' lang='hmd'>&#x16F19;</span> | <span class='shim-R normal' lang='hmd'>&#x16F1A;</span>
+<span class='hmd normal'>&#x16F0F;</span> | <span class='hmd normal'>&#x16F10;</span> | <span class='hmd normal'>&#x16F11;</span> | <span class='hmd normal'>&#x16F14;</span> | <span class='hmd normal'>&#x16F15;</span> | <span class='hmd normal'>&#x16F16;</span> | <span class='hmd normal'>&#x16F17;</span> | <span class='hmd normal'>&#x16F18;</span> | <span class='hmd normal'>&#x16F19;</span> | <span class='hmd normal'>&#x16F1A;</span>
 16F0F | 16F10 | 16F11 | 16F14 | 16F15 | 16F16 | 16F17 | 16F18 | 16F19 | 16F1A
-<span class='shim-R normal' lang='hmd'>&#x16F1B;</span> | <span class='shim-R normal' lang='hmd'>&#x16F1C;</span> | <span class='shim-R normal' lang='hmd'>&#x16F1D;</span> | <span class='shim-R normal' lang='hmd'>&#x16F1E;</span> | <span class='shim-R normal' lang='hmd'>&#x16F1F;</span> | <span class='shim-R normal' lang='hmd'>&#x16F21;</span> | <span class='shim-R normal' lang='hmd'>&#x16F22;</span> | <span class='shim-R normal' lang='hmd'>&#x16F23;</span> | <span class='shim-R normal' lang='hmd'>&#x16F24;</span> | <span class='shim-R normal' lang='hmd'>&#x16F26;</span>
+<span class='hmd normal'>&#x16F1B;</span> | <span class='hmd normal'>&#x16F1C;</span> | <span class='hmd normal'>&#x16F1D;</span> | <span class='hmd normal'>&#x16F1E;</span> | <span class='hmd normal'>&#x16F1F;</span> | <span class='hmd normal'>&#x16F21;</span> | <span class='hmd normal'>&#x16F22;</span> | <span class='hmd normal'>&#x16F23;</span> | <span class='hmd normal'>&#x16F24;</span> | <span class='hmd normal'>&#x16F26;</span>
 16F1B | 16F1C | 16F1D | 16F1E | 16F1F | 16F21 | 16F22 | 16F23 | 16F24 | 16F26
-<span class='shim-R normal' lang='hmd'>&#x16F28;</span> | <span class='shim-R normal' lang='hmd'>&#x16F29;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2A;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2B;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2C;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2D;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2E;</span> | <span class='shim-R normal' lang='hmd'>&#x16F2F;</span> | <span class='shim-R normal' lang='hmd'>&#x16F33;</span> | <span class='shim-R normal' lang='hmd'>&#x16F34;</span>
+<span class='hmd normal'>&#x16F28;</span> | <span class='hmd normal'>&#x16F29;</span> | <span class='hmd normal'>&#x16F2A;</span> | <span class='hmd normal'>&#x16F2B;</span> | <span class='hmd normal'>&#x16F2C;</span> | <span class='hmd normal'>&#x16F2D;</span> | <span class='hmd normal'>&#x16F2E;</span> | <span class='hmd normal'>&#x16F2F;</span> | <span class='hmd normal'>&#x16F33;</span> | <span class='hmd normal'>&#x16F34;</span>
 16F28 | 16F29 | 16F2A | 16F2B | 16F2C | 16F2D | 16F2E | 16F2F | 16F33 | 16F34
-<span class='shim-R normal' lang='hmd'>&#x16F35;</span> | <span class='shim-R normal' lang='hmd'>&#x16F37;</span> | <span class='shim-R normal' lang='hmd'>&#x16F38;</span> | <span class='shim-R normal' lang='hmd'>&#x16F3A;</span> | <span class='shim-R normal' lang='hmd'>&#x16F3B;</span> | <span class='shim-R normal' lang='hmd'>&#x16F3C;</span> | <span class='shim-R normal' lang='hmd'>&#x16F3D;</span> | <span class='shim-R normal' lang='hmd'>&#x16F3E;</span> | <span class='shim-R normal' lang='hmd'>&#x16F40;</span> | <span class='shim-R normal' lang='hmd'>&#x16F41;</span>
+<span class='hmd normal'>&#x16F35;</span> | <span class='hmd normal'>&#x16F37;</span> | <span class='hmd normal'>&#x16F38;</span> | <span class='hmd normal'>&#x16F3A;</span> | <span class='hmd normal'>&#x16F3B;</span> | <span class='hmd normal'>&#x16F3C;</span> | <span class='hmd normal'>&#x16F3D;</span> | <span class='hmd normal'>&#x16F3E;</span> | <span class='hmd normal'>&#x16F40;</span> | <span class='hmd normal'>&#x16F41;</span>
 16F35 | 16F37 | 16F38 | 16F3A | 16F3B | 16F3C | 16F3D | 16F3E | 16F40 | 16F41
-<span class='shim-R normal' lang='hmd'>&#x16F42;</span> | <span class='shim-R normal' lang='hmd'>&#x16F43;</span> | <span class='shim-R normal' lang='hmd'>&#x16F44;</span>
+<span class='hmd normal'>&#x16F42;</span> | <span class='hmd normal'>&#x16F43;</span> | <span class='hmd normal'>&#x16F44;</span>
 16F42 | 16F43 | 16F44
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-_The keyboard includes U+16F5D_ <span class='shim-R normal' lang='hmd'>&#x16F5D;</span> _and U+16F74_ <span class='shim-R normal' lang='hmd'>&#x16F74;</span> _although they are not in Figure 1 [L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf)._
+_The keyboard includes U+16F5D_ <span class='hmd normal'>&#x16F5D;</span> _and U+16F74_ <span class='hmd normal'>&#x16F74;</span> _although they are not in Figure 1 [L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf)._
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='hmd'>&#x16F54;</span> | <span class='shim-R normal' lang='hmd'>&#x16F57;</span> | <span class='shim-R normal' lang='hmd'>&#x16F58;</span> | <span class='shim-R normal' lang='hmd'>&#x16F59;</span> | <span class='shim-R normal' lang='hmd'>&#x16F5C;</span> | <span class='shim-R normal' lang='hmd'>&#x16F5E;</span> | <span class='shim-R normal' lang='hmd'>&#x16F5F;</span> | <span class='shim-R normal' lang='hmd'>&#x16F60;</span> | <span class='shim-R normal' lang='hmd'>&#x16F61;</span> | <span class='shim-R normal' lang='hmd'>&#x16F62;</span> 
+<span class='hmd normal'>&#x16F54;</span> | <span class='hmd normal'>&#x16F57;</span> | <span class='hmd normal'>&#x16F58;</span> | <span class='hmd normal'>&#x16F59;</span> | <span class='hmd normal'>&#x16F5C;</span> | <span class='hmd normal'>&#x16F5E;</span> | <span class='hmd normal'>&#x16F5F;</span> | <span class='hmd normal'>&#x16F60;</span> | <span class='hmd normal'>&#x16F61;</span> | <span class='hmd normal'>&#x16F62;</span> 
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5E | 16F5F | 16F60 | 16F61 | 16F62
-<span class='shim-R normal' lang='hmd'>&#x16F66;</span> | <span class='shim-R normal' lang='hmd'>&#x16F68;</span> | <span class='shim-R normal' lang='hmd'>&#x16F6A;</span> | <span class='shim-R normal' lang='hmd'>&#x16F6B;</span> | <span class='shim-R normal' lang='hmd'>&#x16F71;</span> | <span class='shim-R normal' lang='hmd'>&#x16F73;</span> | <span class='shim-R normal' lang='hmd'>&#x16F75;</span> | <span class='shim-R normal' lang='hmd'>&#x16F77;</span> | <span class='shim-R normal' lang='hmd'>&#x16F79;</span> | <span class='shim-R normal' lang='hmd'>&#x16F7A;</span>
+<span class='hmd normal'>&#x16F66;</span> | <span class='hmd normal'>&#x16F68;</span> | <span class='hmd normal'>&#x16F6A;</span> | <span class='hmd normal'>&#x16F6B;</span> | <span class='hmd normal'>&#x16F71;</span> | <span class='hmd normal'>&#x16F73;</span> | <span class='hmd normal'>&#x16F75;</span> | <span class='hmd normal'>&#x16F77;</span> | <span class='hmd normal'>&#x16F79;</span> | <span class='hmd normal'>&#x16F7A;</span>
 16F66 | 16F68 | 16F6A | 16F6B | 16F71 | 16F73 | 16F75 | 16F77 | 16F79 | 16F7A 
-<span class='shim-R normal' lang='hmd'>&#x16F7B;</span> | | | | | | | | |
+<span class='hmd normal'>&#x16F7B;</span> | | | | | | | | |
 16F7B | | | | | | | | |
 
 Positioning tone marks | |
@@ -207,39 +217,41 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal' lang='hmd'>. , : ; ? [ ] " _ __</span>
+See also <a href="#punct">Punctuation and Digits</a>.
+
+Additional punctuation: <span class='hmd normal'>: ; ? [ ] _ __</span>
 
 **_Sorting (China, Ireland, and UK. Figure 1)_**
 
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F00;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F01;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F00;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F01;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F00;&#x16F51;</span> <br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F0A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F0B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F0A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0A;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F1E;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F1F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F1E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1E;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F2E;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F2F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F2E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2E;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F2A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F2B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F2A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F2A;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F1A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F1B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F1A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1A;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F1C;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F1D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F1C;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F1C;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F37;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F38;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F37;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F38;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F37;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F0E;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F0F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F0E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F0E;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F21;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F22;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F21;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F21;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F22;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F21;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F43;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F44;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F43;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F43;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F44;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F50;&#x16F43;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F08;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F09;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F08;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F3D;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F3E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F3D;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F40;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F41;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F40;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F16;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F17;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F16;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F18;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F19;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F18;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F04;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F05;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F04;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F10;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F11;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F10;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F3B;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F3C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F3B;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F2C;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F2D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F2C;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F14;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F15;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F14;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F23;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F24;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F23;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F28;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F29;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='hmd'>&#x16F28;&#x16F51;</span><br/>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F33;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F34;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F3A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F07;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F26;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F35;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F42;</span></br>
-&#x26;<span class='shim-R normal' lang='hmd'>&#x16F54;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F59;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F73;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F61;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F6A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F71;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F79;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F7A;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F7B;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F60;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F5C;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F57;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F58;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F66;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F68;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F75;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F77;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F62;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F6B;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F5E;</span> &lt; <span class='shim-R normal' lang='hmd'>&#x16F5F; </span>
+&#x26;<span class='hmd normal'>&#x16F00;</span> &lt; <span class='hmd normal'>&#x16F01;</span> &lt;&lt; <span class='hmd normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F01;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F00;&#x16F51;</span> <br/>
+&#x26;<span class='hmd normal'>&#x16F0A;</span> &lt; <span class='hmd normal'>&#x16F0B;</span> &lt;&lt; <span class='hmd normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0B;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0A;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F1E;</span> &lt; <span class='hmd normal'>&#x16F1F;</span> &lt;&lt; <span class='hmd normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1F;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1E;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F2E;</span> &lt; <span class='hmd normal'>&#x16F2F;</span> &lt;&lt; <span class='hmd normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2F;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2E;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F2A;</span> &lt; <span class='hmd normal'>&#x16F2B;</span> &lt;&lt; <span class='hmd normal'>&#x16F2A;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2A;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2B;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F2A;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F1A;</span> &lt; <span class='hmd normal'>&#x16F1B;</span> &lt;&lt; <span class='hmd normal'>&#x16F1A;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1A;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1B;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1A;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F1C;</span> &lt; <span class='hmd normal'>&#x16F1D;</span> &lt;&lt; <span class='hmd normal'>&#x16F1C;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1C;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1D;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F1C;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F37;</span> &lt; <span class='hmd normal'>&#x16F38;</span> &lt;&lt; <span class='hmd normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F38;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F37;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F0E;</span> &lt; <span class='hmd normal'>&#x16F0F;</span> &lt;&lt; <span class='hmd normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0F;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F0E;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F21;</span> &lt; <span class='hmd normal'>&#x16F22;</span> &lt;&lt; <span class='hmd normal'>&#x16F21;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F21;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F22;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F21;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F43;</span> &lt; <span class='hmd normal'>&#x16F44;</span> &lt;&lt; <span class='hmd normal'>&#x16F43;&#x16F51;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F43;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F44;</span> &lt;&lt; <span class='hmd normal'>&#x16F50;&#x16F43;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F08;</span> &lt; <span class='hmd normal'>&#x16F09;</span> &lt;&lt; <span class='hmd normal'>&#x16F08;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F3D;</span> &lt; <span class='hmd normal'>&#x16F3E;</span> &lt;&lt; <span class='hmd normal'>&#x16F3D;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F40;</span> &lt; <span class='hmd normal'>&#x16F41;</span> &lt;&lt; <span class='hmd normal'>&#x16F40;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F16;</span> &lt; <span class='hmd normal'>&#x16F17;</span> &lt;&lt; <span class='hmd normal'>&#x16F16;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F18;</span> &lt; <span class='hmd normal'>&#x16F19;</span> &lt;&lt; <span class='hmd normal'>&#x16F18;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F04;</span> &lt; <span class='hmd normal'>&#x16F05;</span> &lt;&lt; <span class='hmd normal'>&#x16F04;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F10;</span> &lt; <span class='hmd normal'>&#x16F11;</span> &lt;&lt; <span class='hmd normal'>&#x16F10;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F3B;</span> &lt; <span class='hmd normal'>&#x16F3C;</span> &lt;&lt; <span class='hmd normal'>&#x16F3B;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F2C;</span> &lt; <span class='hmd normal'>&#x16F2D;</span> &lt;&lt; <span class='hmd normal'>&#x16F2C;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F14;</span> &lt; <span class='hmd normal'>&#x16F15;</span> &lt;&lt; <span class='hmd normal'>&#x16F14;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F23;</span> &lt; <span class='hmd normal'>&#x16F24;</span> &lt;&lt; <span class='hmd normal'>&#x16F23;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F28;</span> &lt; <span class='hmd normal'>&#x16F29;</span> &lt;&lt; <span class='hmd normal'>&#x16F28;&#x16F51;</span><br/>
+&#x26;<span class='hmd normal'>&#x16F33;</span> &lt; <span class='hmd normal'>&#x16F34;</span> &lt; <span class='hmd normal'>&#x16F3A;</span> &lt; <span class='hmd normal'>&#x16F07;</span> &lt; <span class='hmd normal'>&#x16F26;</span> &lt; <span class='hmd normal'>&#x16F35;</span> &lt; <span class='hmd normal'>&#x16F42;</span></br>
+&#x26;<span class='hmd normal'>&#x16F54;</span> &lt; <span class='hmd normal'>&#x16F59;</span> &lt; <span class='hmd normal'>&#x16F73;</span> &lt; <span class='hmd normal'>&#x16F61;</span> &lt; <span class='hmd normal'>&#x16F6A;</span> &lt; <span class='hmd normal'>&#x16F71;</span> &lt; <span class='hmd normal'>&#x16F79;</span> &lt; <span class='hmd normal'>&#x16F7A;</span> &lt; <span class='hmd normal'>&#x16F7B;</span> &lt; <span class='hmd normal'>&#x16F60;</span> &lt; <span class='hmd normal'>&#x16F5C;</span> &lt; <span class='hmd normal'>&#x16F57;</span> &lt; <span class='hmd normal'>&#x16F58;</span> &lt; <span class='hmd normal'>&#x16F66;</span> &lt; <span class='hmd normal'>&#x16F68;</span> &lt; <span class='hmd normal'>&#x16F75;</span> &lt; <span class='hmd normal'>&#x16F77;</span> &lt; <span class='hmd normal'>&#x16F62;</span> &lt; <span class='hmd normal'>&#x16F6B;</span> &lt; <span class='hmd normal'>&#x16F5E;</span> &lt; <span class='hmd normal'>&#x16F5F; </span>
 
 **Rendering**
 
-See also <a href="#wart">“wart” vs “dot”</a> for special behavior. The traditional orthography uses the “wart” and the normalised orthography us the “dot”.
+See also <a href="#wart">“wart” vs “dot”</a> for special behavior. The traditional orthography uses the “wart” and the normalised orthography uses the “dot”.
 
 See also <a href="#kern">Kerning</a> for special behavior.
 
@@ -249,9 +261,9 @@ _Glyph variants_
 
 Setting        | Sample
 :------------- | :--------------- 
-default        | <span class='shim-R normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span> |
-hmd alternates  | <span class='shim-R normal' lang='hmd'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
-normalized orthography alternates      | <span class='shim-R normal' style='font-feature-settings: "ss03" 1'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
+default        | <span class='shim normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span> |
+hmd alternates  | <span class='hmd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
+normalized orthography alternates      | <span class='hmdd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
 
 _Sample graphic_
 
@@ -282,8 +294,8 @@ _Glyph variants_
 
 Setting        | Sample
 :------- | :--------------- 
-default        | <span class='shim-R normal'>&#x16F57; &#x16F7A;</span> 
-alternate      | <span class='shim-R normal' lang='hmz'>&#x16F57; &#x16F7A;</span>
+default        | <span class='shim normal'>&#x16F57; &#x16F7A;</span> 
+alternate      | <span class='hmz normal'>&#x16F57; &#x16F7A;</span>
 
 ### <a id="lpo"></a>Lipo / Dong Lisu / Eastern Lisu &#x005B;lpo&#x005D;
 
@@ -301,25 +313,25 @@ _Font:_ [Taogu](https://software.sil.org/shimenkan/)
 
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='lpo'>&#x16F00;</span> | <span class='shim-R normal' lang='lpo'>&#x16F02;</span> | <span class='shim-R normal' lang='lpo'>&#x16F04;</span> | <span class='shim-R normal' lang='lpo'>&#x16F07;</span> | <span class='shim-R normal' lang='lpo'>&#x16F08;</span> | <span class='shim-R normal' lang='lpo'>&#x16F0A;</span> | <span class='shim-R normal' lang='lpo'>&#x16F0D;</span> | <span class='shim-R normal' lang='lpo'>&#x16F0E;</span> | <span class='shim-R normal' lang='lpo'>&#x16F10;</span> | <span class='shim-R normal' lang='lpo'>&#x16F13;</span> 
+<span class='lpo normal'>&#x16F00;</span> | <span class='lpo normal'>&#x16F02;</span> | <span class='lpo normal'>&#x16F04;</span> | <span class='lpo normal'>&#x16F07;</span> | <span class='lpo normal'>&#x16F08;</span> | <span class='lpo normal'>&#x16F0A;</span> | <span class='lpo normal'>&#x16F0D;</span> | <span class='lpo normal'>&#x16F0E;</span> | <span class='lpo normal'>&#x16F10;</span> | <span class='lpo normal'>&#x16F13;</span> 
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0D | 16F0E | 16F10 | 16F13
-<span class='shim-R normal' lang='lpo'>&#x16F16;</span> | <span class='shim-R normal' lang='lpo'>&#x16F18;</span> | <span class='shim-R normal' lang='lpo'>&#x16F1E;</span> | <span class='shim-R normal' lang='lpo'>&#x16F21;</span> | <span class='shim-R normal' lang='lpo'>&#x16F23;</span> | <span class='shim-R normal' lang='lpo'>&#x16F26;</span> | <span class='shim-R normal' lang='lpo'>&#x16F28;</span> | <span class='shim-R normal' lang='lpo'>&#x16F2F;</span> | <span class='shim-R normal' lang='lpo'>&#x16F30;</span> | <span class='shim-R normal' lang='lpo'>&#x16F33;</span>
+<span class='lpo normal'>&#x16F16;</span> | <span class='lpo normal'>&#x16F18;</span> | <span class='lpo normal'>&#x16F1E;</span> | <span class='lpo normal'>&#x16F21;</span> | <span class='lpo normal'>&#x16F23;</span> | <span class='lpo normal'>&#x16F26;</span> | <span class='lpo normal'>&#x16F28;</span> | <span class='lpo normal'>&#x16F2F;</span> | <span class='lpo normal'>&#x16F30;</span> | <span class='lpo normal'>&#x16F33;</span>
 16F16 | 16F18 | 16F1E | 16F21 | 16F23 | 16F26 | 16F28 | 16F2F | 16F30 | 16F33
-<span class='shim-R normal' lang='lpo'>&#x16F35;</span> | <span class='shim-R normal' lang='lpo'>&#x16F37;</span> | <span class='shim-R normal' lang='lpo'>&#x16F39;</span> | <span class='shim-R normal' lang='lpo'>&#x16F3A;</span> | <span class='shim-R normal' lang='lpo'>&#x16F3B;</span> | <span class='shim-R normal' lang='lpo'>&#x16F3D;</span> | <span class='shim-R normal' lang='lpo'>&#x16F43;</span> |
+<span class='lpo normal'>&#x16F35;</span> | <span class='lpo normal'>&#x16F37;</span> | <span class='lpo normal'>&#x16F39;</span> | <span class='lpo normal'>&#x16F3A;</span> | <span class='lpo normal'>&#x16F3B;</span> | <span class='lpo normal'>&#x16F3D;</span> | <span class='lpo normal'>&#x16F43;</span> |
 16F35 | 16F37 | 16F39 | 16F3A | 16F3B | 16F3D | 16F43 | 
 
 Modifiers | Aspiration
 :-- | :--  
-&#x0020; | <span class='shim-R normal' lang='hmd'>&#x16F51;</span>
+&#x0020; | <span class='hmd normal'>&#x16F51;</span>
 &#x0020; | 16F51
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='lpo'>&#x16F54;</span> | <span class='shim-R normal' lang='lpo'>&#x16F55;</span> | <span class='shim-R normal' lang='lpo'>&#x16F57;</span>| <span class='shim-R normal' lang='lpo'>&#x16F58;</span>| <span class='shim-R normal' lang='lpo'>&#x16F59;</span> | <span class='shim-R normal' lang='lpo'>&#x16F5A;</span> | <span class='shim-R normal' lang='lpo'>&#x16F5C;</span> | <span class='shim-R normal' lang='lpo'>&#x16F5D;</span> | <span class='shim-R normal' lang='lpo'>&#x16F61;</span> | <span class='shim-R normal' lang='lpo'>&#x16F62;</span> 
+<span class='lpo normal'>&#x16F54;</span> | <span class='lpo normal'>&#x16F55;</span> | <span class='lpo normal'>&#x16F57;</span>| <span class='lpo normal'>&#x16F58;</span>| <span class='lpo normal'>&#x16F59;</span> | <span class='lpo normal'>&#x16F5A;</span> | <span class='lpo normal'>&#x16F5C;</span> | <span class='lpo normal'>&#x16F5D;</span> | <span class='lpo normal'>&#x16F61;</span> | <span class='lpo normal'>&#x16F62;</span> 
 16F54 | 16F55 | 16F57 | 16F58 | 16F59 | 16F5A | 16F5C | 16F5D | 16F61 | 16F62  
-<span class='shim-R normal' lang='lpo'>&#x16F67;</span> | <span class='shim-R normal' lang='lpo'>&#x16F68;</span> | <span class='shim-R normal' lang='lpo'>&#x16F6A;</span> | <span class='shim-R normal' lang='lpo'>&#x16F6B;</span> | <span class='shim-R normal' lang='lpo'>&#x16F6E;</span> | <span class='shim-R normal' lang='lpo'>&#x16F71;</span> | <span class='shim-R normal' lang='lpo'>&#x16F73;</span> | <span class='shim-R normal' lang='lpo'>&#x16F74;</span> | <span class='shim-R normal' lang='lpo'>&#x16F76;</span> | <span class='shim-R normal' lang='lpo'>&#x16F78;</span> 
+<span class='lpo normal'>&#x16F67;</span> | <span class='lpo normal'>&#x16F68;</span> | <span class='lpo normal'>&#x16F6A;</span> | <span class='lpo normal'>&#x16F6B;</span> | <span class='lpo normal'>&#x16F6E;</span> | <span class='lpo normal'>&#x16F71;</span> | <span class='lpo normal'>&#x16F73;</span> | <span class='lpo normal'>&#x16F74;</span> | <span class='lpo normal'>&#x16F76;</span> | <span class='lpo normal'>&#x16F78;</span> 
 16F67 | 16F68 | 16F6A | 16F6B | 16F6E | 16F71 | 16F73 | 16F74 | 16F76 | 16F78
-<span class='shim-R normal' lang='lpo'>&#x16F79;</span> | <span class='shim-R normal' lang='lpo'>&#x16F7A;</span> | <span class='shim-R normal' lang='lpo'>&#x16F7B;</span> | <span class='shim-R normal' lang='lpo'>&#x16F7C;</span> | <span class='shim-R normal' lang='lpo'>&#x16F7E;</span> |
+<span class='lpo normal'>&#x16F79;</span> | <span class='lpo normal'>&#x16F7A;</span> | <span class='lpo normal'>&#x16F7B;</span> | <span class='lpo normal'>&#x16F7C;</span> | <span class='lpo normal'>&#x16F7E;</span> |
 16F79 | 16F7A | 16F7B | 16F7C | 16F7E | 
 
 Positioning tone marks |
@@ -329,9 +341,11 @@ MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal' lang='lpo'>' " , - / : ; = ?</span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
-<span class='shim-R normal' lang='lpo'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
+Additional punctuation: <span class='lpo normal'>' - : ; = ?</span>
+
+<span class='lpo normal'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
 
 **Rendering**
 
@@ -339,8 +353,8 @@ _Glyph variants_
 
 Setting        | Sample
 :------ | :---------------
-default        | <span class='shim-R normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
-alternate      | <span class='shim-R normal' lang='lpo'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
+default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
+alternate      | <span class='lpo normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
 
 
 _Sample graphic_
@@ -363,31 +377,31 @@ _Font:_ [Shimenkan GSM](https://software.sil.org/shimenkan/)
 
 **Character set**
 
-_The keyboard includes U+16F0B_ <span class='shim-R normal' lang='ygp'>&#x16F0B;</span>_, U+16F0F_ <span class='shim-R normal' lang='ygp'>&#x16F0F;</span>_, U+16F2F_ <span class='shim-R normal' lang='ygp'>&#x16F2F;</span>_, and U+16F38_ <span class='shim-R normal' lang='ygp'>&#x16F38;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf). These are warted characters, and it may make sense to include them._
+_The keyboard includes U+16F0B_ <span class='ygp normal'>&#x16F0B;</span>_, U+16F0F_ <span class='ygp normal'>&#x16F0F;</span>_, U+16F2F_ <span class='ygp normal'>&#x16F2F;</span>_, and U+16F38_ <span class='ygp normal'>&#x16F38;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf). These are warted characters, and it may make sense to include them._
 
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='ygp'>&#x16F00; | <span class='shim-R normal' lang='ygp'>&#x16F02; | <span class='shim-R normal' lang='ygp'>&#x16F04; | <span class='shim-R normal' lang='ygp'>&#x16F07; | <span class='shim-R normal' lang='ygp'>&#x16F08; | <span class='shim-R normal' lang='ygp'>&#x16F0A; | <span class='shim-R normal' lang='ygp'>&#x16F0E; | <span class='shim-R normal' lang='ygp'>&#x16F10; | <span class='shim-R normal' lang='ygp'>&#x16F12; | <span class='shim-R normal' lang='ygp'>&#x16F14;  
+<span class='ygp normal'>&#x16F00; | <span class='ygp normal'>&#x16F02; | <span class='ygp normal'>&#x16F04; | <span class='ygp normal'>&#x16F07; | <span class='ygp normal'>&#x16F08; | <span class='ygp normal'>&#x16F0A; | <span class='ygp normal'>&#x16F0E; | <span class='ygp normal'>&#x16F10; | <span class='ygp normal'>&#x16F12; | <span class='ygp normal'>&#x16F14;  
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0E | 16F10 | 16F12 | 16F14
-<span class='shim-R normal' lang='ygp'>&#x16F16; | <span class='shim-R normal' lang='ygp'>&#x16F18; | <span class='shim-R normal' lang='ygp'>&#x16F1E; | <span class='shim-R normal' lang='ygp'>&#x16F23; | <span class='shim-R normal' lang='ygp'>&#x16F26; | <span class='shim-R normal' lang='ygp'>&#x16F28; | <span class='shim-R normal' lang='ygp'>&#x16F2A; | <span class='shim-R normal' lang='ygp'>&#x16F2E; | <span class='shim-R normal' lang='ygp'>&#x16F32; | <span class='shim-R normal' lang='ygp'>&#x16F33;
+<span class='ygp normal'>&#x16F16; | <span class='ygp normal'>&#x16F18; | <span class='ygp normal'>&#x16F1E; | <span class='ygp normal'>&#x16F23; | <span class='ygp normal'>&#x16F26; | <span class='ygp normal'>&#x16F28; | <span class='ygp normal'>&#x16F2A; | <span class='ygp normal'>&#x16F2E; | <span class='ygp normal'>&#x16F32; | <span class='ygp normal'>&#x16F33;
 16F16 | 16F18 | 16F1E | 16F23 | 16F26 | 16F28 | 16F2A | 16F2E | 16F32 | 16F33
-<span class='shim-R normal' lang='ygp'>&#x16F35; | <span class='shim-R normal' lang='ygp'>&#x16F37; | <span class='shim-R normal' lang='ygp'>&#x16F3A; | <span class='shim-R normal' lang='ygp'>&#x16F3B; | <span class='shim-R normal' lang='ygp'>&#x16F3D; | <span class='shim-R normal' lang='ygp'>&#x16F42; | <span class='shim-R normal' lang='ygp'>&#x16F43; | <span class='shim-R normal' lang='ygp'>&#x16F48; | <span class='shim-R normal' lang='ygp'>&#x16F49; | <span class='shim-R normal' lang='ygp'>&#x16F4A;
+<span class='ygp normal'>&#x16F35; | <span class='ygp normal'>&#x16F37; | <span class='ygp normal'>&#x16F3A; | <span class='ygp normal'>&#x16F3B; | <span class='ygp normal'>&#x16F3D; | <span class='ygp normal'>&#x16F42; | <span class='ygp normal'>&#x16F43; | <span class='ygp normal'>&#x16F48; | <span class='ygp normal'>&#x16F49; | <span class='ygp normal'>&#x16F4A;
 16F35 | 16F37 | 16F3A | 16F3B | 16F3D | 16F42 | 16F43 | 16F48 | 16F49 | 16F4A 
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-_The keyboard includes U+16F5B_ <span class='shim-R normal' lang='ygp'>&#x16F5B;</span>_, U+16F5E_ <span class='shim-R normal' lang='ygp'>&#x16F5E;</span>_, U+16F5F_ <span class='shim-R normal' lang='ygp'>&#x16F5F;</span>_, U+16F62_ <span class='shim-R normal' lang='ygp'>&#x16F62;</span>_, and U+16F63_ <span class='shim-R normal' lang='ygp'>&#x16F63;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+_The keyboard includes U+16F5B_ <span class='ygp normal'>&#x16F5B;</span>_, U+16F5E_ <span class='ygp normal'>&#x16F5E;</span>_, U+16F5F_ <span class='ygp normal'>&#x16F5F;</span>_, U+16F62_ <span class='ygp normal'>&#x16F62;</span>_, and U+16F63_ <span class='ygp normal'>&#x16F63;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='ygp'>&#x16F54;</span> | <span class='shim-R normal' lang='ygp'>&#x16F57;</span> | <span class='shim-R normal' lang='ygp'>&#x16F58;</span> | <span class='shim-R normal' lang='ygp'>&#x16F59;</span> | <span class='shim-R normal' lang='ygp'>&#x16F5C;</span> | <span class='shim-R normal' lang='ygp'>&#x16F5D;</span> | <span class='shim-R normal' lang='ygp'>&#x16F60;</span> | <span class='shim-R normal' lang='ygp'>&#x16F61;</span> | <span class='shim-R normal' lang='ygp'>&#x16F66;</span> 
+<span class='ygp normal'>&#x16F54;</span> | <span class='ygp normal'>&#x16F57;</span> | <span class='ygp normal'>&#x16F58;</span> | <span class='ygp normal'>&#x16F59;</span> | <span class='ygp normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5D;</span> | <span class='ygp normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F61;</span> | <span class='ygp normal'>&#x16F66;</span> 
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F60 | 16F61 | 16F66
-<span class='shim-R normal' lang='ygp'>&#x16F68;</span> | <span class='shim-R normal' lang='ygp'>&#x16F6A;</span> | <span class='shim-R normal' lang='ygp'>&#x16F71;</span> | <span class='shim-R normal' lang='ygp'>&#x16F73;</span> | <span class='shim-R normal' lang='ygp'>&#x16F75;</span> | <span class='shim-R normal' lang='ygp'>&#x16F76;</span> | <span class='shim-R normal' lang='ygp'>&#x16F77;</span> | <span class='shim-R normal' lang='ygp'>&#x16F79;</span> | <span class='shim-R normal' lang='ygp'>&#x16F7A;</span>
+<span class='ygp normal'>&#x16F68;</span> | <span class='ygp normal'>&#x16F6A;</span> | <span class='ygp normal'>&#x16F71;</span> | <span class='ygp normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F75;</span> | <span class='ygp normal'>&#x16F76;</span> | <span class='ygp normal'>&#x16F77;</span> | <span class='ygp normal'>&#x16F79;</span> | <span class='ygp normal'>&#x16F7A;</span>
 16F68 | 16F6A | 16F71 | 16F73 | 16F75 | 16F76 | 16F77 | 16F79 | 16F7A
-<span class='shim-R normal' lang='ygp'>&#x16F7B;</span> | <span class='shim-R normal' lang='ygp'>&#x16F7E;</span> | <span class='shim-R normal' lang='ygp'>&#x16F81;</span> | <span class='shim-R normal' lang='ygp'>&#x16F83;</span> | <span class='shim-R normal' lang='ygp'>&#x16F84;</span> | <span class='shim-R normal' lang='ygp'>&#x16F85;</span> | <span class='shim-R normal' lang='ygp'>&#x16F86;</span> | <span class='shim-R normal' lang='ygp'>&#x16F87;</span>
+<span class='ygp normal'>&#x16F7B;</span> | <span class='ygp normal'>&#x16F7E;</span> | <span class='ygp normal'>&#x16F81;</span> | <span class='ygp normal'>&#x16F83;</span> | <span class='ygp normal'>&#x16F84;</span> | <span class='ygp normal'>&#x16F85;</span> | <span class='ygp normal'>&#x16F86;</span> | <span class='ygp normal'>&#x16F87;</span>
 16F7B | 16F7E | 16F81 | 16F83 | 16F84 | 16F85 | 16F86 | 16F87 
 
 Positioning tone marks | |
@@ -397,34 +411,36 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal' lang='ygp'>' " ; : ( ) - *</span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
-**_Sorting (Cheuk, figure 2)_**
+Additional punctuation: <span class='lpo normal'>' ; : - *</span>
 
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F43;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F16;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F00;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F00;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F02;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F48;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F0A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F0A;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F49;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F37;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F37;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F07;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F18;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F32;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F2E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F2E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F2E;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F2A;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F1E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F1E;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F4A;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F0E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F50;&#x16F0E;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F08;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F3D;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F42;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F04;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F10;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F14;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F12;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F3B;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F3A;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F33;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F26;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F26;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ygp'>&#x16F28;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F23;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F35;</span>
 
-1&#x26;<span class='shim-R normal' lang='ygp'>&#x16F54;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F7A;</span></br>
-2&#x26;<span class='shim-R normal' lang='ygp'>&#x16F61;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F54;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F79;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F7B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F66;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F57;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F58;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F61;&#x16F7E; </span></br>
-3&#x26;<span class='shim-R normal' lang='ygp'>&#x16F79; </span></br>
-3b&#x26;<span class='shim-R normal' lang='ygp'>&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F59;&#x16F7E;</span></br>
-4&#x26;<span class='shim-R normal' lang='ygp'>&#x16F6A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F54;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F79;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F7B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F66;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F57;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F58;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F6A;&#x16F7E; </span></br>
-5&#x26;<span class='shim-R normal' lang='ygp'>&#x16F71;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F5D;</span></br>
-5&#x26;<span class='shim-R normal' lang='ygp'>&#x16F5C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ygp'>&#x16F5C;&#x16F5D;</span></br>
-5&#x26;<span class='shim-R normal' lang='ygp'>&#x16F73;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F60;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F86;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F85;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F76;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F7B;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F66;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F84;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F83;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F77;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F75;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F81;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F57;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F58;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F68;</span> &lt; <span class='shim-R normal' lang='ygp'>&#x16F87;</span>
+**_Sorting ([Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 2)_**
+
+&#x26;<span class='ygp normal'>&#x16F43;</span> &lt; <span class='ygp normal'>&#x16F16;</span></br>
+&#x26;<span class='ygp normal'>&#x16F00;</span> &lt;&lt; <span class='ygp normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F00;</span></br>
+&#x26;<span class='ygp normal'>&#x16F02;</span> &lt; <span class='ygp normal'>&#x16F48;</span></br>
+&#x26;<span class='ygp normal'>&#x16F0A;</span> &lt;&lt; <span class='ygp normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F49;</span></br>
+&#x26;<span class='ygp normal'>&#x16F37;</span> &lt;&lt; <span class='ygp normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F37;</span></br>
+&#x26;<span class='ygp normal'>&#x16F07;</span> &lt; <span class='ygp normal'>&#x16F18;</span> &lt; <span class='ygp normal'>&#x16F32;</span></br>
+&#x26;<span class='ygp normal'>&#x16F2E;</span> &lt;&lt; <span class='ygp normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F2E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F2A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F1E;</span> &lt;&lt; <span class='ygp normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F1E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F4A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F0E;</span> &lt;&lt; <span class='ygp normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F08;</span> &lt; <span class='ygp normal'>&#x16F3D;</span> &lt; <span class='ygp normal'>&#x16F42;</span> &lt; <span class='ygp normal'>&#x16F04;</span> &lt; <span class='ygp normal'>&#x16F10;</span> &lt; <span class='ygp normal'>&#x16F14;</span> &lt; <span class='ygp normal'>&#x16F12;</span> &lt; <span class='ygp normal'>&#x16F3B;</span> &lt; <span class='ygp normal'>&#x16F3A;</span> &lt; <span class='ygp normal'>&#x16F33;</span></br>
+&#x26;<span class='ygp normal'>&#x16F26;</span> &lt;&lt; <span class='ygp normal'>&#x16F26;&#x16F51;</span></br>
+&#x26;<span class='ygp normal'>&#x16F28;</span> &lt; <span class='ygp normal'>&#x16F23;</span> &lt; <span class='ygp normal'>&#x16F35;</span>
+&#x26;<span class='ygp normal'>&#x16F54;</span> &lt; <span class='ygp normal'>&#x16F7A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F61;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7E; </span></br>
+&#x26;<span class='ygp normal'>&#x16F79; </span></br>
+&#x26;<span class='ygp normal'>&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F59;&#x16F7E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F6A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7E; </span></br>
+&#x26;<span class='ygp normal'>&#x16F71;</span> &lt; <span class='ygp normal'>&#x16F5D;</span></br>
+&#x26;<span class='ygp normal'>&#x16F5C;</span> &lt;&lt; <span class='ygp normal'>&#x16F5C;&#x16F5D;</span></br>
+&#x26;<span class='ygp normal'>&#x16F73;</span> &lt; <span class='ygp normal'>&#x16F60;</span> &lt; <span class='ygp normal'>&#x16F86;</span> &lt; <span class='ygp normal'>&#x16F85;</span> &lt; <span class='ygp normal'>&#x16F76;</span> &lt; <span class='ygp normal'>&#x16F7B;</span> &lt; <span class='ygp normal'>&#x16F66;</span> &lt; <span class='ygp normal'>&#x16F84;</span> &lt; <span class='ygp normal'>&#x16F83;</span> &lt; <span class='ygp normal'>&#x16F77;</span> &lt; <span class='ygp normal'>&#x16F75;</span> &lt; <span class='ygp normal'>&#x16F81;</span> &lt; <span class='ygp normal'>&#x16F57;</span> &lt; <span class='ygp normal'>&#x16F58;</span> &lt; <span class='ygp normal'>&#x16F68;</span> &lt; <span class='ygp normal'>&#x16F87;</span>
 
 **Rendering**
 
@@ -434,14 +450,14 @@ _Glyph variants_
 
 Setting        | Sample
 :------ | :---------------
-default        | <span class='shim-R normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
-alternate      | <span class='shim-R normal' lang='ygp'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
+default        | <span class='shim normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
+alternate      | <span class='ygp normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
 
-_Sample text taken from Figure 1 of Cheuk._
+_Sample text taken from Figure 1 of [Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Setting        | Sample           | USV
 :-- | :-- | :---------
-ygp | <span class='shim-R normal' lang='ygp'>&#x16F48;&#x16F66;&#x16F90; &#x16F2A;&#x16F5C;&#x16F91; &#x16F48;&#x16F85; &#x16F2E;&#x16F51;&#x16F5C;&#x16F91; &#x16F32;&#x16F61;&#x16F7B;&#x16F90;</span> | U+16F48 U+16F66 U+16F90 U+0020 U+16F2A U+16F5C U+16F91 U+0020 U+16F48 U+16F85 U+0020 U+16F2E U+16F51 U+16F5C U+16F91 U+0020 U+16F32 U+16F61 U+16F7B U+16F90
+ygp | <span class='ygp normal'>&#x16F48;&#x16F66;&#x16F90; &#x16F2A;&#x16F5C;&#x16F91; &#x16F48;&#x16F85; &#x16F2E;&#x16F51;&#x16F5C;&#x16F91; &#x16F32;&#x16F61;&#x16F7B;&#x16F90;</span> | U+16F48 U+16F66 U+16F90 U+0020 U+16F2A U+16F5C U+16F91 U+0020 U+16F48 U+16F85 U+0020 U+16F2E U+16F51 U+16F5C U+16F91 U+0020 U+16F32 U+16F61 U+16F7B U+16F90
 
 _Sample graphic_
 
@@ -464,33 +480,33 @@ _Font:_ [Salaowu](https://software.sil.org/shimenkan/) - normalised orthography
 
 **Character set**
 
-_The keyboard includes U+16F05_ <span class='shim-R normal' lang='ywq'>&#x16F05;</span>_, U+16F13_ <span class='shim-R normal' lang='ywq'>&#x16F13;</span>_, U+16F1A_ <span class='shim-R normal' lang='ywq'>&#x16F1A;</span>_,U+16F1C_ <span class='shim-R normal' lang='ywq'>&#x16F1C;</span>_, U+16F2A_ <span class='shim-R normal' lang='ywq'>&#x16F2A;</span>_, and U+16F2D_ <span class='shim-R normal' lang='ywq'>&#x16F2D;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+_The keyboard includes U+16F05_ <span class='shim normal'>&#x16F05;</span>_, U+16F13_ <span class='shim normal'>&#x16F13;</span>_, U+16F1A_ <span class='shim normal'>&#x16F1A;</span>_,U+16F1C_ <span class='shim normal'>&#x16F1C;</span>_, U+16F2A_ <span class='shim normal'>&#x16F2A;</span>_, and U+16F2D_ <span class='shim normal'>&#x16F2D;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='ywq'>&#x16F00;</span> | <span class='shim-R normal' lang='ywq'>&#x16F02;</span> | <span class='shim-R normal' lang='ywq'>&#x16F04;</span> | <span class='shim-R normal' lang='ywq'>&#x16F07;</span> | <span class='shim-R normal' lang='ywq'>&#x16F08;</span> | <span class='shim-R normal' lang='ywq'>&#x16F0A;</span> | <span class='shim-R normal' lang='ywq'>&#x16F0C;</span> | <span class='shim-R normal' lang='ywq'>&#x16F0D;</span> | <span class='shim-R normal' lang='ywq'>&#x16F0E;</span> | <span class='shim-R normal' lang='ywq'>&#x16F10;</span>
+<span class='shim normal'>&#x16F00;</span> | <span class='shim normal'>&#x16F02;</span> | <span class='shim normal'>&#x16F04;</span> | <span class='shim normal'>&#x16F07;</span> | <span class='shim normal'>&#x16F08;</span> | <span class='shim normal'>&#x16F0A;</span> | <span class='shim normal'>&#x16F0C;</span> | <span class='shim normal'>&#x16F0D;</span> | <span class='shim normal'>&#x16F0E;</span> | <span class='shim normal'>&#x16F10;</span>
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0C | 16F0D | 16F0E | 16F10
-<span class='shim-R normal' lang='ywq'>&#x16F12;</span> | <span class='shim-R normal' lang='ywq'>&#x16F14;</span> | <span class='shim-R normal' lang='ywq'>&#x16F16;</span> | <span class='shim-R normal' lang='ywq'>&#x16F18;</span> | <span class='shim-R normal' lang='ywq'>&#x16F1E;</span> | <span class='shim-R normal' lang='ywq'>&#x16F21;</span> | <span class='shim-R normal' lang='ywq'>&#x16F23;</span> | <span class='shim-R normal' lang='ywq'>&#x16F26;</span> | <span class='shim-R normal' lang='ywq'>&#x16F28;</span> | <span class='shim-R normal' lang='ywq'>&#x16F2E;</span>
+<span class='shim normal'>&#x16F12;</span> | <span class='shim normal'>&#x16F14;</span> | <span class='shim normal'>&#x16F16;</span> | <span class='shim normal'>&#x16F18;</span> | <span class='shim normal'>&#x16F1E;</span> | <span class='shim normal'>&#x16F21;</span> | <span class='shim normal'>&#x16F23;</span> | <span class='shim normal'>&#x16F26;</span> | <span class='shim normal'>&#x16F28;</span> | <span class='shim normal'>&#x16F2E;</span>
 16F12 | 16F14 | 16F16 | 16F18 | 16F1E | 16F21 | 16F23 | 16F26 | 16F28 | 16F2E
-<span class='shim-R normal' lang='ywq'>&#x16F2F;</span> | <span class='shim-R normal' lang='ywq'>&#x16F30;</span> | <span class='shim-R normal' lang='ywq'>&#x16F31;</span> | <span class='shim-R normal' lang='ywq'>&#x16F33;</span> | <span class='shim-R normal' lang='ywq'>&#x16F34;</span> | <span class='shim-R normal' lang='ywq'>&#x16F35;</span> | <span class='shim-R normal' lang='ywq'>&#x16F37;</span> | <span class='shim-R normal' lang='ywq'>&#x16F39;</span> | <span class='shim-R normal' lang='ywq'>&#x16F3A;</span> | <span class='shim-R normal' lang='ywq'>&#x16F3B;</span>
+<span class='shim normal'>&#x16F2F;</span> | <span class='shim normal'>&#x16F30;</span> | <span class='shim normal'>&#x16F31;</span> | <span class='shim normal'>&#x16F33;</span> | <span class='shim normal'>&#x16F34;</span> | <span class='shim normal'>&#x16F35;</span> | <span class='shim normal'>&#x16F37;</span> | <span class='shim normal'>&#x16F39;</span> | <span class='shim normal'>&#x16F3A;</span> | <span class='shim normal'>&#x16F3B;</span>
 16F2F | 16F30 | 16F31 | 16F33 | 16F34 | 16F35 | 16F37 | 16F39 | 16F3A | 16F3B
-<span class='shim-R normal' lang='ywq'>&#x16F3D;</span> | <span class='shim-R normal' lang='ywq'>&#x16F42;</span> | <span class='shim-R normal' lang='ywq'>&#x16F43;</span>
+<span class='shim normal'>&#x16F3D;</span> | <span class='shim normal'>&#x16F42;</span> | <span class='shim normal'>&#x16F43;</span>
 16F3D | 16F42 | 16F43
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-_The keyboard includes U+16F57_ <span class='shim-R normal' lang='ywq'>&#x16F57;</span>_, U+16F5F_ <span class='shim-R normal' lang='ywq'>&#x16F5F;</span>_, and U+16F7E_ <span class='shim-R normal' lang='ywq'>&#x16F7E;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+_The keyboard includes U+16F57_ <span class='shim normal'>&#x16F57;</span>_, U+16F5F_ <span class='shim normal'>&#x16F5F;</span>_, and U+16F7E_ <span class='shim normal'>&#x16F7E;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='ywq'>&#x16F54;</span> | <span class='shim-R normal' lang='ywq'>&#x16F58;</span> | <span class='shim-R normal' lang='ywq'>&#x16F59;</span> | <span class='shim-R normal' lang='ywq'>&#x16F5B;</span> | <span class='shim-R normal' lang='ywq'>&#x16F5C;</span> | <span class='shim-R normal' lang='ywq'>&#x16F5D;</span> | <span class='shim-R normal' lang='ywq'>&#x16F61;</span> | <span class='shim-R normal' lang='ywq'>&#x16F62;</span> | <span class='shim-R normal' lang='ywq'>&#x16F66;</span> | <span class='shim-R normal' lang='ywq'>&#x16F68;</span>  
+<span class='shim normal'>&#x16F54;</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'>&#x16F59;</span> | <span class='shim normal'>&#x16F5B;</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='shim normal'>&#x16F5D;</span> | <span class='shim normal'>&#x16F61;</span> | <span class='shim normal'>&#x16F62;</span> | <span class='shim normal'>&#x16F66;</span> | <span class='shim normal'>&#x16F68;</span>  
 16F54 | 16F58 | 16F59 | 16F5B | 16F5C | 16F5D | 16F61 | 16F62 | 16F66 | 16F68
-<span class='shim-R normal' lang='ywq'>&#x16F6A;</span> | <span class='shim-R normal' lang='ywq'>&#x16F6B;</span> | <span class='shim-R normal' lang='ywq'>&#x16F6E;</span> | <span class='shim-R normal' lang='ywq'>&#x16F71;</span> | <span class='shim-R normal' lang='ywq'>&#x16F73;</span> | <span class='shim-R normal' lang='ywq'>&#x16F76;</span> | <span class='shim-R normal' lang='ywq'>&#x16F78;</span> | <span class='shim-R normal' lang='ywq'>&#x16F79;</span> | <span class='shim-R normal' lang='ywq'>&#x16F7A;</span> | <span class='shim-R normal' lang='ywq'>&#x16F7B;</span>
+<span class='shim normal'>&#x16F6A;</span> | <span class='shim normal'>&#x16F6B;</span> | <span class='shim normal'>&#x16F6E;</span> | <span class='shim normal'>&#x16F71;</span> | <span class='shim normal'>&#x16F73;</span> | <span class='shim normal'>&#x16F76;</span> | <span class='shim normal'>&#x16F78;</span> | <span class='shim normal'>&#x16F79;</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='shim normal'>&#x16F7B;</span>
 16F6A | 16F6B | 16F6E| 16F71 | 16F73 | 16F76 | 16F78 | 16F79 | 16F7A | 16F7B
-<span class='shim-R normal' lang='ywq'>&#x16F7F;</span> | <span class='shim-R normal' lang='ywq'>&#x16F80;</span>
+<span class='shim normal'>&#x16F7F;</span> | <span class='shim normal'>&#x16F80;</span>
 16F7F | 16F80
 
 Positioning tone marks | |
@@ -500,34 +516,33 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal' lang='ywq'>( ) + - = </span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
+**Sorting ([Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 5)**
 
-**Sorting (Cheuk, figure 5)**
+_Red signifies unsure of sorting as it seems to be a digraph and should sort elsewhere. Some of the vowel "digraphs" are what made sense to the author, not as the chart listed them._
 
-_Red signifies unsure of sorting as it seems to be a digraph. Some of the vowel "digraphs" are what made sense to the author, not as the chart listed them._
-
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F43;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F28;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F00;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F02;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F00;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F07;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F26;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F26;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F16;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F18;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F2E;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F2E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F2E;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F1E;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F21;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F30;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F31;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F31;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F0E;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F39;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F37;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F50;&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F0A;&#x16F51;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F0D;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F0C;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F2F;</span> &lt; <span class='shim-R normal' lang='ywq'><font color="red">&#x16F12;&#x16F2E;</font></span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F04;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F10;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F12;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F14;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F33;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F34;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F23;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F3A;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F42;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F08;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F3D;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F3B;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F35;</span></br>
-14&#x26;<span class='shim-R normal' lang='ywq'>&#x16F54;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F79;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F66;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F7B;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F5C;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F59;&#x16F5C;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F5B;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F7F;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F78;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F76;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F61;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F7B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F66;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F5B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F61;&#x16F58;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F6A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F5C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F5D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F66;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F6A;&#x16F58;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F80;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F73;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F7A;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F71;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F5D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='ywq'>&#x16F5D;&#x16F5C;</span></br>
-&#x26;<span class='shim-R normal' lang='ywq'>&#x16F62;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F6B;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F68;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F6E;</span> &lt; <span class='shim-R normal' lang='ywq'>&#x16F58;</span></br>
+&#x26;<span class='shim normal'>&#x16F43;</span> &lt; <span class='shim normal'>&#x16F28;</span></br>
+&#x26;<span class='shim normal'>&#x16F00;</span> &lt; <span class='shim normal'>&#x16F02;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='shim normal'>&#x16F00;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F07;</span> &lt; <span class='shim normal'>&#x16F26;</span> &lt;&lt; <span class='shim normal'>&#x16F26;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F16;</span> &lt; <span class='shim normal'>&#x16F18;</span></br>
+&#x26;<span class='shim normal'>&#x16F2E;</span> &lt; <span class='shim normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='shim normal'>&#x16F2E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F1E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F21;</span> &lt; <span class='shim normal'>&#x16F30;</span></br>
+&#x26;<span class='shim normal'>&#x16F31;</span> &lt;&lt; <span class='shim normal'>&#x16F31;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F0E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F39;</span></br>
+&#x26;<span class='shim normal'>&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F37;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F0A;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0D;</span> &lt; <span class='shim normal'>&#x16F0C;</span> &lt; <span class='shim normal'><font color="red">&#x16F2F;</font></span> &lt; <span class='shim normal'><font color="red">&#x16F12;&#x16F2E;</font></span> &lt; <span class='shim normal'>&#x16F04;</span> &lt; <span class='shim normal'>&#x16F10;</span> &lt; <span class='shim normal'>&#x16F12;</span> &lt; <span class='shim normal'>&#x16F14;</span> &lt; <span class='shim normal'>&#x16F33;</span> &lt; <span class='shim normal'>&#x16F34;</span> &lt; <span class='shim normal'>&#x16F23;</span> &lt; <span class='shim normal'>&#x16F3A;</span> &lt; <span class='shim normal'>&#x16F42;</span> &lt; <span class='shim normal'>&#x16F08;</span> &lt; <span class='shim normal'>&#x16F3D;</span> &lt; <span class='shim normal'>&#x16F3B;</span> &lt; <span class='shim normal'>&#x16F35;</span></br>
+&#x26;<span class='shim normal'>&#x16F54;</span> &lt; <span class='shim normal'>&#x16F79;</span> &lt; <span class='shim normal'>&#x16F66;</span> &lt; <span class='shim normal'>&#x16F7B;</span> &lt; <span class='shim normal'>&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F59;&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F5B;</span> &lt; <span class='shim normal'>&#x16F7F;</span> &lt; <span class='shim normal'>&#x16F78;</span> &lt; <span class='shim normal'>&#x16F76;</span></br>
+&#x26;<span class='shim normal'>&#x16F61;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F5B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F58;</span></br>
+&#x26;<span class='shim normal'>&#x16F6A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5C;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F58;</span></br>
+&#x26;<span class='shim normal'>&#x16F80;</span> &lt; <span class='shim normal'>&#x16F73;</span> &lt; <span class='shim normal'>&#x16F7A;</span> &lt; <span class='shim normal'>&#x16F71;</span></br>
+&#x26;<span class='shim normal'>&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F5D;&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F62;</span> &lt; <span class='shim normal'>&#x16F6B;</span> &lt; <span class='shim normal'>&#x16F68;</span> &lt; <span class='shim normal'>&#x16F6E;</span> &lt; <span class='shim normal'>&#x16F58;</span></br>
 
 
 
@@ -538,15 +553,15 @@ _Glyph variants_
 
 Setting        | Sample
 :------ | :--------------- 
-default        | <span class='shim-R normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
-traditional      | <span class='shim-R normal' lang='ywq'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
-normalized      | <span class='shim-R normal' style='font-feature-settings: "ss04" 1'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+traditional      | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+normalized      | <span class='ywqa normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
 
-_Sample text taken from Figure 7 of Cheuk._
+_Sample text taken from Figure 7 of [Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Setting        | Sample           | USV
 :-- | :-- | :---------
-ywq | <span class='shim-R normal' lang='ywq'>&#x16F0D;&#x16F73;&#x16F90; &#x16F21;&#x16F58; &#x16F12;&#x16F7B;&#x16F91; &#x16F30;&#x16F59;&#x16F5C;&#x16F91;</span> | U+16F0D U+16F73 U+16F90 U+0020 U+16F21 U+16F58 U+0020 U+16F12 U+16F7B U+16F91 U+0020 U+16F30 U+16F59 U+16F5C U+16F91
+ywq | <span class='shim normal'>&#x16F0D;&#x16F73;&#x16F90; &#x16F21;&#x16F58; &#x16F12;&#x16F7B;&#x16F91; &#x16F30;&#x16F59;&#x16F5C;&#x16F91;</span> | U+16F0D U+16F73 U+16F90 U+0020 U+16F21 U+16F58 U+0020 U+16F12 U+16F7B U+16F91 U+0020 U+16F30 U+16F59 U+16F5C U+16F91
 
 _Sample graphic_
 
@@ -569,7 +584,7 @@ Not listed
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
 Vowels and finals | | | | | | | | |
@@ -583,7 +598,9 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal'>. , [ ]</span>
+See also <a href="#punct">Punctuation and Digits</a>.
+
+Additional punctuation: <span class='shim normal'>[ ]</span>
 
 **Rendering**
 
@@ -606,7 +623,7 @@ Not listed
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
 Vowels and finals | | | | | | | | |
@@ -620,7 +637,9 @@ MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal'>. , : ;</span>
+See also <a href="#punct">Punctuation and Digits</a>.
+
+Additional punctuation: <span class='shim normal'>: ;</span>
 
 
 **Rendering**
@@ -646,14 +665,14 @@ Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 Not listed
 
-Positioning tone marks | |
-:-- | :-- | :-- 
+Positioning tone marks | | |
+:-- | :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE | MIAO TONE BELOW
 16F8F | 16F90 | 16F91 | 16F92
 
 _Punctuation_
 
-<span class='shim-R normal'>.</span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
 **Rendering**
 
@@ -691,27 +710,27 @@ _Font:_ [Shimenkan MAS](https://software.sil.org/shimenkan/)
 
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='sfm'>&#x16F00;</span> | <span class='shim-R normal' lang='sfm'>&#x16F01;</span> | <span class='shim-R normal' lang='sfm'>&#x16F03;</span> | <span class='shim-R normal' lang='sfm'>&#x16F04;</span> | <span class='shim-R normal' lang='sfm'>&#x16F07;</span> | <span class='shim-R normal' lang='sfm'>&#x16F08;</span> | <span class='shim-R normal' lang='sfm'>&#x16F0A;</span> | <span class='shim-R normal' lang='sfm'>&#x16F0B;</span> | <span class='shim-R normal' lang='sfm'>&#x16F0E;</span> | <span class='shim-R normal' lang='sfm'>&#x16F0F;</span>
+<span class='sfm normal'>&#x16F00;</span> | <span class='sfm normal'>&#x16F01;</span> | <span class='sfm normal'>&#x16F03;</span> | <span class='sfm normal'>&#x16F04;</span> | <span class='sfm normal'>&#x16F07;</span> | <span class='sfm normal'>&#x16F08;</span> | <span class='sfm normal'>&#x16F0A;</span> | <span class='sfm normal'>&#x16F0B;</span> | <span class='sfm normal'>&#x16F0E;</span> | <span class='sfm normal'>&#x16F0F;</span>
  16F00 | 16F01 | 16F03 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0B | 16F0E |  16F0F
- <span class='shim-R normal' lang='sfm'>&#x16F10;</span> | <span class='shim-R normal' lang='sfm'>&#x16F11;</span> | <span class='shim-R normal' lang='sfm'>&#x16F16;</span> | <span class='shim-R normal' lang='sfm'>&#x16F17;</span> | <span class='shim-R normal' lang='sfm'>&#x16F18;</span> | <span class='shim-R normal' lang='sfm'>&#x16F19;</span> | <span class='shim-R normal' lang='sfm'>&#x16F1E;</span> | <span class='shim-R normal' lang='sfm'>&#x16F1F;</span> | <span class='shim-R normal' lang='sfm'>&#x16F21;</span> | <span class='shim-R normal' lang='sfm'>&#x16F22;</span>
+ <span class='sfm normal'>&#x16F10;</span> | <span class='sfm normal'>&#x16F11;</span> | <span class='sfm normal'>&#x16F16;</span> | <span class='sfm normal'>&#x16F17;</span> | <span class='sfm normal'>&#x16F18;</span> | <span class='sfm normal'>&#x16F19;</span> | <span class='sfm normal'>&#x16F1E;</span> | <span class='sfm normal'>&#x16F1F;</span> | <span class='sfm normal'>&#x16F21;</span> | <span class='sfm normal'>&#x16F22;</span>
  16F10 | 16F11 | 16F16 | 16F17 | 16F18 | 16F19 | 16F1E | 16F1F | 16F21 | 16F22
- <span class='shim-R normal' lang='sfm'>&#x16F23;</span> | <span class='shim-R normal' lang='sfm'>&#x16F26;</span> | <span class='shim-R normal' lang='sfm'>&#x16F28;</span> | <span class='shim-R normal' lang='sfm'>&#x16F29;</span> | <span class='shim-R normal' lang='sfm'>&#x16F2E;</span> | <span class='shim-R normal' lang='sfm'>&#x16F2F;</span> | <span class='shim-R normal' lang='sfm'>&#x16F32;</span> | <span class='shim-R normal' lang='sfm'>&#x16F33;</span> | <span class='shim-R normal' lang='sfm'>&#x16F35;</span> | <span class='shim-R normal' lang='sfm'>&#x16F37;</span>
+ <span class='sfm normal'>&#x16F23;</span> | <span class='sfm normal'>&#x16F26;</span> | <span class='sfm normal'>&#x16F28;</span> | <span class='sfm normal'>&#x16F29;</span> | <span class='sfm normal'>&#x16F2E;</span> | <span class='sfm normal'>&#x16F2F;</span> | <span class='sfm normal'>&#x16F32;</span> | <span class='sfm normal'>&#x16F33;</span> | <span class='sfm normal'>&#x16F35;</span> | <span class='sfm normal'>&#x16F37;</span>
  16F23 | 16F26 | 16F28 | 16F29 | 16F2E | 16F2F | 16F32 | 16F33 | 16F35 | 16F37
- <span class='shim-R normal' lang='sfm'>&#x16F38;</span> | <span class='shim-R normal' lang='sfm'>&#x16F3A;</span> | <span class='shim-R normal' lang='sfm'>&#x16F3D;</span> | <span class='shim-R normal' lang='sfm'>&#x16F42;</span> | <span class='shim-R normal' lang='sfm'>&#x16F43;</span> | <span class='shim-R normal' lang='sfm'>&#x16F45;</span> | <span class='shim-R normal' lang='sfm'>&#x16F46;</span> | <span class='shim-R normal' lang='sfm'>&#x16F47;</span>
+ <span class='sfm normal'>&#x16F38;</span> | <span class='sfm normal'>&#x16F3A;</span> | <span class='sfm normal'>&#x16F3D;</span> | <span class='sfm normal'>&#x16F42;</span> | <span class='sfm normal'>&#x16F43;</span> | <span class='sfm normal'>&#x16F45;</span> | <span class='sfm normal'>&#x16F46;</span> | <span class='sfm normal'>&#x16F47;</span>
  16F38 | 16F3A | 16F3D | 16F42 | 16F43 | 16F45 | 16F46 | 16F47 
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='sfm'>&#x16F54;</span> | <span class='shim-R normal' lang='sfm'>&#x16F57;</span> | <span class='shim-R normal' lang='sfm'>&#x16F58;</span> | <span class='shim-R normal' lang='sfm'>&#x16F59;</span> | <span class='shim-R normal' lang='sfm'>&#x16F5C;</span> | <span class='shim-R normal' lang='sfm'>&#x16F5D;</span> | <span class='shim-R normal' lang='sfm'>&#x16F5E;</span> | <span class='shim-R normal' lang='sfm'>&#x16F5F;</span> | <span class='shim-R normal' lang='sfm'>&#x16F61;</span> | <span class='shim-R normal' lang='sfm'>&#x16F62;</span>
+<span class='sfm normal'>&#x16F54;</span> | <span class='sfm normal'>&#x16F57;</span> | <span class='sfm normal'>&#x16F58;</span> | <span class='sfm normal'>&#x16F59;</span> | <span class='sfm normal'>&#x16F5C;</span> | <span class='sfm normal'>&#x16F5D;</span> | <span class='sfm normal'>&#x16F5E;</span> | <span class='sfm normal'>&#x16F5F;</span> | <span class='sfm normal'>&#x16F61;</span> | <span class='sfm normal'>&#x16F62;</span>
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F5E | 16F5F | 16F61 | 16F62
-<span class='shim-R normal' lang='sfm'>&#x16F63;</span> | <span class='shim-R normal' lang='sfm'>&#x16F64;</span> | <span class='shim-R normal' lang='sfm'>&#x16F66;</span> | <span class='shim-R normal' lang='sfm'>&#x16F68;</span> | <span class='shim-R normal' lang='sfm'>&#x16F69;</span> | <span class='shim-R normal' lang='sfm'>&#x16F6A;</span> | <span class='shim-R normal' lang='sfm'>&#x16F6B;</span> | <span class='shim-R normal' lang='sfm'>&#x16F6C;</span> | <span class='shim-R normal' lang='sfm'>&#x16F6D;</span> | <span class='shim-R normal' lang='sfm'>&#x16F70;</span>
+<span class='sfm normal'>&#x16F63;</span> | <span class='sfm normal'>&#x16F64;</span> | <span class='sfm normal'>&#x16F66;</span> | <span class='sfm normal'>&#x16F68;</span> | <span class='sfm normal'>&#x16F69;</span> | <span class='sfm normal'>&#x16F6A;</span> | <span class='sfm normal'>&#x16F6B;</span> | <span class='sfm normal'>&#x16F6C;</span> | <span class='sfm normal'>&#x16F6D;</span> | <span class='sfm normal'>&#x16F70;</span>
 16F63 | 16F64 | 16F66 | 16F68 | 16F69 | 16F6A | 16F6B | 16F6C | 16F6D | 16F70
-<span class='shim-R normal' lang='sfm'>&#x16F71;</span> | <span class='shim-R normal' lang='sfm'>&#x16F75;</span> | <span class='shim-R normal' lang='sfm'>&#x16F77;</span> | <span class='shim-R normal' lang='sfm'>&#x16F78;</span> | <span class='shim-R normal' lang='sfm'>&#x16F79;</span> | <span class='shim-R normal' lang='sfm'>&#x16F7A;</span> | <span class='shim-R normal' lang='sfm'>&#x16F7B;</span> | <span class='shim-R normal' lang='sfm'>&#x16F7E;</span> | <span class='shim-R normal' lang='sfm'>&#x16F82;</span> | <span class='shim-R normal' lang='sfm'>&#x16F83;</span>
+<span class='sfm normal'>&#x16F71;</span> | <span class='sfm normal'>&#x16F75;</span> | <span class='sfm normal'>&#x16F77;</span> | <span class='sfm normal'>&#x16F78;</span> | <span class='sfm normal'>&#x16F79;</span> | <span class='sfm normal'>&#x16F7A;</span> | <span class='sfm normal'>&#x16F7B;</span> | <span class='sfm normal'>&#x16F7E;</span> | <span class='sfm normal'>&#x16F82;</span> | <span class='sfm normal'>&#x16F83;</span>
 16F71 | 16F75 | 16F77 | 16F78 | 16F79 | 16F7A | 16F7B | 16F7E | 16F82 | 16F83
 
 Positioning tone marks | |
@@ -721,46 +740,46 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal'>. , </span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
-**_Sorting (Cheuk, figure 11)_**
+**_Sorting ([Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 11)_**
 
 _Ordering of vowel digraphs is not the same as the chart, but it seemed to make the most sense to the author._
 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F2E;</span> &lt;&lt;&lt;<span class='shim-R normal' lang='sfm'>&#x16F2E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F2F;</span> &lt;&lt;&lt;<span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F2E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F2E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F2F;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F07;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F26;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F26;&#x16F51;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F28;</span> &lt;&lt;&lt;<span class='shim-R normal' lang='sfm'>&#x16F28;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F29;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F28;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F43;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F35;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F1E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F1F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F1E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F1F;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F21;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F21;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F21;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F21;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F22;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F03;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F03;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F45;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F03;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F03;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F45;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F16;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F18;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F17;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F19;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F04;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F04;&#x16F51;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F10;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F10;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F11;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F23;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F23;&#x16F51;
+&#x26;<span class='sfm normal'>&#x16F2E;</span> &lt;&lt;<span class='sfm normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F2F;</span> &lt;&lt;<span class='sfm normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F2F;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F07;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F26;</span> &lt;&lt; <span class='sfm normal'>&#x16F26;&#x16F51;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F28;</span> &lt;&lt;<span class='sfm normal'>&#x16F28;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F29;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F28;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F43;</span> &lt; <span class='sfm normal'>&#x16F35;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F1E;</span> &lt;&lt; <span class='sfm normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F1F;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1F;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F21;</span> &lt;&lt; <span class='sfm normal'>&#x16F21;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F21;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F21;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F22;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F03;</span> &lt;&lt; <span class='sfm normal'>&#x16F03;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F45;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F03;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F03;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F45;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F16;</span> &lt;&lt; <span class='sfm normal'>&#x16F18;</span> &lt;&lt; <span class='sfm normal'>&#x16F17;</span> &lt;&lt; <span class='sfm normal'>&#x16F19;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F04;</span> &lt;&lt; <span class='sfm normal'>&#x16F04;&#x16F51;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F10;</span> &lt;&lt; <span class='sfm normal'>&#x16F10;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F11;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F23;</span> &lt;&lt; <span class='sfm normal'>&#x16F23;&#x16F51;
 </span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F00;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F01;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F00;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F01;
+&#x26;<span class='sfm normal'>&#x16F00;</span> &lt;&lt; <span class='sfm normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F01;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F00;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F01;
 </span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F33;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F46;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F3A;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F0A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F0B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0A;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0B;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F0E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F0F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0E;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F0F;
+&#x26;<span class='sfm normal'>&#x16F33;</span> &lt;&lt; <span class='sfm normal'>&#x16F46;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F3A;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0B;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0B;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0F;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0F;
 </span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F37;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F38;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F37;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F38;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F42;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F08;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F3D;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F32;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F32;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F47;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F32;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F32;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F50;&#x16F47;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F54;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F79;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F7B;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F5D;&#x16F66;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F7A;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F5C;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F61;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F64;</span> (<span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F58;</span>) &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F63;</span> (<span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F57;</span>) &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F79;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F7B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F5D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F5C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F69;</span>(<span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F59;</span>) &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F83;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F7E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F5E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F61;&#x16F5F;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F78;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F77;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F75;</span></br>
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F59;&#x16F6A;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F6A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F6A;&#x16F5E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F6A;&#x16F5F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F6A;&#x16F7E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F70;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F83;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F83;&#x16F7E;</span></br>
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F71;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F71;&#x16F5D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F71;&#x16F7A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F71;&#x16F7E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F71;&#x16F5E;</span></br>
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F82;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F62;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F68;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F57;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F58;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F5E;</span> &lt; <span class='shim-R normal' lang='sfm'>&#x16F5F;</span></br> 
-&#x26;<span class='shim-R normal' lang='sfm'>&#x16F6B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F6C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='sfm'>&#x16F6D;</span>
+&#x26;<span class='sfm normal'>&#x16F37;</span> &lt;&lt; <span class='sfm normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F38;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F37;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F38;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F42;</span> &lt; <span class='sfm normal'>&#x16F08;</span> &lt; <span class='sfm normal'>&#x16F3D;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F32;</span> &lt;&lt; <span class='sfm normal'>&#x16F32;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F47;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F32;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F32;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F47;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F54;</span> &lt; <span class='sfm normal'>&#x16F79;</span> &lt; <span class='sfm normal'>&#x16F7B;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F5D;&#x16F66;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F7A;</span> &lt; <span class='sfm normal'>&#x16F5C;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F61;</span> &lt;&lt; <span class='sfm normal'>&#x16F64;</span> (<span class='sfm normal'>&#x16F61;&#x16F58;</span>) &lt;&lt; <span class='sfm normal'>&#x16F63;</span> (<span class='sfm normal'>&#x16F61;&#x16F57;</span>) &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5D;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5C;</span> &lt;&lt; <span class='sfm normal'>&#x16F69;</span>(<span class='sfm normal'>&#x16F61;&#x16F59;</span>) &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F83;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7E;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5E;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5F;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F78;</span> &lt; <span class='sfm normal'>&#x16F77;</span> &lt; <span class='sfm normal'>&#x16F75;</span></br>
+&#x26;<span class='sfm normal'>&#x16F59;</span> &lt;&lt; <span class='sfm normal'>&#x16F59;&#x16F6A;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F6A;</span> &lt;&lt; <span class='sfm normal'>&#x16F6A;&#x16F5E;</span> &lt;&lt; <span class='sfm normal'>&#x16F6A;&#x16F5F;</span> &lt;&lt; <span class='sfm normal'>&#x16F6A;&#x16F7E;</span> &lt;&lt; <span class='sfm normal'>&#x16F70;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F83;</span> &lt;&lt; <span class='sfm normal'>&#x16F83;&#x16F7E;</span></br>
+&#x26;<span class='sfm normal'>&#x16F71;</span> &lt;&lt; <span class='sfm normal'>&#x16F71;&#x16F5D;</span> &lt;&lt; <span class='sfm normal'>&#x16F71;&#x16F7A;</span> &lt;&lt; <span class='sfm normal'>&#x16F71;&#x16F7E;</span> &lt;&lt; <span class='sfm normal'>&#x16F71;&#x16F5E;</span></br>
+&#x26;<span class='sfm normal'>&#x16F82;</span> &lt; <span class='sfm normal'>&#x16F62;</span> &lt; <span class='sfm normal'>&#x16F68;</span> &lt; <span class='sfm normal'>&#x16F57;</span> &lt; <span class='sfm normal'>&#x16F58;</span> &lt; <span class='sfm normal'>&#x16F5E;</span> &lt; <span class='sfm normal'>&#x16F5F;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F6B;</span> &lt;&lt; <span class='sfm normal'>&#x16F6C;</span> &lt;&lt; <span class='sfm normal'>&#x16F6D;</span>
 
 
 **Rendering**
@@ -774,7 +793,7 @@ See also <a href="#lig">Ligatures</a> for special behavior.
 _Sample graphic_
 
 <img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
-<figcaption>John (Figure 14, Cheuk 2017).</figcaption>
+<figcaption>John (Figure 14, [Cheuk](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)).</figcaption>
 
 ### <a id="yna"></a>Gan Yi / Aluo &#x005B;yna&#x005D;
 
@@ -792,31 +811,31 @@ _Font:_ [Shimenkan Zonghe](https://software.sil.org/shimenkan/)
 
 **Character set**
 
-_The keyboard includes U+16F13_ <span class='shim-R normal' lang='yna'>&#x16F13;</span> _(instead of U+16F42_ <span class='shim-R normal' lang='yna'>&#x16F42;</span>)_, and U+16F2F_ <span class='shim-R normal' lang='yna'>&#x16F2F;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+_The keyboard includes U+16F13_ <span class='yna normal'>&#x16F13;</span> _(instead of U+16F42_ <span class='yna normal'>&#x16F42;</span>)_, and U+16F2F_ <span class='yna normal'>&#x16F2F;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Consonant onsets | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim-R normal' lang='yna'>&#x16F00;</span> | <span class='shim-R normal' lang='yna'>&#x16F02;</span> | <span class='shim-R normal' lang='yna'>&#x16F04;</span> | <span class='shim-R normal' lang='yna'>&#x16F07;</span> | <span class='shim-R normal' lang='yna'>&#x16F08;</span> | <span class='shim-R normal' lang='yna'>&#x16F0A;</span> | <span class='shim-R normal' lang='yna'>&#x16F0D;</span> | <span class='shim-R normal' lang='yna'>&#x16F0E;</span> | <span class='shim-R normal' lang='yna'>&#x16F10;</span> | <span class='shim-R normal' lang='yna'>&#x16F16;</span>
+<span class='yna normal'>&#x16F00;</span> | <span class='yna normal'>&#x16F02;</span> | <span class='yna normal'>&#x16F04;</span> | <span class='yna normal'>&#x16F07;</span> | <span class='yna normal'>&#x16F08;</span> | <span class='yna normal'>&#x16F0A;</span> | <span class='yna normal'>&#x16F0D;</span> | <span class='yna normal'>&#x16F0E;</span> | <span class='yna normal'>&#x16F10;</span> | <span class='yna normal'>&#x16F16;</span>
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0D | 16F0E | 16F10 | 16F16
-<span class='shim-R normal' lang='yna'>&#x16F18;</span> | <span class='shim-R normal' lang='yna'>&#x16F1E;</span> | <span class='shim-R normal' lang='yna'>&#x16F20;</span> | <span class='shim-R normal' lang='yna'>&#x16F23;</span> | <span class='shim-R normal' lang='yna'>&#x16F26;</span> | <span class='shim-R normal' lang='yna'>&#x16F28;</span> | <span class='shim-R normal' lang='yna'>&#x16F2E;</span> | <span class='shim-R normal' lang='yna'>&#x16F33;</span> | <span class='shim-R normal' lang='yna'>&#x16F35;</span> | <span class='shim-R normal' lang='yna'>&#x16F37;</span>
+<span class='yna normal'>&#x16F18;</span> | <span class='yna normal'>&#x16F1E;</span> | <span class='yna normal'>&#x16F20;</span> | <span class='yna normal'>&#x16F23;</span> | <span class='yna normal'>&#x16F26;</span> | <span class='yna normal'>&#x16F28;</span> | <span class='yna normal'>&#x16F2E;</span> | <span class='yna normal'>&#x16F33;</span> | <span class='yna normal'>&#x16F35;</span> | <span class='yna normal'>&#x16F37;</span>
 16F18 | 16F1E | 16F20 | 16F23 | 16F26 | 16F28 | 16F2E | 16F33 | 16F35 | 16F37
-<span class='shim-R normal' lang='yna'>&#x16F39;</span> | <span class='shim-R normal' lang='yna'>&#x16F3A;</span> | <span class='shim-R normal' lang='yna'>&#x16F3B;</span> | <span class='shim-R normal' lang='yna'>&#x16F3D;</span> | <span class='shim-R normal' lang='yna'>&#x16F42;</span> | <span class='shim-R normal' lang='yna'>&#x16F43;</span> | 
+<span class='yna normal'>&#x16F39;</span> | <span class='yna normal'>&#x16F3A;</span> | <span class='yna normal'>&#x16F3B;</span> | <span class='yna normal'>&#x16F3D;</span> | <span class='yna normal'>&#x16F42;</span> | <span class='yna normal'>&#x16F43;</span> | 
 16F39 | 16F3A | 16F3B | 16F3D | 16F42 | 16F43 | 
 
 Modifiers | Consonant modifier bar | Nasalization | Aspiration
 :-- | :-- | :-- | :-- 
-&#x0020; | <span class='shim-R normal' lang='yna'>&#x16F4F;</span> | <span class='shim-R normal'>&#x16F50;</span> | <span class='shim-R normal'>&#x16F51;</span>
+&#x0020; | <span class='yna normal'>&#x16F4F;</span> | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F4F | 16F50 | 16F51
 
-_The keyboard includes U+16F56_ <span class='shim-R normal' lang='yna'>&#x16F56;</span>_, U+16F59_ <span class='shim-R normal' lang='yna'>&#x16F59;</span>_, U+16F5B_ <span class='shim-R normal' lang='yna'>&#x16F5B;</span>_, U+16F5F_ <span class='shim-R normal' lang='yna'>&#x16F5F;</span>_, U+16F69_ <span class='shim-R normal' lang='yna'>&#x16F69;</span>_, U+16F78_ <span class='shim-R normal' lang='yna'>&#x16F78;</span>_, U+16F7A_ <span class='shim-R normal' lang='yna'>&#x16F7A;</span>_, and U+16F7C_ <span class='shim-R normal' lang='yna'>&#x16F7C;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+_The keyboard includes U+16F56_ <span class='yna normal'>&#x16F56;</span>_, U+16F59_ <span class='yna normal'>&#x16F59;</span>_, U+16F5B_ <span class='yna normal'>&#x16F5B;</span>_, U+16F5F_ <span class='yna normal'>&#x16F5F;</span>_, U+16F69_ <span class='yna normal'>&#x16F69;</span>_, U+16F78_ <span class='yna normal'>&#x16F78;</span>_, U+16F7A_ <span class='yna normal'>&#x16F7A;</span>_, and U+16F7C_ <span class='yna normal'>&#x16F7C;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
 Vowels and finals | | | | | | | | |
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim-R normal' lang='yna'>&#x16F54;</span> | <span class='shim-R normal' lang='yna'>&#x16F58;</span> | <span class='shim-R normal' lang='yna'>&#x16F59;</span> | <span class='shim-R normal' lang='yna'>&#x16F5C;</span> | <span class='shim-R normal' lang='yna'>&#x16F5D;</span> | <span class='shim-R normal' lang='yna'>&#x16F5E;</span> | <span class='shim-R normal' lang='yna'>&#x16F61;</span> | <span class='shim-R normal' lang='yna'>&#x16F62;</span> | <span class='shim-R normal' lang='yna'>&#x16F66;</span> | <span class='shim-R normal' lang='yna'>&#x16F67;</span> 
+<span class='yna normal'>&#x16F54;</span> | <span class='yna normal'>&#x16F58;</span> | <span class='yna normal'>&#x16F59;</span> | <span class='yna normal'>&#x16F5C;</span> | <span class='yna normal'>&#x16F5D;</span> | <span class='yna normal'>&#x16F5E;</span> | <span class='yna normal'>&#x16F61;</span> | <span class='yna normal'>&#x16F62;</span> | <span class='yna normal'>&#x16F66;</span> | <span class='yna normal'>&#x16F67;</span> 
 16F54 | 16F58 | 16F59 | 16F5C | 16F5D | 16F5E | 16F61 | 16F62 | 16F66 | 16F67
-<span class='shim-R normal' lang='yna'>&#x16F68;</span> | <span class='shim-R normal' lang='yna'>&#x16F6A;</span> | <span class='shim-R normal' lang='yna'>&#x16F6B;</span> | <span class='shim-R normal' lang='yna'>&#x16F6E;</span> | <span class='shim-R normal' lang='yna'>&#x16F71;</span> | <span class='shim-R normal' lang='yna'>&#x16F73;</span> | <span class='shim-R normal' lang='yna'>&#x16F74;</span> | <span class='shim-R normal' lang='yna'>&#x16F75;</span> | <span class='shim-R normal' lang='yna'>&#x16F76;</span> | <span class='shim-R normal' lang='yna'>&#x16F77;</span>
+<span class='yna normal'>&#x16F68;</span> | <span class='yna normal'>&#x16F6A;</span> | <span class='yna normal'>&#x16F6B;</span> | <span class='yna normal'>&#x16F6E;</span> | <span class='yna normal'>&#x16F71;</span> | <span class='yna normal'>&#x16F73;</span> | <span class='yna normal'>&#x16F74;</span> | <span class='yna normal'>&#x16F75;</span> | <span class='yna normal'>&#x16F76;</span> | <span class='yna normal'>&#x16F77;</span>
 16F68 | 16F6A | 16F6B | 16F6E | 16F71 | 16F73 | 16F74 | 16F75 | 16F76 | 16F77
-<span class='shim-R normal' lang='yna'>&#x16F79;</span> | <span class='shim-R normal' lang='yna'>&#x16F7B;</span> | <span class='shim-R normal' lang='yna'>&#x16F7E;</span> | <span class='shim-R normal' lang='yna'>&#x16F81;</span> | <span class='shim-R normal' lang='yna'>&#x16F82;</span>
+<span class='yna normal'>&#x16F79;</span> | <span class='yna normal'>&#x16F7B;</span> | <span class='yna normal'>&#x16F7E;</span> | <span class='yna normal'>&#x16F81;</span> | <span class='yna normal'>&#x16F82;</span>
 16F79 | 16F7B | 16F7E | 16F81 | 16F82
 
 Positioning tone marks | | 
@@ -826,34 +845,35 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 _Punctuation_
 
-<span class='shim-R normal' lang='yna'>_ - ; : " ' = . , ? / ! * ( )</span>
+See also <a href="#punct">Punctuation and Digits</a>.
 
-<span class='shim-R normal' lang='yna'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
-<span class='shim-R normal' lang='yna'>&#x3002;</span> (U+3002 IDEOGRAPHIC FULL STOP)
+Additional punctuation: <span class='shim normal'>: ; _ ' ? ! *</span>
+
+<span class='yna normal'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
+<span class='yna normal'>&#x3002;</span> (U+3002 IDEOGRAPHIC FULL STOP)
 
 **Sorting (Cheuk, figure 10)**
 
 
-1&#x26;<span class='shim-R normal' lang='yna'>&#x16F00;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F02;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F00;&#x16F51;</span><br/>
-2&#x26;<span class='shim-R normal' lang='yna'>&#x16F0A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F0D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F0A;&#x16F51;</span><br/>
-3&#x26;<span class='shim-R normal' lang='yna'>&#x16F1E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F20;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F1E;&#x16F51;</span><br/>
-4&#x26;<span class='shim-R normal' lang='yna'>&#x16F2E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F2E;&#x16F51;</span><br/>
-5&#x26;<span class='shim-R normal' lang='yna'>&#x16F37;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F39;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F37;&#x16F51;</span><br/>
-6&#x26;<span class='shim-R normal' lang='yna'>&#x16F08;</span><br/>
-7&#x26;<span class='shim-R normal' lang='yna'>&#x16F07;</span><br/>
-7b&#x26;<span class='shim-R normal' lang='yna'>&#x16F26;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F26;&#x16F51;</span><br/>
-8&#x26;<span class='shim-R normal' lang='yna'>&#x16F04;</span><br/>
-9&#x26;<span class='shim-R normal' lang='yna'>&#x16F10;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F10;&#x16F51;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F10;&#x16F4F;</span><br/>
-10&#x26;<span class='shim-R normal' lang='yna'>&#x16F16;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F18;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F23;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F42;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F35;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F33;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F3B;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F3A;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F3D;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F43;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F28;</span><br/>
-11&#x26;<span class='shim-R normal' lang='yna'>&#x16F0E;&#x16F4F;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F50;&#x16F0E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F0E;&#x16F51;</span><br/>
-12&#x26;<span class='shim-R normal' lang='yna'>&#x16F54;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F7B;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F5C;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F5D;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F74;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F73;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F62;</span><br/>
-13&#x26;<span class='shim-R normal' lang='yna'>&#x16F71;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F71;&#x16F67;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F71;&#x16F82;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F71;&#x16F66; </span><br/>
-14&#x26;<span class='shim-R normal' lang='yna'>&#x16F61;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F67;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F7B;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F82;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F73;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F74;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F5D;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F6E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F7E;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F5C;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F66;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F61;&#x16F81;</span><br/>
-15&#x26;<span class='shim-R normal' lang='yna'>&#x16F6A;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F6A;&#x16F79;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F6A;&#x16F82;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F6A;&#x16F66;</span><br/>
-15&#x26;<span class='shim-R normal' lang='yna'>&#x16F82;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F75;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F77;</span><br/>
-15&#x26;<span class='shim-R normal' lang='yna'>&#x16F59;</span> &lt;&lt;&lt; <span class='shim-R normal' lang='yna'>&#x16F59;&#x16F5C;</span><br/>
-16&#x26;<span class='shim-R normal' lang='yna'>&#x16F68;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F6B;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F58;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F76;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F7E;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F81;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F6E;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F67;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F5E;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F79;</span> &lt; <span class='shim-R normal' lang='yna'>&#x16F66; </span>
-
+&#x26;<span class='yna normal'>&#x16F00;</span> &lt;&lt; <span class='yna normal'>&#x16F02;</span> &lt;&lt; <span class='yna normal'>&#x16F00;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F0A;</span> &lt;&lt; <span class='yna normal'>&#x16F0D;</span> &lt;&lt; <span class='yna normal'>&#x16F0A;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F1E;</span> &lt;&lt; <span class='yna normal'>&#x16F20;</span> &lt;&lt; <span class='yna normal'>&#x16F1E;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F2E;</span> &lt;&lt; <span class='yna normal'>&#x16F0E;</span> &lt;&lt; <span class='yna normal'>&#x16F2E;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F37;</span> &lt;&lt; <span class='yna normal'>&#x16F39;</span> &lt;&lt; <span class='yna normal'>&#x16F37;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F08;</span><br/>
+&#x26;<span class='yna normal'>&#x16F07;</span><br/>
+&#x26;<span class='yna normal'>&#x16F26;</span> &lt;&lt; <span class='yna normal'>&#x16F26;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F04;</span><br/>
+&#x26;<span class='yna normal'>&#x16F10;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F51;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F4F;</span><br/>
+&#x26;<span class='yna normal'>&#x16F16;</span> &lt; <span class='yna normal'>&#x16F18;</span> &lt; <span class='yna normal'>&#x16F23;</span> &lt; <span class='yna normal'>&#x16F42;</span> &lt; <span class='yna normal'>&#x16F35;</span> &lt; <span class='yna normal'>&#x16F33;</span> &lt; <span class='yna normal'>&#x16F3B;</span> &lt; <span class='yna normal'>&#x16F3A;</span> &lt; <span class='yna normal'>&#x16F3D;</span> &lt; <span class='yna normal'>&#x16F43;</span> &lt; <span class='yna normal'>&#x16F28;</span><br/>
+&#x26;<span class='yna normal'>&#x16F0E;&#x16F4F;</span> &lt;&lt; <span class='yna normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='yna normal'>&#x16F0E;&#x16F51;</span><br/>
+&#x26;<span class='yna normal'>&#x16F54;</span> &lt; <span class='yna normal'>&#x16F7B;</span> &lt; <span class='yna normal'>&#x16F5C;</span> &lt; <span class='yna normal'>&#x16F5D;</span> &lt; <span class='yna normal'>&#x16F74;</span> &lt; <span class='yna normal'>&#x16F73;</span> &lt; <span class='yna normal'>&#x16F62;</span><br/>
+&#x26;<span class='yna normal'>&#x16F71;</span> &lt;&lt; <span class='yna normal'>&#x16F71;&#x16F67;</span> &lt;&lt; <span class='yna normal'>&#x16F71;&#x16F82;</span> &lt;&lt; <span class='yna normal'>&#x16F71;&#x16F66; </span><br/>
+&#x26;<span class='yna normal'>&#x16F61;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F67;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F82;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F73;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F74;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F5D;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F6E;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F7E;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F5C;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='yna normal'>&#x16F61;&#x16F81;</span><br/>
+&#x26;<span class='yna normal'>&#x16F6A;</span> &lt;&lt; <span class='yna normal'>&#x16F6A;&#x16F79;</span> &lt;&lt; <span class='yna normal'>&#x16F6A;&#x16F82;</span> &lt;&lt; <span class='yna normal'>&#x16F6A;&#x16F66;</span><br/>
+&#x26;<span class='yna normal'>&#x16F82;</span> &lt; <span class='yna normal'>&#x16F75;</span> &lt; <span class='yna normal'>&#x16F77;</span><br/>
+&#x26;<span class='yna normal'>&#x16F59;</span> &lt;&lt; <span class='yna normal'>&#x16F59;&#x16F5C;</span><br/>
+&#x26;<span class='yna normal'>&#x16F68;</span> &lt; <span class='yna normal'>&#x16F6B;</span> &lt; <span class='yna normal'>&#x16F58;</span> &lt; <span class='yna normal'>&#x16F76;</span> &lt; <span class='yna normal'>&#x16F7E;</span> &lt; <span class='yna normal'>&#x16F81;</span> &lt; <span class='yna normal'>&#x16F6E;</span> &lt; <span class='yna normal'>&#x16F67;</span> &lt; <span class='yna normal'>&#x16F5E;</span> &lt; <span class='yna normal'>&#x16F79;</span> &lt; <span class='yna normal'>&#x16F66; </span>
 
 **Rendering**
 
@@ -863,7 +883,7 @@ _Sample text taken from Figure 8 of Cheuk._
 
 Setting        | Sample           | USV
 :-- | :-- | :---------
-yna | <span class='shim-R normal' lang='yna'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x16F51;&#x16F5C;&#x16F90; &#x16F2E;&#x16F61;&#x16F59;</span> | U+16F10 U+16F4F U+16F7B U+16F91 U+0020 U+16F2E U+16F51 U+16F5C U+16F90 U+0020 U+16F2E U+16F61 U+16F59
+yna | <span class='yna normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x16F51;&#x16F5C;&#x16F90; &#x16F2E;&#x16F61;&#x16F59;</span> | U+16F10 U+16F4F U+16F7B U+16F91 U+0020 U+16F2E U+16F51 U+16F5C U+16F90 U+0020 U+16F2E U+16F61 U+16F59
 
 _Sample graphic_
 
