@@ -2,7 +2,7 @@
 title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 ---
 
-_Lorna Evans, SIL International_
+_Lorna Evans, SIL International (17-Jan-2024)_
 
 _This is a work in progress. Additional information is most welcome._
 
@@ -39,7 +39,7 @@ This document provides an introduction and overview on how to encode Miao/Pollar
 
 Each syllable is divided into an initial and a final. The initial is the initial consonant and the final consists of the vowel cluster and the tone. The positioning of the vowels indicates the tone of a syllable. Nasalization and voicing are considered as initial rather than final.
 
-The syllable structure is: (N)C(M)V(V(V))(S/T), where N is the nasalizer (U+16F50), C is the obligatory consonant (U+16F00.0U+16F4A), M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks), V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87), S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92), and T (U+16F93..U+16F9F) is a tone mark; **S and T do not co-occur on a syllable.**
+The syllable structure is: (N)C(M)V(V(V))(S/T), where N is the nasalizer (U+16F50), C is the obligatory consonant (U+16F00..U+16F4A), M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks), V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87), S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92), and T (U+16F93..U+16F9F) is a tone mark; **S and T do not co-occur on a syllable.**
 
 **Rendering Example**
 
@@ -52,9 +52,9 @@ USV | <span class='affects'>U+16F10 U+16F4F U+16F7B U+16F91 U+16F50 U+16F2E U+16
 
 Users of the Miao script freely use the same punctuation marks as Chinese and Latin. 
 
-All languages use these: . , / " = + - ( ) 
+All languages use this punctuation: <span class='shim normal'>. , / " = + - ( ) </span>
 
-Most Miao script users seem to follow the Chinese convention for indicating proper nouns:
+Additionally, most Miao script users seem to follow the Chinese convention for indicating proper nouns:
 
 - names of people -- single underline
 - names of places -- double underline
