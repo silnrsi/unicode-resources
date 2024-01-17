@@ -2,6 +2,10 @@
 title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 ---
 
+_Lorna Evans, SIL International_
+
+_This is a work in progress. Additional information is most welcome._
+
 - <a href="#over">Overview</a>
    - <a href="#store">Character storage</a>
    - <a href="#punct">Punctuation and Digits</a>
@@ -28,6 +32,8 @@ title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 - <a href="#ref">References</a>
 
 ## <a id="over"></a>Overview
+
+This document provides an introduction and overview on how to encode Miao/Pollard script text. It also gives information on the languages using the script and resources which are available.
 
 ### <a id="store"></a>Character storage
 
@@ -737,7 +743,7 @@ Vowels and finals | | | | | | | | |&#x0020;
 <span class='sfm normal'>&#x16F71;</span> | <span class='sfm normal'>&#x16F75;</span> | <span class='sfm normal'>&#x16F77;</span> | <span class='sfm normal'>&#x16F78;</span> | <span class='sfm normal'>&#x16F79;</span> | <span class='sfm normal'>&#x16F7A;</span> | <span class='sfm normal'>&#x16F7B;</span> | <span class='sfm normal'>&#x16F7E;</span> | <span class='sfm normal'>&#x16F82;</span> | <span class='sfm normal'>&#x16F83;</span>
 16F71 | 16F75 | 16F77 | 16F78 | 16F79 | 16F7A | 16F7B | 16F7E | 16F82 | 16F83
 
-Positioning tone marks | |
+Positioning tone marks | | &#x0020;
 :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F8F | 16F90 | 16F91
