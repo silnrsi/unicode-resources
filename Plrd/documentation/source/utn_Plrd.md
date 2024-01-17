@@ -173,13 +173,17 @@ _SLDR:_ [hmd](https://github.com/silnrsi/sldr/blob/master/sldr/h/hmd.xml)
 
 _Keyman keyboard:_ [hmd](https://keyman.com/keyboards/sil_hmd_plrd)
 
+_Picker:_ [A-Hmao picker](https://r12a.github.io/pickers/plrd-hmd/index.html)
+
 _Font:_ [Sapushan](https://software.sil.org/shimenkan/) - traditional orthography
 
 _Font:_ [Shimenkan Guifan](https://software.sil.org/shimenkan/) - normalised orthography
 
+_Generic Miao fonts:_ [Noto Miao](https://fonts.google.com/noto/fonts?noto.script=Plrd) and [Miao Unicode](https://github.com/phjamr/MiaoUnicode)
+
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | | &#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='hmd normal'>&#x16F00;</span> | <span class='hmd normal'>&#x16F01;</span> | <span class='hmd normal'>&#x16F04;</span> | <span class='hmd normal'>&#x16F05;</span> | <span class='hmd normal'>&#x16F07;</span> | <span class='hmd normal'>&#x16F08;</span> | <span class='hmd normal'>&#x16F09;</span> | <span class='hmd normal'>&#x16F0A;</span> | <span class='hmd normal'>&#x16F0B;</span> | <span class='hmd normal'>&#x16F0E;</span>     
 16F00 | 16F01 | 16F04 | 16F05 | 16F07 | 16F08 | 16F09 | 16F0A | 16F0B | 16F0E
@@ -192,7 +196,7 @@ Consonant onsets | | | | | | | |
 <span class='hmd normal'>&#x16F35;</span> | <span class='hmd normal'>&#x16F37;</span> | <span class='hmd normal'>&#x16F38;</span> | <span class='hmd normal'>&#x16F3A;</span> | <span class='hmd normal'>&#x16F3B;</span> | <span class='hmd normal'>&#x16F3C;</span> | <span class='hmd normal'>&#x16F3D;</span> | <span class='hmd normal'>&#x16F3E;</span> | <span class='hmd normal'>&#x16F40;</span> | <span class='hmd normal'>&#x16F41;</span>
 16F35 | 16F37 | 16F38 | 16F3A | 16F3B | 16F3C | 16F3D | 16F3E | 16F40 | 16F41
 <span class='hmd normal'>&#x16F42;</span> | <span class='hmd normal'>&#x16F43;</span> | <span class='hmd normal'>&#x16F44;</span>
-16F42 | 16F43 | 16F44
+16F42 | 16F43 | 16F44 | | | | |
 
 Modifiers | Nasalization | Aspiration
 :-- | :-- | :-- 
@@ -201,7 +205,7 @@ Modifiers | Nasalization | Aspiration
 
 _The keyboard includes U+16F5D_ <span class='hmd normal'>&#x16F5D;</span> _and U+16F74_ <span class='hmd normal'>&#x16F74;</span> _although they are not in Figure 1 [L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf)._
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | | &#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='hmd normal'>&#x16F54;</span> | <span class='hmd normal'>&#x16F57;</span> | <span class='hmd normal'>&#x16F58;</span> | <span class='hmd normal'>&#x16F59;</span> | <span class='hmd normal'>&#x16F5C;</span> | <span class='hmd normal'>&#x16F5E;</span> | <span class='hmd normal'>&#x16F5F;</span> | <span class='hmd normal'>&#x16F60;</span> | <span class='hmd normal'>&#x16F61;</span> | <span class='hmd normal'>&#x16F62;</span> 
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5E | 16F5F | 16F60 | 16F61 | 16F62
@@ -210,9 +214,9 @@ Vowels and finals | | | | | | | | |
 <span class='hmd normal'>&#x16F7B;</span> | | | | | | | | |
 16F7B | | | | | | | | |
 
-Positioning tone marks | |
-:-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
+Positioning tone marks | &#x0020; |&#x0020;
+:-- | :-- | :--
+MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 16F8F | 16F90 | 16F91 
 
 _Punctuation_
@@ -311,7 +315,7 @@ _Font:_ [Taogu](https://software.sil.org/shimenkan/)
 
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | | &#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='lpo normal'>&#x16F00;</span> | <span class='lpo normal'>&#x16F02;</span> | <span class='lpo normal'>&#x16F04;</span> | <span class='lpo normal'>&#x16F07;</span> | <span class='lpo normal'>&#x16F08;</span> | <span class='lpo normal'>&#x16F0A;</span> | <span class='lpo normal'>&#x16F0D;</span> | <span class='lpo normal'>&#x16F0E;</span> | <span class='lpo normal'>&#x16F10;</span> | <span class='lpo normal'>&#x16F13;</span> 
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0D | 16F0E | 16F10 | 16F13
@@ -325,7 +329,7 @@ Modifiers | Aspiration
 &#x0020; | <span class='hmd normal'>&#x16F51;</span>
 &#x0020; | 16F51
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='lpo normal'>&#x16F54;</span> | <span class='lpo normal'>&#x16F55;</span> | <span class='lpo normal'>&#x16F57;</span>| <span class='lpo normal'>&#x16F58;</span>| <span class='lpo normal'>&#x16F59;</span> | <span class='lpo normal'>&#x16F5A;</span> | <span class='lpo normal'>&#x16F5C;</span> | <span class='lpo normal'>&#x16F5D;</span> | <span class='lpo normal'>&#x16F61;</span> | <span class='lpo normal'>&#x16F62;</span> 
 16F54 | 16F55 | 16F57 | 16F58 | 16F59 | 16F5A | 16F5C | 16F5D | 16F61 | 16F62  
@@ -334,7 +338,7 @@ Vowels and finals | | | | | | | | |
 <span class='lpo normal'>&#x16F79;</span> | <span class='lpo normal'>&#x16F7A;</span> | <span class='lpo normal'>&#x16F7B;</span> | <span class='lpo normal'>&#x16F7C;</span> | <span class='lpo normal'>&#x16F7E;</span> |
 16F79 | 16F7A | 16F7B | 16F7C | 16F7E | 
 
-Positioning tone marks |
+Positioning tone marks |&#x0020;
 :-- | :-- 
 MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F90 | 16F91 
@@ -379,7 +383,7 @@ _Font:_ [Shimenkan GSM](https://software.sil.org/shimenkan/)
 
 _The keyboard includes U+16F0B_ <span class='ygp normal'>&#x16F0B;</span>_, U+16F0F_ <span class='ygp normal'>&#x16F0F;</span>_, U+16F2F_ <span class='ygp normal'>&#x16F2F;</span>_, and U+16F38_ <span class='ygp normal'>&#x16F38;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf). These are warted characters, and it may make sense to include them._
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='ygp normal'>&#x16F00; | <span class='ygp normal'>&#x16F02; | <span class='ygp normal'>&#x16F04; | <span class='ygp normal'>&#x16F07; | <span class='ygp normal'>&#x16F08; | <span class='ygp normal'>&#x16F0A; | <span class='ygp normal'>&#x16F0E; | <span class='ygp normal'>&#x16F10; | <span class='ygp normal'>&#x16F12; | <span class='ygp normal'>&#x16F14;  
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0E | 16F10 | 16F12 | 16F14
@@ -395,7 +399,7 @@ Modifiers | Nasalization | Aspiration
 
 _The keyboard includes U+16F5B_ <span class='ygp normal'>&#x16F5B;</span>_, U+16F5E_ <span class='ygp normal'>&#x16F5E;</span>_, U+16F5F_ <span class='ygp normal'>&#x16F5F;</span>_, U+16F62_ <span class='ygp normal'>&#x16F62;</span>_, and U+16F63_ <span class='ygp normal'>&#x16F63;</span> _although they are not in Figure 2 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='ygp normal'>&#x16F54;</span> | <span class='ygp normal'>&#x16F57;</span> | <span class='ygp normal'>&#x16F58;</span> | <span class='ygp normal'>&#x16F59;</span> | <span class='ygp normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5D;</span> | <span class='ygp normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F61;</span> | <span class='ygp normal'>&#x16F66;</span> 
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F60 | 16F61 | 16F66
@@ -404,7 +408,7 @@ Vowels and finals | | | | | | | | |
 <span class='ygp normal'>&#x16F7B;</span> | <span class='ygp normal'>&#x16F7E;</span> | <span class='ygp normal'>&#x16F81;</span> | <span class='ygp normal'>&#x16F83;</span> | <span class='ygp normal'>&#x16F84;</span> | <span class='ygp normal'>&#x16F85;</span> | <span class='ygp normal'>&#x16F86;</span> | <span class='ygp normal'>&#x16F87;</span>
 16F7B | 16F7E | 16F81 | 16F83 | 16F84 | 16F85 | 16F86 | 16F87 
 
-Positioning tone marks | |
+Positioning tone marks | |&#x0020;
 :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F8F | 16F90 | 16F91 
@@ -482,7 +486,7 @@ _Font:_ [Salaowu](https://software.sil.org/shimenkan/) - normalised orthography
 
 _The keyboard includes U+16F05_ <span class='shim normal'>&#x16F05;</span>_, U+16F13_ <span class='shim normal'>&#x16F13;</span>_, U+16F1A_ <span class='shim normal'>&#x16F1A;</span>_,U+16F1C_ <span class='shim normal'>&#x16F1C;</span>_, U+16F2A_ <span class='shim normal'>&#x16F2A;</span>_, and U+16F2D_ <span class='shim normal'>&#x16F2D;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='shim normal'>&#x16F00;</span> | <span class='shim normal'>&#x16F02;</span> | <span class='shim normal'>&#x16F04;</span> | <span class='shim normal'>&#x16F07;</span> | <span class='shim normal'>&#x16F08;</span> | <span class='shim normal'>&#x16F0A;</span> | <span class='shim normal'>&#x16F0C;</span> | <span class='shim normal'>&#x16F0D;</span> | <span class='shim normal'>&#x16F0E;</span> | <span class='shim normal'>&#x16F10;</span>
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0C | 16F0D | 16F0E | 16F10
@@ -500,7 +504,7 @@ Modifiers | Nasalization | Aspiration
 
 _The keyboard includes U+16F57_ <span class='shim normal'>&#x16F57;</span>_, U+16F5F_ <span class='shim normal'>&#x16F5F;</span>_, and U+16F7E_ <span class='shim normal'>&#x16F7E;</span> _although they are not in Figure 5 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='shim normal'>&#x16F54;</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'>&#x16F59;</span> | <span class='shim normal'>&#x16F5B;</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='shim normal'>&#x16F5D;</span> | <span class='shim normal'>&#x16F61;</span> | <span class='shim normal'>&#x16F62;</span> | <span class='shim normal'>&#x16F66;</span> | <span class='shim normal'>&#x16F68;</span>  
 16F54 | 16F58 | 16F59 | 16F5B | 16F5C | 16F5D | 16F61 | 16F62 | 16F66 | 16F68
@@ -509,7 +513,7 @@ Vowels and finals | | | | | | | | |
 <span class='shim normal'>&#x16F7F;</span> | <span class='shim normal'>&#x16F80;</span>
 16F7F | 16F80
 
-Positioning tone marks | |
+Positioning tone marks | |&#x0020;
 :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F8F | 16F90 | 16F91 
@@ -578,7 +582,7 @@ _Language tag:_ `cqd-Plrd`
 
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Not listed
 
@@ -587,11 +591,11 @@ Modifiers | Nasalization | Aspiration
 &#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 Not listed
 
-Positioning tone marks | |
+Positioning tone marks | |&#x0020;
 :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F8F | 16F90 | 16F91 
@@ -617,7 +621,7 @@ _Language tag:_ `ktp`
 
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | | | &#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Not listed
 
@@ -626,11 +630,11 @@ Modifiers | Nasalization | Aspiration
 &#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 Not listed
 
-Positioning tone marks  |
+Positioning tone marks  |&#x0020;
 :-- | :-- 
 MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F90 | 16F91
@@ -657,15 +661,15 @@ _Language tag:_ `lbc`
 
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | ||&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Not listed
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 Not listed
 
-Positioning tone marks | | |
+Positioning tone marks | | |&#x0020;
 :-- | :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE | MIAO TONE BELOW
 16F8F | 16F90 | 16F91 | 16F92
@@ -708,7 +712,7 @@ _Font:_ [Shimenkan MAS](https://software.sil.org/shimenkan/)
 
 **Character set**
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | ||&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='sfm normal'>&#x16F00;</span> | <span class='sfm normal'>&#x16F01;</span> | <span class='sfm normal'>&#x16F03;</span> | <span class='sfm normal'>&#x16F04;</span> | <span class='sfm normal'>&#x16F07;</span> | <span class='sfm normal'>&#x16F08;</span> | <span class='sfm normal'>&#x16F0A;</span> | <span class='sfm normal'>&#x16F0B;</span> | <span class='sfm normal'>&#x16F0E;</span> | <span class='sfm normal'>&#x16F0F;</span>
  16F00 | 16F01 | 16F03 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0B | 16F0E |  16F0F
@@ -724,7 +728,7 @@ Modifiers | Nasalization | Aspiration
 &#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
 &#x0020; | 16F50 | 16F51
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='sfm normal'>&#x16F54;</span> | <span class='sfm normal'>&#x16F57;</span> | <span class='sfm normal'>&#x16F58;</span> | <span class='sfm normal'>&#x16F59;</span> | <span class='sfm normal'>&#x16F5C;</span> | <span class='sfm normal'>&#x16F5D;</span> | <span class='sfm normal'>&#x16F5E;</span> | <span class='sfm normal'>&#x16F5F;</span> | <span class='sfm normal'>&#x16F61;</span> | <span class='sfm normal'>&#x16F62;</span>
 16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F5E | 16F5F | 16F61 | 16F62
@@ -813,7 +817,7 @@ _Font:_ [Shimenkan Zonghe](https://software.sil.org/shimenkan/)
 
 _The keyboard includes U+16F13_ <span class='yna normal'>&#x16F13;</span> _(instead of U+16F42_ <span class='yna normal'>&#x16F42;</span>)_, and U+16F2F_ <span class='yna normal'>&#x16F2F;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
-Consonant onsets | | | | | | | |
+Consonant onsets | | | | | | | ||&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 <span class='yna normal'>&#x16F00;</span> | <span class='yna normal'>&#x16F02;</span> | <span class='yna normal'>&#x16F04;</span> | <span class='yna normal'>&#x16F07;</span> | <span class='yna normal'>&#x16F08;</span> | <span class='yna normal'>&#x16F0A;</span> | <span class='yna normal'>&#x16F0D;</span> | <span class='yna normal'>&#x16F0E;</span> | <span class='yna normal'>&#x16F10;</span> | <span class='yna normal'>&#x16F16;</span>
 16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0D | 16F0E | 16F10 | 16F16
@@ -829,7 +833,7 @@ Modifiers | Consonant modifier bar | Nasalization | Aspiration
 
 _The keyboard includes U+16F56_ <span class='yna normal'>&#x16F56;</span>_, U+16F59_ <span class='yna normal'>&#x16F59;</span>_, U+16F5B_ <span class='yna normal'>&#x16F5B;</span>_, U+16F5F_ <span class='yna normal'>&#x16F5F;</span>_, U+16F69_ <span class='yna normal'>&#x16F69;</span>_, U+16F78_ <span class='yna normal'>&#x16F78;</span>_, U+16F7A_ <span class='yna normal'>&#x16F7A;</span>_, and U+16F7C_ <span class='yna normal'>&#x16F7C;</span> _although they are not in Figure 10 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
 
-Vowels and finals | | | | | | | | |
+Vowels and finals | | | | | | | | |&#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
 <span class='yna normal'>&#x16F54;</span> | <span class='yna normal'>&#x16F58;</span> | <span class='yna normal'>&#x16F59;</span> | <span class='yna normal'>&#x16F5C;</span> | <span class='yna normal'>&#x16F5D;</span> | <span class='yna normal'>&#x16F5E;</span> | <span class='yna normal'>&#x16F61;</span> | <span class='yna normal'>&#x16F62;</span> | <span class='yna normal'>&#x16F66;</span> | <span class='yna normal'>&#x16F67;</span> 
 16F54 | 16F58 | 16F59 | 16F5C | 16F5D | 16F5E | 16F61 | 16F62 | 16F66 | 16F67
@@ -838,7 +842,7 @@ Vowels and finals | | | | | | | | |
 <span class='yna normal'>&#x16F79;</span> | <span class='yna normal'>&#x16F7B;</span> | <span class='yna normal'>&#x16F7E;</span> | <span class='yna normal'>&#x16F81;</span> | <span class='yna normal'>&#x16F82;</span>
 16F79 | 16F7B | 16F7E | 16F81 | 16F82
 
-Positioning tone marks | | 
+Positioning tone marks | | &#x0020;
 :-- | :-- | :-- 
 MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
 16F8F | 16F90 | 16F91
