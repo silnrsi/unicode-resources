@@ -1,0 +1,52 @@
+/*
+This file is from the SIL Fontdocs project (https://github.com/silnrsi/fontdocs).
+Copyright (c) 2021 SIL International (http://www.sil.org/). This Font Software is
+released under the MIT license (http://opensource.org/licenses/MIT).
+*/
+@font-face {
+    font-family: Shimenkan-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkan/Shimenkan-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Salaowu-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/salaowu/Salaowu-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Sapushan-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/sapushan/Sapushan-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Guifan-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkanguifan/ShimenkanGuifan-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: GSM-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkangsm/ShimenkanGSM-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: MAS-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkanmas/ShimenkanMAS-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: MGS-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkanmgs/ShimenkanMGS-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Zonghe-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/shimenkanzonghe/ShimenkanZonghe-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Taogu-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/taogu/Taogu-Regular.ttf") format("truetype");
+}
+.shim { font-family: Shimenkan-R; }
+.ywq { font-family: Salaowu-R; }
+.ywqa { font-family: Salaowu-R; }
+.hmd { font-family: Sapushan-R; }
+.hmdd { font-family: Guifan-R; }
+.ygp { font-family: GSM-R; }
+.sfm { font-family: MAS-R; }
+.hmz { font-family: MGS-R; }
+.yna { font-family: Zonghe-R; }
+.lpo { font-family: Taogu-R; }
