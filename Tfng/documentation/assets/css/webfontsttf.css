@@ -1,0 +1,26 @@
+/*
+This file is from the SIL Fontdocs project (https://github.com/silnrsi/fontdocs).
+Copyright (c) 2010-2024 SIL International (http://www.sil.org/). This Font Software is
+released under the MIT license (http://opensource.org/licenses/MIT).
+*/
+@font-face {
+    font-family: Akatab-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/akatab/Akatab-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Akatab-R-new;
+    src: url("../../references/Akatab-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: Ebrima-R;
+    src: url("../../references/ebrima.ttf") format("truetype");
+}
+@font-face {
+    font-family: NotoSansTifinagh-R;
+    src: url(https://fonts.gstatic.com/s/notosanstifinagh/v20/I_uzMoCduATTei9eI8dawkHIwvmhCvbXzbPFQXc.woff2) format('woff2');
+}
+
+.akatab  { font-family: Akatab-R-new; }
+.ebrima  { font-family: Ebrima-R; }
+.nototif  { font-family: NotoSansTifinagh-R; }
+

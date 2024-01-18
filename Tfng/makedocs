@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# To generate PDFs that are somewhat OK you will need to have the Roboto and Roboto mono font families installed on your system
+# https://fonts.google.com/specimen/Roboto
+# https://fonts.google.com/specimen/Roboto+Mono
+
+echo "-----Rebuilding documentation..."
+
+echo "     >>> HTML (documentation/)"
+
+echo "     > utn_Tfng.html"
+pandoc -s -f markdown-smart --template documentation/source/template.html documentation/source/utn_Tfng.md -o documentation/utn_Tfng.html --lua-filter=documentation/source/pandocfilters/filter-html.lua
+
+echo "     >>> PDF (documentation/pdf/)"
+mkdir -p documentation/source/pdftemp
+
+echo "     > utn_Tfng.html > utn_Tfng.pdf"
+pandoc -s -f markdown-smart --template documentation/source/templatepdf.html documentation/source/utn_Tfng.md -o documentation/source/pdftemp/utn_Tfng.html --lua-filter=documentation/source/pandocfilters/filter-pdf.lua
+weasyprint documentation/source/pdftemp/utn_Tfng.html documentation/pdf/utn_Tfng.pdf
+
+echo "     Markdown source for other pages is in separate repo"
+
+echo "-----Completed!"
