@@ -8,6 +8,10 @@ released under the MIT license (http://opensource.org/licenses/MIT).
     src: url("https://fonts.languagetechnology.org/fonts/sil/akatab/Akatab-Regular.ttf") format("truetype");
 }
 @font-face {
+    font-family: Tagmukay-R;
+    src: url("https://fonts.languagetechnology.org/fonts/sil/tagmukay/Tagmukay-Regular.ttf") format("truetype");
+}
+@font-face {
     font-family: Akatab-R-new;
     src: url("../../references/Akatab-Regular.ttf") format("truetype");
 }
@@ -21,6 +25,7 @@ released under the MIT license (http://opensource.org/licenses/MIT).
 }
 
 .akatab  { font-family: Akatab-R-new; }
+.tagmukay  { font-family: Tagmukay-R; }
 .ebrima  { font-family: Ebrima-R; }
 .nototif  { font-family: NotoSansTifinagh-R; }
 
