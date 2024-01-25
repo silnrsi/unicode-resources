@@ -1,0 +1,1 @@
+The files in this folder are for creating a hacked font for a user who has committed to only using this font in InDesign. The Paratext files use the correct codepoints and a process is used in exporting the files from Paratext to InDesign to convert to the hacked codepoints.

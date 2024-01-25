@@ -1,0 +1,8 @@
+ttfremap -r -c WOLchanges.cfg Harmattan-Regular.ttf HarmattanRM-Regular.ttf
+ttfname -n "Harmattan Corey Hack" HarmattanRM-Regular.ttf HarmattanCoreyHack-Regular.ttf
+ttfremap -r -c WOLchanges.cfg Harmattan-Bold.ttf HarmattanRM-Bold.ttf
+ttfname -n "Harmattan Corey Hack" HarmattanRM-Bold.ttf HarmattanCoreyHack-Bold.ttf
+ttfremap -r -c WOLchanges.cfg Harmattan-SemiBold.ttf HarmattanRM-SemiBold.ttf
+ttfname -n "Harmattan Corey Hack" HarmattanRM-SemiBold.ttf HarmattanCoreyHack-SemiBold.ttf
+ttfremap -r -c WOLchanges.cfg Harmattan-Medium.ttf HarmattanRM-Medium.ttf
+ttfname -n "Harmattan Corey Hack" HarmattanRM-Medium.ttf HarmattanCoreyHack-Medium.ttf
