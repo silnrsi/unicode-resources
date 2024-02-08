@@ -4,7 +4,7 @@ title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 
 _Lorna Evans, SIL International (8-Feb-2024)_
 
-_This is a work in progress. Additional information is most welcome._
+_This is a work in progress. Additional information is most welcome. Removed hnj, lbc (mistaken for yna), cqd (mistaken for hmd), and ysy (mistaken for ygp?)._
 
 - <a href="#over">Overview</a>
    - <a href="#store">Character storage</a>
@@ -18,18 +18,14 @@ _This is a work in progress. Additional information is most welcome._
 - <a href="#lang">Languages currently using Miao/Pollard script</a>
    - <a href="#hmd">Large Flowery Miao / Dahua Miao / A-Hmao &#x005B;hmd&#x005D;</a>
    - <a href="#hmz">Sinicized Miao / Waishu Miao / Hmong Shua &#x005B;hmz&#x005D;</a>
-   - <a href="#hnj">Hmong Njua &#x005B;hnj&#x005D;</a>
    - <a href="#lpo">Lipo / Dong Lisu / Eastern Lisu &#x005B;lpo&#x005D;</a>
    - <a href="#sfm">Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;</a>
    - <a href="#ygp">Bai Yi / Gepo &#x005B;ygp&#x005D;</a>
    - <a href="#ywq">Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu &#x005B;ywq&#x005D;</a>
 - <a href="#former">Languages formerly using Miao/Pollard script</a>
-   - <a href="#cqd">Chuanqiandian Cluster Miao &#x005B;cqd&#x005D;</a>
    - <a href="#ktp">Kaduo / Kado &#x005B;ktp&#x005D;</a>
-   - <a href="#lbc">Lakkia &#x005B;lbc&#x005D;</a>
-   - <a href="#mww">Hmong Daw &#x005B;mww&#x005D;</a>
-   - <a href="#yna">Gan Yi / Dry Yi / Aluo &#x005B;yna&#x005D;</a>
-   - <a href="#ysy">Sanie / Bai Yi &#x005B;ysy&#x005D;</a>
+   - <a href="#mww">Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;</a>
+   - <a href="#yna">Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;</a>
 - <a href="#ref">References</a>
 
 ## <a id="over"></a>Overview
@@ -190,13 +186,15 @@ _Keyman keyboard:_ [hmd](https://keyman.com/keyboards/sil_hmd_plrd)
 
 _Picker:_ [A-Hmao picker](https://r12a.github.io/pickers/plrd-hmd/index.html)
 
+_Keyboard.cool:_ [Miao block](https://keyboard.cool/db/miao/)
+
 _Font:_ [Sapushan](https://software.sil.org/shimenkan/) - traditional orthography
 
 _Font:_ [Shimenkan Guifan](https://software.sil.org/shimenkan/) - normalised orthography
 
 _Generic Miao fonts:_ [Noto Miao](https://fonts.google.com/noto/fonts?noto.script=Plrd) and [Miao Unicode](https://github.com/phjamr/MiaoUnicode)
 
-**_Chuxiong style character set from 2005 ([L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf), figure 1)_**
+**_Chuxiong reformed character set from 2005 ([L2/10-093](https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf), figure 1)_**
 
 Consonant onsets | | | | | | | | | &#x0020;
 :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
@@ -359,22 +357,6 @@ Setting        | Sample
 :------- | :--------------- 
 default        | <span class='shim normal'>&#x16F57; &#x16F7A;</span> 
 alternate      | <span class='hmz normal'>&#x16F57; &#x16F7A;</span>
-
-### <a id="hnj"></a>Hmong Njua &#x005B;hnj&#x005D;
-
-_Language tag:_ `hnj-Plrd`
-
-_Opentype language system tag:_ none
-
-_SLDR:_ none
-
-_Keyboard:_ none
-
-_Font:_ [Shimenkan](https://software.sil.org/shimenkan/)
-
-**Character set**
-
-Unknown
 
 ### <a id="lpo"></a>Lipo / Dong Lisu / Eastern Lisu &#x005B;lpo&#x005D;
 
@@ -744,45 +726,6 @@ _Sample graphic_
 
 ## <a id="former"></a>Languages formerly using Miao/Pollard script
 
-### <a id="cqd"></a>Chuanqiandian Cluster Miao &#x005B;cqd&#x005D;
-
-**Resources**
-
-_Language tag:_ `cqd-Plrd`
-
-**Character set**
-
-Consonant onsets | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-Not listed
-
-Modifiers | Nasalization | Aspiration
-:-- | :-- | :-- 
-&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
-&#x0020; | 16F50 | 16F51
-
-Vowels and finals | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-Not listed
-
-Positioning tone marks | |&#x0020;
-:-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
-16F8F | 16F90 | 16F91 
-
-_Punctuation_
-
-See also <a href="#punct">Punctuation and Digits</a>.
-
-Additional punctuation: <span class='shim normal'>[ ]</span>
-
-**Rendering**
-
-_Sample graphic_
-
-<img src="assets/images/cqd_MiaoChuan_859.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Chuan sample" />
-<figcaption>Mark 1:1-4 (UBS).</figcaption>
-
 ### <a id="ktp"></a>Kaduo / Kado &#x005B;ktp&#x005D;
 
 **Resources**
@@ -817,34 +760,7 @@ _Sample graphic_
 <img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
 <figcaption>Luke 3:1-4 (UBS).</figcaption>
 
-### <a id="lbc"></a>Lakkia &#x005B;lbc&#x005D;
-
-**Resources**
-
-_Language tag:_ `lbc`
-
-**Character set**
-
-Unknown
-
-Positioning tone marks | | |&#x0020;
-:-- | :-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE | MIAO TONE BELOW
-16F8F | 16F90 | 16F91 | 16F92
-
-_Punctuation_
-
-See also <a href="#punct">Punctuation and Digits</a>.
-
-**Rendering**
-
-_Sample graphic_
-
-<img src="assets/images/lbc_Laka_ill5.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
-<figcaption>John (Illustration 5, China 2009).</figcaption>
-
-
-### <a id="mww"></a>Hmong Daw &#x005B;mww&#x005D;
+### <a id="mww"></a>Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;
 
 **Resources**
 
@@ -855,7 +771,7 @@ _Opentype language system tag:_ `MWW `
 _No further information_
 
 
-### <a id="yna"></a>Gan Yi / Dry Yi / Aluo &#x005B;yna&#x005D;
+### <a id="yna"></a>Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;
 
 **Resources**
 
@@ -894,10 +810,10 @@ Vowels and finals | | | | | | | | |&#x0020;
 <span class='yna normal'>&#x16F79;</span> | <span class='yna normal'>&#x16F7B;</span> | <span class='yna normal'>&#x16F7E;</span> | <span class='yna normal'>&#x16F81;</span> | <span class='yna normal'>&#x16F82;</span>
 16F79 | 16F7B | 16F7E | 16F81 | 16F82
 
-Positioning tone marks | | &#x0020;
-:-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
-16F8F | 16F90 | 16F91
+Positioning tone marks | | |&#x0020;
+:-- | :-- | :-- | :-- 
+MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE | MIAO TONE BELOW
+16F8F | 16F90 | 16F91 | 16F92
 
 _Punctuation_
 
@@ -946,30 +862,12 @@ _Sample graphic_
 <img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
-### <a id="ysy"></a>Sanie / Bai Yi &#x005B;ysy&#x005D;
-
-**Resources**
-
-_Language tag:_ `ysy`
-
-_Opentype language system tag:_ none
-
-_SLDR:_ none
-
-_Keyman keyboard:_ none
-
-_Font:_ [Shimenkan](https://software.sil.org/shimenkan/) 
-
-**Character set**
-
-Unknown
-
 ## <a id="ref"></a>References
 
 UBS. 1972. [The Book of a Thousand Tongues](https://archive.org/details/B-001-001-424/page/2/mode/2up)
 
-Enwall, Joakim (1994, 1995), A myth become reality: History and development of the Miao written
-language. Volumes 1 and 2. Stockholm East Asian monographs no. 5-6., Institute of Oriental
+Enwall, Joakim. 1994/1995. _A myth become reality: History and development of the Miao written
+language._ Volumes 1 and 2. Stockholm East Asian monographs no. 5-6., Institute of Oriental
 Languages, Stockholm University, Sweden.
 
 undated (2011). YU SUEE YAN. [THE STORY OF THE BIG FLOWERY MIAO BIBLE](https://archive.translation.bible/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf)
