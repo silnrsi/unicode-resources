@@ -2,9 +2,9 @@
 title: Representing Miao in Unicode - Unicode Technical Note (proposed draft)
 ---
 
-_Lorna Evans, SIL International (8-Feb-2024)_
+_Lorna Evans, SIL International (23-Feb-2024)_
 
-_This is a work in progress. Additional information is most welcome. Removed hnj, lbc (mistaken for yna), cqd (mistaken for hmd), and ysy (mistaken for ygp?)._
+_This is a work in progress. Additional information is most welcome. Earlier versions contained references to the misidentified languages: cqd, hnj, lbc, and ysy._
 
 - <a href="#over">Overview</a>
    - <a href="#store">Character storage</a>
@@ -15,16 +15,16 @@ _This is a work in progress. Additional information is most welcome. Removed hnj
       - <a href="#lig">Ligatures</a>
       - <a href="#kern">Kerning</a>
       - <a href="#glyph">Glyph variants</a>
-- <a href="#lang">Languages currently using Miao/Pollard script</a>
+- <a href="#lang">Languages currently using Miao/Pollard script</a> [[1](#1)]
    - <a href="#hmd">Large Flowery Miao / Dahua Miao / A-Hmao &#x005B;hmd&#x005D;</a>
    - <a href="#hmz">Sinicized Miao / Waishu Miao / Hmong Shua &#x005B;hmz&#x005D;</a>
    - <a href="#lpo">Lipo / Dong Lisu / Eastern Lisu &#x005B;lpo&#x005D;</a>
-   - <a href="#sfm">Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;</a>
    - <a href="#ygp">Bai Yi / Gepo &#x005B;ygp&#x005D;</a>
    - <a href="#ywq">Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu &#x005B;ywq&#x005D;</a>
-- <a href="#former">Languages formerly using Miao/Pollard script</a>
+- <a href="#former">Languages formerly using Miao/Pollard script</a> [[1](#1)]
    - <a href="#ktp">Kaduo / Kado &#x005B;ktp&#x005D;</a>
    - <a href="#mww">Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;</a>
+   - <a href="#sfm">Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;</a>
    - <a href="#yna">Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;</a>
 - <a href="#ref">References</a>
 
@@ -37,19 +37,19 @@ This document provides an introduction and overview on how to encode Miao/Pollar
 Each syllable is divided into an initial and a final. The initial is the initial consonant and the final consists of the vowel cluster and the tone. The positioning of the vowels indicates the tone of a syllable. Nasalization and voicing are considered as initial rather than final.
 
 The syllable structure is: (N)C(M)V(V(V))(S/T):
-- N is the nasalizer (U+16F50)
-- C is the obligatory consonant (U+16F00..U+16F4A)
-- M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks)
-- V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87)
-- S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92)
-- T (U+16F93..U+16F9F) is a tone mark; **S and T do not co-occur on a syllable.**
+- N is the nasalizer (16F50)
+- C is the obligatory consonant (16F00..16F4A)
+- M is a modifier (16F51 is an aspiration mark in current use and 16F52..16F53 are two archaic voicing marks)
+- V is one obligatory vowel mark which may be followed by two more (16F54..16F87)
+- S is a “shifting” character which controls the height of the vowel (16F8F..16F92)
+- T (16F93..16F9F) is a tone mark; **S and T do not co-occur on a syllable.**
 
 **Rendering Example**
 
 Setting        | Sample 
 :--- | :--------------- 
 default | <span class='shim normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91;&#x16F50;&#x16F2E;&#x16F54;&#x16F91;&#x16F07;&#x16F79;&#x16F26;&#x16F58;&#x16F8F;&#x16F28;&#x16F51;&#x16F7B;&#x16F43;&#x16F66;&#x16F91;&#x16F3B;&#x16F7A;&#x16F90;&#x16F1E;&#x16F59;&#x16F7E;&#x16F91;&#x16F21;&#x16F60;&#x16F1A;&#x16F5C;&#x16F91;&#x16F16;&#x16F73;&#x16F90;&#x16F18;&#x16F61;&#x16F90;&#x16F04;&#x16F77;&#x16F10;&#x16F75;&#x16F91;&#x16F23;&#x16F71;&#x16F90;&#x16F00;&#x16F6A;&#x16F8F;&#x16F35;&#x16F62;&#x16F91;&#x16F3A;&#x16F6B;&#x16F90;&#x16F33;&#x16F68;&#x16F0A;&#x16F6A;&#x16F57;&#x16F91;&#x16F0E;&#x16F5E;&#x16F8F;&#x16F37;&#x16F5F;&#x16F42;&#x16F61;&#x16F79;&#x16F91;&#x16F08;&#x16F64;&#x16F3D;&#x16F61;&#x16F7B;&#x16F91;&#x16F2F;&#x16F61;&#x16F5D;&#x16F8F;&#x16F1F;&#x16F61;&#x16F73;&#x16F91;&#x16F01;&#x16F6A;&#x16F90;&#x16F0B;&#x16F6A;&#x16F58;&#x16F91;&#x16F38;&#x16F6A;&#x16F5E; </span>
-USV | <span class='affects'>U+16F10 U+16F4F U+16F7B U+16F91 U+16F50 U+16F2E U+16F54 U+16F91 U+16F07 U+16F79 U+16F26 U+16F58 U+16F8F U+16F28 U+16F51 U+16F7B U+16F43 U+16F66 U+16F91 U+16F3B U+16F7A U+16F90 U+16F1E U+16F59 U+16F7E U+16F91 U+16F21 U+16F60 U+16F1A U+16F5C U+16F91 U+16F16 U+16F73 U+16F90 U+16F18 U+16F61 U+16F90 U+16F04 U+16F77 U+16F10 U+16F75 U+16F91 U+16F23 U+16F71 U+16F90 U+16F00 U+16F6A U+16F8F U+16F35 U+16F62 U+16F91 U+16F3A U+16F6B U+16F90 U+16F33 U+16F68 U+16F0A U+16F6A U+16F57 U+16F91 U+16F0E U+16F5E U+16F8F U+16F37 U+16F5F U+16F42 U+16F61 U+16F79 U+16F91 U+16F08 U+16F64; U+16F3D U+16F61 U+16F7B U+16F91 U+16F2F U+16F61 U+16F5D U+16F8F U+16F1F U+16F61 U+16F73 U+16F91 U+16F01 U+16F6A U+16F90 U+16F0B U+16F6A U+16F58 U+16F91 U+16F38 U+16F6A U+16F5E </span>
+Code Points | <span class='affects'>16F10 16F4F 16F7B 16F91 16F50 16F2E 16F54 16F91 16F07 16F79 16F26 16F58 16F8F 16F28 16F51 16F7B 16F43 16F66 16F91 16F3B 16F7A 16F90 16F1E 16F59 16F7E 16F91 16F21 16F60 16F1A 16F5C 16F91 16F16 16F73 16F90 16F18 16F61 16F90 16F04 16F77 16F10 16F75 16F91 16F23 16F71 16F90 16F00 16F6A 16F8F 16F35 16F62 16F91 16F3A 16F6B 16F90 16F33 16F68 16F0A 16F6A 16F57 16F91 16F0E 16F5E 16F8F 16F37 16F5F 16F42 16F61 16F79 16F91 16F08 16F64; 16F3D 16F61 16F7B 16F91 16F2F 16F61 16F5D 16F8F 16F1F 16F61 16F73 16F91 16F01 16F6A 16F90 16F0B 16F6A 16F58 16F91 16F38 16F6A 16F5E</span>
 
 ### <a id="punct"></a>Punctuation and Digits
 
@@ -67,7 +67,9 @@ Miao script users use Western-style digits 0-9.
 
 ### <a id="break"></a>Line breaking and word breaking
 
-Word breaking occurs only before an initial consonant. Syllables of consonant, vowels and tone are never split. Line breaks at spaces or after punctuation. A line break may not be inserted between any syllable, or before punctuation.
+Line breaks occur at spaces or after punctuation. A line break may not be inserted within any syllable, or before punctuation immediately following a Miao syllable. There is no line breaking hyphenation.
+
+Word breaking occurs only before an initial consonant. Syllables of consonant, vowels and tone are never split. 
 
 When the Big Flowery Miao &#x005B;hmd&#x005D; Bible was typeset, the translation team introduced word breaks. Earlier texts were written without word breaks, and this caused problems in typesetting. Word breaks were introduced in trial editions and were well accepted. Based on this positive feedback, the team included word breaks in the Miao Bible ([YU SUEE YAN](https://archive.translation.bible/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf)).
 
@@ -77,29 +79,29 @@ When the Big Flowery Miao &#x005B;hmd&#x005D; Bible was typeset, the translation
 
 Four positioning tone marks are encoded. The default position for the vowels and finals is on the baseline. If another position is required a tone positioning mark is required.
 
-Setting | Sample 
-:---    | :--------------- 
-default | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;</span>
-<span class='affects'>U+16F8F MIAO TONE RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F8F; </span>
-<span class='affects'>U+16F90 MIAO TONE TOP RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F90; </span>
-<span class='affects'>U+16F91 MIAO TONE ABOVE</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F91; </span>
-<span class='affects'>U+16F92 MIAO TONE BELOW</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F92; </span>
+Setting | Sample | Code Points
+:---    | :--------------- | :--
+default | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;</span> | 16F23 16F6A 16F57
+<span class='affects'>16F8F MIAO TONE RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F8F; </span> | 16F23 16F6A 16F57 16F8F
+<span class='affects'>16F90 MIAO TONE TOP RIGHT</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F90; </span> | 16F23 16F6A 16F57 16F90
+<span class='affects'>16F91 MIAO TONE ABOVE</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F91; </span> | 16F23 16F6A 16F57 16F91
+<span class='affects'>16F92 MIAO TONE BELOW</span> | <span class='shim normal'>&#x16F23;&#x16F6A;&#x16F57;&#x16F92; </span> | 16F23 16F6A 16F57 16F92
 
 However, for Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D; the four tone positions are used right of initial.
 
-USV       | default | sfm variant 
+Code Points       | default | sfm variant 
 :------------- | :--- | :--- 
-<span class='affects'>U+16F90, U+16F8F, U+16F92, none</span> | <span class='shim normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> |<span class='sfm normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> 
+<span class='affects'>16F90, 16F8F, 16F92, none</span> | <span class='shim normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> |<span class='sfm normal'>&#x16F00;&#x16F6A;&#x16F90; &#x16F00;&#x16F6A;&#x16F8F; &#x16F00;&#x16F6A;&#x16F92; &#x16F00;&#x16F6A;</span> 
 
 **<a id="lig"></a>Ligatures**
 
-Sinicized Miao &#x005B;hmz&#x005D;, Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;, and sometimes Large Flowery Miao / Dahua Miao / A-Hmao &#x005B;hmd&#x005D;, puts the aspiration mark (U+16F51) in front of the consonant rather than the default position of after. It is possible other languages would also do this.
+Sinicized Miao &#x005B;hmz&#x005D;, Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;, and sometimes Large Flowery Miao / Dahua Miao / A-Hmao &#x005B;hmd&#x005D;, puts the aspiration mark (16F51) in front of the consonant rather than the default position of after. It is possible other languages would also do this.
 
-Setting        | default | hmz, sfm, hmd
+Code Points       | default | hmz, sfm, hmd
 :------------- | :--- | :---
-<span class='affects'>U+16F04 U+16F51</span> | <span class='shim normal'>&#x16F04;&#x16F51;</span> | <span class='hmz normal'>&#x16F04;&#x16F51;</span>
-<span class='affects'>U+16F10 U+16F51</span> | <span class='shim normal'>&#x16F10;&#x16F51;</span> | <span class='hmz normal'>&#x16F10;&#x16F51;</span>
-<span class='affects'>U+16F23 U+16F51</span> | <span class='shim normal'>&#x16F23;&#x16F51;</span> | <span class='hmz normal'>&#x16F23;&#x16F51;</span>
+<span class='affects'>16F04 16F51</span> | <span class='shim normal'>&#x16F04;&#x16F51;</span> | <span class='hmz normal'>&#x16F04;&#x16F51;</span>
+<span class='affects'>16F10 16F51</span> | <span class='shim normal'>&#x16F10;&#x16F51;</span> | <span class='hmz normal'>&#x16F10;&#x16F51;</span>
+<span class='affects'>16F23 16F51</span> | <span class='shim normal'>&#x16F23;&#x16F51;</span> | <span class='hmz normal'>&#x16F23;&#x16F51;</span>
 
 **<a id="kern"></a>Kerning**
 
@@ -116,13 +118,13 @@ Setting        | default | variant | language
 
 **<a id="wart"></a>“wart” vs “dot” variants**
 
-Some Miao consonants appear in the code charts with a “wart” attached to the glyph, usually on the left-hand side. In the Chuxiong orthography, a dot appears instead of the wart on these consonants. Because the user communities consider the appearance of the wart or dot to be a different way to write the same characters and not a difference of the character’s identity, the differences in appearance are a matter of font style. There is one other variant for U+16F2F MIAO LETTER DZHA in the **Other variants** table below.
+Some Miao consonants appear in the code charts with a “wart” attached to the glyph, usually on the left-hand side. In the Chuxiong orthography, a dot appears instead of the wart on these consonants. Because the user communities consider the appearance of the wart or dot to be a different way to write the same characters and not a difference of the character’s identity, the differences in appearance are a matter of font style. There is one other variant for 16F2F MIAO LETTER DZHA in the **Other variants** table below.
 
 This “wart” represents a pronunciation which may be voicing or half voicing or lenition or some other sort of “reduced tension”. 
 
 The dot-like mark containing characters and “wart” characters are never used together. 
 
-<span class='affects'>Affects: U+16F01 U+16F05 U+16F09 U+16F0B U+16F0F U+16F11 U+16F15 U+16F17 U+16F19 U+16F1B U+16F1D U+16F1F U+16F22 U+16F24 U+16F29 U+16F2B U+16F2D U+16F2F U+16F36 U+16F38 U+16F3C U+16F3E U+16F41 U+16F44 U+16F45 U+16F46 U+16F47</span>
+<span class='affects'>Affects: 16F01 16F05 16F09 16F0B 16F0F 16F11 16F15 16F17 16F19 16F1B 16F1D 16F1F 16F22 16F24 16F29 16F2B 16F2D 16F2F 16F36 16F38 16F3C 16F3E 16F41 16F44 16F45 16F46 16F47</span>
 
 Setting         | Sample          
 :-------------   | :---------------  
@@ -131,39 +133,39 @@ alternate (dot) | <span class='hmdd normal'>&#x16F01; &#x16F05; &#x16F09; &#x16F
 
 **Other variants**
 
-Setting        | default | variant | language
+Code Points        | default | variant | language
 :------------- | :--- | :--- | :---
-<span class='affects'>U+3001</span> | <span class='shim normal'>&#x3001;</span> |<span class='lpo normal'>&#x3001;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F02</span> | <span class='shim normal'>&#x16F02;</span> |<span class='ygp normal'>&#x16F02;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='hmdd normal'>&#x16F04;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='lpo normal'>&#x16F04;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F04</span> | <span class='shim normal'>&#x16F04;</span> | <span class='ygp normal'>&#x16F04;</span> | <span class='affects'>ygp, ywq normalized</span>
-<span class='affects'>U+16F05</span> | <span class='shim normal'>&#x16F05;</span> |<span class='hmdd normal'>&#x16F05;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='hmdd normal'>&#x16F10;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='lpo normal'>&#x16F10;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F10</span> | <span class='shim normal'>&#x16F10;</span> | <span class='ygp normal'>&#x16F10;</span> | <span class='affects'>ygp, ywq normalized</span>
-<span class='affects'>U+16F11</span> | <span class='shim normal'>&#x16F11;</span> |<span class='hmdd normal'>&#x16F11;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='hmdd normal'>&#x16F14;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='ygp normal'>&#x16F14;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F15</span> | <span class='shim normal'>&#x16F15;</span> |<span class='hmdd normal'>&#x16F15;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='hmdd normal'>&#x16F23;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='lpo normal'>&#x16F23;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='ygp normal'>&#x16F23;</span> | <span class='affects'>ygp</span>
-<span class='affects'>U+16F24</span> | <span class='shim normal'>&#x16F24;</span> |<span class='hmdd normal'>&#x16F24;</span> | <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F2F</span> | <span class='shim normal'>&#x16F2F;</span> | <span class='ywqa normal'>&#x16F2F;</span> | <span class='affects'>ywq normalized</span>
-<span class='affects'>U+16F33</span> | <span class='shim normal'><font color="red">&#x16F33;</font></span> |<span class='lpo normal'>&#x16F33;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F35</span> | <span class='shim normal'>&#x16F35;</span> | <span class='ywqa normal'>&#x16F35;</span> | <span class='affects'>ywq normalized</span>
+<span class='affects'>3001</span> | <span class='shim normal'>&#x3001;</span> |<span class='lpo normal'>&#x3001;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F02</span> | <span class='shim normal'>&#x16F02;</span> |<span class='ygp normal'>&#x16F02;</span> | <span class='affects'>ygp</span>
+<span class='affects'>16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='hmdd normal'>&#x16F04;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F04</span> | <span class='shim normal'>&#x16F04;</span> |<span class='lpo normal'>&#x16F04;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F04</span> | <span class='shim normal'>&#x16F04;</span> | <span class='ygp normal'>&#x16F04;</span> | <span class='affects'>ygp, ywq normalized</span>
+<span class='affects'>16F05</span> | <span class='shim normal'>&#x16F05;</span> |<span class='hmdd normal'>&#x16F05;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='hmdd normal'>&#x16F10;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F10</span> | <span class='shim normal'>&#x16F10;</span> |<span class='lpo normal'>&#x16F10;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F10</span> | <span class='shim normal'>&#x16F10;</span> | <span class='ygp normal'>&#x16F10;</span> | <span class='affects'>ygp, ywq normalized</span>
+<span class='affects'>16F11</span> | <span class='shim normal'>&#x16F11;</span> |<span class='hmdd normal'>&#x16F11;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='hmdd normal'>&#x16F14;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F14</span> | <span class='shim normal'>&#x16F14;</span> |<span class='ygp normal'>&#x16F14;</span> | <span class='affects'>ygp</span>
+<span class='affects'>16F15</span> | <span class='shim normal'>&#x16F15;</span> |<span class='hmdd normal'>&#x16F15;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='hmdd normal'>&#x16F23;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='lpo normal'>&#x16F23;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F23</span> | <span class='shim normal'>&#x16F23;</span> |<span class='ygp normal'>&#x16F23;</span> | <span class='affects'>ygp</span>
+<span class='affects'>16F24</span> | <span class='shim normal'>&#x16F24;</span> |<span class='hmdd normal'>&#x16F24;</span> | <span class='affects'>hmd normalised</span>
+<span class='affects'>16F2F</span> | <span class='shim normal'>&#x16F2F;</span> | <span class='ywqa normal'>&#x16F2F;</span> | <span class='affects'>ywq normalized</span>
+<span class='affects'>16F33</span> | <span class='shim normal'><font color="red">&#x16F33;</font></span> |<span class='lpo normal'>&#x16F33;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F35</span> | <span class='shim normal'>&#x16F35;</span> | <span class='ywqa normal'>&#x16F35;</span> | <span class='affects'>ywq normalized</span>
 
-Setting        | default | variant | language
+Code Points  | default | variant | language
 :------------- | :--- | :--- | :---
-<span class='affects'>U+16F57</span> | <span class='shim normal'>&#x16F57;</span> | <span class='shim normal'   lang='hmd'>&#x16F57;</span> (flat bottom) | <span class='affects'>hmd traditional, hmd normalized, hmz, lpo</span>
-<span class='affects'>U+16F58</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'   lang='lpo'>&#x16F58;</span> | <span class='affects'>lpo</span>
-<span class='affects'>U+16F5C</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5C;</span> (near-centre stem)| <span class='affects'>ygp</span>
-<span class='affects'>U+16F5E</span> | <span class='shim normal'>&#x16F5E;</span> |<span class='hmdd normal'>&#x16F5E;</span> (flat top)| <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F5F</span> | <span class='shim normal'>&#x16F5F;</span> |<span class='hmdd normal'>&#x16F5F;</span> (flat top)| <span class='affects'>hmd normalised</span>
-<span class='affects'>U+16F60</span> | <span class='shim normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F60;</span> (near-centre stem) | <span class='affects'>ygp</span>
-<span class='affects'>U+16F73</span> | <span class='shim normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F73;</span> (near-centre stem) | <span class='affects'>ygp</span>
-<span class='affects'>U+16F7A</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='hmd normal'>&#x16F7A;</span> (pointed hook) | <span class='affects'>hmd traditional, hmd normalized, hmz, sfm</span>
+<span class='affects'>16F57</span> | <span class='shim normal'>&#x16F57;</span> | <span class='shim normal'   lang='hmd'>&#x16F57;</span> (flat bottom) | <span class='affects'>hmd traditional, hmd normalized, hmz, lpo</span>
+<span class='affects'>16F58</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'   lang='lpo'>&#x16F58;</span> | <span class='affects'>lpo</span>
+<span class='affects'>16F5C</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5C;</span> (near-centre stem)| <span class='affects'>ygp</span>
+<span class='affects'>16F5E</span> | <span class='shim normal'>&#x16F5E;</span> |<span class='hmdd normal'>&#x16F5E;</span> (flat top)| <span class='affects'>hmd normalised</span>
+<span class='affects'>16F5F</span> | <span class='shim normal'>&#x16F5F;</span> |<span class='hmdd normal'>&#x16F5F;</span> (flat top)| <span class='affects'>hmd normalised</span>
+<span class='affects'>16F60</span> | <span class='shim normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F60;</span> (near-centre stem) | <span class='affects'>ygp</span>
+<span class='affects'>16F73</span> | <span class='shim normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F73;</span> (near-centre stem) | <span class='affects'>ygp</span>
+<span class='affects'>16F7A</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='hmd normal'>&#x16F7A;</span> (pointed hook) | <span class='affects'>hmd traditional, hmd normalized, hmz, sfm</span>
 
 
 ## <a id="lang"></a>Languages currently using Miao/Pollard script
@@ -288,9 +290,7 @@ default        | <span class='shim normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F1
 hmd alternates  | <span class='hmd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
 normalized orthography alternates      | <span class='hmdd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
 
-_Sample graphic_
-
-<img src="assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
+_Sample graphic_</br><img src="assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 **_Character set from 1988 (Enwall, vol 2, pp 185-188)_**
@@ -406,7 +406,7 @@ See also <a href="#punct">Punctuation and Digits</a>.
 
 Additional punctuation: <span class='lpo normal'>' - : ; = ?</span>
 
-<span class='lpo normal'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
+<span class='lpo normal'>&#x3001;</span> (3001 IDEOGRAPHIC COMMA)
 
 **Rendering**
 
@@ -418,10 +418,245 @@ default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F3
 alternate      | <span class='lpo normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
 
 
-_Sample graphic_
-
-<img src="assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
+_Sample graphic_</br><img src="assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
+
+### <a id="ygp"></a>Bai Yi / Gepo &#x005B;ygp&#x005D;
+
+_Language tag:_ `ygp`
+
+_Opentype language system tag:_ `YGP `
+
+_SLDR:_ none
+
+_Keyman keyboard:_ [ygp](https://keyman.com/keyboards/sil_ygp_plrd)
+
+_Font:_ [Shimenkan GSM](https://software.sil.org/shimenkan/)
+
+**_Character set ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 2)_**
+
+Consonant onsets | | | | | | | | |&#x0020;
+:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+<span class='ygp normal'>&#x16F00; | <span class='ygp normal'>&#x16F02; | <span class='ygp normal'>&#x16F04; | <span class='ygp normal'>&#x16F07; | <span class='ygp normal'>&#x16F08; | <span class='ygp normal'>&#x16F0A; | <span class='ygp normal'>&#x16F0E; | <span class='ygp normal'>&#x16F10; | <span class='ygp normal'>&#x16F12; | <span class='ygp normal'>&#x16F14;  
+16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0E | 16F10 | 16F12 | 16F14
+<span class='ygp normal'>&#x16F16; | <span class='ygp normal'>&#x16F18; | <span class='ygp normal'>&#x16F1E; | <span class='ygp normal'>&#x16F23; | <span class='ygp normal'>&#x16F26; | <span class='ygp normal'>&#x16F28; | <span class='ygp normal'>&#x16F2A; | <span class='ygp normal'>&#x16F2E; | <span class='ygp normal'>&#x16F32; | <span class='ygp normal'>&#x16F33;
+16F16 | 16F18 | 16F1E | 16F23 | 16F26 | 16F28 | 16F2A | 16F2E | 16F32 | 16F33
+<span class='ygp normal'>&#x16F35; | <span class='ygp normal'>&#x16F37; | <span class='ygp normal'>&#x16F3A; | <span class='ygp normal'>&#x16F3B; | <span class='ygp normal'>&#x16F3D; | <span class='ygp normal'>&#x16F42; | <span class='ygp normal'>&#x16F43; | <span class='ygp normal'>&#x16F48; | <span class='ygp normal'>&#x16F49; | <span class='ygp normal'>&#x16F4A;
+16F35 | 16F37 | 16F3A | 16F3B | 16F3D | 16F42 | 16F43 | 16F48 | 16F49 | 16F4A 
+
+Modifiers | Nasalization | Aspiration
+:-- | :-- | :-- 
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
+&#x0020; | 16F50 | 16F51
+
+Vowels and finals | | | | | | | | |&#x0020;
+:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
+<span class='ygp normal'>&#x16F54;</span> | <span class='ygp normal'>&#x16F57;</span> | <span class='ygp normal'>&#x16F58;</span> | <span class='ygp normal'>&#x16F59;</span> | <span class='ygp normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5D;</span> | <span class='ygp normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F61;</span> | <span class='ygp normal'>&#x16F66;</span> 
+16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F60 | 16F61 | 16F66
+<span class='ygp normal'>&#x16F68;</span> | <span class='ygp normal'>&#x16F6A;</span> | <span class='ygp normal'>&#x16F71;</span> | <span class='ygp normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F75;</span> | <span class='ygp normal'>&#x16F76;</span> | <span class='ygp normal'>&#x16F77;</span> | <span class='ygp normal'>&#x16F79;</span> | <span class='ygp normal'>&#x16F7A;</span>
+16F68 | 16F6A | 16F71 | 16F73 | 16F75 | 16F76 | 16F77 | 16F79 | 16F7A
+<span class='ygp normal'>&#x16F7B;</span> | <span class='ygp normal'>&#x16F7E;</span> | <span class='ygp normal'>&#x16F81;</span> | <span class='ygp normal'>&#x16F83;</span> | <span class='ygp normal'>&#x16F84;</span> | <span class='ygp normal'>&#x16F85;</span> | <span class='ygp normal'>&#x16F86;</span> | <span class='ygp normal'>&#x16F87;</span>
+16F7B | 16F7E | 16F81 | 16F83 | 16F84 | 16F85 | 16F86 | 16F87 
+
+Positioning tone marks | |&#x0020;
+:-- | :-- | :-- 
+MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
+16F8F | 16F90 | 16F91 
+
+_Punctuation_
+
+See also <a href="#punct">Punctuation and Digits</a>.
+
+Additional punctuation: <span class='lpo normal'>' ; : - *</span>
+
+
+**_Sorting ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 2)_**
+
+&#x26;<span class='ygp normal'>&#x16F43;</span> &lt; <span class='ygp normal'>&#x16F16;</span></br>
+&#x26;<span class='ygp normal'>&#x16F00;</span> &lt;&lt; <span class='ygp normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F00;</span></br>
+&#x26;<span class='ygp normal'>&#x16F02;</span> &lt; <span class='ygp normal'>&#x16F48;</span></br>
+&#x26;<span class='ygp normal'>&#x16F0A;</span> &lt;&lt; <span class='ygp normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F49;</span></br>
+&#x26;<span class='ygp normal'>&#x16F37;</span> &lt;&lt; <span class='ygp normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F37;</span></br>
+&#x26;<span class='ygp normal'>&#x16F07;</span> &lt; <span class='ygp normal'>&#x16F18;</span> &lt; <span class='ygp normal'>&#x16F32;</span></br>
+&#x26;<span class='ygp normal'>&#x16F2E;</span> &lt;&lt; <span class='ygp normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F2E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F2A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F1E;</span> &lt;&lt; <span class='ygp normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F1E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F4A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F0E;</span> &lt;&lt; <span class='ygp normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F08;</span> &lt; <span class='ygp normal'>&#x16F3D;</span> &lt; <span class='ygp normal'>&#x16F42;</span> &lt; <span class='ygp normal'>&#x16F04;</span> &lt; <span class='ygp normal'>&#x16F10;</span> &lt; <span class='ygp normal'>&#x16F14;</span> &lt; <span class='ygp normal'>&#x16F12;</span> &lt; <span class='ygp normal'>&#x16F3B;</span> &lt; <span class='ygp normal'>&#x16F3A;</span> &lt; <span class='ygp normal'>&#x16F33;</span></br>
+&#x26;<span class='ygp normal'>&#x16F26;</span> &lt;&lt; <span class='ygp normal'>&#x16F26;&#x16F51;</span></br>
+&#x26;<span class='ygp normal'>&#x16F28;</span> &lt; <span class='ygp normal'>&#x16F23;</span> &lt; <span class='ygp normal'>&#x16F35;</span></br>
+&#x26;<span class='ygp normal'>&#x16F54;</span> &lt; <span class='ygp normal'>&#x16F7A;</span></br>
+&#x26;<span class='ygp normal'>&#x16F61;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7E; </span></br>
+&#x26;<span class='ygp normal'>&#x16F79; </span></br>
+&#x26;<span class='ygp normal'>&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F59;&#x16F7E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F6A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7E; </span></br>
+&#x26;<span class='ygp normal'>&#x16F71;</span> &lt; <span class='ygp normal'>&#x16F5D;</span></br>
+&#x26;<span class='ygp normal'>&#x16F5C;</span> &lt;&lt; <span class='ygp normal'>&#x16F5C;&#x16F5D;</span></br>
+&#x26;<span class='ygp normal'>&#x16F73;</span> &lt; <span class='ygp normal'>&#x16F60;</span> &lt; <span class='ygp normal'>&#x16F86;</span> &lt; <span class='ygp normal'>&#x16F85;</span> &lt; <span class='ygp normal'>&#x16F76;</span> &lt; <span class='ygp normal'>&#x16F7B;</span> &lt; <span class='ygp normal'>&#x16F66;</span> &lt; <span class='ygp normal'>&#x16F84;</span> &lt; <span class='ygp normal'>&#x16F83;</span> &lt; <span class='ygp normal'>&#x16F77;</span> &lt; <span class='ygp normal'>&#x16F75;</span> &lt; <span class='ygp normal'>&#x16F81;</span> &lt; <span class='ygp normal'>&#x16F57;</span> &lt; <span class='ygp normal'>&#x16F58;</span> &lt; <span class='ygp normal'>&#x16F68;</span> &lt; <span class='ygp normal'>&#x16F87;</span>
+
+**Rendering**
+
+See also <a href="#kern">Kerning</a> for special behavior.
+
+_Glyph variants_
+
+Setting        | Sample
+:------ | :---------------
+default        | <span class='shim normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
+alternate      | <span class='ygp normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
+
+_Sample text taken from Figure 1 of [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+
+Setting        | Sample           | Code Points
+:-- | :-- | :---------
+ygp | <span class='ygp normal'>&#x16F48;&#x16F66;&#x16F90; &#x16F2A;&#x16F5C;&#x16F91; &#x16F48;&#x16F85; &#x16F2E;&#x16F51;&#x16F5C;&#x16F91; &#x16F32;&#x16F61;&#x16F7B;&#x16F90;</span> | 16F48 16F66 16F90 0020 16F2A 16F5C 16F91 0020 16F48 16F85 0020 16F2E 16F51 16F5C 16F91 0020 16F32 16F61 16F7B 16F90
+
+_Sample graphic_</br><img src="assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
+<figcaption>Mark 1:1-4 (UBS).</figcaption>
+
+### <a id="ywq"></a>Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu &#x005B;ywq&#x005D;
+
+**Resources**
+
+_Language tag:_ `ywq`
+
+_Opentype language system tag:_ `YWQ `
+
+_SLDR:_ none
+
+_Keyman keyboard:_ [ywq](https://keyman.com/keyboards/sil_ywq_plrd)
+
+_Font:_ [Salaowu](https://software.sil.org/shimenkan/) - normalised orthography
+
+**_Character set ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 5)_**
+
+Consonant onsets | | | | | | | | |&#x0020;
+:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+<span class='shim normal'>&#x16F00;</span> | <span class='shim normal'>&#x16F02;</span> | <span class='shim normal'>&#x16F04;</span> | <span class='shim normal'>&#x16F07;</span> | <span class='shim normal'>&#x16F08;</span> | <span class='shim normal'>&#x16F0A;</span> | <span class='shim normal'>&#x16F0C;</span> | <span class='shim normal'>&#x16F0D;</span> | <span class='shim normal'>&#x16F0E;</span> | <span class='shim normal'>&#x16F10;</span>
+16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0C | 16F0D | 16F0E | 16F10
+<span class='shim normal'>&#x16F12;</span> | <span class='shim normal'>&#x16F14;</span> | <span class='shim normal'>&#x16F16;</span> | <span class='shim normal'>&#x16F18;</span> | <span class='shim normal'>&#x16F1E;</span> | <span class='shim normal'>&#x16F21;</span> | <span class='shim normal'>&#x16F23;</span> | <span class='shim normal'>&#x16F26;</span> | <span class='shim normal'>&#x16F28;</span> | <span class='shim normal'>&#x16F2E;</span>
+16F12 | 16F14 | 16F16 | 16F18 | 16F1E | 16F21 | 16F23 | 16F26 | 16F28 | 16F2E
+<span class='shim normal'>&#x16F2F;</span> | <span class='shim normal'>&#x16F30;</span> | <span class='shim normal'>&#x16F31;</span> | <span class='shim normal'>&#x16F33;</span> | <span class='shim normal'>&#x16F34;</span> | <span class='shim normal'>&#x16F35;</span> | <span class='shim normal'>&#x16F37;</span> | <span class='shim normal'>&#x16F39;</span> | <span class='shim normal'>&#x16F3A;</span> | <span class='shim normal'>&#x16F3B;</span>
+16F2F | 16F30 | 16F31 | 16F33 | 16F34 | 16F35 | 16F37 | 16F39 | 16F3A | 16F3B
+<span class='shim normal'>&#x16F3D;</span> | <span class='shim normal'>&#x16F42;</span> | <span class='shim normal'>&#x16F43;</span>
+16F3D | 16F42 | 16F43
+
+Modifiers | Nasalization | Aspiration
+:-- | :-- | :-- 
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
+&#x0020; | 16F50 | 16F51
+
+Vowels and finals | | | | | | | | |&#x0020;
+:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
+<span class='shim normal'>&#x16F54;</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'>&#x16F59;</span> | <span class='shim normal'>&#x16F5B;</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='shim normal'>&#x16F5D;</span> | <span class='shim normal'>&#x16F61;</span> | <span class='shim normal'>&#x16F62;</span> | <span class='shim normal'>&#x16F66;</span> | <span class='shim normal'>&#x16F68;</span>  
+16F54 | 16F58 | 16F59 | 16F5B | 16F5C | 16F5D | 16F61 | 16F62 | 16F66 | 16F68
+<span class='shim normal'>&#x16F6A;</span> | <span class='shim normal'>&#x16F6B;</span> | <span class='shim normal'>&#x16F6E;</span> | <span class='shim normal'>&#x16F71;</span> | <span class='shim normal'>&#x16F73;</span> | <span class='shim normal'>&#x16F76;</span> | <span class='shim normal'>&#x16F78;</span> | <span class='shim normal'>&#x16F79;</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='shim normal'>&#x16F7B;</span>
+16F6A | 16F6B | 16F6E| 16F71 | 16F73 | 16F76 | 16F78 | 16F79 | 16F7A | 16F7B
+<span class='shim normal'>&#x16F7F;</span> | <span class='shim normal'>&#x16F80;</span>
+16F7F | 16F80
+
+Positioning tone marks | |&#x0020;
+:-- | :-- | :-- 
+MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
+16F8F | 16F90 | 16F91 
+
+_Punctuation_
+
+See also <a href="#punct">Punctuation and Digits</a>.
+
+**_Sorting ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 5)_**
+
+_Red signifies unsure of sorting as it seems to be a digraph and should sort elsewhere. Some of the vowel "digraphs" are what made sense to the author, not as the chart listed them._
+
+&#x26;<span class='shim normal'>&#x16F43;</span> &lt; <span class='shim normal'>&#x16F28;</span></br>
+&#x26;<span class='shim normal'>&#x16F00;</span> &lt; <span class='shim normal'>&#x16F02;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='shim normal'>&#x16F00;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F07;</span> &lt; <span class='shim normal'>&#x16F26;</span> &lt;&lt; <span class='shim normal'>&#x16F26;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F16;</span> &lt; <span class='shim normal'>&#x16F18;</span></br>
+&#x26;<span class='shim normal'>&#x16F2E;</span> &lt; <span class='shim normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='shim normal'>&#x16F2E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F1E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F21;</span> &lt; <span class='shim normal'>&#x16F30;</span></br>
+&#x26;<span class='shim normal'>&#x16F31;</span> &lt;&lt; <span class='shim normal'>&#x16F31;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F0E;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F39;</span></br>
+&#x26;<span class='shim normal'>&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F37;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F0A;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F0D;</span> &lt; <span class='shim normal'>&#x16F0C;</span> &lt; <span class='shim normal'><font color="red">&#x16F2F;</font></span> &lt; <span class='shim normal'><font color="red">&#x16F12;&#x16F2E;</font></span> &lt; <span class='shim normal'>&#x16F04;</span> &lt; <span class='shim normal'>&#x16F10;</span> &lt; <span class='shim normal'>&#x16F12;</span> &lt; <span class='shim normal'>&#x16F14;</span> &lt; <span class='shim normal'>&#x16F33;</span> &lt; <span class='shim normal'>&#x16F34;</span> &lt; <span class='shim normal'>&#x16F23;</span> &lt; <span class='shim normal'>&#x16F3A;</span> &lt; <span class='shim normal'>&#x16F42;</span> &lt; <span class='shim normal'>&#x16F08;</span> &lt; <span class='shim normal'>&#x16F3D;</span> &lt; <span class='shim normal'>&#x16F3B;</span> &lt; <span class='shim normal'>&#x16F35;</span></br>
+&#x26;<span class='shim normal'>&#x16F54;</span> &lt; <span class='shim normal'>&#x16F79;</span> &lt; <span class='shim normal'>&#x16F66;</span> &lt; <span class='shim normal'>&#x16F7B;</span> &lt; <span class='shim normal'>&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F59;&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F5B;</span> &lt; <span class='shim normal'>&#x16F7F;</span> &lt; <span class='shim normal'>&#x16F78;</span> &lt; <span class='shim normal'>&#x16F76;</span></br>
+&#x26;<span class='shim normal'>&#x16F61;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F5B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F58;</span></br>
+&#x26;<span class='shim normal'>&#x16F6A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5C;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F58;</span></br>
+&#x26;<span class='shim normal'>&#x16F80;</span> &lt; <span class='shim normal'>&#x16F73;</span> &lt; <span class='shim normal'>&#x16F7A;</span> &lt; <span class='shim normal'>&#x16F71;</span></br>
+&#x26;<span class='shim normal'>&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F5D;&#x16F5C;</span></br>
+&#x26;<span class='shim normal'>&#x16F62;</span> &lt; <span class='shim normal'>&#x16F6B;</span> &lt; <span class='shim normal'>&#x16F68;</span> &lt; <span class='shim normal'>&#x16F6E;</span> &lt; <span class='shim normal'>&#x16F58;</span></br>
+
+
+
+
+**Rendering**
+
+_Glyph variants_
+
+Setting        | Sample
+:------ | :--------------- 
+default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+traditional      | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+normalized      | <span class='ywqa normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
+
+_Sample text taken from Figure 7 of [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
+
+Setting        | Sample           | Code Points
+:-- | :-- | :---------
+ywq | <span class='shim normal'>&#x16F0D;&#x16F73;&#x16F90; &#x16F21;&#x16F58; &#x16F12;&#x16F7B;&#x16F91; &#x16F30;&#x16F59;&#x16F5C;&#x16F91;</span> | 16F0D 16F73 16F90 0020 16F21 16F58 0020 16F12 16F7B 16F91 0020 16F30 16F59 16F5C 16F91
+
+_Sample graphic_</br><img src="assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
+<figcaption>Mark 1:1-4 (UBS).</figcaption>
+
+## <a id="former"></a>Languages formerly using Miao/Pollard script
+
+### <a id="ktp"></a>Kaduo / Kado &#x005B;ktp&#x005D;
+
+**Resources**
+
+_Language tag:_ `ktp`
+
+**Character set**
+
+Unknown
+
+Modifiers | Nasalization | Aspiration
+:-- | :-- | :-- 
+&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
+&#x0020; | 16F50 | 16F51
+
+Positioning tone marks  |&#x0020;
+:-- | :-- 
+MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
+16F90 | 16F91
+
+_Punctuation_
+
+See also <a href="#punct">Punctuation and Digits</a>.
+
+Additional punctuation: <span class='shim normal'>: ;</span>
+
+
+**Rendering**
+
+_Sample graphic_</br><img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
+<figcaption>Luke 3:1-4 (UBS).</figcaption>
+
+### <a id="mww"></a>Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;
+
+**Resources**
+
+_Language tag:_ `mww-Plrd`
+
+_Opentype language system tag:_ `MWW `
+
+_No further information_
 
 ### <a id="sfm"></a>Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;
 
@@ -521,255 +756,8 @@ See also <a href="#kern">Kerning</a> for special behavior.
 
 See also <a href="#lig">Ligatures</a> for special behavior.
 
-_Sample graphic_
-
-<img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
+_Sample graphic_</br><img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
 <figcaption>John (Figure 14, [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)).</figcaption>
-
-
-### <a id="ygp"></a>Bai Yi / Gepo &#x005B;ygp&#x005D;
-
-_Language tag:_ `ygp`
-
-_Opentype language system tag:_ `YGP `
-
-_SLDR:_ none
-
-_Keyman keyboard:_ [ygp](https://keyman.com/keyboards/sil_ygp_plrd)
-
-_Font:_ [Shimenkan GSM](https://software.sil.org/shimenkan/)
-
-**_Character set ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 2)_**
-
-Consonant onsets | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='ygp normal'>&#x16F00; | <span class='ygp normal'>&#x16F02; | <span class='ygp normal'>&#x16F04; | <span class='ygp normal'>&#x16F07; | <span class='ygp normal'>&#x16F08; | <span class='ygp normal'>&#x16F0A; | <span class='ygp normal'>&#x16F0E; | <span class='ygp normal'>&#x16F10; | <span class='ygp normal'>&#x16F12; | <span class='ygp normal'>&#x16F14;  
-16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0E | 16F10 | 16F12 | 16F14
-<span class='ygp normal'>&#x16F16; | <span class='ygp normal'>&#x16F18; | <span class='ygp normal'>&#x16F1E; | <span class='ygp normal'>&#x16F23; | <span class='ygp normal'>&#x16F26; | <span class='ygp normal'>&#x16F28; | <span class='ygp normal'>&#x16F2A; | <span class='ygp normal'>&#x16F2E; | <span class='ygp normal'>&#x16F32; | <span class='ygp normal'>&#x16F33;
-16F16 | 16F18 | 16F1E | 16F23 | 16F26 | 16F28 | 16F2A | 16F2E | 16F32 | 16F33
-<span class='ygp normal'>&#x16F35; | <span class='ygp normal'>&#x16F37; | <span class='ygp normal'>&#x16F3A; | <span class='ygp normal'>&#x16F3B; | <span class='ygp normal'>&#x16F3D; | <span class='ygp normal'>&#x16F42; | <span class='ygp normal'>&#x16F43; | <span class='ygp normal'>&#x16F48; | <span class='ygp normal'>&#x16F49; | <span class='ygp normal'>&#x16F4A;
-16F35 | 16F37 | 16F3A | 16F3B | 16F3D | 16F42 | 16F43 | 16F48 | 16F49 | 16F4A 
-
-Modifiers | Nasalization | Aspiration
-:-- | :-- | :-- 
-&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
-&#x0020; | 16F50 | 16F51
-
-Vowels and finals | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='ygp normal'>&#x16F54;</span> | <span class='ygp normal'>&#x16F57;</span> | <span class='ygp normal'>&#x16F58;</span> | <span class='ygp normal'>&#x16F59;</span> | <span class='ygp normal'>&#x16F5C;</span> | <span class='ygp normal'>&#x16F5D;</span> | <span class='ygp normal'>&#x16F60;</span> | <span class='ygp normal'>&#x16F61;</span> | <span class='ygp normal'>&#x16F66;</span> 
-16F54 | 16F57 | 16F58 | 16F59 | 16F5C | 16F5D | 16F60 | 16F61 | 16F66
-<span class='ygp normal'>&#x16F68;</span> | <span class='ygp normal'>&#x16F6A;</span> | <span class='ygp normal'>&#x16F71;</span> | <span class='ygp normal'>&#x16F73;</span> | <span class='ygp normal'>&#x16F75;</span> | <span class='ygp normal'>&#x16F76;</span> | <span class='ygp normal'>&#x16F77;</span> | <span class='ygp normal'>&#x16F79;</span> | <span class='ygp normal'>&#x16F7A;</span>
-16F68 | 16F6A | 16F71 | 16F73 | 16F75 | 16F76 | 16F77 | 16F79 | 16F7A
-<span class='ygp normal'>&#x16F7B;</span> | <span class='ygp normal'>&#x16F7E;</span> | <span class='ygp normal'>&#x16F81;</span> | <span class='ygp normal'>&#x16F83;</span> | <span class='ygp normal'>&#x16F84;</span> | <span class='ygp normal'>&#x16F85;</span> | <span class='ygp normal'>&#x16F86;</span> | <span class='ygp normal'>&#x16F87;</span>
-16F7B | 16F7E | 16F81 | 16F83 | 16F84 | 16F85 | 16F86 | 16F87 
-
-Positioning tone marks | |&#x0020;
-:-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
-16F8F | 16F90 | 16F91 
-
-_Punctuation_
-
-See also <a href="#punct">Punctuation and Digits</a>.
-
-Additional punctuation: <span class='lpo normal'>' ; : - *</span>
-
-
-**_Sorting ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 2)_**
-
-&#x26;<span class='ygp normal'>&#x16F43;</span> &lt; <span class='ygp normal'>&#x16F16;</span></br>
-&#x26;<span class='ygp normal'>&#x16F00;</span> &lt;&lt; <span class='ygp normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F00;</span></br>
-&#x26;<span class='ygp normal'>&#x16F02;</span> &lt; <span class='ygp normal'>&#x16F48;</span></br>
-&#x26;<span class='ygp normal'>&#x16F0A;</span> &lt;&lt; <span class='ygp normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F49;</span></br>
-&#x26;<span class='ygp normal'>&#x16F37;</span> &lt;&lt; <span class='ygp normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F37;</span></br>
-&#x26;<span class='ygp normal'>&#x16F07;</span> &lt; <span class='ygp normal'>&#x16F18;</span> &lt; <span class='ygp normal'>&#x16F32;</span></br>
-&#x26;<span class='ygp normal'>&#x16F2E;</span> &lt;&lt; <span class='ygp normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F2E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F2A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F1E;</span> &lt;&lt; <span class='ygp normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F1E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F4A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F0E;</span> &lt;&lt; <span class='ygp normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F08;</span> &lt; <span class='ygp normal'>&#x16F3D;</span> &lt; <span class='ygp normal'>&#x16F42;</span> &lt; <span class='ygp normal'>&#x16F04;</span> &lt; <span class='ygp normal'>&#x16F10;</span> &lt; <span class='ygp normal'>&#x16F14;</span> &lt; <span class='ygp normal'>&#x16F12;</span> &lt; <span class='ygp normal'>&#x16F3B;</span> &lt; <span class='ygp normal'>&#x16F3A;</span> &lt; <span class='ygp normal'>&#x16F33;</span></br>
-&#x26;<span class='ygp normal'>&#x16F26;</span> &lt;&lt; <span class='ygp normal'>&#x16F26;&#x16F51;</span></br>
-&#x26;<span class='ygp normal'>&#x16F28;</span> &lt; <span class='ygp normal'>&#x16F23;</span> &lt; <span class='ygp normal'>&#x16F35;</span></br>
-&#x26;<span class='ygp normal'>&#x16F54;</span> &lt; <span class='ygp normal'>&#x16F7A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F61;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7E; </span></br>
-&#x26;<span class='ygp normal'>&#x16F79; </span></br>
-&#x26;<span class='ygp normal'>&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F59;&#x16F7E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F6A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7E; </span></br>
-&#x26;<span class='ygp normal'>&#x16F71;</span> &lt; <span class='ygp normal'>&#x16F5D;</span></br>
-&#x26;<span class='ygp normal'>&#x16F5C;</span> &lt;&lt; <span class='ygp normal'>&#x16F5C;&#x16F5D;</span></br>
-&#x26;<span class='ygp normal'>&#x16F73;</span> &lt; <span class='ygp normal'>&#x16F60;</span> &lt; <span class='ygp normal'>&#x16F86;</span> &lt; <span class='ygp normal'>&#x16F85;</span> &lt; <span class='ygp normal'>&#x16F76;</span> &lt; <span class='ygp normal'>&#x16F7B;</span> &lt; <span class='ygp normal'>&#x16F66;</span> &lt; <span class='ygp normal'>&#x16F84;</span> &lt; <span class='ygp normal'>&#x16F83;</span> &lt; <span class='ygp normal'>&#x16F77;</span> &lt; <span class='ygp normal'>&#x16F75;</span> &lt; <span class='ygp normal'>&#x16F81;</span> &lt; <span class='ygp normal'>&#x16F57;</span> &lt; <span class='ygp normal'>&#x16F58;</span> &lt; <span class='ygp normal'>&#x16F68;</span> &lt; <span class='ygp normal'>&#x16F87;</span>
-
-**Rendering**
-
-See also <a href="#kern">Kerning</a> for special behavior.
-
-_Glyph variants_
-
-Setting        | Sample
-:------ | :---------------
-default        | <span class='shim normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
-alternate      | <span class='ygp normal'>&#x16F02; &#x16F04; &#x16F10; &#x16F14; &#x16F23; &#x16F5C; &#x16F60; &#x16F73;</span>
-
-_Sample text taken from Figure 1 of [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
-
-Setting        | Sample           | USV
-:-- | :-- | :---------
-ygp | <span class='ygp normal'>&#x16F48;&#x16F66;&#x16F90; &#x16F2A;&#x16F5C;&#x16F91; &#x16F48;&#x16F85; &#x16F2E;&#x16F51;&#x16F5C;&#x16F91; &#x16F32;&#x16F61;&#x16F7B;&#x16F90;</span> | U+16F48 U+16F66 U+16F90 U+0020 U+16F2A U+16F5C U+16F91 U+0020 U+16F48 U+16F85 U+0020 U+16F2E U+16F51 U+16F5C U+16F91 U+0020 U+16F32 U+16F61 U+16F7B U+16F90
-
-_Sample graphic_
-
-<img src="assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
-<figcaption>Mark 1:1-4 (UBS).</figcaption>
-
-### <a id="ywq"></a>Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu &#x005B;ywq&#x005D;
-
-**Resources**
-
-_Language tag:_ `ywq`
-
-_Opentype language system tag:_ `YWQ `
-
-_SLDR:_ none
-
-_Keyman keyboard:_ [ywq](https://keyman.com/keyboards/sil_ywq_plrd)
-
-_Font:_ [Salaowu](https://software.sil.org/shimenkan/) - normalised orthography
-
-**_Character set ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 5)_**
-
-Consonant onsets | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-<span class='shim normal'>&#x16F00;</span> | <span class='shim normal'>&#x16F02;</span> | <span class='shim normal'>&#x16F04;</span> | <span class='shim normal'>&#x16F07;</span> | <span class='shim normal'>&#x16F08;</span> | <span class='shim normal'>&#x16F0A;</span> | <span class='shim normal'>&#x16F0C;</span> | <span class='shim normal'>&#x16F0D;</span> | <span class='shim normal'>&#x16F0E;</span> | <span class='shim normal'>&#x16F10;</span>
-16F00 | 16F02 | 16F04 | 16F07 | 16F08 | 16F0A | 16F0C | 16F0D | 16F0E | 16F10
-<span class='shim normal'>&#x16F12;</span> | <span class='shim normal'>&#x16F14;</span> | <span class='shim normal'>&#x16F16;</span> | <span class='shim normal'>&#x16F18;</span> | <span class='shim normal'>&#x16F1E;</span> | <span class='shim normal'>&#x16F21;</span> | <span class='shim normal'>&#x16F23;</span> | <span class='shim normal'>&#x16F26;</span> | <span class='shim normal'>&#x16F28;</span> | <span class='shim normal'>&#x16F2E;</span>
-16F12 | 16F14 | 16F16 | 16F18 | 16F1E | 16F21 | 16F23 | 16F26 | 16F28 | 16F2E
-<span class='shim normal'>&#x16F2F;</span> | <span class='shim normal'>&#x16F30;</span> | <span class='shim normal'>&#x16F31;</span> | <span class='shim normal'>&#x16F33;</span> | <span class='shim normal'>&#x16F34;</span> | <span class='shim normal'>&#x16F35;</span> | <span class='shim normal'>&#x16F37;</span> | <span class='shim normal'>&#x16F39;</span> | <span class='shim normal'>&#x16F3A;</span> | <span class='shim normal'>&#x16F3B;</span>
-16F2F | 16F30 | 16F31 | 16F33 | 16F34 | 16F35 | 16F37 | 16F39 | 16F3A | 16F3B
-<span class='shim normal'>&#x16F3D;</span> | <span class='shim normal'>&#x16F42;</span> | <span class='shim normal'>&#x16F43;</span>
-16F3D | 16F42 | 16F43
-
-Modifiers | Nasalization | Aspiration
-:-- | :-- | :-- 
-&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
-&#x0020; | 16F50 | 16F51
-
-Vowels and finals | | | | | | | | |&#x0020;
-:-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- 
-<span class='shim normal'>&#x16F54;</span> | <span class='shim normal'>&#x16F58;</span> | <span class='shim normal'>&#x16F59;</span> | <span class='shim normal'>&#x16F5B;</span> | <span class='shim normal'>&#x16F5C;</span> | <span class='shim normal'>&#x16F5D;</span> | <span class='shim normal'>&#x16F61;</span> | <span class='shim normal'>&#x16F62;</span> | <span class='shim normal'>&#x16F66;</span> | <span class='shim normal'>&#x16F68;</span>  
-16F54 | 16F58 | 16F59 | 16F5B | 16F5C | 16F5D | 16F61 | 16F62 | 16F66 | 16F68
-<span class='shim normal'>&#x16F6A;</span> | <span class='shim normal'>&#x16F6B;</span> | <span class='shim normal'>&#x16F6E;</span> | <span class='shim normal'>&#x16F71;</span> | <span class='shim normal'>&#x16F73;</span> | <span class='shim normal'>&#x16F76;</span> | <span class='shim normal'>&#x16F78;</span> | <span class='shim normal'>&#x16F79;</span> | <span class='shim normal'>&#x16F7A;</span> | <span class='shim normal'>&#x16F7B;</span>
-16F6A | 16F6B | 16F6E| 16F71 | 16F73 | 16F76 | 16F78 | 16F79 | 16F7A | 16F7B
-<span class='shim normal'>&#x16F7F;</span> | <span class='shim normal'>&#x16F80;</span>
-16F7F | 16F80
-
-Positioning tone marks | |&#x0020;
-:-- | :-- | :-- 
-MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
-16F8F | 16F90 | 16F91 
-
-_Punctuation_
-
-See also <a href="#punct">Punctuation and Digits</a>.
-
-**_Sorting ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 5)_**
-
-_Red signifies unsure of sorting as it seems to be a digraph and should sort elsewhere. Some of the vowel "digraphs" are what made sense to the author, not as the chart listed them._
-
-&#x26;<span class='shim normal'>&#x16F43;</span> &lt; <span class='shim normal'>&#x16F28;</span></br>
-&#x26;<span class='shim normal'>&#x16F00;</span> &lt; <span class='shim normal'>&#x16F02;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='shim normal'>&#x16F00;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F07;</span> &lt; <span class='shim normal'>&#x16F26;</span> &lt;&lt; <span class='shim normal'>&#x16F26;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F16;</span> &lt; <span class='shim normal'>&#x16F18;</span></br>
-&#x26;<span class='shim normal'>&#x16F2E;</span> &lt; <span class='shim normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='shim normal'>&#x16F2E;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='shim normal'>&#x16F1E;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F21;</span> &lt; <span class='shim normal'>&#x16F30;</span></br>
-&#x26;<span class='shim normal'>&#x16F31;</span> &lt;&lt; <span class='shim normal'>&#x16F31;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F0E;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F39;</span></br>
-&#x26;<span class='shim normal'>&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F37;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F0A;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F0D;</span> &lt; <span class='shim normal'>&#x16F0C;</span> &lt; <span class='shim normal'><font color="red">&#x16F2F;</font></span> &lt; <span class='shim normal'><font color="red">&#x16F12;&#x16F2E;</font></span> &lt; <span class='shim normal'>&#x16F04;</span> &lt; <span class='shim normal'>&#x16F10;</span> &lt; <span class='shim normal'>&#x16F12;</span> &lt; <span class='shim normal'>&#x16F14;</span> &lt; <span class='shim normal'>&#x16F33;</span> &lt; <span class='shim normal'>&#x16F34;</span> &lt; <span class='shim normal'>&#x16F23;</span> &lt; <span class='shim normal'>&#x16F3A;</span> &lt; <span class='shim normal'>&#x16F42;</span> &lt; <span class='shim normal'>&#x16F08;</span> &lt; <span class='shim normal'>&#x16F3D;</span> &lt; <span class='shim normal'>&#x16F3B;</span> &lt; <span class='shim normal'>&#x16F35;</span></br>
-&#x26;<span class='shim normal'>&#x16F54;</span> &lt; <span class='shim normal'>&#x16F79;</span> &lt; <span class='shim normal'>&#x16F66;</span> &lt; <span class='shim normal'>&#x16F7B;</span> &lt; <span class='shim normal'>&#x16F5C;</span></br>
-&#x26;<span class='shim normal'>&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F59;&#x16F5C;</span></br>
-&#x26;<span class='shim normal'>&#x16F5B;</span> &lt; <span class='shim normal'>&#x16F7F;</span> &lt; <span class='shim normal'>&#x16F78;</span> &lt; <span class='shim normal'>&#x16F76;</span></br>
-&#x26;<span class='shim normal'>&#x16F61;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F5B;</span> &lt;&lt; <span class='shim normal'>&#x16F61;&#x16F58;</span></br>
-&#x26;<span class='shim normal'>&#x16F6A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5C;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='shim normal'>&#x16F6A;&#x16F58;</span></br>
-&#x26;<span class='shim normal'>&#x16F80;</span> &lt; <span class='shim normal'>&#x16F73;</span> &lt; <span class='shim normal'>&#x16F7A;</span> &lt; <span class='shim normal'>&#x16F71;</span></br>
-&#x26;<span class='shim normal'>&#x16F5D;</span> &lt;&lt; <span class='shim normal'>&#x16F5D;&#x16F5C;</span></br>
-&#x26;<span class='shim normal'>&#x16F62;</span> &lt; <span class='shim normal'>&#x16F6B;</span> &lt; <span class='shim normal'>&#x16F68;</span> &lt; <span class='shim normal'>&#x16F6E;</span> &lt; <span class='shim normal'>&#x16F58;</span></br>
-
-
-
-
-**Rendering**
-
-_Glyph variants_
-
-Setting        | Sample
-:------ | :--------------- 
-default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
-traditional      | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
-normalized      | <span class='ywqa normal'>&#x16F04; &#x16F10; &#x16F2F; &#x16F35;</span>
-
-_Sample text taken from Figure 7 of [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)._
-
-Setting        | Sample           | USV
-:-- | :-- | :---------
-ywq | <span class='shim normal'>&#x16F0D;&#x16F73;&#x16F90; &#x16F21;&#x16F58; &#x16F12;&#x16F7B;&#x16F91; &#x16F30;&#x16F59;&#x16F5C;&#x16F91;</span> | U+16F0D U+16F73 U+16F90 U+0020 U+16F21 U+16F58 U+0020 U+16F12 U+16F7B U+16F91 U+0020 U+16F30 U+16F59 U+16F5C U+16F91
-
-_Sample graphic_
-
-<img src="assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
-<figcaption>Mark 1:1-4 (UBS).</figcaption>
-
-## <a id="former"></a>Languages formerly using Miao/Pollard script
-
-### <a id="ktp"></a>Kaduo / Kado &#x005B;ktp&#x005D;
-
-**Resources**
-
-_Language tag:_ `ktp`
-
-**Character set**
-
-Unknown
-
-Modifiers | Nasalization | Aspiration
-:-- | :-- | :-- 
-&#x0020; | <span class='shim normal'>&#x16F50;</span> | <span class='shim normal'>&#x16F51;</span>
-&#x0020; | 16F50 | 16F51
-
-Positioning tone marks  |&#x0020;
-:-- | :-- 
-MIAO TONE TOP RIGHT | MIAO TONE ABOVE 
-16F90 | 16F91
-
-_Punctuation_
-
-See also <a href="#punct">Punctuation and Digits</a>.
-
-Additional punctuation: <span class='shim normal'>: ;</span>
-
-
-**Rendering**
-
-_Sample graphic_
-
-<img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
-<figcaption>Luke 3:1-4 (UBS).</figcaption>
-
-### <a id="mww"></a>Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;
-
-**Resources**
-
-_Language tag:_ `mww-Plrd`
-
-_Opentype language system tag:_ `MWW `
-
-_No further information_
-
 
 ### <a id="yna"></a>Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;
 
@@ -821,9 +809,9 @@ See also <a href="#punct">Punctuation and Digits</a>.
 
 Additional punctuation: <span class='shim normal'>: ; _ ' ? ! *</span>
 
-<span class='yna normal'>&#x3001;</span> (U+3001 IDEOGRAPHIC COMMA)
+<span class='yna normal'>&#x3001;</span> (3001 IDEOGRAPHIC COMMA)
 
-<span class='yna normal'>&#x3002;</span> (U+3002 IDEOGRAPHIC FULL STOP)
+<span class='yna normal'>&#x3002;</span> (3002 IDEOGRAPHIC FULL STOP)
 
 **_Sorting ([L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf), figure 10)_**
 
@@ -853,13 +841,11 @@ See also <a href="#kern">Kerning</a> for special behavior.
 
 _Sample text taken from Figure 8 of Cheuk._
 
-Setting        | Sample           | USV
+Setting        | Sample           | Code Points
 :-- | :-- | :---------
-yna | <span class='yna normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x16F51;&#x16F5C;&#x16F90; &#x16F2E;&#x16F61;&#x16F59;</span> | U+16F10 U+16F4F U+16F7B U+16F91 U+0020 U+16F2E U+16F51 U+16F5C U+16F90 U+0020 U+16F2E U+16F61 U+16F59
+yna | <span class='yna normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x16F51;&#x16F5C;&#x16F90; &#x16F2E;&#x16F61;&#x16F59;</span> | 16F10 16F4F 16F7B 16F91 0020 16F2E 16F51 16F5C 16F90 0020 16F2E 16F61 16F59
 
-_Sample graphic_
-
-<img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
+_Sample graphic_</br><img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 ## <a id="ref"></a>References
@@ -886,3 +872,6 @@ undated. 2012 (or later). Jeremiah Y.S. Chung and Eric Drewry. [The Uses and Use
 
 [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf) Adrian Cheuk. 2017-10-03. Proposal for additions to the Miao script 
 
+---
+
+<a name="1">1</a> The distinctions made here for languages with &#x201c;current&#x201d; use and &#x201c;former&#x201d; use are based on information found in [The Uses and Users of the Miao Script](https://www.academia.edu/93203752/The_Uses_and_Users_of_the_Miao_Script).

@@ -14,8 +14,8 @@
     <header>
         <h1 class="title">Representing Miao in Unicode - Unicode Technical Note (proposed draft)</h1>
     </header>
-    <p><em>Lorna Evans, SIL International (8-Feb-2024)</em></p>
-    <p><em>This is a work in progress. Additional information is most welcome. Removed hnj, lbc (mistaken for yna), cqd (mistaken for hmd), and ysy (mistaken for ygp?).</em></p>
+    <p><em>Lorna Evans, SIL International (23-Feb-2024)</em></p>
+    <p><em>This is a work in progress. Additional information is most welcome. Earlier versions contained references to the misidentified languages: cqd, hnj, lbc, and ysy.</em></p>
     <ul>
     <li><a href="#over">Overview</a>
     <ul>
@@ -30,19 +30,19 @@
     <li><a href="#glyph">Glyph variants</a></li>
     </ul></li>
     </ul></li>
-    <li><a href="#lang">Languages currently using Miao/Pollard script</a>
+    <li><a href="#lang">Languages currently using Miao/Pollard script</a> [<a href="#1">1</a>]
     <ul>
     <li><a href="#hmd">Large Flowery Miao / Dahua Miao / A-Hmao [hmd]</a></li>
     <li><a href="#hmz">Sinicized Miao / Waishu Miao / Hmong Shua [hmz]</a></li>
     <li><a href="#lpo">Lipo / Dong Lisu / Eastern Lisu [lpo]</a></li>
-    <li><a href="#sfm">Xiaohua Miao / Small Flowery Miao [sfm]</a></li>
     <li><a href="#ygp">Bai Yi / Gepo [ygp]</a></li>
     <li><a href="#ywq">Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu [ywq]</a></li>
     </ul></li>
-    <li><a href="#former">Languages formerly using Miao/Pollard script</a>
+    <li><a href="#former">Languages formerly using Miao/Pollard script</a> [<a href="#1">1</a>]
     <ul>
     <li><a href="#ktp">Kaduo / Kado [ktp]</a></li>
     <li><a href="#mww">Hmong Daw / White Miao / Sichuan Miao [mww]</a></li>
+    <li><a href="#sfm">Xiaohua Miao / Small Flowery Miao [sfm]</a></li>
     <li><a href="#yna">Gan Yi / Dry Yi / Aluo / Laka [yna]</a></li>
     </ul></li>
     <li><a href="#ref">References</a></li>
@@ -51,7 +51,7 @@
     <p>This document provides an introduction and overview on how to encode Miao/Pollard script text. It also gives information on the languages using the script and resources which are available.</p>
     <h3 id="character-storage"><a id="store"></a>Character storage</h3>
     <p>Each syllable is divided into an initial and a final. The initial is the initial consonant and the final consists of the vowel cluster and the tone. The positioning of the vowels indicates the tone of a syllable. Nasalization and voicing are considered as initial rather than final.</p>
-    <p>The syllable structure is: (N)C(M)V(V(V))(S/T): - N is the nasalizer (U+16F50) - C is the obligatory consonant (U+16F00..U+16F4A) - M is a modifier (U+16F51 is an aspiration mark in current use and U+16F52..U+16F53 are two archaic voicing marks) - V is one obligatory vowel mark which may be followed by two more (U+16F54..U+16F87) - S is a “shifting” character which controls the height of the vowel (U+16F8F..U+16F92) - T (U+16F93..U+16F9F) is a tone mark; <strong>S and T do not co-occur on a syllable.</strong></p>
+    <p>The syllable structure is: (N)C(M)V(V(V))(S/T): - N is the nasalizer (16F50) - C is the obligatory consonant (16F00..16F4A) - M is a modifier (16F51 is an aspiration mark in current use and 16F52..16F53 are two archaic voicing marks) - V is one obligatory vowel mark which may be followed by two more (16F54..16F87) - S is a “shifting” character which controls the height of the vowel (16F8F..16F92) - T (16F93..16F9F) is a tone mark; <strong>S and T do not co-occur on a syllable.</strong></p>
     <p><strong>Rendering Example</strong></p>
     <table>
     <colgroup>
@@ -70,8 +70,8 @@
     <td style="text-align: left;"><span class="shim normal">𖼐𖽏𖽻𖾑𖽐𖼮𖽔𖾑𖼇𖽹𖼦𖽘𖾏𖼨𖽑𖽻𖽃𖽦𖾑𖼻𖽺𖾐𖼞𖽙𖽾𖾑𖼡𖽠𖼚𖽜𖾑𖼖𖽳𖾐𖼘𖽡𖾐𖼄𖽷𖼐𖽵𖾑𖼣𖽱𖾐𖼀𖽪𖾏𖼵𖽢𖾑𖼺𖽫𖾐𖼳𖽨𖼊𖽪𖽗𖾑𖼎𖽞𖾏𖼷𖽟𖽂𖽡𖽹𖾑𖼈𖽤𖼽𖽡𖽻𖾑𖼯𖽡𖽝𖾏𖼟𖽡𖽳𖾑𖼁𖽪𖾐𖼋𖽪𖽘𖾑𖼸𖽪𖽞 </span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;"><span class="affects">U+16F10 U+16F4F U+16F7B U+16F91 U+16F50 U+16F2E U+16F54 U+16F91 U+16F07 U+16F79 U+16F26 U+16F58 U+16F8F U+16F28 U+16F51 U+16F7B U+16F43 U+16F66 U+16F91 U+16F3B U+16F7A U+16F90 U+16F1E U+16F59 U+16F7E U+16F91 U+16F21 U+16F60 U+16F1A U+16F5C U+16F91 U+16F16 U+16F73 U+16F90 U+16F18 U+16F61 U+16F90 U+16F04 U+16F77 U+16F10 U+16F75 U+16F91 U+16F23 U+16F71 U+16F90 U+16F00 U+16F6A U+16F8F U+16F35 U+16F62 U+16F91 U+16F3A U+16F6B U+16F90 U+16F33 U+16F68 U+16F0A U+16F6A U+16F57 U+16F91 U+16F0E U+16F5E U+16F8F U+16F37 U+16F5F U+16F42 U+16F61 U+16F79 U+16F91 U+16F08 U+16F64; U+16F3D U+16F61 U+16F7B U+16F91 U+16F2F U+16F61 U+16F5D U+16F8F U+16F1F U+16F61 U+16F73 U+16F91 U+16F01 U+16F6A U+16F90 U+16F0B U+16F6A U+16F58 U+16F91 U+16F38 U+16F6A U+16F5E </span></td>
+    <td style="text-align: left;">Code Points</td>
+    <td style="text-align: left;"><span class="affects">16F10 16F4F 16F7B 16F91 16F50 16F2E 16F54 16F91 16F07 16F79 16F26 16F58 16F8F 16F28 16F51 16F7B 16F43 16F66 16F91 16F3B 16F7A 16F90 16F1E 16F59 16F7E 16F91 16F21 16F60 16F1A 16F5C 16F91 16F16 16F73 16F90 16F18 16F61 16F90 16F04 16F77 16F10 16F75 16F91 16F23 16F71 16F90 16F00 16F6A 16F8F 16F35 16F62 16F91 16F3A 16F6B 16F90 16F33 16F68 16F0A 16F6A 16F57 16F91 16F0E 16F5E 16F8F 16F37 16F5F 16F42 16F61 16F79 16F91 16F08 16F64; 16F3D 16F61 16F7B 16F91 16F2F 16F61 16F5D 16F8F 16F1F 16F61 16F73 16F91 16F01 16F6A 16F90 16F0B 16F6A 16F58 16F91 16F38 16F6A 16F5E</span></td>
     </tr>
     </tbody>
     </table>
@@ -86,7 +86,8 @@
     </ul>
     <p>Miao script users use Western-style digits 0-9.</p>
     <h3 id="line-breaking-and-word-breaking"><a id="break"></a>Line breaking and word breaking</h3>
-    <p>Word breaking occurs only before an initial consonant. Syllables of consonant, vowels and tone are never split. Line breaks at spaces or after punctuation. A line break may not be inserted between any syllable, or before punctuation.</p>
+    <p>Line breaks occur at spaces or after punctuation. A line break may not be inserted within any syllable, or before punctuation immediately following a Miao syllable. There is no line breaking hyphenation.</p>
+    <p>Word breaking occurs only before an initial consonant. Syllables of consonant, vowels and tone are never split.</p>
     <p>When the Big Flowery Miao [hmd] Bible was typeset, the translation team introduced word breaks. Earlier texts were written without word breaks, and this caused problems in typesetting. Word breaks were introduced in trial editions and were well accepted. Based on this positive feedback, the team included word breaks in the Miao Bible (<a href="https://archive.translation.bible/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf">YU SUEE YAN</a>).</p>
     <h3 id="rendering"><a id="rend"></a>Rendering</h3>
     <p><strong><a id="tone"></a>Tone mark positioning</strong></p>
@@ -96,28 +97,34 @@
     <tr class="header">
     <th style="text-align: left;">Setting</th>
     <th style="text-align: left;">Sample</th>
+    <th style="text-align: left;">Code Points</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">default</td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽪𖽗</span></td>
+    <td style="text-align: left;">16F23 16F6A 16F57</td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F8F MIAO TONE RIGHT</span></td>
+    <td style="text-align: left;"><span class="affects">16F8F MIAO TONE RIGHT</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽪𖽗𖾏 </span></td>
+    <td style="text-align: left;">16F23 16F6A 16F57 16F8F</td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F90 MIAO TONE TOP RIGHT</span></td>
+    <td style="text-align: left;"><span class="affects">16F90 MIAO TONE TOP RIGHT</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽪𖽗𖾐 </span></td>
+    <td style="text-align: left;">16F23 16F6A 16F57 16F90</td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F91 MIAO TONE ABOVE</span></td>
+    <td style="text-align: left;"><span class="affects">16F91 MIAO TONE ABOVE</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽪𖽗𖾑 </span></td>
+    <td style="text-align: left;">16F23 16F6A 16F57 16F91</td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F92 MIAO TONE BELOW</span></td>
+    <td style="text-align: left;"><span class="affects">16F92 MIAO TONE BELOW</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽪𖽗𖾒 </span></td>
+    <td style="text-align: left;">16F23 16F6A 16F57 16F92</td>
     </tr>
     </tbody>
     </table>
@@ -125,42 +132,42 @@
     <table>
     <thead>
     <tr class="header">
-    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;">Code Points</th>
     <th style="text-align: left;">default</th>
     <th style="text-align: left;">sfm variant</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F90, U+16F8F, U+16F92, none</span></td>
+    <td style="text-align: left;"><span class="affects">16F90, 16F8F, 16F92, none</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼀𖽪𖾐 𖼀𖽪𖾏 𖼀𖽪𖾒 𖼀𖽪</span></td>
     <td style="text-align: left;"><span class="sfm normal">𖼀𖽪𖾐 𖼀𖽪𖾏 𖼀𖽪𖾒 𖼀𖽪</span></td>
     </tr>
     </tbody>
     </table>
     <p><strong><a id="lig"></a>Ligatures</strong></p>
-    <p>Sinicized Miao [hmz], Xiaohua Miao / Small Flowery Miao [sfm], and sometimes Large Flowery Miao / Dahua Miao / A-Hmao [hmd], puts the aspiration mark (U+16F51) in front of the consonant rather than the default position of after. It is possible other languages would also do this.</p>
+    <p>Sinicized Miao [hmz], Xiaohua Miao / Small Flowery Miao [sfm], and sometimes Large Flowery Miao / Dahua Miao / A-Hmao [hmd], puts the aspiration mark (16F51) in front of the consonant rather than the default position of after. It is possible other languages would also do this.</p>
     <table>
     <thead>
     <tr class="header">
-    <th style="text-align: left;">Setting</th>
+    <th style="text-align: left;">Code Points</th>
     <th style="text-align: left;">default</th>
     <th style="text-align: left;">hmz, sfm, hmd</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F04 U+16F51</span></td>
+    <td style="text-align: left;"><span class="affects">16F04 16F51</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼄𖽑</span></td>
     <td style="text-align: left;"><span class="hmz normal">𖼄𖽑</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F10 U+16F51</span></td>
+    <td style="text-align: left;"><span class="affects">16F10 16F51</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼐𖽑</span></td>
     <td style="text-align: left;"><span class="hmz normal">𖼐𖽑</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F23 U+16F51</span></td>
+    <td style="text-align: left;"><span class="affects">16F23 16F51</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣𖽑</span></td>
     <td style="text-align: left;"><span class="hmz normal">𖼣𖽑</span></td>
     </tr>
@@ -212,10 +219,10 @@
     </table>
     <p><strong><a id="glyph"></a>Glyph variants</strong></p>
     <p><strong><a id="wart"></a>“wart” vs “dot” variants</strong></p>
-    <p>Some Miao consonants appear in the code charts with a “wart” attached to the glyph, usually on the left-hand side. In the Chuxiong orthography, a dot appears instead of the wart on these consonants. Because the user communities consider the appearance of the wart or dot to be a different way to write the same characters and not a difference of the character’s identity, the differences in appearance are a matter of font style. There is one other variant for U+16F2F MIAO LETTER DZHA in the <strong>Other variants</strong> table below.</p>
+    <p>Some Miao consonants appear in the code charts with a “wart” attached to the glyph, usually on the left-hand side. In the Chuxiong orthography, a dot appears instead of the wart on these consonants. Because the user communities consider the appearance of the wart or dot to be a different way to write the same characters and not a difference of the character’s identity, the differences in appearance are a matter of font style. There is one other variant for 16F2F MIAO LETTER DZHA in the <strong>Other variants</strong> table below.</p>
     <p>This “wart” represents a pronunciation which may be voicing or half voicing or lenition or some other sort of “reduced tension”.</p>
     <p>The dot-like mark containing characters and “wart” characters are never used together.</p>
-    <p><span class="affects">Affects: U+16F01 U+16F05 U+16F09 U+16F0B U+16F0F U+16F11 U+16F15 U+16F17 U+16F19 U+16F1B U+16F1D U+16F1F U+16F22 U+16F24 U+16F29 U+16F2B U+16F2D U+16F2F U+16F36 U+16F38 U+16F3C U+16F3E U+16F41 U+16F44 U+16F45 U+16F46 U+16F47</span></p>
+    <p><span class="affects">Affects: 16F01 16F05 16F09 16F0B 16F0F 16F11 16F15 16F17 16F19 16F1B 16F1D 16F1F 16F22 16F24 16F29 16F2B 16F2D 16F2F 16F36 16F38 16F3C 16F3E 16F41 16F44 16F45 16F46 16F47</span></p>
     <table>
     <thead>
     <tr class="header">
@@ -238,7 +245,7 @@
     <table>
     <thead>
     <tr class="header">
-    <th style="text-align: left;">Setting</th>
+    <th style="text-align: left;">Code Points</th>
     <th style="text-align: left;">default</th>
     <th style="text-align: left;">variant</th>
     <th style="text-align: left;">language</th>
@@ -246,121 +253,121 @@
     </thead>
     <tbody>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+3001</span></td>
+    <td style="text-align: left;"><span class="affects">3001</span></td>
     <td style="text-align: left;"><span class="shim normal">、</span></td>
     <td style="text-align: left;"><span class="lpo normal">、</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F02</span></td>
+    <td style="text-align: left;"><span class="affects">16F02</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼂</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖼂</span></td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F04</span></td>
+    <td style="text-align: left;"><span class="affects">16F04</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼄</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼄</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F04</span></td>
+    <td style="text-align: left;"><span class="affects">16F04</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼄</span></td>
     <td style="text-align: left;"><span class="lpo normal">𖼄</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F04</span></td>
+    <td style="text-align: left;"><span class="affects">16F04</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼄</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖼄</span></td>
     <td style="text-align: left;"><span class="affects">ygp, ywq normalized</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F05</span></td>
+    <td style="text-align: left;"><span class="affects">16F05</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼅</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼅</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F10</span></td>
+    <td style="text-align: left;"><span class="affects">16F10</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼐</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼐</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F10</span></td>
+    <td style="text-align: left;"><span class="affects">16F10</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼐</span></td>
     <td style="text-align: left;"><span class="lpo normal">𖼐</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F10</span></td>
+    <td style="text-align: left;"><span class="affects">16F10</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼐</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖼐</span></td>
     <td style="text-align: left;"><span class="affects">ygp, ywq normalized</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F11</span></td>
+    <td style="text-align: left;"><span class="affects">16F11</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼑</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼑</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F14</span></td>
+    <td style="text-align: left;"><span class="affects">16F14</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼔</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼔</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F14</span></td>
+    <td style="text-align: left;"><span class="affects">16F14</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼔</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖼔</span></td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F15</span></td>
+    <td style="text-align: left;"><span class="affects">16F15</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼕</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼕</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F23</span></td>
+    <td style="text-align: left;"><span class="affects">16F23</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼣</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F23</span></td>
+    <td style="text-align: left;"><span class="affects">16F23</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣</span></td>
     <td style="text-align: left;"><span class="lpo normal">𖼣</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F23</span></td>
+    <td style="text-align: left;"><span class="affects">16F23</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼣</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖼣</span></td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F24</span></td>
+    <td style="text-align: left;"><span class="affects">16F24</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼤</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖼤</span></td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F2F</span></td>
+    <td style="text-align: left;"><span class="affects">16F2F</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼯</span></td>
     <td style="text-align: left;"><span class="ywqa normal">𖼯</span></td>
     <td style="text-align: left;"><span class="affects">ywq normalized</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F33</span></td>
+    <td style="text-align: left;"><span class="affects">16F33</span></td>
     <td style="text-align: left;"><span class="shim normal"><font color="red">𖼳</font></span></td>
     <td style="text-align: left;"><span class="lpo normal">𖼳</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F35</span></td>
+    <td style="text-align: left;"><span class="affects">16F35</span></td>
     <td style="text-align: left;"><span class="shim normal">𖼵</span></td>
     <td style="text-align: left;"><span class="ywqa normal">𖼵</span></td>
     <td style="text-align: left;"><span class="affects">ywq normalized</span></td>
@@ -370,7 +377,7 @@
     <table>
     <thead>
     <tr class="header">
-    <th style="text-align: left;">Setting</th>
+    <th style="text-align: left;">Code Points</th>
     <th style="text-align: left;">default</th>
     <th style="text-align: left;">variant</th>
     <th style="text-align: left;">language</th>
@@ -378,49 +385,49 @@
     </thead>
     <tbody>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F57</span></td>
+    <td style="text-align: left;"><span class="affects">16F57</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽗</span></td>
     <td style="text-align: left;"><span class="shim normal" lang="hmd">𖽗</span> (flat bottom)</td>
     <td style="text-align: left;"><span class="affects">hmd traditional, hmd normalized, hmz, lpo</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F58</span></td>
+    <td style="text-align: left;"><span class="affects">16F58</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽘</span></td>
     <td style="text-align: left;"><span class="shim normal" lang="lpo">𖽘</span></td>
     <td style="text-align: left;"><span class="affects">lpo</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F5C</span></td>
+    <td style="text-align: left;"><span class="affects">16F5C</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽜</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖽜</span> (near-centre stem)</td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F5E</span></td>
+    <td style="text-align: left;"><span class="affects">16F5E</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽞</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖽞</span> (flat top)</td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F5F</span></td>
+    <td style="text-align: left;"><span class="affects">16F5F</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽟</span></td>
     <td style="text-align: left;"><span class="hmdd normal">𖽟</span> (flat top)</td>
     <td style="text-align: left;"><span class="affects">hmd normalised</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F60</span></td>
+    <td style="text-align: left;"><span class="affects">16F60</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽠</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖽠</span> (near-centre stem)</td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;"><span class="affects">U+16F73</span></td>
+    <td style="text-align: left;"><span class="affects">16F73</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽳</span></td>
     <td style="text-align: left;"><span class="ygp normal">𖽳</span> (near-centre stem)</td>
     <td style="text-align: left;"><span class="affects">ygp</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;"><span class="affects">U+16F7A</span></td>
+    <td style="text-align: left;"><span class="affects">16F7A</span></td>
     <td style="text-align: left;"><span class="shim normal">𖽺</span></td>
     <td style="text-align: left;"><span class="hmd normal">𖽺</span> (pointed hook)</td>
     <td style="text-align: left;"><span class="affects">hmd traditional, hmd normalized, hmz, sfm</span></td>
@@ -768,8 +775,7 @@
     </tr>
     </tbody>
     </table>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
+    <em>Sample graphic</em></br><img src="assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
     <figcaption>
     Mark 1:1-4 (UBS).
     </figcaption>
@@ -1402,7 +1408,7 @@
     <p><em>Punctuation</em></p>
     <p>See also <a href="#punct">Punctuation and Digits</a>.</p>
     <p>Additional punctuation: <span class="lpo normal">' - : ; = ?</span></p>
-    <p><span class="lpo normal">、</span> (U+3001 IDEOGRAPHIC COMMA)</p>
+    <p><span class="lpo normal">、</span> (3001 IDEOGRAPHIC COMMA)</p>
     <p><strong>Rendering</strong></p>
     <p><em>Glyph variants</em></p>
     <table>
@@ -1423,278 +1429,9 @@
     </tr>
     </tbody>
     </table>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
+    <em>Sample graphic</em></br><img src="assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
     <figcaption>
     Mark 1:1-4 (UBS).
-    </figcaption>
-    <h3 id="xiaohua-miao-small-flowery-miao-sfm"><a id="sfm"></a>Xiaohua Miao / Small Flowery Miao [sfm]</h3>
-    <p><strong>Resources</strong></p>
-    <p><em>Language tag:</em> <code>sfm</code></p>
-    <p><em>Opentype language system tag:</em> <code>SFM</code></p>
-    <p><em>SLDR:</em> none</p>
-    <p><em>Keyman keyboard:</em> none</p>
-    <p><em>Font:</em> <a href="https://software.sil.org/shimenkan/">Shimenkan MAS</a></p>
-    <p><strong><em>Character set (<a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>, figure 11)</em></strong></p>
-    <table>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Consonant onsets</th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"> </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖼀</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼁</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼃</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼄</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼇</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼈</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼊</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼋</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼎</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼏</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F00</td>
-    <td style="text-align: left;">16F01</td>
-    <td style="text-align: left;">16F03</td>
-    <td style="text-align: left;">16F04</td>
-    <td style="text-align: left;">16F07</td>
-    <td style="text-align: left;">16F08</td>
-    <td style="text-align: left;">16F0A</td>
-    <td style="text-align: left;">16F0B</td>
-    <td style="text-align: left;">16F0E</td>
-    <td style="text-align: left;">16F0F</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖼐</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼑</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼖</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼗</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼘</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼙</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼞</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼟</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼡</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼢</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F10</td>
-    <td style="text-align: left;">16F11</td>
-    <td style="text-align: left;">16F16</td>
-    <td style="text-align: left;">16F17</td>
-    <td style="text-align: left;">16F18</td>
-    <td style="text-align: left;">16F19</td>
-    <td style="text-align: left;">16F1E</td>
-    <td style="text-align: left;">16F1F</td>
-    <td style="text-align: left;">16F21</td>
-    <td style="text-align: left;">16F22</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖼣</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼦</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼨</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼩</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼮</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼯</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼲</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼳</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼵</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼷</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F23</td>
-    <td style="text-align: left;">16F26</td>
-    <td style="text-align: left;">16F28</td>
-    <td style="text-align: left;">16F29</td>
-    <td style="text-align: left;">16F2E</td>
-    <td style="text-align: left;">16F2F</td>
-    <td style="text-align: left;">16F32</td>
-    <td style="text-align: left;">16F33</td>
-    <td style="text-align: left;">16F35</td>
-    <td style="text-align: left;">16F37</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖼸</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼺</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖼽</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽂</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽃</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽅</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽆</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽇</span></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F38</td>
-    <td style="text-align: left;">16F3A</td>
-    <td style="text-align: left;">16F3D</td>
-    <td style="text-align: left;">16F42</td>
-    <td style="text-align: left;">16F43</td>
-    <td style="text-align: left;">16F45</td>
-    <td style="text-align: left;">16F46</td>
-    <td style="text-align: left;">16F47</td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    </tbody>
-    </table>
-    <table>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Modifiers</th>
-    <th style="text-align: left;">Nasalization</th>
-    <th style="text-align: left;">Aspiration</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;"> </td>
-    <td style="text-align: left;"><span class="shim normal">𖽐</span></td>
-    <td style="text-align: left;"><span class="shim normal">𖽑</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"> </td>
-    <td style="text-align: left;">16F50</td>
-    <td style="text-align: left;">16F51</td>
-    </tr>
-    </tbody>
-    </table>
-    <table>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Vowels and finals</th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"> </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖽔</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽗</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽘</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽙</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽜</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽝</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽞</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽟</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽡</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽢</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F54</td>
-    <td style="text-align: left;">16F57</td>
-    <td style="text-align: left;">16F58</td>
-    <td style="text-align: left;">16F59</td>
-    <td style="text-align: left;">16F5C</td>
-    <td style="text-align: left;">16F5D</td>
-    <td style="text-align: left;">16F5E</td>
-    <td style="text-align: left;">16F5F</td>
-    <td style="text-align: left;">16F61</td>
-    <td style="text-align: left;">16F62</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖽣</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽤</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽦</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽨</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽩</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽪</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽫</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽬</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽭</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽰</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F63</td>
-    <td style="text-align: left;">16F64</td>
-    <td style="text-align: left;">16F66</td>
-    <td style="text-align: left;">16F68</td>
-    <td style="text-align: left;">16F69</td>
-    <td style="text-align: left;">16F6A</td>
-    <td style="text-align: left;">16F6B</td>
-    <td style="text-align: left;">16F6C</td>
-    <td style="text-align: left;">16F6D</td>
-    <td style="text-align: left;">16F70</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;"><span class="sfm normal">𖽱</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽵</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽷</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽸</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽹</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽺</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽻</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖽾</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖾂</span></td>
-    <td style="text-align: left;"><span class="sfm normal">𖾃</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F71</td>
-    <td style="text-align: left;">16F75</td>
-    <td style="text-align: left;">16F77</td>
-    <td style="text-align: left;">16F78</td>
-    <td style="text-align: left;">16F79</td>
-    <td style="text-align: left;">16F7A</td>
-    <td style="text-align: left;">16F7B</td>
-    <td style="text-align: left;">16F7E</td>
-    <td style="text-align: left;">16F82</td>
-    <td style="text-align: left;">16F83</td>
-    </tr>
-    </tbody>
-    </table>
-    <table>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Positioning tone marks</th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"> </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;">MIAO TONE RIGHT</td>
-    <td style="text-align: left;">MIAO TONE TOP RIGHT</td>
-    <td style="text-align: left;">MIAO TONE ABOVE</td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">16F8F</td>
-    <td style="text-align: left;">16F90</td>
-    <td style="text-align: left;">16F91</td>
-    </tr>
-    </tbody>
-    </table>
-    <p><em>Punctuation</em></p>
-    <p>See also <a href="#punct">Punctuation and Digits</a>.</p>
-    <p><strong><em>Sorting (<a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>, figure 11)</em></strong></p>
-    <p><em>Ordering of vowel digraphs is not the same as the chart, but it seemed to make the most sense to the author.</em></p>
-    <p>&amp;<span class="sfm normal">𖼮</span> &lt;&lt;<span class="sfm normal">𖼮𖽑</span> &lt;&lt; <span class="sfm normal">𖼯</span> &lt;&lt;<span class="sfm normal">𖽐𖼮</span> &lt;&lt; <span class="sfm normal">𖽐𖼮𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼯</span></br> &amp;<span class="sfm normal">𖼇</span></br> &amp;<span class="sfm normal">𖼦</span> &lt;&lt; <span class="sfm normal">𖼦𖽑</span></br> &amp;<span class="sfm normal">𖼨</span> &lt;&lt;<span class="sfm normal">𖼨𖽑</span> &lt;&lt; <span class="sfm normal">𖼩</span> &lt;&lt; <span class="sfm normal">𖽐𖼨</span></br> &amp;<span class="sfm normal">𖽃</span> &lt; <span class="sfm normal">𖼵</span></br> &amp;<span class="sfm normal">𖼞</span> &lt;&lt; <span class="sfm normal">𖼞𖽑</span> &lt;&lt; <span class="sfm normal">𖼟</span> &lt;&lt; <span class="sfm normal">𖽐𖼞</span> &lt;&lt; <span class="sfm normal">𖽐𖼞𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼟</span></br> &amp;<span class="sfm normal">𖼡</span> &lt;&lt; <span class="sfm normal">𖼡𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼡</span> &lt;&lt; <span class="sfm normal">𖽐𖼡𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼢</span></br> &amp;<span class="sfm normal">𖼃</span> &lt;&lt; <span class="sfm normal">𖼃𖽑</span> &lt;&lt; <span class="sfm normal">𖽅</span> &lt;&lt; <span class="sfm normal">𖽐𖼃</span> &lt;&lt; <span class="sfm normal">𖽐𖼃𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖽅</span></br> &amp;<span class="sfm normal">𖼖</span> &lt;&lt; <span class="sfm normal">𖼘</span> &lt;&lt; <span class="sfm normal">𖼗</span> &lt;&lt; <span class="sfm normal">𖼙</span></br> &amp;<span class="sfm normal">𖼄</span> &lt;&lt; <span class="sfm normal">𖼄𖽑</span></br> &amp;<span class="sfm normal">𖼐</span> &lt;&lt; <span class="sfm normal">𖼐𖽑</span> &lt;&lt; <span class="sfm normal">𖼑</span></br> &amp;<span class="sfm normal">𖼣</span> &lt;&lt; <span class="sfm normal">𖼣𖽑 </span></br> &amp;<span class="sfm normal">𖼀</span> &lt;&lt; <span class="sfm normal">𖼀𖽑</span> &lt;&lt; <span class="sfm normal">𖼁</span> &lt;&lt; <span class="sfm normal">𖽐𖼀</span> &lt;&lt; <span class="sfm normal">𖽐𖼀𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼁 </span></br> &amp;<span class="sfm normal">𖼳</span> &lt;&lt; <span class="sfm normal">𖽆</span></br> &amp;<span class="sfm normal">𖼺</span></br> &amp;<span class="sfm normal">𖼊</span> &lt;&lt; <span class="sfm normal">𖼊𖽑</span> &lt;&lt; <span class="sfm normal">𖼋</span> &lt;&lt; <span class="sfm normal">𖽐𖼊</span> &lt;&lt; <span class="sfm normal">𖽐𖼊𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼋</span></br> &amp;<span class="sfm normal">𖼎</span> &lt;&lt; <span class="sfm normal">𖼎𖽑</span> &lt;&lt; <span class="sfm normal">𖼏</span> &lt;&lt; <span class="sfm normal">𖽐𖼎</span> &lt;&lt; <span class="sfm normal">𖽐𖼎𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼏 </span></br> &amp;<span class="sfm normal">𖼷</span> &lt;&lt; <span class="sfm normal">𖼷𖽑</span> &lt;&lt; <span class="sfm normal">𖼸</span> &lt;&lt; <span class="sfm normal">𖽐𖼷</span> &lt;&lt; <span class="sfm normal">𖽐𖼷𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼸</span></br> &amp;<span class="sfm normal">𖽂</span> &lt; <span class="sfm normal">𖼈</span> &lt; <span class="sfm normal">𖼽</span></br> &amp;<span class="sfm normal">𖼲</span> &lt;&lt; <span class="sfm normal">𖼲𖽑</span> &lt;&lt; <span class="sfm normal">𖽇</span> &lt;&lt; <span class="sfm normal">𖽐𖼲</span> &lt;&lt; <span class="sfm normal">𖽐𖼲𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖽇</span></br> &amp;<span class="sfm normal">𖽔</span> &lt; <span class="sfm normal">𖽹</span> &lt; <span class="sfm normal">𖽻</span></br> &amp;<span class="sfm normal">𖽝𖽦</span></br> &amp;<span class="sfm normal">𖽺</span> &lt; <span class="sfm normal">𖽜</span></br> &amp;<span class="sfm normal">𖽡</span> &lt;&lt; <span class="sfm normal">𖽤</span> (<span class="sfm normal">𖽡𖽘</span>) &lt;&lt; <span class="sfm normal">𖽣</span> (<span class="sfm normal">𖽡𖽗</span>) &lt;&lt; <span class="sfm normal">𖽡𖽹</span> &lt;&lt; <span class="sfm normal">𖽡𖽻</span> &lt;&lt; <span class="sfm normal">𖽡𖽝</span> &lt;&lt; <span class="sfm normal">𖽡𖽜</span> &lt;&lt; <span class="sfm normal">𖽩</span>(<span class="sfm normal">𖽡𖽙</span>) &lt;&lt; <span class="sfm normal">𖽡𖾃</span> &lt;&lt; <span class="sfm normal">𖽡𖽺</span> &lt;&lt; <span class="sfm normal">𖽡𖽾</span> &lt;&lt; <span class="sfm normal">𖽡𖽞</span> &lt;&lt; <span class="sfm normal">𖽡𖽟</span></br> &amp;<span class="sfm normal">𖽸</span> &lt; <span class="sfm normal">𖽷</span> &lt; <span class="sfm normal">𖽵</span></br> &amp;<span class="sfm normal">𖽙</span> &lt;&lt; <span class="sfm normal">𖽙𖽪</span></br> &amp;<span class="sfm normal">𖽪</span> &lt;&lt; <span class="sfm normal">𖽪𖽞</span> &lt;&lt; <span class="sfm normal">𖽪𖽟</span> &lt;&lt; <span class="sfm normal">𖽪𖽾</span> &lt;&lt; <span class="sfm normal">𖽰</span></br> &amp;<span class="sfm normal">𖾃</span> &lt;&lt; <span class="sfm normal">𖾃𖽾</span></br> &amp;<span class="sfm normal">𖽱</span> &lt;&lt; <span class="sfm normal">𖽱𖽝</span> &lt;&lt; <span class="sfm normal">𖽱𖽺</span> &lt;&lt; <span class="sfm normal">𖽱𖽾</span> &lt;&lt; <span class="sfm normal">𖽱𖽞</span></br> &amp;<span class="sfm normal">𖾂</span> &lt; <span class="sfm normal">𖽢</span> &lt; <span class="sfm normal">𖽨</span> &lt; <span class="sfm normal">𖽗</span> &lt; <span class="sfm normal">𖽘</span> &lt; <span class="sfm normal">𖽞</span> &lt; <span class="sfm normal">𖽟</span></br> &amp;<span class="sfm normal">𖽫</span> &lt;&lt; <span class="sfm normal">𖽬</span> &lt;&lt; <span class="sfm normal">𖽭</span></p>
-    <p><strong>Rendering</strong></p>
-    <p>See also <a href="#tone">Tone mark positioning</a> for unusual positioning in this language.</p>
-    <p>See also <a href="#kern">Kerning</a> for special behavior.</p>
-    <p>See also <a href="#lig">Ligatures</a> for special behavior.</p>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
-    <figcaption>
-    John (Figure 14, <a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>).
     </figcaption>
     <h3 id="bai-yi-gepo-ygp"><a id="ygp"></a>Bai Yi / Gepo [ygp]</h3>
     <p><em>Language tag:</em> <code>ygp</code></p>
@@ -1962,19 +1699,18 @@
     <tr class="header">
     <th style="text-align: left;">Setting</th>
     <th style="text-align: left;">Sample</th>
-    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;">Code Points</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">ygp</td>
     <td style="text-align: left;"><span class="ygp normal">𖽈𖽦𖾐 𖼪𖽜𖾑 𖽈𖾅 𖼮𖽑𖽜𖾑 𖼲𖽡𖽻𖾐</span></td>
-    <td style="text-align: left;">U+16F48 U+16F66 U+16F90 U+0020 U+16F2A U+16F5C U+16F91 U+0020 U+16F48 U+16F85 U+0020 U+16F2E U+16F51 U+16F5C U+16F91 U+0020 U+16F32 U+16F61 U+16F7B U+16F90</td>
+    <td style="text-align: left;">16F48 16F66 16F90 0020 16F2A 16F5C 16F91 0020 16F48 16F85 0020 16F2E 16F51 16F5C 16F91 0020 16F32 16F61 16F7B 16F90</td>
     </tr>
     </tbody>
     </table>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
+    <em>Sample graphic</em></br><img src="assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
     <figcaption>
     Mark 1:1-4 (UBS).
     </figcaption>
@@ -2272,19 +2008,18 @@
     <tr class="header">
     <th style="text-align: left;">Setting</th>
     <th style="text-align: left;">Sample</th>
-    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;">Code Points</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">ywq</td>
     <td style="text-align: left;"><span class="shim normal">𖼍𖽳𖾐 𖼡𖽘 𖼒𖽻𖾑 𖼰𖽙𖽜𖾑</span></td>
-    <td style="text-align: left;">U+16F0D U+16F73 U+16F90 U+0020 U+16F21 U+16F58 U+0020 U+16F12 U+16F7B U+16F91 U+0020 U+16F30 U+16F59 U+16F5C U+16F91</td>
+    <td style="text-align: left;">16F0D 16F73 16F90 0020 16F21 16F58 0020 16F12 16F7B 16F91 0020 16F30 16F59 16F5C 16F91</td>
     </tr>
     </tbody>
     </table>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
+    <em>Sample graphic</em></br><img src="assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
     <figcaption>
     Mark 1:1-4 (UBS).
     </figcaption>
@@ -2337,8 +2072,7 @@
     <p>See also <a href="#punct">Punctuation and Digits</a>.</p>
     <p>Additional punctuation: <span class="shim normal">: ;</span></p>
     <p><strong>Rendering</strong></p>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
+    <em>Sample graphic</em></br><img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
     <figcaption>
     Luke 3:1-4 (UBS).
     </figcaption>
@@ -2347,6 +2081,273 @@
     <p><em>Language tag:</em> <code>mww-Plrd</code></p>
     <p><em>Opentype language system tag:</em> <code>MWW</code></p>
     <p><em>No further information</em></p>
+    <h3 id="xiaohua-miao-small-flowery-miao-sfm"><a id="sfm"></a>Xiaohua Miao / Small Flowery Miao [sfm]</h3>
+    <p><strong>Resources</strong></p>
+    <p><em>Language tag:</em> <code>sfm</code></p>
+    <p><em>Opentype language system tag:</em> <code>SFM</code></p>
+    <p><em>SLDR:</em> none</p>
+    <p><em>Keyman keyboard:</em> none</p>
+    <p><em>Font:</em> <a href="https://software.sil.org/shimenkan/">Shimenkan MAS</a></p>
+    <p><strong><em>Character set (<a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>, figure 11)</em></strong></p>
+    <table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Consonant onsets</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖼀</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼁</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼃</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼄</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼇</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼈</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼊</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼋</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼎</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼏</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F00</td>
+    <td style="text-align: left;">16F01</td>
+    <td style="text-align: left;">16F03</td>
+    <td style="text-align: left;">16F04</td>
+    <td style="text-align: left;">16F07</td>
+    <td style="text-align: left;">16F08</td>
+    <td style="text-align: left;">16F0A</td>
+    <td style="text-align: left;">16F0B</td>
+    <td style="text-align: left;">16F0E</td>
+    <td style="text-align: left;">16F0F</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖼐</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼑</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼖</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼗</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼘</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼙</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼞</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼟</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼡</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼢</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F10</td>
+    <td style="text-align: left;">16F11</td>
+    <td style="text-align: left;">16F16</td>
+    <td style="text-align: left;">16F17</td>
+    <td style="text-align: left;">16F18</td>
+    <td style="text-align: left;">16F19</td>
+    <td style="text-align: left;">16F1E</td>
+    <td style="text-align: left;">16F1F</td>
+    <td style="text-align: left;">16F21</td>
+    <td style="text-align: left;">16F22</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖼣</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼦</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼨</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼩</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼮</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼯</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼲</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼳</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼵</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼷</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F23</td>
+    <td style="text-align: left;">16F26</td>
+    <td style="text-align: left;">16F28</td>
+    <td style="text-align: left;">16F29</td>
+    <td style="text-align: left;">16F2E</td>
+    <td style="text-align: left;">16F2F</td>
+    <td style="text-align: left;">16F32</td>
+    <td style="text-align: left;">16F33</td>
+    <td style="text-align: left;">16F35</td>
+    <td style="text-align: left;">16F37</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖼸</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼺</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖼽</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽂</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽃</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽅</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽆</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽇</span></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F38</td>
+    <td style="text-align: left;">16F3A</td>
+    <td style="text-align: left;">16F3D</td>
+    <td style="text-align: left;">16F42</td>
+    <td style="text-align: left;">16F43</td>
+    <td style="text-align: left;">16F45</td>
+    <td style="text-align: left;">16F46</td>
+    <td style="text-align: left;">16F47</td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    </tbody>
+    </table>
+    <table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Modifiers</th>
+    <th style="text-align: left;">Nasalization</th>
+    <th style="text-align: left;">Aspiration</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;"> </td>
+    <td style="text-align: left;"><span class="shim normal">𖽐</span></td>
+    <td style="text-align: left;"><span class="shim normal">𖽑</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"> </td>
+    <td style="text-align: left;">16F50</td>
+    <td style="text-align: left;">16F51</td>
+    </tr>
+    </tbody>
+    </table>
+    <table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Vowels and finals</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖽔</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽗</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽘</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽙</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽜</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽝</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽞</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽟</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽡</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽢</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F54</td>
+    <td style="text-align: left;">16F57</td>
+    <td style="text-align: left;">16F58</td>
+    <td style="text-align: left;">16F59</td>
+    <td style="text-align: left;">16F5C</td>
+    <td style="text-align: left;">16F5D</td>
+    <td style="text-align: left;">16F5E</td>
+    <td style="text-align: left;">16F5F</td>
+    <td style="text-align: left;">16F61</td>
+    <td style="text-align: left;">16F62</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖽣</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽤</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽦</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽨</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽩</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽪</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽫</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽬</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽭</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽰</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F63</td>
+    <td style="text-align: left;">16F64</td>
+    <td style="text-align: left;">16F66</td>
+    <td style="text-align: left;">16F68</td>
+    <td style="text-align: left;">16F69</td>
+    <td style="text-align: left;">16F6A</td>
+    <td style="text-align: left;">16F6B</td>
+    <td style="text-align: left;">16F6C</td>
+    <td style="text-align: left;">16F6D</td>
+    <td style="text-align: left;">16F70</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;"><span class="sfm normal">𖽱</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽵</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽷</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽸</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽹</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽺</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽻</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖽾</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖾂</span></td>
+    <td style="text-align: left;"><span class="sfm normal">𖾃</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F71</td>
+    <td style="text-align: left;">16F75</td>
+    <td style="text-align: left;">16F77</td>
+    <td style="text-align: left;">16F78</td>
+    <td style="text-align: left;">16F79</td>
+    <td style="text-align: left;">16F7A</td>
+    <td style="text-align: left;">16F7B</td>
+    <td style="text-align: left;">16F7E</td>
+    <td style="text-align: left;">16F82</td>
+    <td style="text-align: left;">16F83</td>
+    </tr>
+    </tbody>
+    </table>
+    <table>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Positioning tone marks</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">MIAO TONE RIGHT</td>
+    <td style="text-align: left;">MIAO TONE TOP RIGHT</td>
+    <td style="text-align: left;">MIAO TONE ABOVE</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">16F8F</td>
+    <td style="text-align: left;">16F90</td>
+    <td style="text-align: left;">16F91</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><em>Punctuation</em></p>
+    <p>See also <a href="#punct">Punctuation and Digits</a>.</p>
+    <p><strong><em>Sorting (<a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>, figure 11)</em></strong></p>
+    <p><em>Ordering of vowel digraphs is not the same as the chart, but it seemed to make the most sense to the author.</em></p>
+    <p>&amp;<span class="sfm normal">𖼮</span> &lt;&lt;<span class="sfm normal">𖼮𖽑</span> &lt;&lt; <span class="sfm normal">𖼯</span> &lt;&lt;<span class="sfm normal">𖽐𖼮</span> &lt;&lt; <span class="sfm normal">𖽐𖼮𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼯</span></br> &amp;<span class="sfm normal">𖼇</span></br> &amp;<span class="sfm normal">𖼦</span> &lt;&lt; <span class="sfm normal">𖼦𖽑</span></br> &amp;<span class="sfm normal">𖼨</span> &lt;&lt;<span class="sfm normal">𖼨𖽑</span> &lt;&lt; <span class="sfm normal">𖼩</span> &lt;&lt; <span class="sfm normal">𖽐𖼨</span></br> &amp;<span class="sfm normal">𖽃</span> &lt; <span class="sfm normal">𖼵</span></br> &amp;<span class="sfm normal">𖼞</span> &lt;&lt; <span class="sfm normal">𖼞𖽑</span> &lt;&lt; <span class="sfm normal">𖼟</span> &lt;&lt; <span class="sfm normal">𖽐𖼞</span> &lt;&lt; <span class="sfm normal">𖽐𖼞𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼟</span></br> &amp;<span class="sfm normal">𖼡</span> &lt;&lt; <span class="sfm normal">𖼡𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼡</span> &lt;&lt; <span class="sfm normal">𖽐𖼡𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼢</span></br> &amp;<span class="sfm normal">𖼃</span> &lt;&lt; <span class="sfm normal">𖼃𖽑</span> &lt;&lt; <span class="sfm normal">𖽅</span> &lt;&lt; <span class="sfm normal">𖽐𖼃</span> &lt;&lt; <span class="sfm normal">𖽐𖼃𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖽅</span></br> &amp;<span class="sfm normal">𖼖</span> &lt;&lt; <span class="sfm normal">𖼘</span> &lt;&lt; <span class="sfm normal">𖼗</span> &lt;&lt; <span class="sfm normal">𖼙</span></br> &amp;<span class="sfm normal">𖼄</span> &lt;&lt; <span class="sfm normal">𖼄𖽑</span></br> &amp;<span class="sfm normal">𖼐</span> &lt;&lt; <span class="sfm normal">𖼐𖽑</span> &lt;&lt; <span class="sfm normal">𖼑</span></br> &amp;<span class="sfm normal">𖼣</span> &lt;&lt; <span class="sfm normal">𖼣𖽑 </span></br> &amp;<span class="sfm normal">𖼀</span> &lt;&lt; <span class="sfm normal">𖼀𖽑</span> &lt;&lt; <span class="sfm normal">𖼁</span> &lt;&lt; <span class="sfm normal">𖽐𖼀</span> &lt;&lt; <span class="sfm normal">𖽐𖼀𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼁 </span></br> &amp;<span class="sfm normal">𖼳</span> &lt;&lt; <span class="sfm normal">𖽆</span></br> &amp;<span class="sfm normal">𖼺</span></br> &amp;<span class="sfm normal">𖼊</span> &lt;&lt; <span class="sfm normal">𖼊𖽑</span> &lt;&lt; <span class="sfm normal">𖼋</span> &lt;&lt; <span class="sfm normal">𖽐𖼊</span> &lt;&lt; <span class="sfm normal">𖽐𖼊𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼋</span></br> &amp;<span class="sfm normal">𖼎</span> &lt;&lt; <span class="sfm normal">𖼎𖽑</span> &lt;&lt; <span class="sfm normal">𖼏</span> &lt;&lt; <span class="sfm normal">𖽐𖼎</span> &lt;&lt; <span class="sfm normal">𖽐𖼎𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼏 </span></br> &amp;<span class="sfm normal">𖼷</span> &lt;&lt; <span class="sfm normal">𖼷𖽑</span> &lt;&lt; <span class="sfm normal">𖼸</span> &lt;&lt; <span class="sfm normal">𖽐𖼷</span> &lt;&lt; <span class="sfm normal">𖽐𖼷𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖼸</span></br> &amp;<span class="sfm normal">𖽂</span> &lt; <span class="sfm normal">𖼈</span> &lt; <span class="sfm normal">𖼽</span></br> &amp;<span class="sfm normal">𖼲</span> &lt;&lt; <span class="sfm normal">𖼲𖽑</span> &lt;&lt; <span class="sfm normal">𖽇</span> &lt;&lt; <span class="sfm normal">𖽐𖼲</span> &lt;&lt; <span class="sfm normal">𖽐𖼲𖽑</span> &lt;&lt; <span class="sfm normal">𖽐𖽇</span></br> &amp;<span class="sfm normal">𖽔</span> &lt; <span class="sfm normal">𖽹</span> &lt; <span class="sfm normal">𖽻</span></br> &amp;<span class="sfm normal">𖽝𖽦</span></br> &amp;<span class="sfm normal">𖽺</span> &lt; <span class="sfm normal">𖽜</span></br> &amp;<span class="sfm normal">𖽡</span> &lt;&lt; <span class="sfm normal">𖽤</span> (<span class="sfm normal">𖽡𖽘</span>) &lt;&lt; <span class="sfm normal">𖽣</span> (<span class="sfm normal">𖽡𖽗</span>) &lt;&lt; <span class="sfm normal">𖽡𖽹</span> &lt;&lt; <span class="sfm normal">𖽡𖽻</span> &lt;&lt; <span class="sfm normal">𖽡𖽝</span> &lt;&lt; <span class="sfm normal">𖽡𖽜</span> &lt;&lt; <span class="sfm normal">𖽩</span>(<span class="sfm normal">𖽡𖽙</span>) &lt;&lt; <span class="sfm normal">𖽡𖾃</span> &lt;&lt; <span class="sfm normal">𖽡𖽺</span> &lt;&lt; <span class="sfm normal">𖽡𖽾</span> &lt;&lt; <span class="sfm normal">𖽡𖽞</span> &lt;&lt; <span class="sfm normal">𖽡𖽟</span></br> &amp;<span class="sfm normal">𖽸</span> &lt; <span class="sfm normal">𖽷</span> &lt; <span class="sfm normal">𖽵</span></br> &amp;<span class="sfm normal">𖽙</span> &lt;&lt; <span class="sfm normal">𖽙𖽪</span></br> &amp;<span class="sfm normal">𖽪</span> &lt;&lt; <span class="sfm normal">𖽪𖽞</span> &lt;&lt; <span class="sfm normal">𖽪𖽟</span> &lt;&lt; <span class="sfm normal">𖽪𖽾</span> &lt;&lt; <span class="sfm normal">𖽰</span></br> &amp;<span class="sfm normal">𖾃</span> &lt;&lt; <span class="sfm normal">𖾃𖽾</span></br> &amp;<span class="sfm normal">𖽱</span> &lt;&lt; <span class="sfm normal">𖽱𖽝</span> &lt;&lt; <span class="sfm normal">𖽱𖽺</span> &lt;&lt; <span class="sfm normal">𖽱𖽾</span> &lt;&lt; <span class="sfm normal">𖽱𖽞</span></br> &amp;<span class="sfm normal">𖾂</span> &lt; <span class="sfm normal">𖽢</span> &lt; <span class="sfm normal">𖽨</span> &lt; <span class="sfm normal">𖽗</span> &lt; <span class="sfm normal">𖽘</span> &lt; <span class="sfm normal">𖽞</span> &lt; <span class="sfm normal">𖽟</span></br> &amp;<span class="sfm normal">𖽫</span> &lt;&lt; <span class="sfm normal">𖽬</span> &lt;&lt; <span class="sfm normal">𖽭</span></p>
+    <p><strong>Rendering</strong></p>
+    <p>See also <a href="#tone">Tone mark positioning</a> for unusual positioning in this language.</p>
+    <p>See also <a href="#kern">Kerning</a> for special behavior.</p>
+    <p>See also <a href="#lig">Ligatures</a> for special behavior.</p>
+    <em>Sample graphic</em></br><img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
+    <figcaption>
+    John (Figure 14, <a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>).
+    </figcaption>
     <h3 id="gan-yi-dry-yi-aluo-laka-yna"><a id="yna"></a>Gan Yi / Dry Yi / Aluo / Laka [yna]</h3>
     <p><strong>Resources</strong></p>
     <p><em>Language tag:</em> <code>yna</code></p>
@@ -2586,8 +2587,8 @@
     <p><em>Punctuation</em></p>
     <p>See also <a href="#punct">Punctuation and Digits</a>.</p>
     <p>Additional punctuation: <span class='shim normal'>: ; _ ' ? ! *</span></p>
-    <p><span class="yna normal">、</span> (U+3001 IDEOGRAPHIC COMMA)</p>
-    <p><span class="yna normal">。</span> (U+3002 IDEOGRAPHIC FULL STOP)</p>
+    <p><span class="yna normal">、</span> (3001 IDEOGRAPHIC COMMA)</p>
+    <p><span class="yna normal">。</span> (3002 IDEOGRAPHIC FULL STOP)</p>
     <p><strong><em>Sorting (<a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a>, figure 10)</em></strong></p>
     <p>&amp;<span class="yna normal">𖼀</span> &lt;&lt; <span class="yna normal">𖼂</span> &lt;&lt; <span class="yna normal">𖼀𖽑</span><br/> &amp;<span class="yna normal">𖼊</span> &lt;&lt; <span class="yna normal">𖼍</span> &lt;&lt; <span class="yna normal">𖼊𖽑</span><br/> &amp;<span class="yna normal">𖼞</span> &lt;&lt; <span class="yna normal">𖼠</span> &lt;&lt; <span class="yna normal">𖼞𖽑</span><br/> &amp;<span class="yna normal">𖼮</span> &lt;&lt; <span class="yna normal">𖼎</span> &lt;&lt; <span class="yna normal">𖼮𖽑</span><br/> &amp;<span class="yna normal">𖼷</span> &lt;&lt; <span class="yna normal">𖼹</span> &lt;&lt; <span class="yna normal">𖼷𖽑</span><br/> &amp;<span class="yna normal">𖼈</span><br/> &amp;<span class="yna normal">𖼇</span><br/> &amp;<span class="yna normal">𖼦</span> &lt;&lt; <span class="yna normal">𖼦𖽑</span><br/> &amp;<span class="yna normal">𖼄</span><br/> &amp;<span class="yna normal">𖼐</span> &lt;&lt; <span class="yna normal">𖼐𖽑</span> &lt;&lt; <span class="yna normal">𖼐𖽏</span><br/> &amp;<span class="yna normal">𖼖</span> &lt; <span class="yna normal">𖼘</span> &lt; <span class="yna normal">𖼣</span> &lt; <span class="yna normal">𖽂</span> &lt; <span class="yna normal">𖼵</span> &lt; <span class="yna normal">𖼳</span> &lt; <span class="yna normal">𖼻</span> &lt; <span class="yna normal">𖼺</span> &lt; <span class="yna normal">𖼽</span> &lt; <span class="yna normal">𖽃</span> &lt; <span class="yna normal">𖼨</span><br/> &amp;<span class="yna normal">𖼎𖽏</span> &lt;&lt; <span class="yna normal">𖽐𖼎</span> &lt;&lt; <span class="yna normal">𖼎𖽑</span><br/> &amp;<span class="yna normal">𖽔</span> &lt; <span class="yna normal">𖽻</span> &lt; <span class="yna normal">𖽜</span> &lt; <span class="yna normal">𖽝</span> &lt; <span class="yna normal">𖽴</span> &lt; <span class="yna normal">𖽳</span> &lt; <span class="yna normal">𖽢</span><br/> &amp;<span class="yna normal">𖽱</span> &lt;&lt; <span class="yna normal">𖽱𖽧</span> &lt;&lt; <span class="yna normal">𖽱𖾂</span> &lt;&lt; <span class="yna normal">𖽱𖽦 </span><br/> &amp;<span class="yna normal">𖽡</span> &lt;&lt; <span class="yna normal">𖽡𖽧</span> &lt;&lt; <span class="yna normal">𖽡𖽻</span> &lt;&lt; <span class="yna normal">𖽡𖾂</span> &lt;&lt; <span class="yna normal">𖽡𖽳</span> &lt;&lt; <span class="yna normal">𖽡𖽴</span> &lt;&lt; <span class="yna normal">𖽡𖽝</span> &lt;&lt; <span class="yna normal">𖽡𖽮</span> &lt;&lt; <span class="yna normal">𖽡𖽙</span> &lt;&lt; <span class="yna normal">𖽡𖽾</span> &lt;&lt; <span class="yna normal">𖽡𖽜</span> &lt;&lt; <span class="yna normal">𖽡𖽦</span> &lt;&lt; <span class="yna normal">𖽡𖾁</span><br/> &amp;<span class="yna normal">𖽪</span> &lt;&lt; <span class="yna normal">𖽪𖽹</span> &lt;&lt; <span class="yna normal">𖽪𖾂</span> &lt;&lt; <span class="yna normal">𖽪𖽦</span><br/> &amp;<span class="yna normal">𖾂</span> &lt; <span class="yna normal">𖽵</span> &lt; <span class="yna normal">𖽷</span><br/> &amp;<span class="yna normal">𖽙</span> &lt;&lt; <span class="yna normal">𖽙𖽜</span><br/> &amp;<span class="yna normal">𖽨</span> &lt; <span class="yna normal">𖽫</span> &lt; <span class="yna normal">𖽘</span> &lt; <span class="yna normal">𖽶</span> &lt; <span class="yna normal">𖽾</span> &lt; <span class="yna normal">𖾁</span> &lt; <span class="yna normal">𖽮</span> &lt; <span class="yna normal">𖽧</span> &lt; <span class="yna normal">𖽞</span> &lt; <span class="yna normal">𖽹</span> &lt; <span class="yna normal">𖽦 </span></p>
     <p><strong>Rendering</strong></p>
@@ -2603,19 +2604,18 @@
     <tr class="header">
     <th style="text-align: left;">Setting</th>
     <th style="text-align: left;">Sample</th>
-    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;">Code Points</th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">yna</td>
     <td style="text-align: left;"><span class="yna normal">𖼐𖽏𖽻𖾑 𖼮𖽑𖽜𖾐 𖼮𖽡𖽙</span></td>
-    <td style="text-align: left;">U+16F10 U+16F4F U+16F7B U+16F91 U+0020 U+16F2E U+16F51 U+16F5C U+16F90 U+0020 U+16F2E U+16F61 U+16F59</td>
+    <td style="text-align: left;">16F10 16F4F 16F7B 16F91 0020 16F2E 16F51 16F5C 16F90 0020 16F2E 16F61 16F59</td>
     </tr>
     </tbody>
     </table>
-    <p><em>Sample graphic</em></p>
-    <img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
+    <em>Sample graphic</em></br><img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
     <figcaption>
     Mark 1:1-4 (UBS).
     </figcaption>
@@ -2630,6 +2630,8 @@
     <p><a href="http://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/10-049">L2/10-049</a> Michael Everson, Erich Fickle, and Martin Hosken. 2010-01-28. Toward a proposal for encoding the Miao script in the SMP of the UCS</p>
     <p><a href="https://www.unicode.org/L2/L2010/10093-n3789-miao.pdf">L2/10-093</a> China, Ireland, and UK. 2010-03-26. Final proposal for encoding the Miao script in the SMP of the UCS</p>
     <p><a href="https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf">L2/17-345</a> Adrian Cheuk. 2017-10-03. Proposal for additions to the Miao script</p>
+    <hr />
+    <p><a name="1">1</a> The distinctions made here for languages with “current” use and “former” use are based on information found in <a href="https://www.academia.edu/93203752/The_Uses_and_Users_of_the_Miao_Script">The Uses and Users of the Miao Script</a>.</p>
     <footer class="footer">
         <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Plrd/" title="" class="active">unicode-resources</a> and is copyright © 2023-2024 SIL International.</p>
     </footer>
