@@ -23,9 +23,13 @@ released under the MIT license (http://opensource.org/licenses/MIT).
     font-family: NotoSansTifinagh-R;
     src: url(https://fonts.gstatic.com/s/notosanstifinagh/v20/I_uzMoCduATTei9eI8dawkHIwvmhCvbXzbPFQXc.woff2) format('woff2');
 }
-
+@font-face {
+    font-family: NotoSansTifinaghAgraw-R;
+    src: url(../../references/NotoSansTifinaghAgrawImazighen-Regular.ttf) format('truetype');
+}
 .akatab  { font-family: Akatab-R-new; }
 .tagmukay  { font-family: Tagmukay-R; }
 .ebrima  { font-family: Ebrima-R; }
 .nototif  { font-family: NotoSansTifinagh-R; }
+.nototifagraw  { font-family: NotoSansTifinaghAgraw-R; }
 
