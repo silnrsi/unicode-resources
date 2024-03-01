@@ -26,6 +26,7 @@ _This is a work in progress. Additional information is most welcome. Earlier ver
    - <a href="#mww">Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;</a>
    - <a href="#sfm">Xiaohua Miao / Small Flowery Miao &#x005B;sfm&#x005D;</a>
    - <a href="#yna">Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;</a>
+- <a href="#ack">Acknowledgements</a>
 - <a href="#ref">References</a>
 
 ## <a id="over"></a>Overview
@@ -807,6 +808,10 @@ yna | <span class='yna normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x
 
 _Sample graphic_</br><img src="../assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
+
+## <a id="ack"></a>Acknowledgements
+
+The following people have generously offered feedback for this document: Eiso Chan, Martin Hosken, and Richard Ishida.
 
 ## <a id="ref"></a>References
 
