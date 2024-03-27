@@ -2,7 +2,7 @@
 title: Representing Tifinagh in Unicode - Unicode Technical Note (proposed draft)
 ---
 
-_Lorna Evans, SIL International (29-Feb-2024)_
+_Lorna Evans, SIL International (27-Mar-2024)_
 
 _This is a work in progress. Additional information is most welcome._
 
@@ -452,6 +452,27 @@ Latn        | /t&#x0323;/ | /w/ | /y/ | /z/ | /z&#x0323;/ | /ʷ/ |  |  | |  |
 #### Collation
 
 <span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt;&lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4A;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5E;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span>
+
+_Source_: <a href="#tarifit2004">A Dictionary of Tarifit Berber.</a> This set of characters is different than the set (dated 2009) above.
+
+Characters | | | | | | | | | &#x0020;
+:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+Tfng       | <span class='nototif normal'>&#x2D30;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='nototif normal'>&#x2D3B;</span> | <span class='nototif normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span> | <span class='nototif normal'>&#x2D40;</span> | <span class='nototif normal'>&#x2D43;</span>
+USV        | 2D30 | 2D33 | 2D37 | 2D39 | 2D3B | 2D3C | 2D3D | 2D40 | 2D43
+Latn        | /a/ | /g/ | /d/ | /dˁ/ | /&#x01dd;/ | /f/ | /k/ | /b, β, p/ | /h, &#x0127;/
+| | | | | | | | |
+Tfng       | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='nototif normal'>&#x2D49;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='nototif normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span> | <span class='nototif normal'>&#x2D52;</span> | <span class='nototif normal'>&#x2D53;</span>
+USV        | 2D45 | 2D47 | 2D49 | 2D4A | 2D4D | 2D4E | 2D4F | 2D52 | 2D53
+Latn        | /x/ | /q/ | /i/ | /ʒ/ | /l/ | /m/ | /n, &#x014b;/ | /ʕ/ | /u/
+| | | | | | | | |
+Tfng        |  <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D56;</span> | <span class='nototif normal'>&#x2D59;</span> | <span class='nototif normal'>&#x2D5B;</span> | <span class='nototif normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5D;</span> | <span class='nototif normal'>&#x2D60;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='nototif normal'>&#x2D62;</span>  
+USV        | 2D54 | 2D56 | 2D59 | 2D5B | 2D5C | 2D5D | 2D60 | 2D61 | 2D62 
+Latn        | /r, rˁ/ | /&#x0263;/ | /s, sˁ/ | /ʃ/ | /t, tˁ/ | /θ/ | /ð, ðˁ/ | /w/ | /y/
+| | | | | | | | |
+Tfng        | <span class='nototif normal'>&#x2D63;</span> | | | | | | | 
+USV        | 2D63 | | | | | | | |   
+Latn        | /z, zˁ/ | | | | | | | |
+| | | | | | | | |
 
 #### Glyph variants and Biconsonants
 
@@ -979,6 +1000,8 @@ ____. 2005. Inventaire des oeils de la police pan-berbère Hapax Berbère. http:
 
 de Foucauld, Charles Eugène. 1951. Dictionnaire touareg–français, dialecte de l’Ahaggar. 4 vols. [Paris]: Imprimerie nationale de France.
 
+<a id="tarifit2004"></a>McClelland III, Clive W. 2004. A Dictionary of Tarifit Berber. The Edwin Mellen Press. Lewiston, New York.
+ 
 <a id="savage2000"></a>Savage, Andrew. 2000. Writing Tuareg Vowels. Advantages and Disadvantages of the Three Script Options: Arabic, Tifinagh and Roman. Submitted in partial fulfillment of the requirements for the degree of Master of Letters in Linguistics from the Univerisity of New England, New South Wales, Australia.
 
 <a id="savage2003"></a>_____. 2003. [Tifinagh Unicode Propositions](http://www.unicode.org/L2/L2003/03143-tifinagh-samples.pdf), Stanthorpe.

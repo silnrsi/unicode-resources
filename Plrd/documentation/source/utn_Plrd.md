@@ -289,7 +289,7 @@ default        | <span class='shim normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F1
 hmd alternates  | <span class='hmd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
 normalized orthography alternates      | <span class='hmdd normal'>&#x16F04; &#x16F05; &#x16F10; &#x16F11; &#x16F14; &#x16F15; &#x16F23; &#x16F24; &#x16F57; &#x16F5E; &#x16F5F; &#x16F7A;</span>
 
-_Sample graphic_</br><img src="../assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
+_Sample graphic_</br><img src="assets/images/hmd_MiaoHwa_861.png" title="fig:" style="width:80%;height:80%;" alt="Miao: Hwa sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 **_Character set from 1988 (Enwall, vol 2, pp 185-188)_**
@@ -411,7 +411,7 @@ default        | <span class='shim normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F3
 alternate      | <span class='lpo normal'>&#x16F04; &#x16F10; &#x16F23; &#x16F33; &#x16F57; &#x16F58; &#x3001;</span>
 
 
-_Sample graphic_</br><img src="../assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
+_Sample graphic_</br><img src="assets/images/lpo_LisuEastern_735.png" title="fig:" style="width:80%;height:80%;" alt="Lisu: Eastern sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 ### <a id="ygp"></a>Bai Yi / Gepo &#x005B;ygp&#x005D;
@@ -499,7 +499,7 @@ Setting        | Sample           | Code Points
 :-- | :-- | :---------
 ygp | <span class='ygp normal'>&#x16F48;&#x16F66;&#x16F90; &#x16F2A;&#x16F5C;&#x16F91; &#x16F48;&#x16F85; &#x16F2E;&#x16F51;&#x16F5C;&#x16F91; &#x16F32;&#x16F61;&#x16F7B;&#x16F90;</span> | 16F48 16F66 16F90 0020 16F2A 16F5C 16F91 0020 16F48 16F85 0020 16F2E 16F51 16F5C 16F91 0020 16F32 16F61 16F7B 16F90
 
-_Sample graphic_</br><img src="../assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
+_Sample graphic_</br><img src="assets/images/ygp_Kopu_674.png" title="fig:" style="width:80%;height:80%;" alt="Kopu sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 ### <a id="ywq"></a>Hei Yi / Black Yi / Wuding-Luquan Yi / Nasu &#x005B;ywq&#x005D;
@@ -593,7 +593,7 @@ Setting        | Sample           | Code Points
 :-- | :-- | :---------
 ywq | <span class='shim normal'>&#x16F0D;&#x16F73;&#x16F90; &#x16F21;&#x16F58; &#x16F12;&#x16F7B;&#x16F91; &#x16F30;&#x16F59;&#x16F5C;&#x16F91;</span> | 16F0D 16F73 16F90 0020 16F21 16F58 0020 16F12 16F7B 16F91 0020 16F30 16F59 16F5C 16F91
 
-_Sample graphic_</br><img src="../assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
+_Sample graphic_</br><img src="assets/images/ywq_Nosu_972.png" title="fig:" style="width:80%;height:80%;" alt="Nosu sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 ## <a id="former"></a>Languages formerly using Miao/Pollard script
@@ -620,7 +620,7 @@ MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 
 **Rendering**
 
-_Sample graphic_</br><img src="../assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
+_Sample graphic_</br><img src="assets/images/ktp_Kado_600.png" title="fig:" style="width:80%;height:80%;" alt="Kado sample" />
 <figcaption>Luke 3:1-4 (UBS).</figcaption>
 
 ### <a id="mww"></a>Hmong Daw / White Miao / Sichuan Miao &#x005B;mww&#x005D;
@@ -727,7 +727,7 @@ See also <a href="#kern">Kerning</a> for special behavior.
 
 See also <a href="#lig">Ligatures</a> for special behavior.
 
-_Sample graphic_</br><img src="../assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
+_Sample graphic_</br><img src="assets/images/sfm_XiaohuaMiao_Fig14.png" title="fig:" style="width:80%;height:80%;" alt="Xiaohua Miao sample" />
 <figcaption>John (Figure 14, [L2/17-345](https://www.unicode.org/L2/L2017/17345-n4845-miao-add.pdf)).</figcaption>
 
 ### <a id="yna"></a>Gan Yi / Dry Yi / Aluo / Laka &#x005B;yna&#x005D;
@@ -806,7 +806,7 @@ Setting        | Sample           | Code Points
 :-- | :-- | :---------
 yna | <span class='yna normal'>&#x16F10;&#x16F4F;&#x16F7B;&#x16F91; &#x16F2E;&#x16F51;&#x16F5C;&#x16F90; &#x16F2E;&#x16F61;&#x16F59;</span> | 16F10 16F4F 16F7B 16F91 0020 16F2E 16F51 16F5C 16F90 0020 16F2E 16F61 16F59
 
-_Sample graphic_</br><img src="../assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
+_Sample graphic_</br><img src="assets/images/yna_Laka_713.png" title="fig:" style="width:80%;height:80%;" alt="Laka sample" />
 <figcaption>Mark 1:1-4 (UBS).</figcaption>
 
 ## <a id="ack"></a>Acknowledgements
