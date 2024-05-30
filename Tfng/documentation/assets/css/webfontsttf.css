@@ -27,9 +27,33 @@ released under the MIT license (http://opensource.org/licenses/MIT).
     font-family: NotoSansTifinaghAgraw-R;
     src: url(../../references/NotoSansTifinaghAgrawImazighen-Regular.ttf) format('truetype');
 }
+@font-face {
+    font-family: HapaxTifinarCarre-R;
+    src: url(../../references/HapaxTifinarCarré.ttf) format('truetype');
+}
+@font-face {
+    font-family: HapaxTuareg-R;
+    src: url(../../references/hapaxtouareg.ttf) format('truetype');
+}
+@font-face {
+    font-family: NotoAPT-R;
+    src: url(../../references/NotoSansTifinaghAPT-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: Catrinity-R;
+    src: url(../../references/Catrinity.otf) format('truetype');
+}
+@font-face {
+    font-family: HapaxBerbere-R;
+    src: url(../../references/hapaxber-6.1.ttf) format('truetype');
+}
 .akatab  { font-family: Akatab-R-new; }
 .tagmukay  { font-family: Tagmukay-R; }
 .ebrima  { font-family: Ebrima-R; }
 .nototif  { font-family: NotoSansTifinagh-R; }
 .nototifagraw  { font-family: NotoSansTifinaghAgraw-R; }
-
+.hapaxcarre  { font-family: HapaxTifinarCarre-R;}
+.hapaxtuareg  { font-family: HapaxTuareg-R;}
+.hapaxberbere  { font-family: HapaxBerbere-R;}
+.apt  { font-family: NotoAPT-R;}
+.catrinity  { font-family: Catrinity-R;}

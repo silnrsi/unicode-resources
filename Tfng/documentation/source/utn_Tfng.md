@@ -2,9 +2,9 @@
 title: Representing Tifinagh in Unicode - Unicode Technical Note (proposed draft)
 ---
 
-_Lorna Evans, SIL International (27-Mar-2024)_
+_Lorna Evans, SIL International (30-May-2024)_
 
-_This is a work in progress. Additional information is most welcome._
+_This is a work in progress. Additional information on language usage is most welcome._
 
 
 - <a href="#intro">Introduction</a>
@@ -51,9 +51,9 @@ _This is a work in progress. Additional information is most welcome._
 
 Tifinagh is encoded in the U+2D30..U+2D7F block of Unicode.
 
-This document aims to give guidance on the encoding of _modern orthographies_ using the Tifinagh script. Since the script is used for a number of orthographies covering different languages, the development of this document is ongoing. It aims to bring together the results of consensus between experts in the encoding of the various orthographies using the script. In terms of the Unicode standard, this document is purely informative since it is concerned with issues not covered by that standard. 
+This document aims to give guidance on the encoding of _modern orthographies_ using the Tifinagh script (no attempt is made to document all the variants used in ancient Tifinagh orthographies). Since the script is used for a number of orthographies covering different languages, the development of this document is ongoing. It aims to bring together the results of consensus between experts in the encoding of the various orthographies using the script. In terms of the Unicode standard, this document is purely informative since it is concerned with issues not covered by that standard. 
 
-This document also aims to give guidance on font development for the different orthographies and languages.
+This document also aims to give guidance on font development for the different _modern_ orthographies and languages.
 
 **To Add**
 
@@ -67,13 +67,13 @@ This document also aims to give guidance on font development for the different o
 
 The basic consonants are relatively obvious and can be discovered by viewing the Unicode charts.
 
-**Design**: There can be some design issues related to "dotted" characters especially when the design is similar. When these characters appear together, they can be difficult to read unless care is taken to change the size or spacing of the dots: <span class='akatab normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. The Neotifinagh design does not have as significant an issue: <span class='nototif normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>
+**Design**: There can be some design issues related to "dotted" characters especially when the design is similar. When these characters appear together, they can be difficult to read unless care is taken to change the size or spacing of the dots: <span class='akatab normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. The Neo-Tifinagh design does not have as significant an issue: <span class='nototif normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>
 
 ### <a id="vowel"></a>Vowels
 
 Vowels are not as clearly defined. Neo-Tifinagh does not have any special vowels. However, different traditional Tifinagh orthographies may demonstrate vowels using combining marks in different ways. These vowels are primarily used as an aid in learning to read.
 
-#### _SIL_
+#### _SIL-Niger_
 
 Vowels |     |     |     |     |     |  |
 :-------   | :-- | :-- | :-- | :-- | :-- | :--
@@ -100,7 +100,7 @@ USV  | 2D5D 0307 | 2D5D 0308 | 2D5D | 2D49 0307 | 2D49 0308 |
 
 Western-style punctuation signs are used in Tifinagh. Words are separated by a space. 
 
-_A few languages use a special separator mark which has been encoded in the Tifinagh block._ The languages using the separator mark will be indicated in the section on that language. Otherwise, punctuation will not be listed in each section.
+_A few languages use a special separator mark which has been encoded in the Tifinagh block._ The languages using the separator mark will be indicated in the section on that language. Otherwise, punctuation is not listed in each section.
 
 
 Punctuation |      |      |      |      |      |      | | |
@@ -110,40 +110,38 @@ USV         | 002E | 002C | 003B | 003A | 003F | 0021 | 2026 | 2D70
 
 #### Digits
 
-There does not seem to be any common way to write numbers using Tifinagh script. The Ircam Tifinagh uses the usual Western-style digits
+There does not seem to be any common way to write numbers using Tifinagh script. The IRCAM Tifinagh uses the usual Western-style digits.
 
-### <a id="variant"></a>Glyphs Variants
+### <a id="variant"></a>Variant Glyphs
 
-This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants.
+This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants. In addition, because of the issues relating to <a href="#dir">Writing Direction</a>, there are variants which are mirrored or turned for right to left text or even for vertical text. Those variants are not included here.
 
 Because these glyphs are taken from various fonts, the height of a particular glyph may not be significant.
 
 |  | 2D3     | 2D4      | 2D5      | 2D6      | 2D7    
 :- | :--     | :--      | :--      | :--      | :--
-0  |<span class='nototif normal'>&#x2D30;</span> <span class='nototifagraw normal'>&#x2D30;</span> <span class='akatab normal'>&#x2D30;</span> <span class='akatab normal' style='font-feature-settings: "cv01" 1'>&#x2D30;</span>| <span class='nototif normal'>&#x2D40;</span> <span class='akatab normal' style='font-feature-settings: "cv11" 1'>&#x2D40;</span>| <span class='nototif normal'>&#x2D50;</span> <span class='akatab normal'>&#x2D50;</span> <span class='akatab normal'style='font-feature-settings: "cv04" 1'>&#x2D50;</span>| <span class='nototif normal'>&#x2D60;</span> | <span class='nototif normal'>&#x2D70;</span>
-1  |<span class='nototif normal'>&#x2D31;</span> <span class='akatab normal' style='font-feature-settings: "cv08" 1'>&#x2D31;</span>| <span class='nototif normal'>&#x2D41;</span> | <span class='nototif normal'>&#x2D51;</span> | <span class='nototif normal'>&#x2D61;</span> | 
-2  |<span class='nototif normal'>&#x2D32;</span> | <span class='nototif normal'>&#x2D42;</span> | <span class='nototif normal'>&#x2D52;</span> | <span class='nototif normal'>&#x2D62;</span> <span class='akatab normal'>&#x2D62;</span> <span class='nototifagraw normal'>&#x2D62;</span>| 
-3  |<span class='nototif normal'>&#x2D33;</span> <span class='akatab normal' style='font-feature-settings: "cv09" 1'>&#x2D33;</span>| <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D53;</span> <span class='akatab normal'>&#x2D53;</span> <span class='akatab normal'style='font-feature-settings: "cv05" 1'>&#x2D53;</span>| <span class='nototif normal'>&#x2D63;</span> <span class='akatab normal'>&#x2D63;</span> <span class='akatab normal' style='font-feature-settings: "cv06" 1'>&#x2D63;</span>| 
-4  |<span class='nototif normal'>&#x2D34;</span> <span class='akatab normal' style='font-feature-settings: "cv03" 1'>&#x2D34;</span> <span class='nototifagraw normal'>&#x2D34;</span>| <span class='nototif normal'>&#x2D44;</span> <span class='nototifagraw normal'>&#x2D44;</span>| <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D64;</span> | 
-5  |<span class='nototif normal'>&#x2D35;</span> <span class='nototifagraw normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D55;</span> <span class='nototifagraw normal'>&#x2D55;</span>| <span class='nototif normal'>&#x2D65;</span> <span class='akatab normal'>&#x2D65;</span> <span class='nototifagraw normal'>&#x2D65;</span>| 
-6  |<span class='nototif normal'>&#x2D36;</span> <span class='akatab normal' style='font-feature-settings: "cv10" 1'>&#x2D36;</span>| <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D56;</span> | <span class='nototif normal'>&#x2D66;</span> | 
-7  |<span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='nototif normal'>&#x2D57;</span> | <span class='nototif normal'>&#x2D67;</span> <span class='akatab normal'>&#x2D67;</span>| 
-8  |<span class='nototif normal'>&#x2D38;</span> <span class='akatab normal' style='font-feature-settings: "cv15" 1'>&#x2D38;</span>| <span class='nototif normal'>&#x2D48;</span> | <span class='nototif normal'>&#x2D58;</span> |  | 
-9  |<span class='nototif normal'>&#x2D39;</span> | <span class='nototif normal'>&#x2D49;</span> | <span class='nototif normal'>&#x2D59;</span> |  | 
-A  |<span class='nototif normal'>&#x2D3A;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='nototif normal'>&#x2D5A;</span> <span class='akatab normal'>&#x2D5A;</span> <span class='nototifagraw normal'>&#x2D5A;</span>|  | 
-B  |<span class='nototif normal'>&#x2D3B;</span> <span class='nototifagraw normal'>&#x2D3B;</span>| <span class='nototif normal'>&#x2D4B;</span> <span class='akatab normal'>&#x2D4B;</span> <span class='akatab normal' style='font-feature-settings: "cv07" 1'>&#x2D4B;</span>| <span class='nototif normal'>&#x2D5B;</span> <span class='akatab normal'>&#x2D5B;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;</span>|  | 
-C  |<span class='nototif normal'>&#x2D3C;</span> <span class='akatab normal'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 2'>&#x2D3C;</span>| <span class='nototif normal'>&#x2D4C;</span> | <span class='nototif normal'>&#x2D5C;</span> <span class='akatab normal'>&#x2D5C;</span>|  | 
-D  |<span class='nototif normal'>&#x2D3D;</span> | <span class='nototif normal'>&#x2D4D;</span> <span class='akatab normal'>&#x2D4D;</span>| <span class='nototif normal'>&#x2D5D;</span> |  | 
-E  |<span class='nototif normal'>&#x2D3E;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D5E;</span> <span class='nototifagraw normal'>&#x2D5E;</span>|  | 
-F  |<span class='nototif normal'>&#x2D3F;</span> | <span class='nototif normal'>&#x2D4F;</span> | <span class='nototif normal'>&#x2D5F;</span> <span class='akatab normal' style='font-feature-settings: "cv13" 1'>&#x2D5F;</span> <span class='nototifagraw normal'>&#x2D5F;</span>| <span class='nototif normal'>&#x2D6F;</span> <span class='nototifagraw normal'>&#x2D6F;</span>| <span class='nototif normal'>&#x2D7F;</span>
+0  |<span class='nototif normal'>&#x2D30;</span> (<span class='nototifagraw normal'>&#x2D30;</span> <span class='akatab normal'>&#x2D30;</span>)| <span class='nototif normal'>&#x2D40;</span> (<span class='hapaxtuareg normal'>&#x2D40;</span> <span class='akatab normal' style='font-feature-settings: "cv11" 1'>&#x2D40;</span>)| <span class='nototif normal'>&#x2D50;</span> (<span class='akatab normal'>&#x2D50;</span> <span class='akatab normal'style='font-feature-settings: "cv04" 1'>&#x2D50;</span> <span class='hapaxtuareg normal'>&#x2D50;</span>)| <span class='nototif normal'>&#x2D60;</span> | <span class='nototif normal'>&#x2D70;</span>
+1  |<span class='nototif normal'>&#x2D31;</span> (<span class='hapaxcarre normal'>&#x2D31;</span> <span class='akatab normal' style='font-feature-settings: "cv08" 1'>&#x2D31;</span>)| <span class='nototif normal'>&#x2D41;</span> | <span class='nototif normal'>&#x2D51;</span> | <span class='nototif normal'>&#x2D61;</span> | 
+2  |<span class='nototif normal'>&#x2D32;</span> | <span class='nototif normal'>&#x2D42;</span> | <span class='nototif normal'>&#x2D52;</span> | <span class='nototif normal'>&#x2D62;</span> (<span class='akatab normal'>&#x2D62;</span> <span class='nototifagraw normal'>&#x2D62;</span>)| 
+3  |<span class='nototif normal'>&#x2D33;</span> (<span class='akatab normal' style='font-feature-settings: "cv09" 1'>&#x2D33;</span>)| <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D53;</span> (<span class='akatab normal'>&#x2D53;</span> <span class='akatab normal'style='font-feature-settings: "cv05" 1'>&#x2D53;</span>)| <span class='nototif normal'>&#x2D63;</span> (<span class='akatab normal'>&#x2D63;</span> <span class='akatab normal' style='font-feature-settings: "cv06" 1'>&#x2D63;</span>)| 
+4  |<span class='nototif normal'>&#x2D34;</span> (<span class='akatab normal' style='font-feature-settings: "cv03" 1'>&#x2D34;</span> <span class='nototifagraw normal'>&#x2D34;</span>)| <span class='nototif normal'>&#x2D44;</span> (<span class='nototifagraw normal'>&#x2D44;</span>)| <span class='nototif normal'>&#x2D54;</span> (<span class='hapaxcarre normal'>&#x2D54;</span>) | <span class='nototif normal'>&#x2D64;</span> | 
+5  |<span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D55;</span> (<span class='nototifagraw normal'>&#x2D55;</span>)| <span class='nototif normal'>&#x2D65;</span> (<span class='akatab normal'>&#x2D65;</span> <span class='nototifagraw normal'>&#x2D65;</span>)| 
+6  |<span class='nototif normal'>&#x2D36;</span> (<span class='akatab normal' style='font-feature-settings: "cv10" 1'>&#x2D36;</span>)| <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D56;</span> | <span class='nototif normal'>&#x2D66;</span> | 
+7  |<span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='nototif normal'>&#x2D57;</span> | <span class='nototif normal'>&#x2D67;</span> (<span class='akatab normal'>&#x2D67;</span>)| 
+8  |<span class='nototif normal'>&#x2D38;</span> (<span class='akatab normal' style='font-feature-settings: "cv15" 1'>&#x2D38;</span>)| <span class='nototif normal'>&#x2D48;</span> | <span class='nototif normal'>&#x2D58;</span> |  | 
+9  |<span class='nototif normal'>&#x2D39;</span> (<span class='hapaxtuareg normal'>&#x2D39;</span>)| <span class='nototif normal'>&#x2D49;</span> (<span class='catrinity normal'>&#x2D49;</span>) | <span class='nototif normal'>&#x2D59;</span> (<span class='hapaxcarre normal'>&#x2D59;</span>) |  | 
+A  |<span class='nototif normal'>&#x2D3A;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='nototif normal'>&#x2D5A;</span> (<span class='akatab normal'>&#x2D5A;</span> <span class='nototifagraw normal'>&#x2D5A;</span>)|  | 
+B  |<span class='nototif normal'>&#x2D3B;</span> (<span class='nototifagraw normal'>&#x2D3B;</span> <span class='apt normal'>&#x2D3B;</span>)| <span class='nototif normal'>&#x2D4B;</span> (<span class='akatab normal'>&#x2D4B;</span> <span class='akatab normal' style='font-feature-settings: "cv07" 1'>&#x2D4B;</span>)| <span class='nototif normal'>&#x2D5B;</span> (<span class='akatab normal'>&#x2D5B;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;</span> <span class='hapaxcarre normal'>&#x2D5B;</span>)|  | 
+C  |<span class='nototif normal'>&#x2D3C;</span> (<span class='akatab normal'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 2'>&#x2D3C;</span>)| <span class='nototif normal'>&#x2D4C;</span> | <span class='ebrima normal'>&#x2D5C;</span> (<span class='akatab normal'>&#x2D5C;</span>)|  | 
+D  |<span class='nototif normal'>&#x2D3D;</span> | <span class='nototif normal'>&#x2D4D;</span> (<span class='akatab normal'>&#x2D4D;</span> <span class='hapaxtuareg normal'>&#x2D4D;</span> <span class='hapaxberbere normal'>&#x2D4D;</span>)| <span class='nototif normal'>&#x2D5D;</span> |  | 
+E  |<span class='nototif normal'>&#x2D3E;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D5E;</span> (<span class='nototifagraw normal'>&#x2D5E;</span>)|  | 
+F  |<span class='nototif normal'>&#x2D3F;</span> | <span class='nototif normal'>&#x2D4F;</span> | <span class='nototif normal'>&#x2D5F;</span> (<span class='akatab normal' style='font-feature-settings: "cv13" 1'>&#x2D5F;</span> <span class='nototifagraw normal'>&#x2D5F;</span> )| <span class='nototif normal'>&#x2D6F;</span>| <span class='nototif normal'>&#x2D7F;</span>
 
-Variants will only be included in each language section when there are known variants.
-
-### <a id="bicons"></a>Bi- Tri-Consonants
+### <a id="bicons"></a>Bi- Tri-consonants
 
 Bi-consonants are additional letterforms used in the Tifinagh script, particularly for Tuareg, to represent a consonant cluster—a sequence of two consonants without an intervening vowel. These bi-consonants, sometimes also referred to as bigraphs, are not directly encoded as single characters in the Unicode Standard. Instead, they are represented as a sequence of the two consonant letters, separated either by U+200D ZERO WIDTH JOINER or by U+2D7F TIFINAGH CONSONANT JOINER.
  
-When a bi-consonant is considered obligatory in text, it is represented by the two consonant letters, with U+2D7F TIFINAGH CONSONANT JOINER. inserted between them. This use of U+2D7F is comparable in function to the use of U+0652 ARABIC SUKUN to indicate the absence of a vowel after a consonant, when Tuareg is written in the Arabic script. However, instead of appearing as a visible mark in the text, U+2D7F TIFINAGH CONSONANT JOINER indicates the presence of a bi-consonant, which should then be rendered with a preformed glyph for the sequence. 
+When a bi-consonant is considered obligatory in text, it is represented by the two consonant letters, with U+2D7F TIFINAGH CONSONANT JOINER inserted between them. This use of U+2D7F is comparable in function to the use of U+0652 ARABIC SUKUN to indicate the absence of a vowel after a consonant in the Arabic script. However, instead of appearing as a visible mark in the text, U+2D7F TIFINAGH CONSONANT JOINER indicates the presence of a bi-consonant, which should then be rendered with a preformed glyph for the sequence. 
 
 Some of the bi-consonants have ascenders. These should ascend above the normal height of the Tifinagh consonants.
 
@@ -237,7 +235,7 @@ Contextual shaping will only be included in each language section when there is 
 
 ### <a id="dir"></a>Writing Direction
 
-Historically, in early inscriptions, Berber was written horizontally from left to right, from right to left, vertically (bottom to top, top to bottom) or even in boustrophedon. However, the most frequently used directionality in the modern-day Berber script is horizontal from left to right.
+Historically, in early inscriptions, Tifinagh was written horizontally from left to right, from right to left, vertically (bottom to top, top to bottom) or even in boustrophedon. However, the most frequently used directionality in the modern-day Tifinagh script is horizontal from left to right.
 
 Given that left-to-right directionality seems to be the most widely used one in the Maghreb and in Niger, the strong directionality of Tifinagh is defined to be left-to-right. If needed, it is possible to explicitly declare a right-to-left directionality. The glyphs will then have to be mirrored, if needed, according to the rules in effect for the specified variant. If the glyphs are to be mirrored, then this must be implemented in the font.
 
@@ -256,9 +254,11 @@ Using hard-coded directional characters in the HTML code (as illustrated above) 
 
 ## <a id="resource"></a>Resources
 
+It is important to realize that a keyboard only outputs codepoints. A font will support codepoints; but a font may also include variant glyphs for specific languages. A carefully chosen keyboard _and_ font are required in order to display the correct behavior for a particular language. 
+
 ### <a id="key"></a>Keyboarding
 
-The only standard keyboard known at the moment is the [Moroccan standard keyboard](http://hapax.qc.ca/pdf/NM%2017.6.000.pdf). A keyboard based on the Moroccan standard keyboard is supported in Microsoft Windows.
+The only standard keyboard known at the moment is the [Moroccan standard keyboard](http://hapax.qc.ca/pdf/NM%2017.6.000.pdf) for Neo-Tiginagh. A keyboard based on the Moroccan standard keyboard is supported in Microsoft Windows.
 
 Keyman is a cross-platform keyboarding application. Four keyboards are available for the Tifinagh script:
 
@@ -270,7 +270,11 @@ Keyman is a cross-platform keyboarding application. Four keyboards are available
 
 - [Tuareg Tifinagh](https://keyman.com/keyboards/tuareg_tifinagh) [taq, thv]
 
+[lexilogos.com input](https://www.lexilogos.com/clavier/tifinagh.htm)
 
+[Neo-Tifinagh Character Picker](https://r12a.github.io/pickers/tfng-zgh/index.html)
+
+[Tifinagh Character Picker](https://r12a.github.io/pickers/tfng-all/index.html)
 
 ### <a id="font"></a>Fonts
 
@@ -289,7 +293,7 @@ These fonts provide support for some or all of the Tifinagh block.
 
 ### <a id="tzm_zgh"></a>Central Atlas Tamazight, Standard Moroccan Tamazight
 
-_Source_: [Tifinaghe-IRCAM](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html), [Omniglot](https://omniglot.com/writing/tamazight.htm)
+_Source_: [Tifinaghe-IRCAM](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html), [Omniglot](https://omniglot.com/writing/tamazight.htm), [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html)
 
 _Language tag:_ `tzm-Tfng`, `zgh`
 
@@ -341,8 +345,6 @@ Neo-Tifinagh does not use contextual shaping for the “l” and “n”. This i
 
 _Source_: [Omniglot](https://omniglot.com/writing/kabyle.php), [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf) 
 
-_**Table below is based on Omniglot. The Marocaine document is likely more accurate. Add a section for auxiliary characters.**_ 
-
 _Language Tag_: `kab-Tfng`
 
 _Opentype language system tag:_ `BBR `
@@ -368,7 +370,7 @@ Latn | /č/ | /ṭ/ | /w/ | /y/ | /z/ | /ẓ/ | /ʷ/ |
 
 #### Known glyph variants
 
-- Variants are used for c č and l. However, the variants are not in any of the Akatab, Ebrima, or Noto fonts.
+A variant of U+2D4d is used: <span class='hapaxberbere normal'>&#x2D4D;</span>
 
 #### Bi-consonants
 
@@ -409,9 +411,9 @@ Latn  | /y/ | /z/ | /z&#x0323;/ | /&#x02b7;/ | | | | | |
 
 #### Known glyph variants
 
-A variant for "l" is not in any of the Akatab, Ebrima, or Noto fonts.
+A variant of U+2D4d is used: <span class='hapaxberbere normal'>&#x2D4D;</span>
 
-#### Biconsonants
+#### Bi-consonants
 
 Unknown.
 
@@ -474,7 +476,7 @@ USV        | 2D63 | | | | | | | |
 Latn        | /z, zˁ/ | | | | | | | |
 | | | | | | | | |
 
-#### Glyph variants and Biconsonants
+#### Glyph variants and Bi-consonants
 
 Unknown.
 
@@ -501,7 +503,7 @@ Tfng | <span class='nototif normal'>&#x2D61;</span> | <span class='nototif norma
 USV  |2D61 | 2D62 | 2D63 | 2D65 | 2D6F | | | |
 | | | | | | | | |
 
-#### Glyph variants and Biconsonants
+#### Glyph variants and Bi-consonants
 
 Unknown.
 
@@ -544,7 +546,7 @@ USV  | 2D30 2D49 | 2D30 2D53 | 2D54 2D54
 Latin | /ai/ /e/ | /au/ /o/ | /rr/
 | | |
 
-#### Glyph variants and Biconsonants
+#### Glyph variants and Bi-consonants
 
 Unknown.
 
@@ -580,7 +582,7 @@ USV         | 2D61 | 2D62 | 2D63 | 2D65 | 2D66 |
 Latn        | /w/ | /y/ | /z/ | /z&#x0323;/ | /e/ /&#x01DD;/| 
 | | | | | | | | |
 
-#### Glyph variants and Biconsonants
+#### Glyph variants and Bi-consonants
 
 Unknown.
 
@@ -738,7 +740,7 @@ USV |&#x0020; | &#x0020; | &#x0020;
 2D5B | <span class='nototif normal'>&#x2D5B;</span>|&#x003E;|<span class='akatab normal'>&#x2D5B;</span>
 2D63 | <span class='nototif normal'>&#x2D63;</span>|&#x003E;|<span class='akatab normal'>&#x2D63;</span>
 
-#### Biconsonants
+#### Bi-consonants
 
 Unknown.
 
@@ -794,7 +796,7 @@ All punctuation required for Neo-Tifinagh is also required for `thz`. In additio
 <span class='nototif normal'>&#x2D5B;</span>|&#x003E;|<span class='akatab normal'>&#x2D5B;</span>
 <span class='nototif normal'>&#x2D67;</span>|&#x003E;|<span class='akatab normal'>&#x2D67;</span>
 
-#### Biconsonants
+#### Bi-consonants
 
 Unknown.
 
@@ -998,36 +1000,15 @@ Andries, P. 2004-06-06. Proposal to add the Tifinagh Script. N2739R ISO/IEC JTC 
 
 ____. 2005. Inventaire des oeils de la police pan-berbère Hapax Berbère. http://hapax.qc.ca/polices/inventaire-des-oeils.pdf (accessed 19-May-2008)
 
-de Foucauld, Charles Eugène. 1951. Dictionnaire touareg–français, dialecte de l’Ahaggar. 4 vols. [Paris]: Imprimerie nationale de France.
+<a id="ishida_zgh"></a>Ishida, Richard. [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html)
 
 <a id="tarifit2004"></a>McClelland III, Clive W. 2004. A Dictionary of Tarifit Berber. The Edwin Mellen Press. Lewiston, New York.
- 
+
+Morocco-Canada-France (prepared by P. Andries). 2004. Proposal to add the Tifinagh Script. [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf)
+
 <a id="savage2000"></a>Savage, Andrew. 2000. Writing Tuareg Vowels. Advantages and Disadvantages of the Three Script Options: Arabic, Tifinagh and Roman. Submitted in partial fulfillment of the requirements for the degree of Master of Letters in Linguistics from the Univerisity of New England, New South Wales, Australia.
 
-<a id="savage2003"></a>_____. 2003. [Tifinagh Unicode Propositions](http://www.unicode.org/L2/L2003/03143-tifinagh-samples.pdf), Stanthorpe.
+[2009 New Testament](https://archive.org/details/newtestament-tarifit)
 
-[ALPHABETS OF TAMASHEK IN MALI](http://web.archive.org/web/20031210100153/wwwusers.imaginet.fr/~yusuf/tamashek.html)
+2004. [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf)
 
-[Entrance to Kidal.](https://en-academic.com/dic.nsf/enwiki/18396)
-
-[Souad Sahraoui. 2021. English and the Languages of Algeria: Suggestions towards a New Language Policy](https://www.academia.edu/75532503/English_and_the_Languages_of_Algeria_Suggestions_towards_a_New_Language_Policy)
-
-[lexilogos.com input](https://www.lexilogos.com/clavier/tifinagh.htm)
-
-[Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html)
-
-[The Tifinagh alphabet](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh.html)
-
-[Grammaire Tamachek](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-hanoteau.html)
-
-[Livre I](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-basset.html)
-
-[P. Thott-Hansen, Kortfattet Dansk Haandbog i de vigstigste af Afrikas Sprog, København, 1969.](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-thott-hansen.html)
-
-[Comparaison entre le libyque (occidental et oriental), le tifinagh saharien, six variations du système touarègue et le néo-tifinagh développé par l'Académie berbère](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-mondeberbere.html)
-
-[Temehu](https://www.temehu.com/imazighen/tifinagh.htm)
-
-[Lameen Souag](https://dn790008.ca.archive.org/0/items/rosettaproject_kab_ortho-1/rosettaproject_kab_ortho-1.pdf)
-
-L2/04-195. 2004. [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf)
