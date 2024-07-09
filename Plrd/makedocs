@@ -8,15 +8,15 @@ echo "-----Rebuilding documentation..."
 
 echo "     >>> HTML (documentation/)"
 
-echo "     > utn_Plrd.html"
-pandoc -s -f markdown-smart --template documentation/source/template.html documentation/source/utn_Plrd.md -o documentation/utn_Plrd.html --lua-filter=documentation/source/pandocfilters/filter-html.lua
+echo "     > utn56_Plrd.html"
+pandoc -s -f markdown-smart --template documentation/source/template.html documentation/source/utn56_Plrd.md -o documentation/utn56_Plrd.html --lua-filter=documentation/source/pandocfilters/filter-html.lua
 
 echo "     >>> PDF (documentation/pdf/)"
 mkdir -p documentation/source/pdftemp
 
-echo "     > utn_Plrd.html > utn_Plrd.pdf"
-pandoc -s -f markdown-smart --template documentation/source/templatepdf.html documentation/source/utn_Plrd.md -o documentation/source/pdftemp/utn_Plrd.html --lua-filter=documentation/source/pandocfilters/filter-pdf.lua
-weasyprint documentation/source/pdftemp/utn_Plrd.html documentation/pdf/utn_Plrd.pdf
+echo "     > utn56_Plrd.html > utn56_Plrd.pdf"
+pandoc -s -f markdown-smart --template documentation/source/templatepdf.html documentation/source/utn56_Plrd.md -o documentation/source/pdftemp/utn56_Plrd.html --lua-filter=documentation/source/pandocfilters/filter-pdf.lua
+weasyprint documentation/source/pdftemp/utn56_Plrd.html documentation/pdf/utn56_Plrd.pdf
 
 echo "     Markdown source for other pages is in separate repo"
 
