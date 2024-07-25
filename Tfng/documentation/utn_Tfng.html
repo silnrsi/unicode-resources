@@ -15,7 +15,7 @@
         <h1 class="title">Unicode Technical Note xx - Representing
 Tifinagh in Unicode (proposed draft)</h1>
     </header>
-    <p><em>Lorna Evans, SIL International (15-Jul-2024)</em></p>
+    <p><em>Lorna Evans, SIL International (25-Jul-2024)</em></p>
     <p><em>This is a work in progress. Additional information on
     language usage is most welcome.</em></p>
     <ul>
@@ -30,6 +30,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <li><a href="#bicons">Bi- Tri-Consonants</a></li>
     <li><a href="#contexual">Contextual Shaping</a></li>
     <li><a href="#dir">Writing Direction</a></li>
+    <li><a href="#dir_var">Directional Glyphs</a></li>
     </ul></li>
     <li><a href="#resource">Resources</a>
     <ul>
@@ -40,19 +41,23 @@ Tifinagh in Unicode (proposed draft)</h1>
     <ul>
     <li><a href="#tzm_zgh">Central Atlas Tamazight, Standard Moroccan
     Tamazight [tzm] [zgh]</a></li>
-    <li><a href="#kab">Kabyle, Amazigh [kab]</a></li>
+    <li><a href="#kab">Kabyle, Amazigh, Taqbaylit [kab]</a></li>
     </ul></li>
     <li><a href="#trad">Languages Using Traditional Tifinagh script</a>
     <ul>
+    <li><a href="#cnu">Chenoua, Tacenwit [cnu]</a></li>
     <li><a href="#gho">Ghomara, Shilha [gho]</a></li>
+    <li><a href="#mzb">Tumzabt [mzb]</a></li>
     <li><a href="#rif">Tarifit, Riffian [rif]</a></li>
     <li><a href="#shi">Tachelhit [shi]</a></li>
+    <li><a href="#shy">Tachawit, Tacawit [shy]</a></li>
     <li><a href="#siz">Siwi [siz]</a></li>
     <li><a href="#taq">Tamasheq [taq]</a></li>
     <li><a href="#taq-ML">Tamasheq (Mali) [taq]</a></li>
     <li><a href="#tda">Tagdal, Tuareg (Azawagh dialect of Niger-Mali)
     [tda]</a></li>
-    <li><a href="#thv">Tahaggart Tamahaq [thv]</a></li>
+    <li><a href="#thv">Tahaggart Tamahaq, Tamahaq (Tuareg)
+    [thv]</a></li>
     <li><a href="#thz">Tayart Tamajeq, [thz]</a></li>
     <li><a href="#ttq">Tawallammat Tamajaq [ttq]</a></li>
     </ul></li>
@@ -62,10 +67,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <li><a href="#auj">Awjilah [auj]</a></li>
     <li><a href="#gha">Ghadamès [gha]</a></li>
     <li><a href="#grr">Taznatit [grr]</a></li>
-    <li><a href="#jbn">Nafusi, Zuwara [jbn]</a></li>
-    <li><a href="#mzb">Tumzabt [mzb]</a></li>
+    <li><a href="#jbn">Nafusi (Zuwara dialect) [jbn]</a></li>
     <li><a href="#nxm">Numidian [nxm]</a></li>
-    <li><a href="#shy">Tachawit, Tacawit [shy]</a></li>
     <li><a href="#tez">Tetserret [tez]</a></li>
     <li><a href="#zen">Zenaga [zen]</a></li>
     </ul></li>
@@ -179,18 +182,12 @@ Tifinagh in Unicode (proposed draft)</h1>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵦ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵢ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵧ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵦ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵧ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
@@ -198,13 +195,12 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D66</td>
     <td style="text-align: left;">2D62</td>
     <td style="text-align: left;">2D67</td>
-    <td style="text-align: left;">2D66 0302</td>
-    <td style="text-align: left;">2D67 0302</td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">not encoded?</td>
     </tr>
     </tbody>
     </table>
     <h4 id="hawad"><em>Hawad</em></h4>
-    <p><em>Positioning of U+0308 is incorrect in most fonts</em></p>
     <table>
     <colgroup>
     <col style="width: 30%" />
@@ -229,16 +225,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵝ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
@@ -326,7 +317,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     historical glyph variants. In addition, because of the issues
     relating to <a href="#dir">Writing Direction</a>, there are variants
     which are mirrored or turned for right to left text or even for
-    vertical text. Those variants are not included here.</p>
+    vertical text. The default directional variants are included below
+    under <a href="#dir_var">Directional Glyphs</a>.</p>
     <p>Because these glyphs are taken from various fonts, the height of
     a particular glyph should not be considered significant.</p>
     <table>
@@ -351,228 +343,216 @@ Tifinagh in Unicode (proposed draft)</h1>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">0</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴰ</span>
-    (<span class="hapaxrond normal"></span> <span
-    class="akatab normal">ⴰ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵀ</span>
-    (<span class="hapaxrond normal"></span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv11&quot; 1">ⵀ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵐ</span>
-    (<span class="akatab normal">ⵐ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv04&quot; 1">ⵐ</span> <span
-    class="hapaxtuareg normal">ⵐ</span> <span
-    class="hapaxrond normal">ⵐ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴰ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>ya</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵀ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yah or Tuareg yab</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵐ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>Tuareg yagn</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵠ</span>
+    <span class="utn normal"></span></br><em>yav</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵠ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">⵰</span></td>
+    class="utn normal">⵰</span></br><em>tazarast</em></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">1</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴱ</span>
-    (<span class="hapaxtuareg normal"></span> <span
-    class="akatab normal"
-    style="font-feature-settings: &quot;cv08&quot; 1">ⴱ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴱ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yab</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵁ</span></td>
+    class="utn normal">ⵁ</span></br><em>Berber yah</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵑ</span></td>
+    class="utn normal">ⵑ</span></br><em>Tuareg yang</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵡ</span></td>
+    class="utn normal">ⵡ</span></br><em>yaw</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴲ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵂ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴲ</span>
+    <span class="utn normal"></span></br><em>yabh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵂ</span>
+    <span class="utn normal"></span></br><em>Tuareg yah</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵒ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵢ</span>
-    (<span class="akatab normal">ⵢ</span> <span
-    class="hapaxtuareg normal"></span> <span
-    class="hapaxrond normal"></span> <span
-    class="hapaxrond normal"></span>)</td>
+    class="utn normal">ⵒ</span></br><em>yap</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵢ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yay</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">3</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴳ</span>
-    (<span class="akatab normal"
-    style="font-feature-settings: &quot;cv09&quot; 1">ⴳ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴳ</span>
+    <span class="utn normal"></span></br><em>yag</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵃ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵓ</span>
-    (<span class="hapaxtuareg normal">ⵓ</span> <span
-    class="hapaxrond normal">ⵓ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵣ</span>
-    (<span class="akatab normal">ⵣ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv06&quot; 1">ⵣ</span>)</td>
+    class="utn normal">ⵃ</span></br><em>yahh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵓ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span></br><em>yu or Tuareg yaw</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵣ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span></br><em>yaz</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">4</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴴ</span>
-    (<span class="akatab normal"
-    style="font-feature-settings: &quot;cv03&quot; 1">ⴴ</span> <span
-    class="hapaxrond normal"></span> <span
-    class="hapaxrond normal"></span> <span
-    class="hapaxrond normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵄ</span>
-    (<span class="hapaxrond normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵔ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵤ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴴ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span></br><em>yaghh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵄ</span>
+    <span class="utn normal"></span></br><em>yaa</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵔ</span>
+    <span class="utn normal"></span></br><em>yar</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵤ</span>
+    <span class="utn normal"></span></br><em>Tawellemet yaz</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">5</td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⴵ</span></td>
+    class="utn normal">ⴵ</span></br><em>Berber yaj</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵅ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵕ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵥ</span>
-    (<span class="akatab normal">ⵥ</span> <span
-    class="hapaxtuareg normal"></span>)</td>
+    class="utn normal">ⵅ</span></br><em>yakh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵕ</span>
+    <span class="utn normal"></span></br><em>yarr</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵥ</span>
+    <span class="utn normal"></span></br><em>yazz</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">6</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴶ</span>
-    (<span class="akatab normal"
-    style="font-feature-settings: &quot;cv10&quot; 1">ⴶ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴶ</span>
+    <span class="utn normal"></span></br><em>yaj</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵆ</span></td>
+    class="utn normal">ⵆ</span></br><em>Tuareg yakh</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵖ</span></td>
+    class="utn normal">ⵖ</span></br><em>yagh</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵦ</span></td>
+    class="utn normal">ⵦ</span></br><em>ye</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">7</td>
+    <td style="text-align: left;"><span class="utn normal">ⴷ</span>
+    <span class="utn normal"></span></br><em>yad</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⴷ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵇ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵗ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵧ</span>
-    (<span class="akatab normal">ⵧ</span>)</td>
+    class="utn normal">ⵇ</span></br><em>yaq</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵗ</span>
+    <span class="utn normal"></span></br><em>Tuareg yagh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵧ</span>
+    <span class="utn normal"></span></br><em>yo</em></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">8</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴸ</span>
-    (<span class="akatab normal"
-    style="font-feature-settings: &quot;cv15&quot; 1">ⴸ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵈ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴸ</span>
+    <span class="utn normal"></span></br><em>yadh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵈ</span>
+    <span class="utn normal"></span></br><em>Tuareg yaq</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵘ</span></td>
+    class="utn normal">ⵘ</span></br><em>Ayer yagh or Adrar yaj</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">9</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴹ</span> (<span
-    class="nototif normal">ⴹ</span> <span
-    class="hapaxrond normal">ⴹ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵉ</span>
-    (<span class="hapaxrond normal"></span> <span
-    class="hapaxrond normal">ⵉ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵙ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴹ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yadd</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵉ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yi</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵙ</span>
+    <span class="utn normal"></span></br><em>yas</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">A</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴺ</span>
-    (<span class="hapaxtuareg normal"></span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴺ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yaddh</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵊ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵚ</span>
-    (<span class="akatab normal">ⵚ</span> <span
-    class="nototifagraw normal">ⵚ</span>)</td>
+    class="utn normal">ⵊ</span></br><em>yazh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵚ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yass</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">B</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴻ</span>
-    (<span class="nototifagraw normal">ⴻ</span> <span
-    class="hapaxrond normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵋ</span>
-    (<span class="akatab normal">ⵋ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv07&quot; 1">ⵋ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵛ</span>
-    (<span class="akatab normal">ⵛ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv12&quot; 1">ⵛ</span> <span
-    class="hapaxcarre normal">ⵛ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴻ</span>
+    <span class="utn normal"></span></br><em>yey</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵋ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>Ahaggar yazh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵛ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yash</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">C</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴼ</span>
-    (<span class="akatab normal">ⴼ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv02&quot; 1">ⴼ</span> <span
-    class="akatab normal"
-    style="font-feature-settings: &quot;cv02&quot; 2">ⴼ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴼ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span></br><em>yaf</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵌ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxberbere normal">ⵜ</span> (<span
-    class="akatab normal">ⵜ</span>)</td>
+    class="utn normal">ⵌ</span></br><em>Tuareg yazh</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵜ</span>
+    <span class="utn normal"></span></br><em>yat</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">D</td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⴽ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵍ</span>
-    (<span class="akatab normal">ⵍ</span> <span
-    class="hapaxtuareg normal">ⵍ</span> <span
-    class="hapaxberbere normal">ⵍ</span>)</td>
+    class="utn normal">ⴽ</span></br><em>yak</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵍ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yal</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵝ</span></td>
+    class="utn normal">ⵝ</span></br><em>yath</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">E</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴾ</span>
-    (<span class="hapaxtuareg normal"></span> <span
-    class="hapaxtuareg normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵎ</span>
-    (<span class="hapaxtuareg normal"></span> <span
-    class="hapaxrond normal"></span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵞ</span>
-    (<span class="nototifagraw normal">ⵞ</span>)</td>
+    <td style="text-align: left;"><span class="utn normal">ⴾ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>Tuareg yak</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵎ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yam</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵞ</span>
+    <span class="utn normal"></span> <span
+    class="utn normal"></span></br><em>yach</em></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">F</td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⴿ</span></td>
+    class="utn normal">ⴿ</span></br><em>yakhh</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵏ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵟ</span>
-    (<span class="hapaxrond normal">ⵟ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv13&quot; 1">ⵟ</span> <span
-    class="nototifagraw normal">ⵟ</span>)</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵯ</span>
-    (<span class="nototifagraw normal">ⵯ</span>)</td>
+    class="utn normal">ⵏ</span></br><em>yan</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵟ</span>
+    <span class="utn normal"></span> <span class="utn normal"></span>
+    <span class="utn normal"></span></br><em>yatt</em></td>
+    <td style="text-align: left;"><span class="utn normal">ⵯ</span>
+    <span class="utn normal"></span></br><em>tamatart</em></td>
     <td style="text-align: left;"><span
-    class="nototif normal">⵿</span></td>
+    class="utn normal">⵿</span></br><em>joiner</em></td>
     </tr>
     </tbody>
     </table>
@@ -651,7 +631,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
     <td style="text-align: left;"><span class="akatab normal">ⴶ⵿ⵜ</span>
-    <span class="hapaxtuareg normal"></span></td>
+    <span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">5 /ft/ 2D3C 2D5C</td>
@@ -743,7 +723,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="nototif normal">ⵎ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
-    <td style="text-align: left;"><span class="ebrima normal">ⵎ⵿ⵜ</span>
+    <td style="text-align: left;"><span class="utn normal"></span>
     <span class="nototif normal">ⵎ⵿ⵜ</span> <span
     class="akatab normal">ⵎ⵿ⵜ</span> <span class="akatab normal"
     style="font-feature-settings: &quot;cv34&quot; 2">ⵎ⵿ⵜ</span> <span
@@ -766,7 +746,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     ⴴ</span></td>
     <td style="text-align: left;">→</td>
     <td style="text-align: left;"><span class="akatab normal">ⵏ⵿ⴴ</span>
-    <span class="ebrima normal">ⵏ⵿ⴴ</span></td>
+    <span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">17 /nġ/ 2D4F 2D36</td>
@@ -1017,7 +997,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     style="font-feature-settings: &quot;cv32&quot; 1">ⵔ⵿ⵜ</span> <span
     class="akatab normal"
     style="font-feature-settings: &quot;cv32&quot; 2">ⵔ⵿ⵜ</span> <span
-    class="hapaxtuareg normal"></span></td>
+    class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">42 /gt/ 2D56 2D5C</td>
@@ -1055,7 +1035,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     style="font-feature-settings: &quot;cv33&quot; 2">ⵙ⵿ⵜ</span> <span
     class="akatab normal"
     style="font-feature-settings: &quot;cv33&quot; 3">ⵙ⵿ⵜ</span> <span
-    class="hapaxtuareg normal"></span></td>
+    class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">46 /šk/ 2D5B 2D3E</td>
@@ -1086,7 +1066,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="nototif normal">ⵛ⵿ⵜ</span>
     <span class="akatab normal">ⵛ⵿ⵜ</span> <span class="akatab normal"
     style="font-feature-settings: &quot;cv48&quot; 1">ⵛ⵿ⵜ</span> <span
-    class="hapaxtuareg normal"></span></td>
+    class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">49 /ts/ 2D5C 2D59</td>
@@ -1109,8 +1089,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="nototif normal">ⵢ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵢ⵿ⵜ</span>
-    <span class="ebrima normal">ⵢ⵿ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵢ⵿ⵜ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">52 /zt/ 2D63 2D5C</td>
@@ -1309,28 +1289,31 @@ Tifinagh in Unicode (proposed draft)</h1>
     to the rules in effect for the specified variant. If the glyphs are
     to be mirrored, then this must be implemented in the font.</p>
     <p><strong>The following text demonstrates Tifinagh left-to-right
-    behaviour:</strong><br> <span class="akatab normal"> ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ
-    ⵜⴶⵂⵏⵜ ⵎⵉ </span></p>
+    behaviour:</strong><br> <span class="akatab-v2 normal">ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ
+    ⵜⴶⵂⵏⵜ ⵎⵉ</span> (Senatet tsokalén wr teǧǧehnet émi.)</p>
     <p><strong>Using the same text, right-to-left behaviour is
     demonstrated using U+202E RIGHT-TO-LEFT OVERRIDE:</strong><br> <span
-    class="akatab normal" dir="rtl"> ‮ ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span></p>
+    class="akatab-v2 normal" dir="rtl"> ‮ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ
+    ⵎⵉ</span></p>
     <strong>The following text demonstrates both Tifinagh directional
-    behaviours using the U+202E RIGHT-TO-LEFT OVERRIDE and U+202C OP
-    DIRECTIONAL FORMATTING:</strong><br> <span class="akatab normal"
-    dir="rtl"> ‮ ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ ‬ ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span>
+    behaviours using the U+202E RIGHT-TO-LEFT OVERRIDE and U+202C POP
+    DIRECTIONAL FORMATTING:</strong><br> <span class="akatab-v2 normal"
+    dir="rtl"> ‮ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ ‬ ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span>
     </p>
     <p>‮ <!-- 
     Using hard-coded directional characters in the HTML code (as illustrated above) can prevent accidental deletion of invisible characters.
     --></p>
-    <h3 id="variant-directional-glyphs"><a id="dir_var"></a>Variant
-    Directional Glyphs</h3>
+    <h3 id="directional-glyphs"><a id="dir_var"></a>Directional
+    Glyphs</h3>
     <p>Because the script can be written in multiple directions, the
-    glyphs must be mirrored or turned. Below is a sampling of some of
-    the different shapes required for differing directions. Some glyphs,
-    like a circle, could look the same in any direction. However, unless
-    the glyphs are monoline, there will be slight variations in the
-    glyph design. Where there are glyph variants, the number of glyphs
-    required for different directions will increase exponentially.</p>
+    glyphs must be mirrored for right-to-left text, turned 90° for
+    bottom-to-top text, or turned -90° for top-to-bottom text. Below is
+    a sampling of some of the different shapes required for differing
+    directions. Some glyphs, like a circle, could look the same in any
+    direction. However, unless the glyphs are monoline, there will be
+    slight variations in the glyph design. Where there are glyph
+    variants, the number of glyphs required for different directions
+    will increase exponentially.</p>
     <table>
     <colgroup>
     <col style="width: 14%" />
@@ -1342,628 +1325,445 @@ Tifinagh in Unicode (proposed draft)</h1>
     <thead>
     <tr class="header">
     <th style="text-align: left;"></th>
-    <th style="text-align: left;">→</th>
-    <th style="text-align: left;">←</th>
-    <th style="text-align: left;">↑</th>
-    <th style="text-align: left;">↓</th>
+    <th style="text-align: left;"><span class="normal">→</span></th>
+    <th style="text-align: left;"><span class="normal">←</span></th>
+    <th style="text-align: left;"><span class="normal">↑</span></th>
+    <th style="text-align: left;"><span class="normal">↓</span></th>
     </tr>
     </thead>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">2D30</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴰ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴰ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴰ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴰ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴰ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D31</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴱ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴱ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴱ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴱ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D32</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴲ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴲ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴲ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴲ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴲ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴲ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D33</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴳ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴳ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴳ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴳ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D34</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴴ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴴ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴴ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴴ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D35</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴵ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴵ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴵ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴵ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D36</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴶ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴶ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴶ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴶ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D37</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴷ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴷ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴷ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴷ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D38</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴸ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴸ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴸ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴸ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D39</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴹ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
+    </tbody>
+    </table>
+    <p> </p>
+    <table>
+    <colgroup>
+    <col style="width: 14%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"><span class="normal">→</span></th>
+    <th style="text-align: left;"><span class="normal">←</span></th>
+    <th style="text-align: left;"><span class="normal">↑</span></th>
+    <th style="text-align: left;"><span class="normal">↓</span></th>
+    </tr>
+    </thead>
+    <tbody>
     <tr class="odd">
     <td style="text-align: left;">2D3A</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴺ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴺ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D3B</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴻ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴻ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D3C</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴼ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴼ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴼ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴼ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D3D</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴽ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴽ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﴽ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D3E</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴾ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴾ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﴾</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D3F</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴿ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⴿ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﴿</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D40</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴱ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴱ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵀ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵀ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D41</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵁ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵁ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵁</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D42</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵂ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵂ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵂ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵂ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D43</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵃ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵃ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵃</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D44</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵄ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵄ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵄ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵄ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D45</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵅ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵅ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵅ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵅ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D46</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵆ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵆ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵆ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵆ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵆ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵆ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D47</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵇ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵇ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵇</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D48</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵈ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵈ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵗ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵗ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵈ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵈ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D49</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵉ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵉ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵉</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D4A</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵊ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵊ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵊ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵊ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D4B</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵋ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵋ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵋ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵋ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D4C</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵌ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵌ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵌ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵌ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵌ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵌ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D4D</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵍ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵍</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D4E</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵎ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵎ</span></td>
+    <td style="text-align: left;"><span class="utn normal">﵎</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D4F</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵏ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵏ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
+    </tbody>
+    </table>
+    <table>
+    <colgroup>
+    <col style="width: 14%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"><span class="normal">→</span></th>
+    <th style="text-align: left;"><span class="normal">←</span></th>
+    <th style="text-align: left;"><span class="normal">↑</span></th>
+    <th style="text-align: left;"><span class="normal">↓</span></th>
+    </tr>
+    </thead>
+    <tbody>
     <tr class="odd">
     <td style="text-align: left;">2D50</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵐ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵐ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D51</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵑ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵑ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵑ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵑ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D52</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵒ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵒ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵒ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D53</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵓ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵓ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵓ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵓ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D54</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵔ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵔ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵔ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵔ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵔ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵔ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D55</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵕ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵕ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵕ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D56</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵖ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵖ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵖ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵖ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D57</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵗ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵗ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵈ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵈ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵗ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵗ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D58</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵘ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵘ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵘ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵘ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵘ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵘ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D59</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵙ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵙ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵙ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵙ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵙ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵙ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D5A</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵚ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵚ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵚ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D5B</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵛ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵛ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵛ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D5C</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵜ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵜ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵜ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵜ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵜ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵜ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D5D</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵝ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵝ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵝ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵝ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D5E</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵞ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵞ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵞ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D5F</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵟ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵟ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵟ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D60</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵠ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵠ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵠ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵠ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D61</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵡ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵡ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵎ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵡ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵡ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D62</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵢ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵢ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵢ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D63</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵣ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵣ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵣ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵣ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D64</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵤ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵤ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵤ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D65</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵥ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵥ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">-</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵥ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵥ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">2D66</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵦ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴷ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⴸ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵦ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ﵦ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">2D67</td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵧ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal">ⵧ</span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
-    <td style="text-align: left;"><span
-    class="hapaxtuareg normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵧ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵧ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     </tbody>
     </table>
@@ -2030,12 +1830,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     <h3
     id="central-atlas-tamazight-standard-moroccan-tamazight"><a id="tzm_zgh"></a>Central
     Atlas Tamazight, Standard Moroccan Tamazight</h3>
-    <p><em>Source</em>: <a
-    href="https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html">Tifinaghe-IRCAM</a>,
-    <a href="https://omniglot.com/writing/tamazight.htm">Omniglot</a>,
-    <a href="https://r12a.github.io/scripts/tfng/zgh.html">Tamazight:
-    Neo-Tifinagh orthography notes</a></p>
-    <p><em>Language tag:</em> <code>tzm-Tfng</code>,
+    <p><em>Source</em>: <a href="#ircam">Tifinaghe-IRCAM</a>, <a
+    href="https://omniglot.com/writing/tamazight.htm">Omniglot</a>,
+    <a href="#ishida_zgh">Tamazight: Neo-Tifinagh orthography notes</a>,
+    and <a href="#sahraoui">Souad Sahraoui (pages 307-308)</a></p>
+    <p><em>Language tags:</em> <code>tzm-Tfng</code>,
     <code>zgh</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
     <p><em>SLDR:</em> <a
@@ -2346,12 +2145,12 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵢ</span> &lt; <span
     class="nototif normal">ⵣ</span> &lt; <span
     class="nototif normal">ⵥ</span></p>
-    <h3 id="kabyle-amazigh"><a id="kab"></a>Kabyle, Amazigh</h3>
+    <h3 id="kabyle-amazigh-taqbaylit"><a id="kab"></a>Kabyle, Amazigh,
+    Taqbaylit</h3>
     <p><em>Source</em>: <a
-    href="https://omniglot.com/writing/kabyle.php">Omniglot</a>, <a
-    href="https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf">Projet
-    de norme marocaine: Alphabet tifinaghe</a></p>
-    <p><em>Language Tag</em>: <code>kab-Tfng</code></p>
+    href="https://omniglot.com/writing/kabyle.php">Omniglot</a> and
+    <a href="#snima">SNIMA 2004</a></p>
+    <p><em>Language tag</em>: <code>kab-Tfng</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
     <table>
     <colgroup>
@@ -2609,7 +2408,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     </table>
     <h4 id="known-glyph-variants-1">Known glyph variants</h4>
     <p>A variant of U+2D4d is used: <span
-    class="hapaxberbere normal">ⵍ</span></p>
+    class="utn normal"></span></p>
     <h4 id="bi-consonants-1">Bi-consonants</h4>
     <p>Bi-consonants are not “required” in Neo-Tifinagh. If a font
     supports bi-consonants, the two consonants separated by the ZWJ
@@ -2660,10 +2459,292 @@ Tifinagh in Unicode (proposed draft)</h1>
     <h2
     id="languages-using-traditional-tifinagh-script"><a id="trad"></a>Languages
     Using Traditional Tifinagh script</h2>
+    <h3 id="chenoua-tacenwit"><a id="cnu"></a> Chenoua, Tacenwit</h3>
+    <p><em>Source</em>: <a href="#savage2003">Savage, 2003 pages
+    2-3</a></p>
+    <p>This source lists a set of characters that are used in a Algerian
+    school text book entitled “Adlis” printed in 1988 (pages 12,13). It
+    is unknown how widely used this book (or the characters) are
+    actually used.</p>
+    <p><em>Language tag</em>: <code>cnu-Tfng</code></p>
+    <table>
+    <colgroup>
+    <col style="width: 22%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Characters</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ̂</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴳ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴵ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴷ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴹ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴽ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;">2D30 0302</td>
+    <td style="text-align: left;">2D33</td>
+    <td style="text-align: left;">2D35</td>
+    <td style="text-align: left;">2D37</td>
+    <td style="text-align: left;">2D39</td>
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;">2D3D</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/a/</td>
+    <td style="text-align: left;">/ɛ/</td>
+    <td style="text-align: left;">/g/</td>
+    <td style="text-align: left;">/ǧ/</td>
+    <td style="text-align: left;">/d/</td>
+    <td style="text-align: left;">/ḍ/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/f/</td>
+    <td style="text-align: left;">/k/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵀ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵃ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵅ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵇ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵊ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵎ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵏ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D40</td>
+    <td style="text-align: left;">2D43</td>
+    <td style="text-align: left;">2D45</td>
+    <td style="text-align: left;">2D47</td>
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;">2D4A</td>
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;">2D4E</td>
+    <td style="text-align: left;">2D4F</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/b/</td>
+    <td style="text-align: left;">/ḥ/</td>
+    <td style="text-align: left;">/x/</td>
+    <td style="text-align: left;">/q/</td>
+    <td style="text-align: left;">/i/</td>
+    <td style="text-align: left;">/j/</td>
+    <td style="text-align: left;">/l/</td>
+    <td style="text-align: left;">/m/</td>
+    <td style="text-align: left;">/n/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵔ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵙ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵟ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵡ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵣ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">2D54</td>
+    <td style="text-align: left;">2D59</td>
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;">2D5F</td>
+    <td style="text-align: left;">2D61</td>
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;">2D63</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/u/</td>
+    <td style="text-align: left;">/r/</td>
+    <td style="text-align: left;">/s/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/t/</td>
+    <td style="text-align: left;">/ṭ/</td>
+    <td style="text-align: left;">/w/</td>
+    <td style="text-align: left;">/y/</td>
+    <td style="text-align: left;">/z/</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="glyph-variants">Glyph variants</h4>
+    <table>
+    <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴰ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴻ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴼ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵉ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵍ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵓ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵛ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵜ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵢ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    </tbody>
+    </table>
     <h3 id="ghomara-shilha"><a id="gho"></a>Ghomara, Shilha</h3>
     <p><em>Source</em>: <a
     href="https://omniglot.com/writing/shilha.htm">Omniglot</a></p>
-    <p><em>Language Tag</em>: <code>gho-Tfng</code></p>
+    <p><em>Language tag</em>: <code>gho-Tfng</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
     <table>
     <colgroup>
@@ -2920,7 +3001,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     </table>
     <h4 id="known-glyph-variants-2">Known glyph variants</h4>
     <p>A variant of U+2D4d is used: <span
-    class="hapaxberbere normal">ⵍ</span></p>
+    class="utn normal"></span></p>
     <h4 id="bi-consonants-2">Bi-consonants</h4>
     <p>Unknown.</p>
     <h4 id="collation-2">Collation</h4>
@@ -2958,13 +3039,294 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵢ</span> &lt; <span
     class="nototif normal">ⵣ</span> &lt; <span
     class="nototif normal">ⵥ</span></p>
+    <h3 id="tumzabt"><a id="mzb"></a>Tumzabt</h3>
+    <p><em>Source</em>: <a href="#savage2003">Savage, 2003 pages
+    2-3</a></p>
+    <p>This source lists a set of characters that are used in a Algerian
+    school text book entitled “Adlis” printed in 1988 (pages 12,13). It
+    is unknown how widely used this book (or the characters) are
+    actually used.</p>
+    <p><em>Language tag</em>: <code>mzb-Tfng</code></p>
+    <table>
+    <colgroup>
+    <col style="width: 22%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Characters</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ̂</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴳ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴵ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴷ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴹ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴽ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;">2D30 0302</td>
+    <td style="text-align: left;">2D33</td>
+    <td style="text-align: left;">2D35</td>
+    <td style="text-align: left;">2D37</td>
+    <td style="text-align: left;">2D39</td>
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;">2D3D</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/a/</td>
+    <td style="text-align: left;">/ɛ/</td>
+    <td style="text-align: left;">/g/</td>
+    <td style="text-align: left;">/ǧ/</td>
+    <td style="text-align: left;">/d/</td>
+    <td style="text-align: left;">/ḍ/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/f/</td>
+    <td style="text-align: left;">/k/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵀ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵃ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵅ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵇ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵊ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵎ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵏ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D40</td>
+    <td style="text-align: left;">2D43</td>
+    <td style="text-align: left;">2D45</td>
+    <td style="text-align: left;">2D47</td>
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;">2D4A</td>
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;">2D4E</td>
+    <td style="text-align: left;">2D4F</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/b/</td>
+    <td style="text-align: left;">/ḥ/</td>
+    <td style="text-align: left;">/x/</td>
+    <td style="text-align: left;">/q/</td>
+    <td style="text-align: left;">/i/</td>
+    <td style="text-align: left;">/j/</td>
+    <td style="text-align: left;">/l/</td>
+    <td style="text-align: left;">/m/</td>
+    <td style="text-align: left;">/n/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵔ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵙ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵟ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵡ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵣ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">2D54</td>
+    <td style="text-align: left;">2D59</td>
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;">2D5F</td>
+    <td style="text-align: left;">2D61</td>
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;">2D63</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/u/</td>
+    <td style="text-align: left;">/r/</td>
+    <td style="text-align: left;">/s/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/t/</td>
+    <td style="text-align: left;">/ṭ/</td>
+    <td style="text-align: left;">/w/</td>
+    <td style="text-align: left;">/y/</td>
+    <td style="text-align: left;">/z/</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="glyph-variants-1">Glyph variants</h4>
+    <table>
+    <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴰ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴻ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴼ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵉ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵍ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵓ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵛ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵜ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵢ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    </tbody>
+    </table>
     <h3 id="tarifit-riffian"><a id="rif"></a>Tarifit, Riffian</h3>
+    <p><em>Source</em>: <a
+    href="https://omniglot.com/writing/riffian.htm">Omniglot</a> and
+    <a href="#2009">Tarifit New Testament</a></p>
     <p><em>Language tag:</em> <code>rif-Tfng</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
-    <p><em>Source</em>: <a
-    href="https://omniglot.com/writing/riffian.htm">Omniglot</a>, <a
-    href="https://archive.org/details/newtestament-tarifit">2009 New
-    Testament</a></p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -3124,9 +3486,9 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="nototif normal">ⵛ</span></td>
     <td style="text-align: left;"><span
-    class="nototif normal">ⵞ</span></td>
-    <td style="text-align: left;"><span
     class="nototif normal">ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵞ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
@@ -3137,8 +3499,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D59</td>
     <td style="text-align: left;">2D5A</td>
     <td style="text-align: left;">2D5B</td>
-    <td style="text-align: left;">2D5E</td>
     <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;">2D5E</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
@@ -3149,8 +3511,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">/s/</td>
     <td style="text-align: left;">/ṣ/</td>
     <td style="text-align: left;">/c/</td>
-    <td style="text-align: left;">/č/</td>
     <td style="text-align: left;">/t/</td>
+    <td style="text-align: left;">/č/</td>
     </tr>
     <tr class="even">
     <td style="text-align: left;"></td>
@@ -3255,267 +3617,15 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵢ</span> &lt; <span
     class="nototif normal">ⵣ</span> &lt; <span
     class="nototif normal">ⵥ</span></p>
-    <p><em>Source</em>: <a href="#tarifit2004">A Dictionary of Tarifit
-    Berber.</a> This set of characters is different than the set (dated
-    2009) above.</p>
-    <table>
-    <colgroup>
-    <col style="width: 22%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    <col style="width: 8%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Characters</th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"> </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴳ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴷ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴹ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴻ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴼ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⴽ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵀ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵃ</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D30</td>
-    <td style="text-align: left;">2D33</td>
-    <td style="text-align: left;">2D37</td>
-    <td style="text-align: left;">2D39</td>
-    <td style="text-align: left;">2D3B</td>
-    <td style="text-align: left;">2D3C</td>
-    <td style="text-align: left;">2D3D</td>
-    <td style="text-align: left;">2D40</td>
-    <td style="text-align: left;">2D43</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/a/</td>
-    <td style="text-align: left;">/g/</td>
-    <td style="text-align: left;">/d/</td>
-    <td style="text-align: left;">/dˁ/</td>
-    <td style="text-align: left;">/ǝ/</td>
-    <td style="text-align: left;">/f/</td>
-    <td style="text-align: left;">/k/</td>
-    <td style="text-align: left;">/b, β, p/</td>
-    <td style="text-align: left;">/h, ħ/</td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵅ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵇ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵉ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵊ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵍ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵎ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵏ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵒ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵓ</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D45</td>
-    <td style="text-align: left;">2D47</td>
-    <td style="text-align: left;">2D49</td>
-    <td style="text-align: left;">2D4A</td>
-    <td style="text-align: left;">2D4D</td>
-    <td style="text-align: left;">2D4E</td>
-    <td style="text-align: left;">2D4F</td>
-    <td style="text-align: left;">2D52</td>
-    <td style="text-align: left;">2D53</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/x/</td>
-    <td style="text-align: left;">/q/</td>
-    <td style="text-align: left;">/i/</td>
-    <td style="text-align: left;">/ʒ/</td>
-    <td style="text-align: left;">/l/</td>
-    <td style="text-align: left;">/m/</td>
-    <td style="text-align: left;">/n, ŋ/</td>
-    <td style="text-align: left;">/ʕ/</td>
-    <td style="text-align: left;">/u/</td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵔ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵖ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵙ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵛ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵜ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵝ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵠ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵡ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵢ</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D54</td>
-    <td style="text-align: left;">2D56</td>
-    <td style="text-align: left;">2D59</td>
-    <td style="text-align: left;">2D5B</td>
-    <td style="text-align: left;">2D5C</td>
-    <td style="text-align: left;">2D5D</td>
-    <td style="text-align: left;">2D60</td>
-    <td style="text-align: left;">2D61</td>
-    <td style="text-align: left;">2D62</td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/r, rˁ/</td>
-    <td style="text-align: left;">/ɣ/</td>
-    <td style="text-align: left;">/s, sˁ/</td>
-    <td style="text-align: left;">/ʃ/</td>
-    <td style="text-align: left;">/t, tˁ/</td>
-    <td style="text-align: left;">/θ/</td>
-    <td style="text-align: left;">/ð, ðˁ/</td>
-    <td style="text-align: left;">/w/</td>
-    <td style="text-align: left;">/y/</td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵣ</span></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D63</td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="odd">
-    <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/z, zˁ/</td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    </tbody>
-    </table>
     <h4 id="glyph-variants-and-bi-consonants">Glyph variants and
     Bi-consonants</h4>
     <p>Unknown.</p>
     <h3 id="tachelhit"><a id="shi"></a>Tachelhit</h3>
+    <p><em>Source</em>: <a
+    href="https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml">shi</a>
+    (SLDR)</p>
     <p><em>Language tag:</em> <code>shi</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
-    <p><em>SLDR:</em> <a
-    href="https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml">shi</a></p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -3759,10 +3869,292 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵢ</span> &lt; <span
     class="nototif normal">ⵣ</span> &lt; <span
     class="nototif normal">ⵥ</span></p>
+    <h3 id="tachawit-tacawit"><a id="shy"></a>Tachawit, Tacawit</h3>
+    <p><em>Source</em>: <a href="#savage2003">Savage, 2003 pages
+    2-3</a></p>
+    <p>This source lists a set of characters that are used in a Algerian
+    school text book entitled “Adlis” printed in 1988 (pages 12,13). It
+    is unknown how widely used this book (or the characters) are
+    actually used.</p>
+    <p><em>Language tag</em>: <code>shy-Tfng</code></p>
+    <table>
+    <colgroup>
+    <col style="width: 22%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Characters</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ̂</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴳ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴵ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴷ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴹ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴽ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;">2D30 0302</td>
+    <td style="text-align: left;">2D33</td>
+    <td style="text-align: left;">2D35</td>
+    <td style="text-align: left;">2D37</td>
+    <td style="text-align: left;">2D39</td>
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;">2D3D</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/a/</td>
+    <td style="text-align: left;">/ɛ/</td>
+    <td style="text-align: left;">/g/</td>
+    <td style="text-align: left;">/ǧ/</td>
+    <td style="text-align: left;">/d/</td>
+    <td style="text-align: left;">/ḍ/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/f/</td>
+    <td style="text-align: left;">/k/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵀ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵃ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵅ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵇ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵊ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵎ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵏ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D40</td>
+    <td style="text-align: left;">2D43</td>
+    <td style="text-align: left;">2D45</td>
+    <td style="text-align: left;">2D47</td>
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;">2D4A</td>
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;">2D4E</td>
+    <td style="text-align: left;">2D4F</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/b/</td>
+    <td style="text-align: left;">/ḥ/</td>
+    <td style="text-align: left;">/x/</td>
+    <td style="text-align: left;">/q/</td>
+    <td style="text-align: left;">/i/</td>
+    <td style="text-align: left;">/j/</td>
+    <td style="text-align: left;">/l/</td>
+    <td style="text-align: left;">/m/</td>
+    <td style="text-align: left;">/n/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵔ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵙ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵟ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵡ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵣ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">2D54</td>
+    <td style="text-align: left;">2D59</td>
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;">2D5F</td>
+    <td style="text-align: left;">2D61</td>
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;">2D63</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/u/</td>
+    <td style="text-align: left;">/r/</td>
+    <td style="text-align: left;">/s/</td>
+    <td style="text-align: left;">/c/</td>
+    <td style="text-align: left;">/t/</td>
+    <td style="text-align: left;">/ṭ/</td>
+    <td style="text-align: left;">/w/</td>
+    <td style="text-align: left;">/y/</td>
+    <td style="text-align: left;">/z/</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="glyph-variants-2">Glyph variants</h4>
+    <table>
+    <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴰ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D3B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴻ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴼ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D49</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵉ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵍ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵓ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D5B</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵛ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵜ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵢ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    </tbody>
+    </table>
     <h3 id="siwi"><a id="siz"></a>Siwi</h3>
     <p><em>Source</em>: <a
     href="https://omniglot.com/writing/siwi.htm">Omniglot</a></p>
-    <p><em>Language Tag</em>: <code>siz-Tfng</code></p>
+    <p><em>Language tag</em>: <code>siz-Tfng</code></p>
     <p><em>Opentype language system tag:</em> <code>BBR</code></p>
     <table>
     <colgroup>
@@ -4102,9 +4494,9 @@ Tifinagh in Unicode (proposed draft)</h1>
     <h3 id="tamasheq"><a id="taq"></a>Tamasheq</h3>
     <p><em>Source</em>: <a
     href="https://omniglot.com/writing/tamasheq.htm">Omniglot</a></p>
-    <p><em>Language Tag</em>: <code>taq-Tfng</code></p>
-    <p><em>Opentype language system tag:</em> <code>TMH</code> and
-    <code>BBR</code></p>
+    <p><em>Language tag</em>: <code>taq-Tfng</code></p>
+    <p><em>Opentype language system tag:</em> <code>TAQ</code>
+    (preferred) or <code>TMH</code></p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -4143,8 +4535,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⴴ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⴶ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⴷ /
-    ⴸ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴷ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⴹ</span></td>
     <td style="text-align: left;"><span
@@ -4160,7 +4552,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D31</td>
     <td style="text-align: left;">2D34</td>
     <td style="text-align: left;">2D36</td>
-    <td style="text-align: left;">2D37 or 2D38</td>
+    <td style="text-align: left;">2D37</td>
     <td style="text-align: left;">2D39</td>
     <td style="text-align: left;">2D3C</td>
     <td style="text-align: left;">2D3E</td>
@@ -4202,14 +4594,14 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵈ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵉ</span></td>
-    <td style="text-align: left;"><span class="nototif normal">ⵋ or
-    ⵌ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵋ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵌ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵍ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵎ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵏ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
@@ -4218,10 +4610,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D46</td>
     <td style="text-align: left;">2D48</td>
     <td style="text-align: left;">2D49</td>
-    <td style="text-align: left;">2D4B or 2D4C</td>
+    <td style="text-align: left;">2D4B</td>
+    <td style="text-align: left;">2D4C</td>
     <td style="text-align: left;">2D4D</td>
     <td style="text-align: left;">2D4E</td>
-    <td style="text-align: left;">2D4F</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
@@ -4231,9 +4623,9 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">/q/</td>
     <td style="text-align: left;">/i/</td>
     <td style="text-align: left;">/ž/</td>
+    <td style="text-align: left;">/ẓ/</td>
     <td style="text-align: left;">/l/</td>
     <td style="text-align: left;">/m/</td>
-    <td style="text-align: left;">/n/</td>
     </tr>
     <tr class="even">
     <td style="text-align: left;"></td>
@@ -4249,6 +4641,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵏ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵑ</span></td>
     <td style="text-align: left;"><span
@@ -4265,11 +4659,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵛ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵜ</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">ⵟ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D4F</td>
     <td style="text-align: left;">2D51</td>
     <td style="text-align: left;">2D53</td>
     <td style="text-align: left;">2D54</td>
@@ -4278,10 +4671,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D5A</td>
     <td style="text-align: left;">2D5B</td>
     <td style="text-align: left;">2D5C</td>
-    <td style="text-align: left;">2D5F</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/n/</td>
     <td style="text-align: left;">/ŋ/</td>
     <td style="text-align: left;">/o/ /u/</td>
     <td style="text-align: left;">/r/</td>
@@ -4290,7 +4683,6 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">/ṣ/</td>
     <td style="text-align: left;">/š/</td>
     <td style="text-align: left;">/t/</td>
-    <td style="text-align: left;">/ṭ/</td>
     </tr>
     <tr class="even">
     <td style="text-align: left;"></td>
@@ -4307,6 +4699,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
     <td style="text-align: left;"><span
+    class="nototif normal">ⵟ</span></td>
+    <td style="text-align: left;"><span
     class="nototif normal">ⵡ</span></td>
     <td style="text-align: left;"><span
     class="nototif normal">ⵢ</span></td>
@@ -4319,10 +4713,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D5F</td>
     <td style="text-align: left;">2D61</td>
     <td style="text-align: left;">2D62</td>
     <td style="text-align: left;">2D63</td>
@@ -4331,28 +4725,15 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/ṭ/</td>
     <td style="text-align: left;">/w/</td>
     <td style="text-align: left;">/y/</td>
     <td style="text-align: left;">/z/</td>
     <td style="text-align: left;">/ẓ/</td>
     <td style="text-align: left;">/e/ /ǝ/</td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
     <td style="text-align: left;"></td>
@@ -4366,8 +4747,9 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p><span class="nototif normal">ⴰ</span> &lt; <span
     class="nototif normal">ⴱ</span> &lt; <span
     class="nototif normal">ⴴ</span> &lt; <span
-    class="nototif normal">ⴶ</span> &lt; <span class="nototif normal">ⴷ
-    / ⴸ</span> &lt; <span class="nototif normal">ⴹ</span> &lt; <span
+    class="nototif normal">ⴶ</span> &lt; <span
+    class="nototif normal">ⴷ</span> &lt; <span
+    class="nototif normal">ⴹ</span> &lt; <span
     class="nototif normal">ⴼ</span> &lt; <span
     class="nototif normal">ⴾ</span> &lt; <span
     class="nototif normal">ⵂ</span> &lt; <span
@@ -4375,8 +4757,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵄ</span> &lt; <span
     class="nototif normal">ⵆ</span> &lt; <span
     class="nototif normal">ⵈ</span> &lt; <span
-    class="nototif normal">ⵉ</span> &lt; <span class="nototif normal">ⵌ
-    or ⵋ</span> &lt; <span class="nototif normal">ⵍ</span> &lt; <span
+    class="nototif normal">ⵉ</span> &lt; <span
+    class="nototif normal">ⵌ</span> &lt; <span
+    class="nototif normal">ⵋ</span> &lt; <span
+    class="nototif normal">ⵍ</span> &lt; <span
     class="nototif normal">ⵎ</span> &lt; <span
     class="nototif normal">ⵏ</span> &lt; <span
     class="nototif normal">ⵑ</span> &lt; <span
@@ -4394,13 +4778,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵥ</span> &lt; <span
     class="nototif normal">ⵦ</span></p>
     <h3 id="tamasheq-mali"><a id="taq-ML"></a>Tamasheq (Mali)</h3>
-    <p><em>Source</em>: <a href="#savage2000">Savage, 2000</a></p>
-    <p><em>Language Tag</em>: <code>taq-Tfng-ML</code></p>
-    <p><em>Opentype language system tag:</em> <code>TMH</code> and
-    <code>BBR</code></p>
-    <p><em>Two of these characters are possibly not right. The second
-    U+2D4D is wrong, but I do not know what it should be. U+2D49 is also
-    possibly not correct. In the source it is reversed.</em></p>
+    <p><em>Source</em>: <a href="#savage2000">Savage, 2000</a> (pages
+    145-147, 154)</p>
+    <p><em>Language tag</em>: <code>taq-Tfng-ML</code></p>
+    <p><em>Opentype language system tag:</em> <code>TAQ</code>
+    (preferred) or <code>TMH</code></p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -4446,9 +4828,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⴾ</span></td>
     <td style="text-align: left;"><span
-    class="akatab normal">ⵍ</span></td>
-    <td style="text-align: left;"><span class="akatab normal">ⵍ
-    ???</span></td>
+    class="akatab normal">ⵂ</span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵆ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
@@ -4459,8 +4840,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D39</td>
     <td style="text-align: left;">2D3C</td>
     <td style="text-align: left;">2D3E</td>
-    <td style="text-align: left;">2D4D</td>
-    <td style="text-align: left;">2D4D ???</td>
+    <td style="text-align: left;">2D42</td>
+    <td style="text-align: left;">2D46</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
@@ -4471,8 +4852,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">/ḍ/</td>
     <td style="text-align: left;">/f/</td>
     <td style="text-align: left;">/k/</td>
-    <td style="text-align: left;">/l/</td>
-    <td style="text-align: left;">/ḷ/</td>
+    <td style="text-align: left;">/h/</td>
+    <td style="text-align: left;">/x/</td>
     </tr>
     <tr class="even">
     <td style="text-align: left;"></td>
@@ -4488,10 +4869,6 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵂ</span></td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵆ</span></td>
     <td style="text-align: left;"><span
     class="akatab normal">ⵈ</span></td>
     <td style="text-align: left;"><span
@@ -4501,35 +4878,39 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵌ</span></td>
     <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    <td style="text-align: left;"><span
     class="akatab normal">ⵎ</span></td>
     <td style="text-align: left;"><span
     class="akatab normal">ⵏ</span></td>
     <td style="text-align: left;"><span
     class="akatab normal">ⵓ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵔ</span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D42</td>
-    <td style="text-align: left;">2D46</td>
     <td style="text-align: left;">2D48</td>
     <td style="text-align: left;">2D49</td>
     <td style="text-align: left;">2D4B</td>
     <td style="text-align: left;">2D4C</td>
+    <td style="text-align: left;">2D4D</td>
     <td style="text-align: left;">2D4E</td>
     <td style="text-align: left;">2D4F</td>
     <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">2D54</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/h/</td>
-    <td style="text-align: left;">/x/</td>
     <td style="text-align: left;">/q/</td>
     <td style="text-align: left;">/y/</td>
     <td style="text-align: left;">/ž/</td>
     <td style="text-align: left;">/ẓ/</td>
+    <td style="text-align: left;">/l/</td>
     <td style="text-align: left;">/m/</td>
     <td style="text-align: left;">/n/</td>
     <td style="text-align: left;">/w/</td>
+    <td style="text-align: left;">/r/</td>
     </tr>
     <tr class="even">
     <td style="text-align: left;"></td>
@@ -4545,8 +4926,6 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵔ</span></td>
     <td style="text-align: left;"><span
     class="akatab normal">ⵗ</span></td>
     <td style="text-align: left;"><span
@@ -4563,10 +4942,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     style="font-feature-settings: &quot;cv13&quot; 1">ⵟ</span></td>
     <td style="text-align: left;"><span
     class="akatab normal">ⵣ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">2D54</td>
     <td style="text-align: left;">2D57</td>
     <td style="text-align: left;">2D58</td>
     <td style="text-align: left;">2D59</td>
@@ -4575,10 +4954,10 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D5C</td>
     <td style="text-align: left;">2D5F</td>
     <td style="text-align: left;">2D63</td>
+    <td style="text-align: left;">unencoded?</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
-    <td style="text-align: left;">/r/</td>
     <td style="text-align: left;">/ɣ/</td>
     <td style="text-align: left;">/ǰ/</td>
     <td style="text-align: left;">/s/</td>
@@ -4587,22 +4966,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">/t/</td>
     <td style="text-align: left;">/ṭ/</td>
     <td style="text-align: left;">/z/</td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
+    <td style="text-align: left;">/ḷ/</td>
     </tr>
     </tbody>
     </table>
-    <h4 id="glyph-variants">Glyph variants</h4>
+    <h4 id="glyph-variants-3">Glyph variants</h4>
     <table>
     <colgroup>
     <col style="width: 25%" />
@@ -4974,26 +5342,287 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="akatab normal">ⵗ</span> &lt; <span
     class="akatab normal">ⵂ</span> &lt; <span
     class="akatab normal">ⵘ</span> &lt; <span
-    class="akatab normal">ⵍ</span> &lt; <span class="akatab normal">ⵍ
-    ???</span> &lt; <span class="akatab normal">ⵓ</span> &lt; <span
+    class="akatab normal">ⵍ</span> &lt; <span
+    class="utn normal"></span> &lt; <span
+    class="akatab normal">ⵓ</span> &lt; <span
     class="akatab normal">ⵉ</span></p>
     <h3
     id="tuareg-azawagh-dialect-of-niger-mali-tagdal"><a id="tda"></a>Tuareg
     (Azawagh dialect of Niger-Mali), Tagdal</h3>
-    <p><em><strong>Source</strong></em>: <a
-    href="https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf">L2/04-142</a>
-    (pages 8 &amp; 31)</p>
-    <p><em><strong>Language Tag</strong></em>: <code>tda-Tfng</code></p>
-    <h3 id="tahaggart-tamahaq"><a id="thv"></a> Tahaggart Tamahaq</h3>
+    <p><em>Source</em>: <a href="#Andries2004">L2/04-142</a> (pages 8
+    &amp; 31)</p>
+    <p><em>Language tag</em>: <code>tda-Tfng</code></p>
+    <table>
+    <colgroup>
+    <col style="width: 22%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    <col style="width: 8%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">Characters</th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"></th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴶ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴹ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴾ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵀ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵂ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵆ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵈ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;">2D36</td>
+    <td style="text-align: left;">2D39</td>
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;">2D3E</td>
+    <td style="text-align: left;">2D40</td>
+    <td style="text-align: left;">2D42</td>
+    <td style="text-align: left;">2D46</td>
+    <td style="text-align: left;">2D48</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/a/</td>
+    <td style="text-align: left;">/g/</td>
+    <td style="text-align: left;">/d/</td>
+    <td style="text-align: left;">/f/</td>
+    <td style="text-align: left;">/k/</td>
+    <td style="text-align: left;">/b/</td>
+    <td style="text-align: left;">/h/</td>
+    <td style="text-align: left;">/q/</td>
+    <td style="text-align: left;">/x/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵌ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵎ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵏ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵔ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵗ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵙ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵛ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D4C</td>
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;">2D4E</td>
+    <td style="text-align: left;">2D4F</td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">2D54</td>
+    <td style="text-align: left;">2D57</td>
+    <td style="text-align: left;">2D59</td>
+    <td style="text-align: left;">2D5B</td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/j/</td>
+    <td style="text-align: left;">/l/</td>
+    <td style="text-align: left;">/m/</td>
+    <td style="text-align: left;">/n/</td>
+    <td style="text-align: left;">/w/</td>
+    <td style="text-align: left;">/r/</td>
+    <td style="text-align: left;">/ɣ/</td>
+    <td style="text-align: left;">/s/</td>
+    <td style="text-align: left;">/š/</td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Tfng</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵢ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵣ</span></td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵤ</span></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">USV</td>
+    <td style="text-align: left;">2D5C</td>
+    <td style="text-align: left;">2D62</td>
+    <td style="text-align: left;">2D63</td>
+    <td style="text-align: left;">2D64</td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">Latn</td>
+    <td style="text-align: left;">/t/</td>
+    <td style="text-align: left;">/y/</td>
+    <td style="text-align: left;">/z/</td>
+    <td style="text-align: left;">/ẓ/</td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;"></td>
+    <td style="text-align: left;">/</td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="glyph-variants-4">Glyph variants</h4>
+    <table>
+    <colgroup>
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    <col style="width: 25%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th style="text-align: left;">USV</th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    <th style="text-align: left;"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td style="text-align: left;">2D30</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴰ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴰ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D3C</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴼ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⴼ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">2D4D</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵍ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵍ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⵓ</span></td>
+    <td style="text-align: left;">&gt;</td>
+    <td style="text-align: left;"><span
+    class="akatab normal">ⵓ</span></td>
+    </tr>
+    </tbody>
+    </table>
+    <h4 id="bi-consonants-4">Bi-consonants</h4>
+    <p>Unknown.</p>
+    <h4 id="collation-8">Collation</h4>
+    <p><span class="akatab normal">ⴰ</span> &lt; <span
+    class="akatab normal">ⵀ</span> &lt; <span
+    class="akatab normal">ⴹ</span> &lt; <span
+    class="akatab normal">ⴼ</span> &lt; <span
+    class="akatab normal">ⴶ</span> &lt; <span
+    class="akatab normal">ⵗ</span> &lt; <span
+    class="akatab normal">ⵂ</span> &lt; <span
+    class="akatab normal">ⵌ</span> &lt; <span
+    class="akatab normal">ⴾ</span> &lt; <span
+    class="akatab normal">ⵍ</span> &lt; <span
+    class="akatab normal">ⵎ</span> &lt; <span
+    class="akatab normal">ⵏ</span> &lt; <span
+    class="akatab normal">ⵆ</span> &lt; <span
+    class="akatab normal">ⵔ</span> &lt; <span
+    class="akatab normal">ⵙ</span> &lt; <span
+    class="akatab normal">ⵛ</span> &lt; <span
+    class="akatab normal">ⵜ</span> &lt; <span
+    class="akatab normal">ⵓ</span> &lt; <span
+    class="akatab normal">ⵈ</span> &lt; <span
+    class="akatab normal">ⵢ</span> &lt; <span
+    class="akatab normal">ⵣ</span> &lt; <span
+    class="akatab normal">ⵤ</span></p>
+    <h3 id="tahaggart-tamahaq-tamahaq-tuareg"><a id="thv"></a> Tahaggart
+    Tamahaq, Tamahaq (Tuareg)</h3>
+    <p><em>Source</em>: Alphabet Chart (personal files)</p>
     <p><em>Language tag:</em> <code>thv-Tfng</code></p>
-    <p><em>Opentype language system tag:</em> <code>TMH</code> and
-    <code>BBR</code></p>
+    <p><em>Opentype language system tag:</em> <code>THV</code>
+    (preferred) or <code>TMH</code></p>
     <p><em>Keyman keyboard:</em> <a
     href="https://keyman.com/keyboards/tuareg_tifinagh">Tuareg
     Tifinagh</a> [taq, thv]</p>
     <p><em>Font:</em> <a
     href="https://software.sil.org/akatab/">Akatab</a></p>
-    <p><em><strong>Source</strong></em>: Possibly from keyboard?</p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -5182,7 +5811,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     </tbody>
     </table>
-    <h4 id="glyph-variants-1">Glyph variants</h4>
+    <h4 id="glyph-variants-5">Glyph variants</h4>
     <table>
     <colgroup>
     <col style="width: 25%" />
@@ -5273,19 +5902,44 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     </tbody>
     </table>
-    <h4 id="bi-consonants-4">Bi-consonants</h4>
+    <h4 id="bi-consonants-5">Bi-consonants</h4>
     <p>Unknown.</p>
+    <h4 id="collation-9">Collation</h4>
+    <p><span class="akatab normal">ⴰ</span> &lt; <span
+    class="akatab normal">ⵓ</span> &lt; <span
+    class="akatab normal">ⵗ</span> &lt; <span
+    class="akatab normal">ⵈ</span> &lt; <span
+    class="akatab normal">ⴾ</span> &lt; <span
+    class="akatab normal">ⵂ</span> &lt; <span
+    class="akatab normal">ⵆ</span> &lt; <span
+    class="akatab normal">ⵛ</span> &lt; <span
+    class="akatab normal">ⵙ</span> &lt; <span
+    class="akatab normal">ⵔ</span> &lt; <span
+    class="akatab normal">ⴱ</span> &lt; <span
+    class="akatab normal">ⵜ</span> &lt; <span
+    class="akatab normal">ⵏ</span> &lt; <span
+    class="akatab normal">ⵍ</span> &lt; <span
+    class="akatab normal">ⵎ</span> &lt; <span
+    class="akatab normal">ⴷ</span> &lt; <span
+    class="akatab normal">ⴼ</span> &lt; <span
+    class="akatab normal">ⴹ</span> &lt; <span
+    class="akatab normal">ⵟ</span> &lt; <span
+    class="akatab normal">ⵉ</span> &lt; <span
+    class="akatab normal">ⵋ</span> &lt; <span
+    class="akatab normal">ⵣ</span> &lt; <span
+    class="akatab normal">ⵌ</span> &lt; <span
+    class="akatab normal">ⵐ</span> &lt; <span class="akatab normal"
+    style="font-feature-settings: &quot;cv03&quot; 1">ⴴ</span> &lt;
+    <span class="akatab normal">ⴶ</span></p>
     <h3
     id="tayart-tamajeq-tuareg-air-dialect-of-niger"><a id="thz"></a>Tayart
     Tamajeq, Tuareg (Aïr dialect of Niger)</h3>
     <p><em>Source</em>: <a
     href="https://omniglot.com/writing/tayarttamajeq.htm">Omniglot</a>
-    and <a
-    href="https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf">L2/04-142</a>
-    (pages 8 &amp; 31)</p>
-    <p><em>Language Tag</em>: <code>thz-Tfng</code></p>
-    <p><em>Opentype language system tag:</em> <code>TMH</code> and
-    <code>BBR</code></p>
+    and <a href="#Andries2004">L2/04-142</a> (pages 8 &amp; 31)</p>
+    <p><em>Language tag</em>: <code>thz-Tfng</code></p>
+    <p><em>Opentype language system tag:</em> <code>THZ</code>
+    (preferred) or <code>TMH</code></p>
     <p>The order of these characters is based on Unicode codepoints, not
     on the order listed in the sources. The two sources have an
     inconsistent character set. This is a combination of the two.</p>
@@ -5572,7 +6226,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>All punctuation required for Neo-Tifinagh is also required for
     <code>thz</code>. In addition, the separator mark is used: U+2D70
     <span class="nototif normal">⵰</span>.</p>
-    <h4 id="glyph-variants-2">Glyph variants</h4>
+    <h4 id="glyph-variants-6">Glyph variants</h4>
     <table>
     <colgroup>
     <col style="width: 33%" />
@@ -5631,9 +6285,9 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     </tbody>
     </table>
-    <h4 id="bi-consonants-5">Bi-consonants</h4>
+    <h4 id="bi-consonants-6">Bi-consonants</h4>
     <p>Unknown.</p>
-    <h4 id="collation-8">Collation</h4>
+    <h4 id="collation-10">Collation</h4>
     <p><span class="nototif normal">ⴰ</span> &lt; <span
     class="nototif normal">ⵀ</span> &lt; <span
     class="nototif normal">ⴳ</span> &lt; <span
@@ -5670,17 +6324,18 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵥ</span></p>
     <h3 id="tawallammat-tamajaq"><a id="ttq"></a>Tawallammat
     Tamajaq</h3>
-    <p><em>Language Tag</em>: <code>ttq-Tfng</code>,
+    <p><em>Source</em>: <a href="#abdoussamed">Abdoussamed</a>, and
+    characters which are included in Tagmukay font and the keyboard
+    below.</p>
+    <p><em>Language tag</em>: <code>ttq-Tfng</code>,
     <code>tmh-Tfng</code> (macrolanguage)</p>
-    <p><em>Opentype language system tag:</em> <code>TMH</code> and
-    <code>BBR</code></p>
+    <p><em>Opentype language system tag:</em> <code>TTQ</code>
+    (preferred) or <code>TMH</code></p>
     <p><em>Keyman keyboard:</em> <a
     href="https://keyman.com/keyboards/sil_tawallammat">Tawallammat
     Tifinagh (SIL)</a> [ttq, tzm]</p>
     <p><em>Font:</em> <a
     href="https://software.sil.org/tagmukay/">Tagmukay</a></p>
-    <p><em><strong>Source</strong></em>: Possibly from keyboard or
-    Tagmukay font?</p>
     <table>
     <colgroup>
     <col style="width: 22%" />
@@ -5872,15 +6527,15 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>SIL and APT have differing orthographies for the same
     language</p>
     <h5 id="sil"><em>SIL</em></h5>
-    <table>
+    <table style="width:100%;">
     <colgroup>
-    <col style="width: 30%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
     </colgroup>
     <thead>
     <tr class="header">
@@ -5930,15 +6585,15 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tbody>
     </table>
     <h5 id="apt-1"><em>APT</em></h5>
-    <table>
+    <table style="width:100%;">
     <colgroup>
-    <col style="width: 30%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
+    <col style="width: 14%" />
     </colgroup>
     <thead>
     <tr class="header">
@@ -5954,16 +6609,12 @@ Tifinagh in Unicode (proposed draft)</h1>
     <tbody>
     <tr class="odd">
     <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⴰ</span></td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵦ</span></td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵢ</span></td>
-    <td style="text-align: left;"><span
-    class="akatab normal">ⵧ</span></td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵦ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal">ⵧ</span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
     <td style="text-align: left;">USV</td>
@@ -5971,8 +6622,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D66</td>
     <td style="text-align: left;">2D62</td>
     <td style="text-align: left;">2D67</td>
-    <td style="text-align: left;"></td>
-    <td style="text-align: left;"></td>
+    <td style="text-align: left;">2D53</td>
+    <td style="text-align: left;">not encoded?</td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">Latn</td>
@@ -5989,7 +6640,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>All punctuation required for Neo-Tifinagh is also required for
     <code>ttq</code>. In addition, the separator mark is used: U+2D70
     <span class="tagmukay normal">⵰</span>.</p>
-    <h4 id="glyph-variants-3">Glyph variants</h4>
+    <h4 id="glyph-variants-7">Glyph variants</h4>
     <table>
     <colgroup>
     <col style="width: 25%" />
@@ -6366,42 +7017,28 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>These language are reported to have used or are using Tifinagh
     script. However, no further information is available.</p>
     <h3 id="awjilah"><a id="auj"></a>Awjilah</h3>
-    <p><em>Language Tag</em>: <code>auj-Tfng</code></p>
+    <p><em>Language tag</em>: <code>auj-Tfng</code></p>
     <h3 id="ghadamès"><a id="gha"></a>Ghadamès</h3>
-    <p><em>Language Tag</em>: <code>gha-Tfng</code></p>
+    <p><em>Language tag</em>: <code>gha-Tfng</code></p>
     <h3 id="taznatit"><a id="grr"></a>Taznatit</h3>
-    <p><em>Language Tag</em>: <code>grr-Tfng</code></p>
-    <h3 id="nafusi-zuwara"><a id="jbn"></a>Nafusi, Zuwara</h3>
+    <p><em>Language tag</em>: <code>grr-Tfng</code></p>
+    <h3 id="nafusi-zuwara-dialect"><a id="jbn"></a>Nafusi (Zuwara
+    dialect)</h3>
     <p><em>Source</em>: <a
     href="https://www.omniglot.com/writing/zuwara.htm">Omniglot</a></p>
-    <p><em>Language Tag</em>: <code>jbn-Tfng</code></p>
+    <p><em>Language tag</em>: <code>jbn-Tfng</code></p>
     <p>Omniglot indicates this language can be written with Tifinagh,
     but no further information is given.</p>
-    <h3 id="tumzabt"><a id="mzb"></a>Tumzabt</h3>
-    <p><em>Language Tags</em>: <code>mzb-Tfng</code></p>
-    <p><em><strong>Source</strong></em>: Savage, 2003. p. 2.</p>
-    <p>This source lists a set of characters that are used in a Algerian
-    school text book entitled “Adlis” printed in 1988 (pp 12,13). It is
-    unknown how widely used this book (or the characters) are actually
-    used.</p>
     <h3 id="numidian"><a id="nxm"></a>Numidian</h3>
-    <p><em>Language Tag</em>: <code>nxm-Tfng</code></p>
-    <h3 id="tachawit-tacawit"><a id="shy"></a>Tachawit, Tacawit</h3>
-    <p><em>Language Tags</em>: <code>shy-Tfng</code></p>
-    <p><em><strong>Source</strong></em>: Savage, 2003. p. 2.</p>
-    <p>This source lists a set of characters that are used in a Algerian
-    school text book entitled “Adlis” printed in 1988 (pp 12,13). It is
-    unknown how widely used this book (or the characters) are actually
-    used.</p>
+    <p><em>Language tag</em>: <code>nxm-Tfng</code></p>
     <h3 id="tetserret"><a id="tez"></a>Tetserret</h3>
-    <p><em>Language Tag</em>: <code>tez-Tfng</code></p>
+    <p><em>Language tag</em>: <code>tez-Tfng</code></p>
     <h3 id="zenaga"><a id="zen"></a>Zenaga</h3>
-    <p><em>Language Tag</em>: <code>zen-Tfng</code></p>
+    <p><em>Language tag</em>: <code>zen-Tfng</code></p>
     <h2 id="other-berber-languages">Other Berber languages</h2>
     <p>These are Berber languages which do not appear to have ever used
     the Tifinagh script:</p>
     <ul>
-    <li>Chenoua <code>[cnu]</code></li>
     <li>Judeo-Berber <code>[jbe]</code></li>
     <li>Tagargrent, Ouargli <code>[oua]</code></li>
     <li>Sened <code>[sds]</code></li>
@@ -6425,44 +7062,48 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p><a href="https://omniglot.com/writing/siwi.htm">Omniglot - Siwi
     (ⴶⵍⴰⵏⵏⵉⵙⵉⵡⴰⵏ / Jlan n isiwan) [siz]</a></p>
     <p><a href="https://omniglot.com/writing/tamasheq.htm">Omniglot -
-    Tamasheq (Tafaghist) [taq]</a> (but could be other languages?)</p>
+    Tamasheq (Tafaghist) [taq]</a></p>
     <p><a href="https://omniglot.com/writing/tayarttamajeq.htm">Omniglot
     - Tayart Tamajeq (Tamajeq, ⵜⵎⵌⵆ, ثمجق‎) [thz]</a></p>
-    <p><a
-    href="https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html">Tifinaghe-IRCAM
-    [tzm]</a></p>
-    <p>Aghali-Zakara, M. 1994. "Graphies berbères et dilemme de
-    diffusion: interactions des alphabets latin, ajami et tifinagh,
-    Etudes et Documents berbères, 11, 1994 : 107-121.</p>
-    <p>Andries, P. 2004-06-06. Proposal to add the Tifinagh Script.
-    N2739R ISO/IEC JTC 1/SC 2/WG 2 N2739.
-    http://anubis.dkuug.dk/jtc1/sc2/wg2/docs/n2739.pdf.</p>
-    <p>____. 2005. Inventaire des oeils de la police pan-berbère Hapax
-    Berbère. http://hapax.qc.ca/polices/inventaire-des-oeils.pdf
-    (accessed 19-May-2008)</p>
+    <p><a id="abdoussamed"></a>Abdoussamed, Ghomar; Weber, Christiane.
+    1997. Lisons le tǝmajǝq en shifinagh vocalisé.</p>
+    <p><a id="Andries2004"></a>Andries, P (on behalf of
+    Morocco-Canada-France). 2004-06-06. Proposal to add the Tifinagh
+    Script. <a
+    href="https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf">L2/04-142</a>
+    (accessed 19-Jul-2024)</p>
+    <p>____. 2005. <a
+    href="http://hapax.qc.ca/polices/inventaire-des-oeils.pdf">Inventaire
+    des oeils de la police pan-berbère Hapax Berbère</a> (accessed
+    19-Jul-2024)</p>
+    <p><a id="2009"></a>DHIMH Multimedia. 2009. <a
+    href="https://archive.org/details/newtestament-tarifit">Tarifit
+    (rif) New Testament</a> (accessed 19-Jul-2024)</p>
     <p><a id="ishida_zgh"></a>Ishida, Richard. <a
     href="https://r12a.github.io/scripts/tfng/zgh.html">Tamazight:
-    Neo-Tifinagh orthography notes</a></p>
-    <p><a id="tarifit2004"></a>McClelland III, Clive W. 2004. A
-    Dictionary of Tarifit Berber. The Edwin Mellen Press. Lewiston, New
-    York.</p>
-    <p>Morocco-Canada-France (prepared by P. Andries). 2004. Proposal to
-    add the Tifinagh Script. <a
-    href="https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf">L2/04-142</a></p>
+    Neo-Tifinagh orthography notes</a> (accessed 19-Jul-2024)</p>
     <p><a id="savage2000"></a>Savage, Andrew. 2000. Writing Tuareg
     Vowels. Advantages and Disadvantages of the Three Script Options:
     Arabic, Tifinagh and Roman. Submitted in partial fulfillment of the
     requirements for the degree of Master of Letters in Linguistics from
     the Univerisity of New England, New South Wales, Australia.</p>
-    <p><a href="https://archive.org/details/newtestament-tarifit">2009
-    New Testament</a></p>
-    <ol start="2004" type="1">
-    <li><a
+    <p><a id="savage2003"></a>Savage, Andrew. 2003. Tifinagh Unicode
+    Propositions, Stanthorpe, <a
+    href="http://www.unicode.org/L2/L2003/03143-tifinagh-samples.pdf">L2/03-143</a>
+    (accessed 19-Jul-2024)</p>
+    <p><a id="sahraoui"></a>Sahraoui, Souad. 2021. <a
+    href="https://www.academia.edu/75532503/English_and_the_Languages_of_Algeria_Suggestions_towards_a_New_Language_Policy">English
+    and the Languages of Algeria: Suggestions towards a New Language
+    Policy</a> (accessed 19-Jul-2024)</p>
+    <p><a id="snima"></a>Snima. 2004. <a
     href="https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf">Projet
-    de norme marocaine: Alphabet tifinaghe</a></li>
-    </ol>
+    de norme marocaine: Alphabet tifinaghe</a> (accessed
+    19-Jul-2024)</p>
+    <p><a id="ircam"></a><a
+    href="https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html">Tifinaghe-IRCAM
+    [tzm]</a> (accessed 19-Jul-2024)</p>
     <footer class="footer">
-        <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Tfng/" title="" class="active">unicode-resources/Tfng</a> and is copyright © 2023-2024 SIL International.</p>
+        <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Tfng/" title="" class="active">unicode-resources/Tfng</a> and is copyright © 2010-2024 SIL International.</p>
     </footer>
 </article>
 </div>

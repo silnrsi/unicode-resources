@@ -2,7 +2,7 @@
 title: Unicode Technical Note xx - Representing Tifinagh in Unicode (proposed draft)
 ---
 
-_Lorna Evans, SIL International (15-Jul-2024)_
+_Lorna Evans, SIL International (25-Jul-2024)_
 
 _This is a work in progress. Additional information on language usage is most welcome._
 
@@ -16,31 +16,33 @@ _This is a work in progress. Additional information on language usage is most we
    - <a href="#bicons">Bi- Tri-Consonants</a>
   - <a href="#contexual">Contextual Shaping</a>
   - <a href="#dir">Writing Direction</a>
+  - <a href="#dir_var">Directional Glyphs</a>
 - <a href="#resource">Resources</a>
   - <a href="#key">Keyboarding</a>
   - <a href="#font">Fonts</a>
 - <a href="#neo">Languages Using Neo-Tifinagh script</a>
   - <a href="#tzm_zgh">Central Atlas Tamazight, Standard Moroccan Tamazight &#x005B;tzm&#x005D; &#x005B;zgh&#x005D;</a>
-  - <a href="#kab">Kabyle, Amazigh &#x005B;kab&#x005D;</a>
+  - <a href="#kab">Kabyle, Amazigh, Taqbaylit &#x005B;kab&#x005D;</a>
 - <a href="#trad">Languages Using Traditional Tifinagh script</a>
+  - <a href="#cnu">Chenoua, Tacenwit &#x005B;cnu&#x005D;</a>
   - <a href="#gho">Ghomara, Shilha &#x005B;gho&#x005D;</a>
+  - <a href="#mzb">Tumzabt &#x005B;mzb&#x005D;</a>
   - <a href="#rif">Tarifit, Riffian &#x005B;rif&#x005D;</a>
   - <a href="#shi">Tachelhit &#x005B;shi&#x005D;</a>
+  - <a href="#shy">Tachawit, Tacawit &#x005B;shy&#x005D;</a>
   - <a href="#siz">Siwi &#x005B;siz&#x005D;</a>
   - <a href="#taq">Tamasheq &#x005B;taq&#x005D;</a>
   - <a href="#taq-ML">Tamasheq (Mali) &#x005B;taq&#x005D;</a>
   - <a href="#tda">Tagdal, Tuareg (Azawagh dialect of Niger-Mali) &#x005B;tda&#x005D;</a>
-  - <a href="#thv">Tahaggart Tamahaq &#x005B;thv&#x005D;</a>
+  - <a href="#thv">Tahaggart Tamahaq, Tamahaq (Tuareg) &#x005B;thv&#x005D;</a>
   - <a href="#thz">Tayart Tamajeq,  &#x005B;thz&#x005D;</a>
   - <a href="#ttq">Tawallammat Tamajaq &#x005B;ttq&#x005D;</a>
 - <a href="#other">Other languages with little or no information</a>
   - <a href="#auj">Awjilah &#x005B;auj&#x005D;</a>
   - <a href="#gha">Ghadamès &#x005B;gha&#x005D;</a>
   - <a href="#grr">Taznatit &#x005B;grr&#x005D;</a>
-  - <a href="#jbn">Nafusi, Zuwara &#x005B;jbn&#x005D;</a>
-  - <a href="#mzb">Tumzabt &#x005B;mzb&#x005D;</a>
+  - <a href="#jbn">Nafusi (Zuwara dialect) &#x005B;jbn&#x005D;</a>
   - <a href="#nxm">Numidian &#x005B;nxm&#x005D;</a>
-  - <a href="#shy">Tachawit, Tacawit &#x005B;shy&#x005D;</a>
   - <a href="#tez">Tetserret &#x005B;tez&#x005D;</a>
   - <a href="#zen">Zenaga &#x005B;zen&#x005D;</a>
 - <a href="#ack">Acknowledgements</a>
@@ -68,25 +70,23 @@ Vowels are not as clearly defined. Four vowels have been encoded for Neo-Tifinag
 
 #### _SIL-Niger_
 
-Vowels |     |     |     |     |     |  |
+Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
 Tfng   | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='akatab normal'>&#x2D30;&#x0306;</span> | <span class='akatab normal'>&#x2D62;&#x0323;</span> | <span class='akatab normal'>&#x2D62;&#x0302;</span> | <span class='akatab normal'>&#x2D53;&#x0302;</span> | <span class='akatab normal'>&#x2D67;&#x0302;</span>
 USV    | 2D30 + 0302 | 2D30 + 0306 | 2D62 + 0323 | 2D62 + 0302 | 2D53 + 0302 | 2D67 + 0302
 
 #### _APT_
 
-Vowels |     |     |     |     |     |  |
+Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
-Tfng   | <span class='hapaxtuareg normal'>&#x2D30;</span>    | <span class='hapaxtuareg normal'>&#x2D66;</span>    | <span class='hapaxtuareg normal'>&#x2D62;</span>    | <span class='hapaxtuareg normal'>&#x2D67;</span> | <span class='hapaxtuareg normal'>&#xE040;</span> | <span class='hapaxtuareg normal'>&#xE541;</span>
-USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D66 0302 | 2D67 0302 
+Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#x2D66;</span>    | <span class='utn normal'>&#xED62;</span>    | <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xE014;</span> | <span class='utn normal'>&#xED67;</span>
+USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | not encoded? 
 
 #### _Hawad_
 
-_Positioning of U+0308 is incorrect in most fonts_
-
-Vowels |     |     |     |     |     |  |
+Vowels |     |     |     |     |     |
 :-------   | :-- | :-- | :-- | :-- | :-- | :--
-Tfng | <span class='hapaxtuareg normal'>&#xE600;</span>    | <span class='hapaxtuareg normal'>&#xE601;</span>  | <span class='hapaxtuareg normal'>&#xE602;</span>  | <span class='hapaxtuareg normal'>&#xE603;</span>    | <span class='hapaxtuareg normal'>&#xE604;</span> |  
+Tfng | <span class='utn normal'>&#xE030;</span>    | <span class='utn normal'>&#xE031;</span>  | <span class='utn normal'>&#x2D5D;</span>  | <span class='utn normal'>&#xE032;</span>    | <span class='utn normal'>&#xE033;</span> |  
 USV  | 2D5D 0307 | 2D5D 0308 | 2D5D | 2D49 0307 | 2D49 0308 | 
 
 ### <a id="punct"></a>Punctuation
@@ -107,28 +107,28 @@ There is no common way to write numbers using Tifinagh script. The IRCAM Tifinag
 
 ### <a id="variant"></a>Variant Glyphs
 
-This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants. In addition, because of the issues relating to <a href="#dir">Writing Direction</a>, there are variants which are mirrored or turned for right to left text or even for vertical text. Those variants are not included here.
+This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants. In addition, because of the issues relating to <a href="#dir">Writing Direction</a>, there are variants which are mirrored or turned for right to left text or even for vertical text. The default directional variants are included below under <a href="#dir_var">Directional Glyphs</a>.
 
 Because these glyphs are taken from various fonts, the height of a particular glyph should not be considered significant.
 
 |  | 2D3     | 2D4      | 2D5      | 2D6      | 2D7    
 :- | :--     | :--      | :--      | :--      | :--
-0  |<span class='nototif normal'>&#x2D30;</span> (<span class='hapaxrond normal'>&#xE002;</span> <span class='akatab normal'>&#x2D30;</span>)| <span class='nototif normal'>&#x2D40;</span> (<span class='hapaxrond normal'>&#xF005;</span> <span class='akatab normal' style='font-feature-settings: "cv11" 1'>&#x2D40;</span>)| <span class='nototif normal'>&#x2D50;</span> (<span class='akatab normal'>&#x2D50;</span> <span class='akatab normal'style='font-feature-settings: "cv04" 1'>&#x2D50;</span> <span class='hapaxtuareg normal'>&#x2D50;</span> <span class='hapaxrond normal'>&#x2D50;</span>)| <span class='nototif normal'>&#x2D60;</span> | <span class='nototif normal'>&#x2D70;</span>
-1  |<span class='nototif normal'>&#x2D31;</span> (<span class='hapaxtuareg normal'>&#xF005;</span> <span class='akatab normal' style='font-feature-settings: "cv08" 1'>&#x2D31;</span>)| <span class='nototif normal'>&#x2D41;</span> | <span class='nototif normal'>&#x2D51;</span> | <span class='nototif normal'>&#x2D61;</span> | 
-2  |<span class='nototif normal'>&#x2D32;</span> (<span class='hapaxtuareg normal'>&#xF1D5;</span>) | <span class='nototif normal'>&#x2D42;</span> (<span class='hapaxtuareg normal'>&#xE01E;</span>) | <span class='nototif normal'>&#x2D52;</span> | <span class='nototif normal'>&#x2D62;</span> (<span class='akatab normal'>&#x2D62;</span> <span class='hapaxtuareg normal'>&#xE531;</span> <span class='hapaxrond normal'>&#xE570;</span> <span class='hapaxrond normal'>&#xF208;</span>)| 
-3  |<span class='nototif normal'>&#x2D33;</span> (<span class='akatab normal' style='font-feature-settings: "cv09" 1'>&#x2D33;</span>)| <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D53;</span> (<span class='hapaxtuareg normal'>&#x2D53;</span> <span class='hapaxrond normal'>&#x2D53;</span>)| <span class='nototif normal'>&#x2D63;</span> (<span class='akatab normal'>&#x2D63;</span> <span class='akatab normal' style='font-feature-settings: "cv06" 1'>&#x2D63;</span>)| 
-4  |<span class='nototif normal'>&#x2D34;</span> (<span class='akatab normal' style='font-feature-settings: "cv03" 1'>&#x2D34;</span> <span class='hapaxrond normal'>&#xE8BD;</span> <span class='hapaxrond normal'>&#xE517;</span> <span class='hapaxrond normal'>&#xE519;</span>)| <span class='nototif normal'>&#x2D44;</span> (<span class='hapaxrond normal'>&#xF5D1;</span>)| <span class='nototif normal'>&#x2D54;</span> (<span class='hapaxtuareg normal'>&#xF121;</span>) | <span class='nototif normal'>&#x2D64;</span> | 
-5  |<span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D55;</span> (<span class='hapaxtuareg normal'>&#xF7C1;</span>)| <span class='nototif normal'>&#x2D65;</span> (<span class='akatab normal'>&#x2D65;</span> <span class='hapaxtuareg normal'>&#xF253;</span>)| 
-6  |<span class='nototif normal'>&#x2D36;</span> (<span class='akatab normal' style='font-feature-settings: "cv10" 1'>&#x2D36;</span>)| <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D56;</span> | <span class='nototif normal'>&#x2D66;</span> | 
-7  |<span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='nototif normal'>&#x2D57;</span> (<span class='hapaxtuareg normal'>&#xE01A;</span>)| <span class='nototif normal'>&#x2D67;</span> (<span class='akatab normal'>&#x2D67;</span>)| 
-8  |<span class='nototif normal'>&#x2D38;</span> (<span class='akatab normal' style='font-feature-settings: "cv15" 1'>&#x2D38;</span>)| <span class='nototif normal'>&#x2D48;</span> (<span class='hapaxtuareg normal'>&#xE06E;</span>)| <span class='nototif normal'>&#x2D58;</span> |  | 
-9  |<span class='hapaxtuareg normal'>&#x2D39;</span> (<span class='nototif normal'>&#x2D39;</span> <span class='hapaxrond normal'>&#x2D39;</span>)| <span class='nototif normal'>&#x2D49;</span> (<span class='hapaxrond normal'>&#xE070;</span> <span class='hapaxrond normal'>&#x2D49;</span>) | <span class='nototif normal'>&#x2D59;</span> (<span class='hapaxtuareg normal'>&#xF002;</span>) |  | 
-A  |<span class='nototif normal'>&#x2D3A;</span> (<span class='hapaxtuareg normal'>&#xF016;</span>) | <span class='nototif normal'>&#x2D4A;</span> | <span class='nototif normal'>&#x2D5A;</span> (<span class='akatab normal'>&#x2D5A;</span> <span class='nototifagraw normal'>&#x2D5A;</span>)|  | 
-B  |<span class='nototif normal'>&#x2D3B;</span> (<span class='nototifagraw normal'>&#x2D3B;</span> <span class='hapaxrond normal'>&#xE040;</span>)| <span class='nototif normal'>&#x2D4B;</span> (<span class='akatab normal'>&#x2D4B;</span> <span class='akatab normal' style='font-feature-settings: "cv07" 1'>&#x2D4B;</span>)| <span class='nototif normal'>&#x2D5B;</span> (<span class='akatab normal'>&#x2D5B;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;</span> <span class='hapaxcarre normal'>&#x2D5B;</span>)|  | 
-C  |<span class='nototif normal'>&#x2D3C;</span> (<span class='akatab normal'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 2'>&#x2D3C;</span>)| <span class='nototif normal'>&#x2D4C;</span> | <span class='hapaxberbere normal'>&#x2D5C;</span> (<span class='akatab normal'>&#x2D5C;</span>)|  | 
-D  |<span class='nototif normal'>&#x2D3D;</span> | <span class='nototif normal'>&#x2D4D;</span> (<span class='akatab normal'>&#x2D4D;</span> <span class='hapaxtuareg normal'>&#x2D4D;</span> <span class='hapaxberbere normal'>&#x2D4D;</span>)| <span class='nototif normal'>&#x2D5D;</span> |  | 
-E  |<span class='nototif normal'>&#x2D3E;</span> (<span class='hapaxtuareg normal'>&#xF0A2;</span> <span class='hapaxtuareg normal'>&#xF0A1;</span>) | <span class='nototif normal'>&#x2D4E;</span> (<span class='hapaxtuareg normal'>&#xF140;</span> <span class='hapaxrond normal'>&#xF0C2;</span>) | <span class='nototif normal'>&#x2D5E;</span> (<span class='nototifagraw normal'>&#x2D5E;</span>)|  | 
-F  |<span class='nototif normal'>&#x2D3F;</span> | <span class='nototif normal'>&#x2D4F;</span> | <span class='nototif normal'>&#x2D5F;</span> (<span class='hapaxrond normal'>&#x2D5F;</span> <span class='akatab normal' style='font-feature-settings: "cv13" 1'>&#x2D5F;</span> <span class='nototifagraw normal'>&#x2D5F;</span>)| <span class='nototif normal'>&#x2D6F;</span> (<span class='nototifagraw normal'>&#x2D6F;</span>)| <span class='nototif normal'>&#x2D7F;</span>
+0  |<span class='utn normal'>&#x2D30;</span> <span class='utn normal'>&#xED30;</span> <span class='utn normal'>&#xE000;</span></br>_ya_| <span class='utn normal'>&#x2D40;</span> <span class='utn normal'>&#xED40;</span> <span class='utn normal'>&#xE00A;</span></br>_yah or Tuareg yab_| <span class='utn normal'>&#x2D50;</span> <span class='utn normal'>&#xED50;</span> <span class='utn normal'>&#xE010;</span> <span class='utn normal'>&#xE011;</span> <span class='utn normal'>&#xE012;</span></br>_Tuareg yagn_| <span class='utn normal'>&#x2D60;</span> <span class='utn normal'>&#xE026;</span></br>_yav_ | <span class='utn normal'>&#x2D70;</span></br>_tazarast_
+1  |<span class='utn normal'>&#x2D31;</span> <span class='utn normal'>&#xED31;</span> <span class='utn normal' >&#xE001;</span></br>_yab_| <span class='utn normal'>&#x2D41;</span></br>_Berber yah_ | <span class='utn normal'>&#x2D51;</span></br>_Tuareg yang_ | <span class='utn normal'>&#x2D61;</span></br>_yaw_ | 
+2  |<span class='utn normal'>&#x2D32;</span> <span class='utn normal'>&#xED32;</span></br>_yabh_ | <span class='utn normal'>&#x2D42;</span> <span class='utn normal'>&#xED42;</span></br>_Tuareg yah_ | <span class='utn normal'>&#x2D52;</span></br>_yap_ | <span class='utn normal'>&#x2D62;</span> <span class='utn normal'>&#xED62;</span> <span class='utn normal'>&#xE01A;</span> <span class='utn normal'>&#xE01B;</span> <span class='utn normal'>&#xE020;</span> <span class='utn normal'>&#xE01C;</span> <span class='utn normal'>&#xE03B;</span></br>_yay_| 
+3  |<span class='utn normal'>&#x2D33;</span> <span class='utn normal'>&#xED33;</span></br>_yag_| <span class='utn normal'>&#x2D43;</span></br>_yahh_ | <span class='utn normal'>&#x2D53;</span> <span class='utn normal'>&#xED53;</span> <span class='utn normal'>&#xE013;</span> <span class='utn normal'>&#xE014;</span></br>_yu or Tuareg yaw_| <span class='utn normal'>&#x2D63;</span> <span class='utn normal'>&#xED63;</span> <span class='utn normal'>&#xE01D;</span> <span class='utn normal'>&#xE01E;</span></br>_yaz_| 
+4  |<span class='utn normal'>&#x2D34;</span> <span class='utn normal'>&#xED34;</span> <span class='utn normal'>&#xE002;</span> <span class='utn normal'>&#xE003;</span> <span class='utn normal'>&#xE004;</span> <span class='utn normal'>&#xE024;</span></br>_yaghh_| <span class='utn normal'>&#x2D44;</span> <span class='utn normal'>&#xED44;</span></br>_yaa_| <span class='utn normal'>&#x2D54;</span> <span class='utn normal'>&#xED54;</span></br>_yar_ | <span class='utn normal'>&#x2D64;</span> <span class='utn normal'>&#xE01F;</span></br>_Tawellemet yaz_| 
+5  |<span class='utn normal'>&#x2D35;</span></br>_Berber yaj_ | <span class='utn normal'>&#x2D45;</span></br>_yakh_ | <span class='utn normal'>&#x2D55;</span> <span class='utn normal'>&#xED55;</span></br>_yarr_| <span class='utn normal'>&#x2D65;</span> <span class='utn normal'>&#xED65;</span></br>_yazz_| 
+6  |<span class='utn normal'>&#x2D36;</span> <span class='utn normal'>&#xED36;</span></br>_yaj_| <span class='utn normal'>&#x2D46;</span></br>_Tuareg yakh_ | <span class='utn normal'>&#x2D56;</span></br>_yagh_ | <span class='utn normal'>&#x2D66;</span></br>_ye_ | 
+7  |<span class='utn normal'>&#x2D37;</span> <span class='utn normal'>&#xED37;</span></br>_yad_ | <span class='utn normal'>&#x2D47;</span></br>_yaq_ | <span class='utn normal'>&#x2D57;</span> <span class='utn normal'>&#xED57;</span></br>_Tuareg yagh_| <span class='utn normal'>&#x2D67;</span> <span class='utn normal'>&#xED67;</span></br>_yo_| 
+8  |<span class='utn normal'>&#x2D38;</span> <span class='utn normal'>&#xED38;</span></br>_yadh_| <span class='utn normal'>&#x2D48;</span> <span class='utn normal'>&#xED48;</span></br>_Tuareg yaq_| <span class='utn normal'>&#x2D58;</span></br>_Ayer yagh or Adrar yaj_ |  | 
+9  |<span class='utn normal'>&#x2D39;</span> <span class='utn normal'>&#xED39;</span> <span class='utn normal'>&#xE005;</span></br>_yadd_| <span class='utn normal'>&#x2D49;</span> <span class='utn normal'>&#xED49;</span> <span class='utn normal'>&#xE00B;</span></br>_yi_ | <span class='utn normal'>&#x2D59;</span> <span class='utn normal'>&#xED59;</span></br>_yas_ |  | 
+A  |<span class='utn normal'>&#x2D3A;</span> <span class='utn normal'>&#xED3A;</span> <span class='utn normal'>&#xE006;</span></br>_yaddh_ | <span class='utn normal'>&#x2D4A;</span></br>_yazh_ | <span class='utn normal'>&#x2D5A;</span> <span class='utn normal'>&#xED5A;</span> <span class='utn normal'>&#xE015;</span></br>_yass_|  | 
+B  |<span class='utn normal'>&#x2D3B;</span> <span class='utn normal'>&#xED3B;</span></br>_yey_| <span class='utn normal'>&#x2D4B;</span> <span class='utn normal'>&#xED4B;</span> <span class='utn normal'>&#xE00C;</span></br>_Ahaggar yazh_| <span class='utn normal'>&#x2D5B;</span> <span class='utn normal'>&#xED5B;</span> <span class='utn normal'>&#xE017;</span> <span class='utn normal'>&#xE023;</span> <span class='utn normal'>&#xE016;</span></br>_yash_|  | 
+C  |<span class='utn normal'>&#x2D3C;</span> <span class='utn normal'>&#xED3C;</span> <span class='utn normal'>&#xE007;</span> <span class='utn normal'>&#xE008;</span></br>_yaf_| <span class='utn normal'>&#x2D4C;</span></br>_Tuareg yazh_ | <span class='utn normal'>&#x2D5C;</span> <span class='utn normal'>&#xED5C;</span></br>_yat_|  | 
+D  |<span class='utn normal'>&#x2D3D;</span></br>_yak_ | <span class='utn normal'>&#x2D4D;</span> <span class='utn normal'>&#xED4D;</span> <span class='utn normal'>&#xE00E;</span></br>_yal_| <span class='utn normal'>&#x2D5D;</span></br>_yath_ |  | 
+E  |<span class='utn normal'>&#x2D3E;</span> <span class='utn normal'>&#xED3E;</span> <span class='utn normal'>&#xE009;</span> <span class='utn normal'>&#xE021;</span> <span class='utn normal'>&#xE022;</span></br>_Tuareg yak_ | <span class='utn normal'>&#x2D4E;</span> <span class='utn normal'>&#xED4E;</span> <span class='utn normal'>&#xE00F;</span></br>_yam_ | <span class='utn normal'>&#x2D5E;</span> <span class='utn normal'>&#xED5E;</span> <span class='utn normal'>&#xE025;</span></br>_yach_|  | 
+F  |<span class='utn normal'>&#x2D3F;</span></br>_yakhh_ | <span class='utn normal'>&#x2D4F;</span></br>_yan_ | <span class='utn normal'>&#x2D5F;</span> <span class='utn normal'>&#xED5F;</span> <span class='utn normal'>&#xE018;</span> <span class='utn normal'>&#xE019;</span></br>_yatt_| <span class='utn normal'>&#x2D6F;</span> <span class='utn normal'>&#xED6F;</span></br>_tamatart_| <span class='utn normal'>&#x2D7F;</span></br>_joiner_
 
 ### <a id="bicons"></a>Bi- Tri-consonants
 
@@ -147,7 +147,7 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 1 /bt/ 2D31 2D5C | <span class='nototif normal'>&#x2D31; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D31;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv31" 1'>&#x2D31;&#x2D7F;&#x2D5C;</span>
 2 /gʼt/ 2D33 2D5C | <span class='nototif normal'>&#x2D33; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D33;&#x2D7F;&#x2D5C;</span>
 3 /gʼt/ 2D34 2D5C | <span class='nototif normal'>&#x2D34; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D34;&#x2D7F;&#x2D5C;</span>
-4 /gt/ 2D36 2D5C | <span class='nototif normal'>&#x2D36; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D36;&#x2D7F;&#x2D5C;</span> <span class='hapaxtuareg normal'>&#xF340;</span>
+4 /gt/ 2D36 2D5C | <span class='nototif normal'>&#x2D36; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D36;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE034;</span>
 5 /ft/ 2D3C 2D5C | <span class='nototif normal'>&#x2D3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 2'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv14" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
 6 /bt/ 2D40 2D5C | <span class='nototif normal'>&#x2D40; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D40;&#x2D7F;&#x2D5C;</span>
 7 /yt/ 2D49 2D5C | <span class='nototif normal'>&#x2D49; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D49;&#x2D7F;&#x2D5C;</span>
@@ -157,9 +157,9 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 11 /lt/ 2D4D 2D5C | <span class='nototif normal'>&#x2D4D; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D4D;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D4D;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv38" 1'>&#x2D4D;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv38" 2'>&#x2D4D;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv38" 3'>&#x2D4D;&#x2D7F;&#x2D5C;</span>
 12 /mb/ 2D4E 2D40 | <span class='nototif normal'>&#x2D4E; + &#x2D7F; + &#x2D40;</span> | → | <span class='nototif normal'>&#x2D4E;&#x2D7F;&#x2D40;</span> <span class='akatab normal'>&#x2D4E;&#x2D7F;&#x2D40;</span>
 13 /ms/ 2D4E 2D59 | <span class='nototif normal'>&#x2D4E; + &#x2D7F; + &#x2D59;</span> | → | <span class='akatab normal'>&#x2D4E;&#x2D7F;&#x2D59;</span>
-14 /mt/ 2D4E 2D5C | <span class='nototif normal'>&#x2D4E; + &#x2D7F; + &#x2D5C;</span> | → | <span class='ebrima normal'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='nototif normal'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv34" 2'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv34" 1'>&#x2D4E;&#x2D7F;&#x2D5C;</span>  <span class='akatab normal' style='font-feature-settings: "cv34" 3'>&#x2D4E;&#x2D7F;&#x2D5C;</span>
+14 /mt/ 2D4E 2D5C | <span class='nototif normal'>&#x2D4E; + &#x2D7F; + &#x2D5C;</span> | → | <span class='utn normal'>&#xE038;</span> <span class='nototif normal'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv34" 2'>&#x2D4E;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv34" 1'>&#x2D4E;&#x2D7F;&#x2D5C;</span>  <span class='akatab normal' style='font-feature-settings: "cv34" 3'>&#x2D4E;&#x2D7F;&#x2D5C;</span>
 15 /nb/ 2D4F 2D31 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D31;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D31;</span>
-16 /ng/ 2D4F 2D34 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D34;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D34;</span> <span class='ebrima normal'>&#x2D4F;&#x2D7F;&#x2D34;</span>
+16 /ng/ 2D4F 2D34 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D34;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D34;</span> <span class='utn normal'>&#xE039;</span>
 17 /nġ/ 2D4F 2D36 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D36;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D36;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D36;</span> <span class='akatab normal' style='font-feature-settings: "cv43" 1'>&#x2D4F;&#x2D7F;&#x2D36;</span>
 18 /nd/ 2D4F 2D37 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D37;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D37;</span> <span class='akatab normal' style='font-feature-settings: "cv41" 1'>&#x2D4F;&#x2D7F;&#x2D37;</span>
 19 /nd/ 2D4F 2D38 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D38;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D38;</span> <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D38;</span>
@@ -190,17 +190,17 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 
 USV | 2D7F between characters | → | Glyph</br>(2D7F)
 :----- | :--  | :-- | :-- 
-41 /rt/ 2D54 2D5C | <span class='nototif normal'>&#x2D54; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 1'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 2'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='hapaxtuareg normal'>&#xF1D5;</span>
+41 /rt/ 2D54 2D5C | <span class='nototif normal'>&#x2D54; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 1'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 2'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE035;</span>
 42 /gt/ 2D56 2D5C | <span class='nototif normal'>&#x2D56; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D56;&#x2D7F;&#x2D5C;</span>
 43 /sk/ 2D59 2D3E | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal'>&#x2D59;&#x2D7F;&#x2D3E;</span>
 44 /sn/ 2D59 2D4F | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D4F;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D4F;</span>
-45 /st/ 2D59 2D5C | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 1'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 2'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 3'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='hapaxtuareg normal'>&#xE880;</span>
+45 /st/ 2D59 2D5C | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 1'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 2'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 3'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE036;</span>
 46 /šk/ 2D5B 2D3E | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv47" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv47" 2'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span>
 47 /šn/ 2D5B 2D4F | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D4F;</span> | → | <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D4F;</span>
-48 /št/ 2D5B 2D5C | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv48" 1'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='hapaxtuareg normal'>&#xF3AF;</span>
+48 /št/ 2D5B 2D5C | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv48" 1'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE037;</span>
 49 /ts/ 2D5C 2D59 | <span class='nototif normal'>&#x2D5C; + &#x2D7F; + &#x2D59;</span> | → | <span class='nototif normal'>&#x2D5C;&#x2D7F;&#x2D59;</span>
 50 /wt/ 2D61 2D5C | <span class='nototif normal'>&#x2D61; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D61;&#x2D7F;&#x2D5C;</span>
-51 /yt/ 2D62 2D5C | <span class='nototif normal'>&#x2D62; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D62;&#x2D7F;&#x2D5C;</span> <span class='ebrima normal'>&#x2D62;&#x2D7F;&#x2D5C;</span>
+51 /yt/ 2D62 2D5C | <span class='nototif normal'>&#x2D62; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D62;&#x2D7F;&#x2D5C;</span>
 52 /zt/ 2D63 2D5C | <span class='nototif normal'>&#x2D63; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D63;&#x2D7F;&#x2D5C;</span>
 53 /zt/ 2D65 2D5C | <span class='nototif normal'>&#x2D65; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D65;&#x2D7F;&#x2D5C;</span>
 
@@ -237,80 +237,88 @@ In early inscriptions, Tifinagh was written horizontally from left to right, fro
 Given that left-to-right directionality seems to be the most widely used one in the Maghreb and in Niger, the strong directionality of Tifinagh is defined to be left-to-right. When needed, it is possible to explicitly declare a right-to-left directionality. The glyphs will then have to be mirrored, according to the rules in effect for the specified variant. If the glyphs are to be mirrored, then this must be implemented in the font.
 
 **The following text demonstrates Tifinagh left-to-right behaviour:**<br>
-<span class='akatab normal'> ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span>
+<span class='akatab-v2 normal'>&#x2D59;&#x2D4F;&#x2D5C;&#x2D5C; &#x2D5C;&#x2D59;&#x2D3E;&#x2D4D;&#x2D4F; &#x2D53;&#x2D54; &#x2D5C;&#x2D36;&#x2D42;&#x2D4F;&#x2D5C; &#x2D4E;&#x2D49;</span> (Senatet tsokalén wr teǧǧehnet émi.)
 
 **Using the same text, right-to-left behaviour is demonstrated using U+202E RIGHT-TO-LEFT OVERRIDE:**<br>
-<span dir="rtl" class='akatab normal'> &#x202E; ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span>
+<span dir="rtl" class='akatab-v2 normal'> &#x202E;&#x2D59;&#x2D4F;&#x2D5C;&#x2D5C; &#x2D5C;&#x2D59;&#x2D3E;&#x2D4D;&#x2D4F; &#x2D53;&#x2D54; &#x2D5C;&#x2D36;&#x2D42;&#x2D4F;&#x2D5C; &#x2D4E;&#x2D49;</span>
 
-**The following text demonstrates both Tifinagh directional behaviours using the U+202E RIGHT-TO-LEFT OVERRIDE and U+202C OP DIRECTIONAL FORMATTING:**<br>
-<span dir="rtl" class='akatab normal'> &#x202E; ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ  &#x202C; ⵙⵏⵜⵜ ⵜⵙⴾⵍⵏ ⵓⵔ ⵜⴶⵂⵏⵜ ⵎⵉ </span>
+**The following text demonstrates both Tifinagh directional behaviours using the U+202E RIGHT-TO-LEFT OVERRIDE and U+202C POP DIRECTIONAL FORMATTING:**<br>
+<span dir="rtl" class='akatab-v2 normal'> &#x202E;&#x2D59;&#x2D4F;&#x2D5C;&#x2D5C; &#x2D5C;&#x2D59;&#x2D3E;&#x2D4D;&#x2D4F; &#x2D53;&#x2D54; &#x2D5C;&#x2D36;&#x2D42;&#x2D4F;&#x2D5C; &#x2D4E;&#x2D49;  &#x202C; &#x2D59;&#x2D4F;&#x2D5C;&#x2D5C; &#x2D5C;&#x2D59;&#x2D3E;&#x2D4D;&#x2D4F; &#x2D53;&#x2D54; &#x2D5C;&#x2D36;&#x2D42;&#x2D4F;&#x2D5C; &#x2D4E;&#x2D49; </span>
 </p>‮
 <!-- 
 Using hard-coded directional characters in the HTML code (as illustrated above) can prevent accidental deletion of invisible characters.
 -->
 
-### <a id="dir_var"></a>Variant Directional Glyphs
+### <a id="dir_var"></a>Directional Glyphs
 
-Because the script can be written in multiple directions, the glyphs must be mirrored or turned. Below is a sampling of some of the different shapes required for differing directions. Some glyphs, like a circle, could look the same in any direction. However, unless the glyphs are monoline, there will be slight variations in the glyph design. Where there are glyph variants, the number of glyphs required for different directions will increase exponentially.
+Because the script can be written in multiple directions, the glyphs must be mirrored for right-to-left text, turned 90&#x00B0; for bottom-to-top text, or turned -90&#x00B0; for top-to-bottom text. Below is a sampling of some of the different shapes required for differing directions. Some glyphs, like a circle, could look the same in any direction. However, unless the glyphs are monoline, there will be slight variations in the glyph design. Where there are glyph variants, the number of glyphs required for different directions will increase exponentially.
 
-|  | &#x2192;     | &#x2190;      | &#x2191;      | &#x2193;    
+|  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
 :- | :--     | :--      | :--      | :--
-2D30  |<span class='hapaxtuareg normal'>&#x2D30;</span>| <span class='hapaxtuareg normal'>&#x2D30;</span> | <span class='hapaxtuareg normal'>&#x2D30;</span>|<span class='hapaxtuareg normal'>&#x2D30;</span>
-2D31  |<span class='hapaxtuareg normal'>&#x2D31;</span>| <span class='hapaxtuareg normal'>&#x2D31;</span> | <span class='hapaxtuareg normal'>&#xE310;</span>|<span class='hapaxtuareg normal'>&#xE310;</span>
-2D32  |<span class='hapaxtuareg normal'>&#x2D32;</span>| <span class='hapaxtuareg normal'>&#x2D32;</span> | <span class='hapaxtuareg normal'>&#x2D32;</span>|<span class='hapaxtuareg normal'>&#x2D32;</span>
-2D33  |<span class='hapaxtuareg normal'>&#x2D33;</span>| <span class='hapaxtuareg normal'>&#x2D33;</span> | <span class='hapaxtuareg normal'>&#xE885;</span>|<span class='hapaxtuareg normal'>&#xF031;</span>
-2D34  |<span class='hapaxtuareg normal'>&#x2D34;</span>| <span class='hapaxtuareg normal'>&#x2D34;</span> | <span class='hapaxtuareg normal'>&#xF031;</span>|<span class='hapaxtuareg normal'>&#xE885;</span>
-2D35  |<span class='hapaxtuareg normal'>&#x2D35;</span>| <span class='hapaxtuareg normal'>&#x2D35;</span> | <span class='hapaxtuareg normal'>&#xF691;</span>|<span class='hapaxtuareg normal'>&#xF691;</span>
-2D36  |<span class='hapaxtuareg normal'>&#x2D36;</span>| <span class='hapaxtuareg normal'>&#x2D36;</span> | <span class='hapaxtuareg normal'>&#xF061;</span>|<span class='hapaxtuareg normal'></span>
-2D37  |<span class='hapaxtuareg normal'>&#x2D37;</span>| <span class='hapaxtuareg normal'>&#x2D37;</span> | <span class='hapaxtuareg normal'>&#xE00C;</span>|<span class='hapaxtuareg normal'>&#xF0C3;</span>
-2D38  |<span class='hapaxtuareg normal'>&#x2D38;</span>| <span class='hapaxtuareg normal'>&#x2D38;</span> | <span class='hapaxtuareg normal'>&#xF0C3;</span>|<span class='hapaxtuareg normal'>&#xE00C;</span>
-2D39  |<span class='hapaxtuareg normal'>&#xE330;</span>| <span class='hapaxtuareg normal'>&#xF017;</span> | <span class='hapaxtuareg normal'>&#xE106;</span>|<span class='hapaxtuareg normal'>&#xE8A8;</span>
-2D3A  |<span class='hapaxtuareg normal'>&#x2D3A;</span>| <span class='hapaxtuareg normal'>&#xE330;</span> | <span class='hapaxtuareg normal'>&#xE8A8;</span>|<span class='hapaxtuareg normal'>&#xE106;</span>
-2D3B  |<span class='hapaxtuareg normal'>&#xF062;</span>| <span class='hapaxtuareg normal'>&#xF062;</span> | <span class='hapaxtuareg normal'>&#xF063;</span>|<span class='hapaxtuareg normal'>&#xF063;</span>
-2D3C  |<span class='hapaxtuareg normal'>&#x2D3C;</span>| <span class='hapaxtuareg normal'>&#x2D3C;</span> | <span class='hapaxtuareg normal'>&#xE012;</span>|<span class='hapaxtuareg normal'>&#xE012;</span>
-2D3D  |<span class='hapaxtuareg normal'>&#x2D3D;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D3E  |<span class='hapaxtuareg normal'>&#x2D3E;</span>| <span class='hapaxtuareg normal'>&#xF0A3;</span> | <span class='hapaxtuareg normal'>&#xF0A4;</span>|<span class='hapaxtuareg normal'>-</span>
-2D3F  |<span class='hapaxtuareg normal'>&#x2D3F;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D40  |<span class='hapaxtuareg normal'>&#xE310;</span>| <span class='hapaxtuareg normal'>&#xE310;</span> | <span class='hapaxtuareg normal'>&#x2D31;</span>|<span class='hapaxtuareg normal'>&#x2D31;</span>
-2D41  |<span class='hapaxtuareg normal'>&#x2D41;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D42  |<span class='hapaxtuareg normal'>&#x2D42;</span>| <span class='hapaxtuareg normal'>&#x2D42;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D43  |<span class='hapaxtuareg normal'>&#x2D43;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D44  |<span class='hapaxtuareg normal'>&#x2D44;</span>| <span class='hapaxtuareg normal'>&#x2D44;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D45  |<span class='hapaxtuareg normal'>&#x2D45;</span>| <span class='hapaxtuareg normal'>&#x2D45;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D46  |<span class='hapaxtuareg normal'>&#x2D46;</span>| <span class='hapaxtuareg normal'>&#x2D46;</span> | <span class='hapaxtuareg normal'>&#x2D46;</span>|<span class='hapaxtuareg normal'>&#x2D46;</span>
-2D47  |<span class='hapaxtuareg normal'>&#x2D47;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D48  |<span class='hapaxtuareg normal'>&#x2D48;</span>| <span class='hapaxtuareg normal'>&#x2D48;</span> | <span class='hapaxtuareg normal'>&#x2D57;</span>|<span class='hapaxtuareg normal'>&#x2D57;</span>
-2D49  |<span class='hapaxtuareg normal'>&#x2D49;</span>| <span class='hapaxtuareg normal'>&#xF153;</span> | <span class='hapaxtuareg normal'>&#xF163;</span>|<span class='hapaxtuareg normal'>&#xF162;</span>
-2D4A  |<span class='hapaxtuareg normal'>&#x2D4A;</span>| <span class='hapaxtuareg normal'>&#x2D4A;</span> | <span class='hapaxtuareg normal'>&#xF250;</span>|<span class='hapaxtuareg normal'>&#xF250;</span>
-2D4B  |<span class='hapaxtuareg normal'>&#x2D4B;</span>| <span class='hapaxtuareg normal'>&#x2D4B;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D4C  |<span class='hapaxtuareg normal'>&#x2D4C;</span>| <span class='hapaxtuareg normal'>&#x2D4C;</span> | <span class='hapaxtuareg normal'>&#x2D4C;</span>|<span class='hapaxtuareg normal'>&#x2D4C;</span>
-2D4D  |<span class='hapaxtuareg normal'>&#xF0B1;</span>| <span class='hapaxtuareg normal'>&#xF0B1;</span> | <span class='hapaxtuareg normal'>&#xF0B2;</span>|<span class='hapaxtuareg normal'>&#xF0B2;</span>
-2D4E  |<span class='hapaxtuareg normal'>&#x2D4E;</span>| <span class='hapaxtuareg normal'>&#xF0C0;</span> | <span class='hapaxtuareg normal'>&#xF0C4;</span>|<span class='hapaxtuareg normal'>&#xF6F2;</span>
-2D4F  |<span class='hapaxtuareg normal'>&#xF0D0;</span>| <span class='hapaxtuareg normal'>&#xF0D0;</span> | <span class='hapaxtuareg normal'>&#xF0D1;</span>|<span class='hapaxtuareg normal'>&#xF0D1;</span>
-2D50  |<span class='hapaxtuareg normal'>&#xE038;</span>| <span class='hapaxtuareg normal'>&#xE038;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D51  |<span class='hapaxtuareg normal'>&#x2D51;</span>| <span class='hapaxtuareg normal'>&#x2D51;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D52  |<span class='hapaxtuareg normal'>&#x2D52;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D53  |<span class='hapaxtuareg normal'>&#x2D53;</span>| <span class='hapaxtuareg normal'>&#x2D53;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D54  |<span class='hapaxtuareg normal'>&#x2D54;</span>| <span class='hapaxtuareg normal'>&#x2D54;</span> | <span class='hapaxtuareg normal'>&#x2D54;</span>|<span class='hapaxtuareg normal'>&#x2D54;</span>
-2D55  |<span class='hapaxtuareg normal'>&#x2D55;</span>| <span class='hapaxtuareg normal'>&#xF563;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D56  |<span class='hapaxtuareg normal'>&#x2D56;</span>| <span class='hapaxtuareg normal'>&#x2D56;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D57  |<span class='hapaxtuareg normal'>&#x2D57;</span>| <span class='hapaxtuareg normal'>&#x2D57;</span> | <span class='hapaxtuareg normal'>&#x2D48;</span>|<span class='hapaxtuareg normal'>&#x2D48;</span>
-2D58  |<span class='hapaxtuareg normal'>&#x2D58;</span>| <span class='hapaxtuareg normal'>&#x2D58;</span> | <span class='hapaxtuareg normal'>&#x2D58;</span>|<span class='hapaxtuareg normal'>&#x2D58;</span>
-2D59  |<span class='hapaxtuareg normal'>&#x2D59;</span>| <span class='hapaxtuareg normal'>&#x2D59;</span> | <span class='hapaxtuareg normal'>&#x2D59;</span>|<span class='hapaxtuareg normal'>&#x2D59;</span>
-2D5A  |<span class='hapaxtuareg normal'>&#x2D5A;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D5B  |<span class='hapaxtuareg normal'>&#x2D5B;</span>| <span class='hapaxtuareg normal'>&#xF166;</span> | <span class='hapaxtuareg normal'>&#xF0C5;</span>|<span class='hapaxtuareg normal'>&#xF167;</span>
-2D5C  |<span class='hapaxtuareg normal'>&#x2D5C;</span>| <span class='hapaxtuareg normal'>&#x2D5C;</span> | <span class='hapaxtuareg normal'>&#x2D5C;</span>|<span class='hapaxtuareg normal'>&#x2D5C;</span>
-2D5D  |<span class='hapaxtuareg normal'>&#x2D5D;</span>| <span class='hapaxtuareg normal'>&#x2D5D;</span> | <span class='hapaxtuareg normal'>&#xF351;</span>|<span class='hapaxtuareg normal'>&#xF351;</span>
-2D5E  |<span class='hapaxtuareg normal'>&#x2D5E;</span>| <span class='hapaxtuareg normal'>-</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D5F  |<span class='hapaxtuareg normal'>&#x2D5F;</span>| <span class='hapaxtuareg normal'>&#xF1D1;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D60  |<span class='hapaxtuareg normal'>&#x2D60;</span>| <span class='hapaxtuareg normal'>&#x2D60;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D61  |<span class='hapaxtuareg normal'>&#x2D61;</span>| <span class='hapaxtuareg normal'>&#x2D61;</span> | <span class='hapaxtuareg normal'>&#xF0C0;</span>|<span class='hapaxtuareg normal'>&#x2D4E;</span>
-2D62  |<span class='hapaxtuareg normal'>&#x2D62;</span>| <span class='hapaxtuareg normal'>&#xE87B;</span> | <span class='hapaxtuareg normal'>&#xF203;</span>|<span class='hapaxtuareg normal'>&#xF202;</span>
-2D63  |<span class='hapaxtuareg normal'>&#x2D63;</span>| <span class='hapaxtuareg normal'>&#x2D63;</span> | <span class='hapaxtuareg normal'>&#xF290;</span>|<span class='hapaxtuareg normal'>&#xF290;</span>
-2D64  |<span class='hapaxtuareg normal'>&#x2D64;</span>| <span class='hapaxtuareg normal'>&#xF222;</span> | <span class='hapaxtuareg normal'>&#xF050;</span>|<span class='hapaxtuareg normal'>&#xE11A;</span>
-2D65  |<span class='hapaxtuareg normal'>&#x2D65;</span>| <span class='hapaxtuareg normal'>&#x2D65;</span> | <span class='hapaxtuareg normal'>-</span>|<span class='hapaxtuareg normal'>-</span>
-2D66  |<span class='hapaxtuareg normal'>&#x2D66;</span>| <span class='hapaxtuareg normal'>&#xF0C3;</span> | <span class='hapaxtuareg normal'>&#x2D37;</span>|<span class='hapaxtuareg normal'>&#x2D38;</span>
-2D67  |<span class='hapaxtuareg normal'>&#x2D67;</span>| <span class='hapaxtuareg normal'>&#x2D67;</span> | <span class='hapaxtuareg normal'></span>|<span class='hapaxtuareg normal'></span>
+2D30  |<span class='utn normal'>&#x2D30;</span>| <span class='utn normal'>&#x2D30;</span> | <span class='utn normal'>&#x2D30;</span>|<span class='utn normal'>&#x2D30;</span>
+2D31  |<span class='utn normal'>&#x2D31;</span>| <span class='utn normal'>&#x2D31;</span> | <span class='utn normal'>&#xF031;</span>|<span class='utn normal'>&#xF031;</span>
+2D32  |<span class='utn normal'>&#x2D32;</span>| <span class='utn normal'>&#x2D32;</span> | <span class='utn normal'>&#xF032;</span>|<span class='utn normal'>&#xF032;</span>
+2D33  |<span class='utn normal'>&#x2D33;</span>| <span class='utn normal'>&#x2D33;</span> | <span class='utn normal'>&#xF033;</span>|<span class='utn normal'>&#xF034;</span>
+2D34  |<span class='utn normal'>&#x2D34;</span>| <span class='utn normal'>&#x2D34;</span> | <span class='utn normal'>&#xF034;</span>|<span class='utn normal'>&#xF033;</span>
+2D35  |<span class='utn normal'>&#x2D35;</span>| <span class='utn normal'>&#x2D35;</span> | <span class='utn normal'>&#xF035;</span>|<span class='utn normal'>&#xF035;</span>
+2D36  |<span class='utn normal'>&#x2D36;</span>| <span class='utn normal'>&#x2D36;</span> | <span class='utn normal'>&#xF036;</span>|<span class='utn normal'>&#xF136;</span>
+2D37  |<span class='utn normal'>&#x2D37;</span>| <span class='utn normal'>&#x2D37;</span> | <span class='utn normal'>&#xF037;</span>|<span class='utn normal'>&#xF038;</span>
+2D38  |<span class='utn normal'>&#x2D38;</span>| <span class='utn normal'>&#x2D38;</span> | <span class='utn normal'>&#xF038;</span>|<span class='utn normal'>&#xF037;</span>
+2D39  |<span class='utn normal'>&#x2D39;</span>| <span class='utn normal'>&#xED3A;</span> | <span class='utn normal'>&#xF039;</span>|<span class='utn normal'>&#xF139;</span>
+
+&#x00A0;
+
+|  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
+:- | :--     | :--      | :--      | :--
+2D3A  |<span class='utn normal'>&#x2D3A;</span>| <span class='utn normal'>&#xED39;</span> | <span class='utn normal'>&#xF03A;</span>|<span class='utn normal'>&#xF13A;</span>
+2D3B  |<span class='utn normal'>&#x2D3B;</span>| <span class='utn normal'>&#x2D3B;</span> | <span class='utn normal'>&#xF03B;</span>|<span class='utn normal'>&#xF03B;</span>
+2D3C  |<span class='utn normal'>&#x2D3C;</span>| <span class='utn normal'>&#x2D3C;</span> | <span class='utn normal'>&#xF03C;</span>|<span class='utn normal'>&#xF03C;</span>
+2D3D  |<span class='utn normal'>&#x2D3D;</span>| <span class='utn normal'>&#xFD3D;</span> | <span class='utn normal'>&#xF03D;</span>|<span class='utn normal'>&#xF13D;</span>
+2D3E  |<span class='utn normal'>&#x2D3E;</span>| <span class='utn normal'>&#xFD3E;</span> | <span class='utn normal'>&#xF03E;</span>|<span class='utn normal'>&#xF13E;</span>
+2D3F  |<span class='utn normal'>&#x2D3F;</span>| <span class='utn normal'>&#xFD3F;</span> | <span class='utn normal'>&#xF03F;</span>|<span class='utn normal'>&#xF13F;</span>
+2D40  |<span class='utn normal'>&#x2D40;</span>| <span class='utn normal'>&#x2D40;</span> | <span class='utn normal'>&#xF040;</span>|<span class='utn normal'>&#xF040;</span>
+2D41  |<span class='utn normal'>&#x2D41;</span>| <span class='utn normal'>&#xFD41;</span> | <span class='utn normal'>&#xF041;</span>|<span class='utn normal'>&#xF041;</span>
+2D42  |<span class='utn normal'>&#x2D42;</span>| <span class='utn normal'>&#x2D42;</span> | <span class='utn normal'>&#xF042;</span>|<span class='utn normal'>&#xF042;</span>
+2D43  |<span class='utn normal'>&#x2D43;</span>| <span class='utn normal'>&#xFD43;</span> | <span class='utn normal'>&#xF043;</span>|<span class='utn normal'>&#xF143;</span>
+2D44  |<span class='utn normal'>&#x2D44;</span>| <span class='utn normal'>&#x2D44;</span> | <span class='utn normal'>&#xF044;</span>|<span class='utn normal'>&#xF056;</span>
+2D45  |<span class='utn normal'>&#x2D45;</span>| <span class='utn normal'>&#x2D45;</span> | <span class='utn normal'>&#xF045;</span>|<span class='utn normal'>&#xF145;</span>
+2D46  |<span class='utn normal'>&#x2D46;</span>| <span class='utn normal'>&#x2D46;</span> | <span class='utn normal'>&#xF046;</span>|<span class='utn normal'>&#xF046;</span>
+2D47  |<span class='utn normal'>&#x2D47;</span>| <span class='utn normal'>&#xFD47;</span> | <span class='utn normal'>&#xF047;</span>|<span class='utn normal'>&#xF147;</span>
+2D48  |<span class='utn normal'>&#x2D48;</span>| <span class='utn normal'>&#x2D48;</span> | <span class='utn normal'>&#xF048;</span>|<span class='utn normal'>&#xF048;</span>
+2D49  |<span class='utn normal'>&#x2D49;</span>| <span class='utn normal'>&#xFD49;</span> | <span class='utn normal'>&#xF049;</span>|<span class='utn normal'>&#xF149;</span>
+2D4A  |<span class='utn normal'>&#x2D4A;</span>| <span class='utn normal'>&#x2D4A;</span> | <span class='utn normal'>&#xF04A;</span>|<span class='utn normal'>&#xF04A;</span>
+2D4B  |<span class='utn normal'>&#x2D4B;</span>| <span class='utn normal'>&#x2D4B;</span> | <span class='utn normal'>&#xF04B;</span>|<span class='utn normal'>&#xF04B;</span>
+2D4C  |<span class='utn normal'>&#x2D4C;</span>| <span class='utn normal'>&#x2D4C;</span> | <span class='utn normal'>&#xF04C;</span>|<span class='utn normal'>&#xF04C;</span>
+2D4D  |<span class='utn normal'>&#x2D4D;</span>| <span class='utn normal'>&#xFD4D;</span> | <span class='utn normal'>&#xF04D;</span>|<span class='utn normal'>&#xF04D;</span>
+2D4E  |<span class='utn normal'>&#x2D4E;</span>| <span class='utn normal'>&#xFD4E;</span> | <span class='utn normal'>&#xF04E;</span>|<span class='utn normal'>&#xF14E;</span>
+2D4F  |<span class='utn normal'>&#x2D4F;</span>| <span class='utn normal'>&#x2D4F;</span> | <span class='utn normal'>&#xF04F;</span>|<span class='utn normal'>&#xF04F;</span>
+
+|  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
+:- | :--     | :--      | :--      | :--
+2D50  |<span class='utn normal'>&#x2D50;</span>| <span class='utn normal'>&#x2D50;</span> | <span class='utn normal'>&#xF050;</span>|<span class='utn normal'>&#xF050;</span>
+2D51  |<span class='utn normal'>&#x2D51;</span>| <span class='utn normal'>&#x2D51;</span> | <span class='utn normal'>&#xF051;</span>|<span class='utn normal'>&#xF151;</span>
+2D52  |<span class='utn normal'>&#x2D52;</span>| <span class='utn normal'>&#xFD52;</span> | <span class='utn normal'>&#xF052;</span>|<span class='utn normal'>&#xF152;</span>
+2D53  |<span class='utn normal'>&#x2D53;</span>| <span class='utn normal'>&#x2D53;</span> | <span class='utn normal'>&#xF053;</span>|<span class='utn normal'>&#xF053;</span>
+2D54  |<span class='utn normal'>&#x2D54;</span>| <span class='utn normal'>&#x2D54;</span> | <span class='utn normal'>&#xF054;</span>|<span class='utn normal'>&#xF054;</span>
+2D55  |<span class='utn normal'>&#x2D55;</span>| <span class='utn normal'>&#xFD55;</span> | <span class='utn normal'>&#xF055;</span>|<span class='utn normal'>&#xF155;</span>
+2D56  |<span class='utn normal'>&#x2D56;</span>| <span class='utn normal'>&#x2D56;</span> | <span class='utn normal'>&#xF056;</span>|<span class='utn normal'>&#xF044;</span>
+2D57  |<span class='utn normal'>&#x2D57;</span>| <span class='utn normal'>&#x2D57;</span> | <span class='utn normal'>&#xF057;</span>|<span class='utn normal'>&#xF057;</span>
+2D58  |<span class='utn normal'>&#x2D58;</span>| <span class='utn normal'>&#x2D58;</span> | <span class='utn normal'>&#xF058;</span>|<span class='utn normal'>&#xF058;</span>
+2D59  |<span class='utn normal'>&#x2D59;</span>| <span class='utn normal'>&#x2D59;</span> | <span class='utn normal'>&#xF059;</span>|<span class='utn normal'>&#xF059;</span>
+2D5A  |<span class='utn normal'>&#x2D5A;</span>| <span class='utn normal'>&#xFD5A;</span> | <span class='utn normal'>&#xF05A;</span>|<span class='utn normal'>&#xF15A;</span>
+2D5B  |<span class='utn normal'>&#x2D5B;</span>| <span class='utn normal'>&#xFD5B;</span> | <span class='utn normal'>&#xF05B;</span>|<span class='utn normal'>&#xF15B;</span>
+2D5C  |<span class='utn normal'>&#x2D5C;</span>| <span class='utn normal'>&#x2D5C;</span> | <span class='utn normal'>&#xF05C;</span>|<span class='utn normal'>&#xF05C;</span>
+2D5D  |<span class='utn normal'>&#x2D5D;</span>| <span class='utn normal'>&#x2D5D;</span> | <span class='utn normal'>&#xF05D;</span>|<span class='utn normal'>&#xF05D;</span>
+2D5E  |<span class='utn normal'>&#x2D5E;</span>| <span class='utn normal'>&#xFD5E;</span> | <span class='utn normal'>&#xF05E;</span>|<span class='utn normal'>&#xF15E;</span>
+2D5F  |<span class='utn normal'>&#x2D5F;</span>| <span class='utn normal'>&#xFD5F;</span> | <span class='utn normal'>&#xF05F;</span>|<span class='utn normal'>&#xF15F;</span>
+2D60  |<span class='utn normal'>&#x2D60;</span>| <span class='utn normal'>&#x2D60;</span> | <span class='utn normal'>&#xF060;</span>|<span class='utn normal'>&#xF160;</span>
+2D61  |<span class='utn normal'>&#x2D61;</span>| <span class='utn normal'>&#x2D61;</span> | <span class='utn normal'>&#xF061;</span>|<span class='utn normal'>&#xF161;</span>
+2D62  |<span class='utn normal'>&#x2D62;</span>| <span class='utn normal'>&#xFD62;</span> | <span class='utn normal'>&#xF062;</span>|<span class='utn normal'>&#xF162;</span>
+2D63  |<span class='utn normal'>&#x2D63;</span>| <span class='utn normal'>&#x2D63;</span> | <span class='utn normal'>&#xF063;</span>|<span class='utn normal'>&#xF063;</span>
+2D64  |<span class='utn normal'>&#x2D64;</span>| <span class='utn normal'>&#xFD64;</span> | <span class='utn normal'>&#xF064;</span>|<span class='utn normal'>&#xF164;</span>
+2D65  |<span class='utn normal'>&#x2D65;</span>| <span class='utn normal'>&#x2D65;</span> | <span class='utn normal'>&#xF065;</span>|<span class='utn normal'>&#xF065;</span>
+2D66  |<span class='utn normal'>&#x2D66;</span>| <span class='utn normal'>&#xFD66;</span> | <span class='utn normal'>&#xF066;</span>|<span class='utn normal'>&#xF166;</span>
+2D67  |<span class='utn normal'>&#x2D67;</span>| <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xF067;</span>|<span class='utn normal'>&#xF067;</span>
 
 ## <a id="resource"></a>Resources
 
@@ -353,9 +361,9 @@ These fonts provide support for some or all of the Tifinagh block.
 
 ### <a id="tzm_zgh"></a>Central Atlas Tamazight, Standard Moroccan Tamazight
 
-_Source_: [Tifinaghe-IRCAM](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html), [Omniglot](https://omniglot.com/writing/tamazight.htm), [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html)
+_Source_: <a href="#ircam">Tifinaghe-IRCAM</a>, [Omniglot](https://omniglot.com/writing/tamazight.htm), <a href="#ishida_zgh">Tamazight: Neo-Tifinagh orthography notes</a>, and <a href="#sahraoui">Souad Sahraoui (pages 307-308)</a>
 
-_Language tag:_ `tzm-Tfng`, `zgh`
+_Language tags:_ `tzm-Tfng`, `zgh`
 
 _Opentype language system tag:_ `BBR `
 
@@ -401,11 +409,11 @@ Neo-Tifinagh does not use contextual shaping for the “l” and “n”. This i
 <span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt;&lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4A;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span>
 
 
-### <a id="kab"></a>Kabyle, Amazigh
+### <a id="kab"></a>Kabyle, Amazigh, Taqbaylit
 
-_Source_: [Omniglot](https://omniglot.com/writing/kabyle.php), [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf) 
+_Source_: [Omniglot](https://omniglot.com/writing/kabyle.php) and <a href="#snima">SNIMA 2004</a>
 
-_Language Tag_: `kab-Tfng`
+_Language tag_: `kab-Tfng`
 
 _Opentype language system tag:_ `BBR `
 
@@ -430,7 +438,7 @@ Latn | /č/ | /ṭ/ | /w/ | /y/ | /z/ | /ẓ/ | /ʷ/ |
 
 #### Known glyph variants
 
-A variant of U+2D4d is used: <span class='hapaxberbere normal'>&#x2D4D;</span>
+A variant of U+2D4d is used: <span class='utn normal'>&#xE00E;</span>
 
 #### Bi-consonants
 
@@ -442,11 +450,47 @@ Bi-consonants are not “required” in Neo-Tifinagh. If a font supports bi-cons
 
 ## <a id="trad"></a>Languages Using Traditional Tifinagh script
 
+### <a id="cnu"></a> Chenoua, Tacenwit
+
+_Source_: [Savage, 2003 pages 2-3](#savage2003)
+
+This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pages 12,13). It is unknown how widely used this book (or the characters) are actually used.
+
+_Language tag_: `cnu-Tfng`
+
+Characters | | | | | | | | | &#x0020;
+:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+Tfng | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xED3B;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span>
+USV  | 2D30 | 2D30 0302 | 2D33 | 2D35        | 2D37 | 2D39 | 2D3B | 2D3C | 2D3D
+Latn | /a/  | /&#x025b;/  | /g/  | /g&#x030C;/ | /d/  | /ḍ/  | /c/  | /f/  | /k/ 
+| | | | | | | | |
+Tfng | <span class='nototif normal'>&#x2D40;</span> | <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='utn normal'>&#xED49;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='akatab normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span>
+USV  | 2D40 | 2D43        | 2D45 | 2D47 | 2D49 | 2D4A | 2D4D | 2D4E | 2D4F
+Latn | /b/  | /h&#x0323;/ | /x/  | /q/  | /i/  | /j/  | /l/  | /m/  | /n/ 
+| | | | | | | | |
+Tfng | <span class='akatab normal'>&#x2D53;</span> | <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5B;</span> | <span class='akatab normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5F;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='utn normal'>&#xE03B;</span> | <span class='nototif normal'>&#x2D63;</span>
+USV  | 2D53 | 2D54 | 2D59 | 2D5B | 2D5C | 2D5F        | 2D61 | 2D62 | 2D63
+Latn | /u/  | /r/  | /s/  | /c/  | /t/  | /t&#x0323;/ | /w/  | /y/  | /z/ 
+
+#### Glyph variants
+
+USV |&#x0020; | &#x0020; | &#x0020;
+:--  | :--  | :--  | :--
+2D30 | <span class='nototif normal'>&#x2D30;</span>|&#x003E;|<span class='akatab normal'>&#x2D30;</span>
+2D3B | <span class='nototif normal'>&#x2D3B;</span>|&#x003E;|<span class='utn normal'>&#xED3B;</span>
+2D3C | <span class='nototif normal'>&#x2D3C;</span>|&#x003E;|<span class='akatab normal'>&#x2D3C;</span>
+2D49 | <span class='nototif normal'>&#x2D49;</span>|&#x003E;|<span class='utn normal'>&#xED49;</span>
+2D4D | <span class='nototif normal'>&#x2D4D;</span>|&#x003E;|<span class='akatab normal'>&#x2D4D;</span>
+2D53 | <span class='nototif normal'>&#x2D53;</span>|&#x003E;|<span class='akatab normal'>&#x2D53;</span>
+2D5B | <span class='nototif normal'>&#x2D5B;</span>|&#x003E;|<span class='akatab normal'>&#x2D5B;</span>
+2D5C | <span class='nototif normal'>&#x2D5C;</span>|&#x003E;|<span class='akatab normal'>&#x2D5C;</span>
+2D62 | <span class='nototif normal'>&#x2D62;</span>|&#x003E;|<span class='utn normal'>&#xE03B;</span>
+
 ### <a id="gho"></a>Ghomara, Shilha
 
 _Source_: [Omniglot](https://omniglot.com/writing/shilha.htm)
 
-_Language Tag_: `gho-Tfng`
+_Language tag_: `gho-Tfng`
 
 _Opentype language system tag:_ `BBR `
 
@@ -471,7 +515,7 @@ Latn  | /y/ | /z/ | /z&#x0323;/ | /&#x02b7;/ | | | | | |
 
 #### Known glyph variants
 
-A variant of U+2D4d is used: <span class='hapaxberbere normal'>&#x2D4D;</span>
+A variant of U+2D4d is used: <span class='utn normal'>&#xE00E;</span>
 
 #### Bi-consonants
 
@@ -484,13 +528,49 @@ Unknown.
 &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4A;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt;&lt; <span class='nototif normal'>&#x2D56;&#x2D6F;</span> 
 &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span>
 
+### <a id="mzb"></a>Tumzabt
+
+_Source_: [Savage, 2003 pages 2-3](#savage2003)
+
+This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pages 12,13). It is unknown how widely used this book (or the characters) are actually used.
+
+_Language tag_: `mzb-Tfng`
+
+Characters | | | | | | | | | &#x0020;
+:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+Tfng | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xED3B;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span>
+USV  | 2D30 | 2D30 0302 | 2D33 | 2D35        | 2D37 | 2D39 | 2D3B | 2D3C | 2D3D
+Latn | /a/  | /&#x025b;/  | /g/  | /g&#x030C;/ | /d/  | /ḍ/  | /c/  | /f/  | /k/ 
+| | | | | | | | |
+Tfng | <span class='nototif normal'>&#x2D40;</span> | <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='utn normal'>&#xED49;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='akatab normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span>
+USV  | 2D40 | 2D43        | 2D45 | 2D47 | 2D49 | 2D4A | 2D4D | 2D4E | 2D4F
+Latn | /b/  | /h&#x0323;/ | /x/  | /q/  | /i/  | /j/  | /l/  | /m/  | /n/ 
+| | | | | | | | |
+Tfng | <span class='akatab normal'>&#x2D53;</span> | <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5B;</span> | <span class='akatab normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5F;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='utn normal'>&#xE03B;</span> | <span class='nototif normal'>&#x2D63;</span>
+USV  | 2D53 | 2D54 | 2D59 | 2D5B | 2D5C | 2D5F        | 2D61 | 2D62 | 2D63
+Latn | /u/  | /r/  | /s/  | /c/  | /t/  | /t&#x0323;/ | /w/  | /y/  | /z/ 
+
+#### Glyph variants
+
+USV |&#x0020; | &#x0020; | &#x0020;
+:--  | :--  | :--  | :--
+2D30 | <span class='nototif normal'>&#x2D30;</span>|&#x003E;|<span class='akatab normal'>&#x2D30;</span>
+2D3B | <span class='nototif normal'>&#x2D3B;</span>|&#x003E;|<span class='utn normal'>&#xED3B;</span>
+2D3C | <span class='nototif normal'>&#x2D3C;</span>|&#x003E;|<span class='akatab normal'>&#x2D3C;</span>
+2D49 | <span class='nototif normal'>&#x2D49;</span>|&#x003E;|<span class='utn normal'>&#xED49;</span>
+2D4D | <span class='nototif normal'>&#x2D4D;</span>|&#x003E;|<span class='akatab normal'>&#x2D4D;</span>
+2D53 | <span class='nototif normal'>&#x2D53;</span>|&#x003E;|<span class='akatab normal'>&#x2D53;</span>
+2D5B | <span class='nototif normal'>&#x2D5B;</span>|&#x003E;|<span class='akatab normal'>&#x2D5B;</span>
+2D5C | <span class='nototif normal'>&#x2D5C;</span>|&#x003E;|<span class='akatab normal'>&#x2D5C;</span>
+2D62 | <span class='nototif normal'>&#x2D62;</span>|&#x003E;|<span class='utn normal'>&#xE03B;</span>
+
 ### <a id="rif"></a>Tarifit, Riffian
+
+_Source_: [Omniglot](https://omniglot.com/writing/riffian.htm) and <a href="#2009">Tarifit New Testament</a>
 
 _Language tag:_ `rif-Tfng`
 
 _Opentype language system tag:_ `BBR `
-
-_Source_: [Omniglot](https://omniglot.com/writing/riffian.htm), [2009 New Testament](https://archive.org/details/newtestament-tarifit)
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
@@ -515,38 +595,17 @@ Latn        | /t&#x0323;/ | /w/ | /y/ | /z/ | /z&#x0323;/ | /ʷ/ |  |  | |  |
 
 <span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt;&lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4A;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5E;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span>
 
-_Source_: <a href="#tarifit2004">A Dictionary of Tarifit Berber (2004).</a> This set of characters is different than the set (dated 2009) above.
-
-Characters | | | | | | | | | &#x0020;
-:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-Tfng       | <span class='nototif normal'>&#x2D30;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='nototif normal'>&#x2D3B;</span> | <span class='nototif normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span> | <span class='nototif normal'>&#x2D40;</span> | <span class='nototif normal'>&#x2D43;</span>
-USV        | 2D30 | 2D33 | 2D37 | 2D39 | 2D3B | 2D3C | 2D3D | 2D40 | 2D43
-Latn        | /a/ | /g/ | /d/ | /dˁ/ | /&#x01dd;/ | /f/ | /k/ | /b, β, p/ | /h, &#x0127;/
-| | | | | | | | |
-Tfng       | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='nototif normal'>&#x2D49;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='nototif normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span> | <span class='nototif normal'>&#x2D52;</span> | <span class='nototif normal'>&#x2D53;</span>
-USV        | 2D45 | 2D47 | 2D49 | 2D4A | 2D4D | 2D4E | 2D4F | 2D52 | 2D53
-Latn        | /x/ | /q/ | /i/ | /ʒ/ | /l/ | /m/ | /n, &#x014b;/ | /ʕ/ | /u/
-| | | | | | | | |
-Tfng        |  <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D56;</span> | <span class='nototif normal'>&#x2D59;</span> | <span class='nototif normal'>&#x2D5B;</span> | <span class='nototif normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5D;</span> | <span class='nototif normal'>&#x2D60;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='nototif normal'>&#x2D62;</span>  
-USV        | 2D54 | 2D56 | 2D59 | 2D5B | 2D5C | 2D5D | 2D60 | 2D61 | 2D62 
-Latn        | /r, rˁ/ | /&#x0263;/ | /s, sˁ/ | /ʃ/ | /t, tˁ/ | /θ/ | /ð, ðˁ/ | /w/ | /y/
-| | | | | | | | |
-Tfng        | <span class='nototif normal'>&#x2D63;</span> | | | | | | | 
-USV        | 2D63 | | | | | | | |   
-Latn        | /z, zˁ/ | | | | | | | |
-| | | | | | | | |
-
 #### Glyph variants and Bi-consonants
 
 Unknown.
 
 ### <a id="shi"></a>Tachelhit
 
+_Source_: [shi](https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml) (SLDR)
+
 _Language tag:_ `shi`
 
 _Opentype language system tag:_ `BBR `
-
-_SLDR:_ [shi](https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml)
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
@@ -571,12 +630,47 @@ Unknown.
 
 <span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt;&lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4A;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span>
 
+### <a id="shy"></a>Tachawit, Tacawit
+
+_Source_: [Savage, 2003 pages 2-3](#savage2003)
+
+This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pages 12,13). It is unknown how widely used this book (or the characters) are actually used.
+
+_Language tag_: `shy-Tfng`
+
+Characters | | | | | | | | | &#x0020;
+:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+Tfng | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xED3B;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span>
+USV  | 2D30 | 2D30 0302 | 2D33 | 2D35        | 2D37 | 2D39 | 2D3B | 2D3C | 2D3D
+Latn | /a/  | /&#x025b;/  | /g/  | /g&#x030C;/ | /d/  | /ḍ/  | /c/  | /f/  | /k/ 
+| | | | | | | | |
+Tfng | <span class='nototif normal'>&#x2D40;</span> | <span class='nototif normal'>&#x2D43;</span> | <span class='nototif normal'>&#x2D45;</span> | <span class='nototif normal'>&#x2D47;</span> | <span class='utn normal'>&#xED49;</span> | <span class='nototif normal'>&#x2D4A;</span> | <span class='akatab normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span>
+USV  | 2D40 | 2D43        | 2D45 | 2D47 | 2D49 | 2D4A | 2D4D | 2D4E | 2D4F
+Latn | /b/  | /h&#x0323;/ | /x/  | /q/  | /i/  | /j/  | /l/  | /m/  | /n/ 
+| | | | | | | | |
+Tfng | <span class='akatab normal'>&#x2D53;</span> | <span class='nototif normal'>&#x2D54;</span> | <span class='nototif normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5B;</span> | <span class='akatab normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5F;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='utn normal'>&#xE03B;</span> | <span class='nototif normal'>&#x2D63;</span>
+USV  | 2D53 | 2D54 | 2D59 | 2D5B | 2D5C | 2D5F        | 2D61 | 2D62 | 2D63
+Latn | /u/  | /r/  | /s/  | /c/  | /t/  | /t&#x0323;/ | /w/  | /y/  | /z/ 
+
+#### Glyph variants
+
+USV |&#x0020; | &#x0020; | &#x0020;
+:--  | :--  | :--  | :--
+2D30 | <span class='nototif normal'>&#x2D30;</span>|&#x003E;|<span class='akatab normal'>&#x2D30;</span>
+2D3B | <span class='nototif normal'>&#x2D3B;</span>|&#x003E;|<span class='utn normal'>&#xED3B;</span>
+2D3C | <span class='nototif normal'>&#x2D3C;</span>|&#x003E;|<span class='akatab normal'>&#x2D3C;</span>
+2D49 | <span class='nototif normal'>&#x2D49;</span>|&#x003E;|<span class='utn normal'>&#xED49;</span>
+2D4D | <span class='nototif normal'>&#x2D4D;</span>|&#x003E;|<span class='akatab normal'>&#x2D4D;</span>
+2D53 | <span class='nototif normal'>&#x2D53;</span>|&#x003E;|<span class='akatab normal'>&#x2D53;</span>
+2D5B | <span class='nototif normal'>&#x2D5B;</span>|&#x003E;|<span class='akatab normal'>&#x2D5B;</span>
+2D5C | <span class='nototif normal'>&#x2D5C;</span>|&#x003E;|<span class='akatab normal'>&#x2D5C;</span>
+2D62 | <span class='nototif normal'>&#x2D62;</span>|&#x003E;|<span class='utn normal'>&#xE03B;</span>
 
 ### <a id="siz"></a>Siwi
 
 _Source_: [Omniglot](https://omniglot.com/writing/siwi.htm)
 
-_Language Tag_: `siz-Tfng`
+_Language tag_: `siz-Tfng`
 
 _Opentype language system tag:_ `BBR `
 
@@ -619,28 +713,27 @@ Unknown.
 
 _Source_: [Omniglot](https://omniglot.com/writing/tamasheq.htm)
 
-_Language Tag_: `taq-Tfng`
+_Language tag_: `taq-Tfng`
 
-_Opentype language system tag:_ `TMH ` and `BBR `
+_Opentype language system tag:_ `TAQ ` (preferred) or `TMH `
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-Tfng       | <span class='nototif normal'>&#x2D30;</span> | <span class='nototif normal'>&#x2D31;</span> | <span class='nototif normal'>&#x2D34;</span> | <span class='nototif normal'>&#x2D36;</span> | <span class='nototif normal'>&#x2D37; / &#x2D38;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='nototif normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3E;</span> | <span class='nototif normal'>&#x2D42;</span> 
-USV        | 2D30 | 2D31 | 2D34 | 2D36 | 2D37 or 2D38 | 2D39 | 2D3C | 2D3E | 2D42 
+Tfng       | <span class='nototif normal'>&#x2D30;</span> | <span class='nototif normal'>&#x2D31;</span> | <span class='nototif normal'>&#x2D34;</span> | <span class='nototif normal'>&#x2D36;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='nototif normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3E;</span> | <span class='nototif normal'>&#x2D42;</span> 
+USV        | 2D30 | 2D31 | 2D34 | 2D36 | 2D37 | 2D39 | 2D3C | 2D3E | 2D42 
 Latn        | /a/ | /b/ | /g/ | /j/ | /d/ | /ḍ/ | /f/ | /k/ | /h/ 
 | | | | | | | | |
- Tfng       |<span class='nototif normal'>&#x2D43;</span> |<span class='nototif normal'>&#x2D44;</span> | <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D48;</span> | <span class='nototif normal'>&#x2D49;</span> | <span class='nototif normal'>&#x2D4B; or &#x2D4C;</span> | <span class='nototif normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span> | <span class='nototif normal'>&#x2D4F;</span> 
-USV        | 2D43 | 2D44| 2D46 | 2D48 | 2D49 | 2D4B or 2D4C | 2D4D | 2D4E | 2D4F 
-Latn        | /h&#x0323;/ | /&#x025B;/ | /x/ | /q/ | /i/ | /z&#x030C;/ | /l/ | /m/ | /n/ 
+ Tfng       |<span class='nototif normal'>&#x2D43;</span> |<span class='nototif normal'>&#x2D44;</span> | <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D48;</span> | <span class='nototif normal'>&#x2D49;</span> | <span class='nototif normal'>&#x2D4B;</span> |<span class='nototif normal'>&#x2D4C;</span> | <span class='nototif normal'>&#x2D4D;</span> | <span class='nototif normal'>&#x2D4E;</span>  
+USV        | 2D43 | 2D44| 2D46 | 2D48 | 2D49 | 2D4B | 2D4C | 2D4D | 2D4E 
+Latn        | /h&#x0323;/ | /&#x025B;/ | /x/ | /q/ | /i/ | /z&#x030C;/ | /z&#x0323;/ | /l/ | /m/ 
 | | | | | | | | |
-Tfng       | <span class='nototif normal'>&#x2D51;</span> | <span class='nototif normal'>&#x2D53;</span> |<span class='nototif normal'>&#x2D54;</span> |<span class='nototif normal'>&#x2D57;</span>| <span class='nototif normal'>&#x2D59;</span> | <span class='nototif normal'>&#x2D5A;</span> | <span class='nototif normal'>&#x2D5B;</span> | <span class='nototif normal'>&#x2D5C;</span> | <span class='nototif normal'>&#x2D5F;</span> 
-USV         | 2D51 | 2D53 | 2D54 | 2D57 | 2D59 | 2D5A | 2D5B | 2D5C | 2D5F 
-Latn        | /&#x014B;/ | /o/ /u/ | /r/ | /&#x0263;/ | /s/ | /s&#x0323;/ | /s&#x030C;/ | /t/ | /t&#x0323;/
+Tfng       | <span class='nototif normal'>&#x2D4F;</span>| <span class='nototif normal'>&#x2D51;</span> | <span class='nototif normal'>&#x2D53;</span> |<span class='nototif normal'>&#x2D54;</span> |<span class='nototif normal'>&#x2D57;</span>| <span class='nototif normal'>&#x2D59;</span> | <span class='nototif normal'>&#x2D5A;</span> | <span class='nototif normal'>&#x2D5B;</span> | <span class='nototif normal'>&#x2D5C;</span> 
+USV         | 2D4F | 2D51 | 2D53 | 2D54 | 2D57 | 2D59 | 2D5A | 2D5B | 2D5C 
+Latn        | /n/ | /&#x014B;/ | /o/ /u/ | /r/ | /&#x0263;/ | /s/ | /s&#x0323;/ | /s&#x030C;/ | /t/ 
 | | | | | | | | |
-Tfng       | <span class='nototif normal'>&#x2D61;</span> | <span class='nototif normal'>&#x2D62;</span> | <span class='nototif normal'>&#x2D63;</span> | <span class='nototif normal'>&#x2D65;</span> |<span class='nototif normal'>&#x2D66;</span> |
-USV         | 2D61 | 2D62 | 2D63 | 2D65 | 2D66 | 
-Latn        | /w/ | /y/ | /z/ | /z&#x0323;/ | /e/ /&#x01DD;/| 
-| | | | | | | | |
+Tfng       | <span class='nototif normal'>&#x2D5F;</span> | <span class='nototif normal'>&#x2D61;</span> | <span class='nototif normal'>&#x2D62;</span> | <span class='nototif normal'>&#x2D63;</span> | <span class='nototif normal'>&#x2D65;</span> |<span class='nototif normal'>&#x2D66;</span> |
+USV         | 2D5F | 2D61 | 2D62 | 2D63 | 2D65 | 2D66 | 
+Latn        | /t&#x0323;/| /w/ | /y/ | /z/ | /z&#x0323;/ | /e/ /&#x01DD;/| 
 
 #### Glyph variants and Bi-consonants
 
@@ -648,32 +741,30 @@ Unknown.
 
 #### Collation
 
-<span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D34;</span> &lt; <span class='nototif normal'>&#x2D36;</span> &lt; <span class='nototif normal'>&#x2D37; / &#x2D38;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3E;</span> &lt; <span class='nototif normal'>&#x2D42;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D46;</span> &lt; <span class='nototif normal'>&#x2D48;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4C; or &#x2D4B;</span> &lt;  <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D51;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D57;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span> &lt; <span class='nototif normal'>&#x2D66;</span>
+<span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt; <span class='nototif normal'>&#x2D34;</span> &lt; <span class='nototif normal'>&#x2D36;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3E;</span> &lt; <span class='nototif normal'>&#x2D42;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D46;</span> &lt; <span class='nototif normal'>&#x2D48;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4C;</span> &lt; <span class='nototif normal'>&#x2D4B;</span> &lt;  <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D51;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D57;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span> &lt; <span class='nototif normal'>&#x2D66;</span>
 
 ### <a id="taq-ML"></a>Tamasheq (Mali)
 
-_Source_: [Savage, 2000](#savage2000)
+_Source_: [Savage, 2000](#savage2000) (pages 145-147, 154)
 
-_Language Tag_: `taq-Tfng-ML`
+_Language tag_: `taq-Tfng-ML`
 
-_Opentype language system tag:_ `TMH ` and `BBR `
-
-_Two of these characters are possibly not right. The second U+2D4D is wrong, but I do not know what it should be. U+2D49 is also possibly not correct. In the source it is reversed._
+_Opentype language system tag:_ `TAQ ` (preferred) or `TMH `
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-Tfng       | <span class='akatab normal' style='font-feature-settings: "cv01" 1'>&#x2D30;</span> | <span class='akatab normal'>&#x2D31;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D37;</span> | <span class='akatab normal'>&#x2D39;</span> |<span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> | <span class='akatab normal'>&#x2D4D;</span> | <span class='akatab normal'>&#x2D4D; ???</span> 
-USV        | 2D30 | 2D31 | 2D36 | 2D37 | 2D39 | 2D3C | 2D3E | 2D4D | 2D4D ???
-Latn        | /&#x0251;/ | /b/ | /&#x0261;/ | /d/ | /ḍ/ | /f/ | /k/ | /l/ | /ḷ/ 
+Tfng       | <span class='akatab normal' style='font-feature-settings: "cv01" 1'>&#x2D30;</span> | <span class='akatab normal'>&#x2D31;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D37;</span> | <span class='akatab normal'>&#x2D39;</span> |<span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> | <span class='akatab normal'>&#x2D42;</span> | <span class='utn normal'>&#x2D46;</span> 
+USV        | 2D30 | 2D31 | 2D36 | 2D37 | 2D39 | 2D3C | 2D3E | 2D42 | 2D46
+Latn        | /&#x0251;/ | /b/ | /&#x0261;/ | /d/ | /ḍ/ | /f/ | /k/ | /h/ | /x/ 
 | | | | | | | | |
- Tfng       | <span class='akatab normal'>&#x2D42;</span> | <span class='akatab normal'>&#x2D46;</span> | <span class='akatab normal'>&#x2D48;</span> | <span class='akatab normal'>&#x2D49;</span> | <span class='akatab normal'>&#x2D4B;</span> | <span class='akatab normal'>&#x2D4C;</span> | <span class='akatab normal'>&#x2D4E;</span> | <span class='akatab normal'>&#x2D4F;</span> | <span class='akatab normal'>&#x2D53;</span>
-USV        | 2D42 | 2D46| 2D48 | 2D49 | 2D4B | 2D4C | 2D4E | 2D4F | 2D53 
-Latn        | /h/ | /x/ | /q/ | /y/ | /z&#x030C;/ | /z&#x0323;/  | /m/ | /n/ | /w/ 
+ Tfng       | <span class='akatab normal'>&#x2D48;</span> | <span class='akatab normal'>&#x2D49;</span> | <span class='akatab normal'>&#x2D4B;</span> | <span class='akatab normal'>&#x2D4C;</span> | <span class='akatab normal'>&#x2D4D;</span> |<span class='akatab normal'>&#x2D4E;</span> | <span class='akatab normal'>&#x2D4F;</span> | <span class='akatab normal'>&#x2D53;</span>| <span class='akatab normal'>&#x2D54;</span>
+USV        | 2D48 | 2D49 | 2D4B | 2D4C | 2D4D | 2D4E | 2D4F | 2D53 |2D54
+Latn        | /q/ | /y/ | /z&#x030C;/ | /z&#x0323;/ | /l/ | /m/ | /n/ | /w/ | /r/
 | | | | | | | | |
-Tfng       | <span class='akatab normal'>&#x2D54;</span> | <span class='akatab normal'>&#x2D57;</span> | <span class='akatab normal'>&#x2D58;</span> | <span class='akatab normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5A;</span> | <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;</span> | <span class='akatab normal'>&#x2D5C;</span> | <span class='akatab normal' style='font-feature-settings: "cv13" 1'>&#x2D5F;</span> | <span class='akatab normal'>&#x2D63;</span> 
-USV         | 2D54 | 2D57 | 2D58 | 2D59 | 2D5A | 2D5B | 2D5C | 2D5F | 2D63 
-Latn        | /r/ | /&#x0263;/ | /j&#x030c;/ | /s/ | /s&#x0323;/ | /s&#x030c;/ | /t/ | /t&#x0323;/ | /z/
-| | | | | | | | |
+Tfng        | <span class='akatab normal'>&#x2D57;</span> | <span class='akatab normal'>&#x2D58;</span> | <span class='akatab normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5A;</span> | <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;</span> | <span class='akatab normal'>&#x2D5C;</span> | <span class='akatab normal' style='font-feature-settings: "cv13" 1'>&#x2D5F;</span> | <span class='akatab normal'>&#x2D63;</span> | <span class='utn normal'>&#xE03A;</span>
+USV         | 2D57 | 2D58 | 2D59 | 2D5A | 2D5B | 2D5C | 2D5F | 2D63 | unencoded?
+Latn        | /&#x0263;/ | /j&#x030c;/ | /s/ | /s&#x0323;/ | /s&#x030c;/ | /t/ | /t&#x0323;/ | /z/ |  /ḷ/
+
 
 #### Glyph variants
 
@@ -749,28 +840,79 @@ Contextual Shaping |     |     |     |     |     |  |
 <span class='akatab normal'>&#x2D42;</span> &lt;
 <span class='akatab normal'>&#x2D58;</span> &lt;
 <span class='akatab normal'>&#x2D4D;</span> &lt;
-<span class='akatab normal'>&#x2D4D; ???</span> &lt;
+<span class='utn normal'>&#xE03A;</span> &lt;
 <span class='akatab normal'>&#x2D53;</span> &lt;
 <span class='akatab normal'>&#x2D49;</span>
 
 ### <a id="tda"></a>Tuareg (Azawagh dialect of Niger-Mali), Tagdal
 
-_**Source**_: [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf) (pages 8 & 31)
+_Source_: <a href="#Andries2004">L2/04-142</a> (pages 8 & 31)
 
-_**Language Tag**_: `tda-Tfng`
+_Language tag_: `tda-Tfng`
 
+Characters | | | | | | | | | &#x0020;
+:------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
+Tfng       | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D39;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> |<span class='akatab normal'>&#x2D40;</span> | <span class='akatab normal'>&#x2D42;</span> | <span class='akatab normal'>&#x2D46;</span> | <span class='akatab normal'>&#x2D48;</span> 
+USV        | 2D30 | 2D36 | 2D39 | 2D3C | 2D3E | 2D40 | 2D42 | 2D46 | 2D48
+Latn       | /a/  | /g/  | /d/  | /f/  | /k/  | /b/  | /h/  | /q/  | /x/ 
+| | | | | | | | |
+Tfng       | <span class='akatab normal'>&#x2D4C;</span> | <span class='akatab normal'>&#x2D4D;</span> | <span class='akatab normal'>&#x2D4E;</span> | <span class='akatab normal'>&#x2D4F;</span> | <span class='akatab normal'>&#x2D53;</span> |<span class='akatab normal'>&#x2D54;</span> | <span class='akatab normal'>&#x2D57;</span> | <span class='akatab normal'>&#x2D59;</span> | <span class='akatab normal'>&#x2D5B;</span> 
+USV        | 2D4C | 2D4D | 2D4E | 2D4F | 2D53 | 2D54 | 2D57 | 2D59 | 2D5B
+Latn       | /j/  | /l/  | /m/  | /n/  | /w/  | /r/  | /&#x0263;/  | /s/  | /s&#x030C;/ 
+| | | | | | | | |
+Tfng       | <span class='akatab normal'>&#x2D5C;</span> | <span class='akatab normal'>&#x2D62;</span> | <span class='akatab normal'>&#x2D63;</span> | <span class='akatab normal'>&#x2D64;</span> | | | | |  
+USV        | 2D5C | 2D62 | 2D63 | 2D64 |  |  |  |  | 
+Latn       | /t/  | /y/  | /z/  | /z&#x0323;/  |  |  |   |   | / 
 
-### <a id="thv"></a> Tahaggart Tamahaq
+#### Glyph variants
+
+USV |&#x0020; | &#x0020; | &#x0020;
+:--  | :--  | :--  | :--
+2D30 | <span class='nototif normal'>&#x2D30;</span>|&#x003E;|<span class='akatab normal'>&#x2D30;</span>
+2D3C | <span class='nototif normal'>&#x2D3C;</span>|&#x003E;|<span class='akatab normal'>&#x2D3C;</span>
+2D4D | <span class='nototif normal'>&#x2D4D;</span>|&#x003E;|<span class='akatab normal'>&#x2D4D;</span>
+2D53 | <span class='nototif normal'>&#x2D53;</span>|&#x003E;|<span class='akatab normal'>&#x2D53;</span>
+
+#### Bi-consonants
+
+Unknown.
+
+#### Collation
+
+<span class='akatab normal'>&#x2D30;</span> &lt;
+<span class='akatab normal'>&#x2D40;</span> &lt;
+<span class='akatab normal'>&#x2D39;</span> &lt;
+<span class='akatab normal'>&#x2D3C;</span> &lt;
+<span class='akatab normal'>&#x2D36;</span> &lt;
+<span class='akatab normal'>&#x2D57;</span> &lt;
+<span class='akatab normal'>&#x2D42;</span> &lt;
+<span class='akatab normal'>&#x2D4C;</span> &lt;
+<span class='akatab normal'>&#x2D3E;</span> &lt;
+<span class='akatab normal'>&#x2D4D;</span> &lt;
+<span class='akatab normal'>&#x2D4E;</span> &lt;
+<span class='akatab normal'>&#x2D4F;</span> &lt;
+<span class='akatab normal'>&#x2D46;</span> &lt;
+<span class='akatab normal'>&#x2D54;</span> &lt;
+<span class='akatab normal'>&#x2D59;</span> &lt;
+<span class='akatab normal'>&#x2D5B;</span> &lt;
+<span class='akatab normal'>&#x2D5C;</span> &lt;
+<span class='akatab normal'>&#x2D53;</span> &lt;
+<span class='akatab normal'>&#x2D48;</span> &lt;
+<span class='akatab normal'>&#x2D62;</span> &lt;
+<span class='akatab normal'>&#x2D63;</span> &lt;
+<span class='akatab normal'>&#x2D64;</span>
+
+### <a id="thv"></a> Tahaggart Tamahaq, Tamahaq (Tuareg)
+
+_Source_: Alphabet Chart (personal files)
 
 _Language tag:_ `thv-Tfng`
 
-_Opentype language system tag:_ `TMH ` and `BBR `
+_Opentype language system tag:_ `THV ` (preferred) or `TMH `
 
 _Keyman keyboard:_ [Tuareg Tifinagh](https://keyman.com/keyboards/tuareg_tifinagh) [taq, thv]
 
 _Font:_ [Akatab](https://software.sil.org/akatab/)
-
-_**Source**_: Possibly from keyboard?
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
@@ -804,13 +946,42 @@ USV |&#x0020; | &#x0020; | &#x0020;
 
 Unknown.
 
+#### Collation
+
+<span class='akatab normal'>&#x2D30;</span> &lt;
+<span class='akatab normal'>&#x2D53;</span> &lt;
+<span class='akatab normal'>&#x2D57;</span> &lt;
+<span class='akatab normal'>&#x2D48;</span> &lt;
+<span class='akatab normal'>&#x2D3E;</span> &lt;
+<span class='akatab normal'>&#x2D42;</span> &lt;
+<span class='akatab normal'>&#x2D46;</span> &lt;
+<span class='akatab normal'>&#x2D5B;</span> &lt;
+<span class='akatab normal'>&#x2D59;</span> &lt;
+<span class='akatab normal'>&#x2D54;</span> &lt;
+<span class='akatab normal'>&#x2D31;</span> &lt;
+<span class='akatab normal'>&#x2D5C;</span> &lt;
+<span class='akatab normal'>&#x2D4F;</span> &lt;
+<span class='akatab normal'>&#x2D4D;</span> &lt;
+<span class='akatab normal'>&#x2D4E;</span> &lt;
+<span class='akatab normal'>&#x2D37;</span> &lt;
+<span class='akatab normal'>&#x2D3C;</span> &lt;
+<span class='akatab normal'>&#x2D39;</span> &lt;
+<span class='akatab normal'>&#x2D5F;</span> &lt;
+<span class='akatab normal'>&#x2D49;</span> &lt;
+<span class='akatab normal'>&#x2D4B;</span> &lt;
+<span class='akatab normal'>&#x2D63;</span> &lt;
+<span class='akatab normal'>&#x2D4C;</span> &lt;
+<span class='akatab normal'>&#x2D50;</span> &lt;
+<span class='akatab normal' style='font-feature-settings: "cv03" 1'>&#x2D34;</span> &lt;
+<span class='akatab normal'>&#x2D36;</span>
+
 ### <a id="thz"></a>Tayart Tamajeq, Tuareg (Aïr dialect of Niger)
 
-_Source_: [Omniglot](https://omniglot.com/writing/tayarttamajeq.htm) and [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf) (pages 8 & 31)
+_Source_: [Omniglot](https://omniglot.com/writing/tayarttamajeq.htm) and <a href="#Andries2004">L2/04-142</a> (pages 8 & 31)
 
-_Language Tag_: `thz-Tfng`
+_Language tag_: `thz-Tfng`
 
-_Opentype language system tag:_ `TMH ` and `BBR `
+_Opentype language system tag:_ `THZ ` (preferred) or `TMH `
 
 The order of these characters is based on Unicode codepoints, not on the order listed in the sources. The two sources have an inconsistent character set. This is a combination of the two. 
 
@@ -866,15 +1037,15 @@ Unknown.
 
 ### <a id="ttq"></a>Tawallammat Tamajaq
 
-_Language Tag_: `ttq-Tfng`, `tmh-Tfng` (macrolanguage)
+_Source_: <a href="#abdoussamed">Abdoussamed</a>, and characters which are included in Tagmukay font and the keyboard below.
 
-_Opentype language system tag:_ `TMH ` and `BBR `
+_Language tag_: `ttq-Tfng`, `tmh-Tfng` (macrolanguage)
+
+_Opentype language system tag:_ `TTQ ` (preferred) or `TMH `
 
 _Keyman keyboard:_ [Tawallammat Tifinagh (SIL)](https://keyman.com/keyboards/sil_tawallammat) [ttq, tzm]
 
 _Font:_ [Tagmukay](https://software.sil.org/tagmukay/)
-
-_**Source**_: Personal communication.
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
@@ -896,19 +1067,19 @@ SIL and APT have differing orthographies for the same language
 
 ##### _SIL_
 
-Vowels |     |     |     |     |     |  |
-:-------   | :-- | :-- | :-- | :-- | :-- | :--
-Tfng | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='akatab normal'>&#x2D30;&#x0306;</span> | <span class='akatab normal'>&#x2D62;&#x0323;</span> | <span class='akatab normal'>&#x2D62;&#x0302;</span> | <span class='akatab normal'>&#x2D53;&#x0302;</span> | <span class='akatab normal'>&#x2D67;&#x0302;</span>
-USV  | 2D30 + 0302 | 2D30 + 0306 | 2D62 + 0323 | 2D62 + 0302 | 2D53 + 0302 | 2D67 + 0302
+Vowels |     |     |     |     |     |
+:--    | :-- | :-- | :-- | :-- | :-- | :--
+Tfng   | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='akatab normal'>&#x2D30;&#x0306;</span> | <span class='akatab normal'>&#x2D62;&#x0323;</span> | <span class='akatab normal'>&#x2D62;&#x0302;</span> | <span class='akatab normal'>&#x2D53;&#x0302;</span> | <span class='akatab normal'>&#x2D67;&#x0302;</span>
+USV    | 2D30 + 0302 | 2D30 + 0306 | 2D62 + 0323 | 2D62 + 0302 | 2D53 + 0302 | 2D67 + 0302
 Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
 
 
 ##### _APT_
 
-Vowels |     |     |     |     |     |  |
-:-------   | :-- | :-- | :-- | :-- | :-- | :--
-Tfng | <span class='akatab normal'>&#x2D30;</span>    | <span class='akatab normal'>&#x2D66;</span>    | <span class='akatab normal'>&#x2D62;</span>    | <span class='akatab normal'>&#x2D67;</span> |  | 
-USV  | 2D30 | 2D66 | 2D62 | 2D67 | | 
+Vowels |     |     |     |     |     |
+:--    | :-- | :-- | :-- | :-- | :-- | :--
+Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#x2D66;</span>    | <span class='utn normal'>&#xED62;</span>    | <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xE014;</span> | <span class='utn normal'>&#xED67;</span>
+USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | not encoded? 
 Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
 
 #### Punctuation
@@ -971,59 +1142,41 @@ These language are reported to have used or are using Tifinagh script. However, 
 
 ### <a id="auj"></a>Awjilah
 
-_Language Tag_: `auj-Tfng` 	
+_Language tag_: `auj-Tfng` 	
 
 ### <a id="gha"></a>Ghadamès
 
-_Language Tag_: `gha-Tfng`
+_Language tag_: `gha-Tfng`
 
 ### <a id="grr"></a>Taznatit
 
-_Language Tag_: `grr-Tfng`
+_Language tag_: `grr-Tfng`
 
 
-### <a id="jbn"></a>Nafusi, Zuwara
+### <a id="jbn"></a>Nafusi (Zuwara dialect)
 
 _Source_: [Omniglot](https://www.omniglot.com/writing/zuwara.htm)
 
-_Language Tag_: `jbn-Tfng`
+_Language tag_: `jbn-Tfng`
 
 Omniglot indicates this language can be written with Tifinagh, but no further information is given.
 
-### <a id="mzb"></a>Tumzabt
-
-_Language Tags_: `mzb-Tfng`
-
-_**Source**_: Savage, 2003. p. 2.
-
-This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pp 12,13). It is unknown how widely used this book (or the characters) are actually used.
-
-
 ### <a id="nxm"></a>Numidian
 
-_Language Tag_: `nxm-Tfng`
-
-### <a id="shy"></a>Tachawit, Tacawit
-
-_Language Tags_: `shy-Tfng`
-
-_**Source**_: Savage, 2003. p. 2.
-
-This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pp 12,13). It is unknown how widely used this book (or the characters) are actually used.
+_Language tag_: `nxm-Tfng`
 
 ### <a id="tez"></a>Tetserret
 
-_Language Tag_: `tez-Tfng`
+_Language tag_: `tez-Tfng`
 
 ### <a id="zen"></a>Zenaga
 
-_Language Tag_: `zen-Tfng`
+_Language tag_: `zen-Tfng`
 
 ## Other Berber languages
 
 These are Berber languages which do not appear to have ever used the Tifinagh script:
 
-- Chenoua `[cnu]`
 - Judeo-Berber `[jbe]`
 - Tagargrent, Ouargli `[oua]`
 - Sened `[sds]`
@@ -1048,27 +1201,28 @@ The following people have generously offered feedback for this document: Jon Cob
 
 [Omniglot - Siwi &#x28;ⴶⵍⴰⵏⵏⵉⵙⵉⵡⴰⵏ / Jlan n isiwan&#x29; &#x5B;siz&#x5D;](https://omniglot.com/writing/siwi.htm)
 
-[Omniglot - Tamasheq &#x28;Tafaghist&#x29; &#x5B;taq&#x5D;](https://omniglot.com/writing/tamasheq.htm) (but could be other languages?)
+[Omniglot - Tamasheq &#x28;Tafaghist&#x29; &#x5B;taq&#x5D;](https://omniglot.com/writing/tamasheq.htm) 
 
 [Omniglot - Tayart Tamajeq &#x28;Tamajeq, ⵜⵎⵌⵆ, ثمجق&#x200e;&#x29; &#x5B;thz&#x5D;](https://omniglot.com/writing/tayarttamajeq.htm)
 
-[Tifinaghe-IRCAM &#x5B;tzm&#x5D;](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html)
+<a id="abdoussamed"></a>Abdoussamed, Ghomar; Weber, Christiane. 1997. Lisons le tǝmajǝq en shifinagh vocalisé.
 
-Aghali-Zakara, M. 1994. "Graphies berbères et dilemme de diffusion: interactions des alphabets latin, ajami et tifinagh, Etudes et Documents berbères, 11, 1994 : 107-121.
+<a id="Andries2004"></a>Andries, P (on behalf of Morocco-Canada-France). 2004-06-06. Proposal to add the Tifinagh Script. [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf) (accessed 19-Jul-2024)
 
-Andries, P. 2004-06-06. Proposal to add the Tifinagh Script. N2739R ISO/IEC JTC 1/SC 2/WG 2 N2739. http://anubis.dkuug.dk/jtc1/sc2/wg2/docs/n2739.pdf.
+____. 2005. [Inventaire des oeils de la police pan-berbère Hapax Berbère](http://hapax.qc.ca/polices/inventaire-des-oeils.pdf) (accessed 19-Jul-2024)
 
-____. 2005. Inventaire des oeils de la police pan-berbère Hapax Berbère. http://hapax.qc.ca/polices/inventaire-des-oeils.pdf (accessed 19-May-2008)
+<a id="2009"></a>DHIMH Multimedia. 2009. [Tarifit (rif) New Testament](https://archive.org/details/newtestament-tarifit) (accessed 19-Jul-2024)
 
-<a id="ishida_zgh"></a>Ishida, Richard. [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html)
-
-<a id="tarifit2004"></a>McClelland III, Clive W. 2004. A Dictionary of Tarifit Berber. The Edwin Mellen Press. Lewiston, New York.
-
-Morocco-Canada-France (prepared by P. Andries). 2004. Proposal to add the Tifinagh Script. [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf)
+<a id="ishida_zgh"></a>Ishida, Richard. [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html) (accessed 19-Jul-2024)
 
 <a id="savage2000"></a>Savage, Andrew. 2000. Writing Tuareg Vowels. Advantages and Disadvantages of the Three Script Options: Arabic, Tifinagh and Roman. Submitted in partial fulfillment of the requirements for the degree of Master of Letters in Linguistics from the Univerisity of New England, New South Wales, Australia.
 
-[2009 New Testament](https://archive.org/details/newtestament-tarifit)
+<a id="savage2003"></a>Savage, Andrew. 2003. Tifinagh Unicode Propositions, Stanthorpe, [L2/03-143](http://www.unicode.org/L2/L2003/03143-tifinagh-samples.pdf) (accessed 19-Jul-2024)
 
-2004. [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf)
+<a id="sahraoui"></a>Sahraoui, Souad. 2021. [English and the Languages of Algeria: Suggestions towards a New Language Policy](https://www.academia.edu/75532503/English_and_the_Languages_of_Algeria_Suggestions_towards_a_New_Language_Policy) (accessed 19-Jul-2024)
+
+<a id="snima"></a>Snima. 2004. [Projet de norme marocaine: Alphabet tifinaghe](https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf) (accessed 19-Jul-2024)
+
+<a id="ircam"></a>[Tifinaghe-IRCAM &#x5B;tzm&#x5D;](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html) (accessed 19-Jul-2024)
+
 
