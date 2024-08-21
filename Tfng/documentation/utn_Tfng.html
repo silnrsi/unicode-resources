@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Unicode Technical Note xx - Representing Tifinagh in Unicode (proposed draft)</title>
+    <title>Unicode Technical Note xx - Representing Tifinagh in Unicode</title>
     <meta name="author" content="SIL Writing Systems Technology">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link rel="stylesheet" href="./assets/css/theme.css">
@@ -13,11 +13,12 @@
 <article class="article">
     <header>
         <h1 class="title">Unicode Technical Note xx - Representing
-Tifinagh in Unicode (proposed draft)</h1>
+Tifinagh in Unicode</h1>
     </header>
-    <p><em>Lorna Evans, SIL International (25-Jul-2024)</em></p>
-    <p><em>This is a work in progress. Additional information on
-    language usage is most welcome.</em></p>
+    <p><em>Lorna Evans, SIL Global (20-Aug-2024)</em></p>
+    <p><em>Further information, corrections, and additions on script
+    use, as well as information on language usage is most
+    welcome.</em></p>
     <ul>
     <li><a href="#intro">Introduction</a></li>
     <li><a href="#uni">The Unicode Model</a>
@@ -78,8 +79,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <h2 id="introduction"><a id="intro"></a>Introduction</h2>
     <p>Tifinagh is encoded in the U+2D30..U+2D7F block of Unicode. The
     encoding in the Tifinagh block is based on the modern alphabet
-    called Neo-Tifinagh. It also includes the characters required for
-    modern Tuareg.</p>
+    called Neo-Tifinagh. It also includes characters for modern attested
+    Tuareg.</p>
     <p>This document gives guidance on the encoding of <em>modern
     orthographies</em> using the Tifinagh script (no attempt is made to
     document all the variants used in ancient Tifinagh orthographies).
@@ -102,12 +103,20 @@ Tifinagh in Unicode (proposed draft)</h1>
     confusion when adjacent to each other: <span
     class="nototif normal">ⴰⵓⴾⵆⵘⴰ</span>. Sidebearings on characters are
     still important.</p>
+    <p>In some fonts the characters do not rest on a baseline. They
+    could be described as centered. For example <span
+    class="akatab normal">.ⴱⴰⴾⵂⵧⵥ.</span> This design is more consistent
+    with the traditional handwritten Tifinagh styles.</p>
+    <p>Neo-Tifinagh fonts generally have a distinct baseline: <span
+    class="nototif normal">.ⴱⴰⴾⵂⵧⵥ.</span></p>
     <h3 id="vowels"><a id="vowel"></a>Vowels</h3>
     <p>Vowels are not as clearly defined. Four vowels have been encoded
     for Neo-Tifinagh. However, different traditional Tifinagh
     orthographies may demonstrate vowels using combining marks in
     different ways. These vowels are primarily used as an aid in
-    learning to read.</p>
+    learning to read. Several competing systems
+    (<a href="#Andries2004">L2/04-142</a> (pages 6, 7, &amp; 30)) have
+    been advocated:</p>
     <h4 id="sil-niger"><em>SIL-Niger</em></h4>
     <table style="width:100%;">
     <colgroup>
@@ -196,7 +205,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;">2D62</td>
     <td style="text-align: left;">2D67</td>
     <td style="text-align: left;">2D53</td>
-    <td style="text-align: left;">not encoded?</td>
+    <td style="text-align: left;">2D67</td>
     </tr>
     </tbody>
     </table>
@@ -243,71 +252,32 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     </tbody>
     </table>
+    <p>The combining marks required for these three systems would
+    be:</p>
+    <ul>
+    <li>0302 COMBINING CIRCUMFLEX ACCENT</li>
+    <li>0306 COMBINING BREVE</li>
+    <li>0307 COMBINING DOT ABOVE</li>
+    <li>0308 COMBINING DIAERESIS</li>
+    <li>0323 COMBINING DOT BELOW</li>
+    </ul>
+    <p>There is some indication in the <a href="#unicode">Unicode
+    Standard (chapter 19)</a> that the following two combining marks may
+    also be used:</p>
+    <ul>
+    <li>0304 COMBINING MACRON</li>
+    <li>0309 COMBINING HOOK ABOVE</li>
+    </ul>
     <h3 id="punctuation"><a id="punct"></a>Punctuation</h3>
-    <p>Western-style punctuation signs are used in Tifinagh. Words are
-    separated by a space.</p>
+    <p>Western-style punctuation signs are used in Tifinagh. These
+    include: <span class="nototif normal">. , : ; ? ! ( ) « » „ ”
+    …</span></p>
+    <p>Modern usage separates words by a space.</p>
     <p><em>A few languages use a special separator mark which has been
-    encoded in the Tifinagh block.</em> The languages using the
-    separator mark will be indicated in the section on that language.
-    Otherwise, punctuation is not listed in each section.</p>
-    <table style="width:100%;">
-    <colgroup>
-    <col style="width: 17%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    <col style="width: 10%" />
-    </colgroup>
-    <thead>
-    <tr class="header">
-    <th style="text-align: left;">Punctuation</th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    <th style="text-align: left;"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="odd">
-    <td style="text-align: left;">Tfng</td>
-    <td style="text-align: left;"><span
-    class="nototif normal">.</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">,</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">;</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">:</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">?</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">!</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">...</span></td>
-    <td style="text-align: left;"><span
-    class="nototif normal">⵰</span></td>
-    </tr>
-    <tr class="even">
-    <td style="text-align: left;">USV</td>
-    <td style="text-align: left;">002E</td>
-    <td style="text-align: left;">002C</td>
-    <td style="text-align: left;">003B</td>
-    <td style="text-align: left;">003A</td>
-    <td style="text-align: left;">003F</td>
-    <td style="text-align: left;">0021</td>
-    <td style="text-align: left;">2026</td>
-    <td style="text-align: left;">2D70</td>
-    </tr>
-    </tbody>
-    </table>
+    encoded in the Tifinagh block.</em> That character is U+2D70 (<span
+    class="nototif normal">⵰</span>) The languages using the separator
+    mark will be indicated in the section on that language. Otherwise,
+    punctuation is not listed in each section.</p>
     <h4 id="digits">Digits</h4>
     <p>There is no common way to write numbers using Tifinagh script.
     The IRCAM Tifinagh uses the usual Western-style digits.</p>
@@ -318,17 +288,21 @@ Tifinagh in Unicode (proposed draft)</h1>
     relating to <a href="#dir">Writing Direction</a>, there are variants
     which are mirrored or turned for right to left text or even for
     vertical text. The default directional variants are included below
-    under <a href="#dir_var">Directional Glyphs</a>.</p>
+    under <a href="#dir_var">Directional Glyphs</a>. In general, when a
+    variant is used for a glyph, the same principle would apply for
+    similar glyphs. For example, if a round glyph with a horizontal bar
+    has a square variant, then another round glyph with a vertical bar
+    would likely be square.</p>
     <p>Because these glyphs are taken from various fonts, the height of
     a particular glyph should not be considered significant.</p>
     <table>
     <colgroup>
-    <col style="width: 11%" />
-    <col style="width: 17%" />
-    <col style="width: 17%" />
-    <col style="width: 17%" />
-    <col style="width: 17%" />
-    <col style="width: 17%" />
+    <col style="width: 9%" />
+    <col style="width: 19%" />
+    <col style="width: 19%" />
+    <col style="width: 19%" />
+    <col style="width: 19%" />
+    <col style="width: 14%" />
     </colgroup>
     <thead>
     <tr class="header">
@@ -581,9 +555,17 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>Although rare, tri-consonants do exist. This document will use
     the term bi-consonant even when it may be a tri-consonant.</p>
     <p>This chart does not demonstrate all of the possible historical
-    glyph variants. Although this chart demonstrates the use of U+2D7F
-    TIFINAGH CONSONANT JOINER, fonts should support either U+2D7F
-    (obligatory bi-consonants) or U+200D (optional bi-consonants).</p>
+    glyph variants. It should be noted that if the base glyph is a
+    variant that will affect the variant for the bi-consonant. For
+    example, if a language uses a square variant of <span
+    class="nototif normal">ⵙ</span> (<span class="utn normal"></span>),
+    then the bi-consonant should also be square (<span
+    class="utn normal"></span> instead of <span
+    class="nototif normal">ⵙ⵿ⵜ</span>). Glyph variants for the base
+    characters are not shown in the chart below.</p>
+    <p>Although this chart demonstrates the use of U+2D7F TIFINAGH
+    CONSONANT JOINER, fonts could support both U+2D7F (obligatory
+    bi-consonants) and U+200D (optional bi-consonants).</p>
     <table>
     <colgroup>
     <col style="width: 40%" />
@@ -634,21 +616,41 @@ Tifinagh in Unicode (proposed draft)</h1>
     <span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
-    <td style="text-align: left;">5 /ft/ 2D3C 2D5C</td>
+    <td style="text-align: left;">5a /ft/ 2D3C 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⴼ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
-    <td style="text-align: left;"><span class="nototif normal">ⴼ⵿ⵜ</span>
-    <span class="akatab normal">ⴼ⵿ⵜ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv02&quot; 1">ⴼ⵿ⵜ</span> <span
-    class="akatab normal"
-    style="font-feature-settings: &quot;cv35&quot; 1">ⴼ⵿ⵜ</span> <span
-    class="akatab normal"
-    style="font-feature-settings: &quot;cv35&quot; 2">ⴼ⵿ⵜ</span> <span
-    class="akatab normal"
-    style="font-feature-settings: &quot;cv14&quot; 1">ⴼ⵿ⵜ</span></td>
+    <td style="text-align: left;"><span
+    class="nototif normal">ⴼ⵿ⵜ</span></td>
     </tr>
     <tr class="even">
+    <td style="text-align: left;">5b</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="akatab normal">ⴼ⵿ⵜ</span>
+    <span class="akatab normal"
+    style="font-feature-settings: &quot;cv35&quot; 1">ⴼ⵿ⵜ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">5c</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="akatab normal"
+    style="font-feature-settings: &quot;cv02&quot; 1">ⴼ⵿ⵜ</span> <span
+    class="akatab normal"
+    style="font-feature-settings: &quot;cv35&quot; 2">ⴼ⵿ⵜ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">5d</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="akatab normal"
+    style="font-feature-settings: &quot;cv14&quot; 1">ⴼ⵿ⵜ</span></td>
+    </tr>
+    <tr class="odd">
     <td style="text-align: left;">6 /bt/ 2D40 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵀ + ⵿ +
     ⵜ</span></td>
@@ -656,7 +658,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="nototif normal">ⵀ⵿ⵜ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">7 /yt/ 2D49 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵉ + ⵿ +
     ⵜ</span></td>
@@ -664,7 +666,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵉ⵿ⵜ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">8 /ẓt/ 2D4B 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵋ + ⵿ +
     ⵜ</span></td>
@@ -672,7 +674,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵋ⵿ⵜ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">9 /ẓt/ 2D4C 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵌ + ⵿ +
     ⵜ</span></td>
@@ -681,7 +683,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <span class="akatab normal">ⵌ⵿ⵜ</span> <span class="akatab normal"
     style="font-feature-settings: &quot;cv40&quot; 1">ⵌ⵿ⵜ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">10 /lk/ 2D4D 2D3E</td>
     <td style="text-align: left;"><span class="nototif normal">ⵍ + ⵿ +
     ⴾ</span></td>
@@ -689,7 +691,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵍ⵿ⴾ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">11 /lt/ 2D4D 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵍ + ⵿ +
     ⵜ</span></td>
@@ -702,7 +704,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="akatab normal"
     style="font-feature-settings: &quot;cv38&quot; 3">ⵍ⵿ⵜ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">12 /mb/ 2D4E 2D40</td>
     <td style="text-align: left;"><span class="nototif normal">ⵎ + ⵿ +
     ⵀ</span></td>
@@ -710,7 +712,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="nototif normal">ⵎ⵿ⵀ</span>
     <span class="akatab normal">ⵎ⵿ⵀ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">13 /ms/ 2D4E 2D59</td>
     <td style="text-align: left;"><span class="nototif normal">ⵎ + ⵿ +
     ⵙ</span></td>
@@ -718,7 +720,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵎ⵿ⵙ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">14 /mt/ 2D4E 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵎ + ⵿ +
     ⵜ</span></td>
@@ -732,7 +734,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="akatab normal"
     style="font-feature-settings: &quot;cv34&quot; 3">ⵎ⵿ⵜ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">15 /nb/ 2D4F 2D31</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴱ</span></td>
@@ -740,7 +742,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="nototif normal">ⵏ⵿ⴱ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">16 /ng/ 2D4F 2D34</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴴ</span></td>
@@ -748,7 +750,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="akatab normal">ⵏ⵿ⴴ</span>
     <span class="utn normal"></span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">17 /nġ/ 2D4F 2D36</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴶ</span></td>
@@ -757,7 +759,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <span class="akatab normal">ⵏ⵿ⴶ</span> <span class="akatab normal"
     style="font-feature-settings: &quot;cv43&quot; 1">ⵏ⵿ⴶ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">18 /nd/ 2D4F 2D37</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴷ</span></td>
@@ -766,7 +768,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <span class="akatab normal"
     style="font-feature-settings: &quot;cv41&quot; 1">ⵏ⵿ⴷ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">19 /nd/ 2D4F 2D38</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴸ</span></td>
@@ -774,7 +776,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span class="akatab normal">ⵏ⵿ⴸ</span>
     <span class="nototif normal">ⵏ⵿ⴸ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">20 /nd/ 2D4F 2D39</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⴹ</span></td>
@@ -878,7 +880,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     style="font-feature-settings: &quot;cv37&quot; 1">ⵏ⵿ⵜ</span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;">30 /č/ 2D4F 2D5E</td>
+    <td style="text-align: left;">30 /nč/ 2D4F 2D5E</td>
     <td style="text-align: left;"><span class="nototif normal">ⵏ + ⵿ +
     ⵞ</span></td>
     <td style="text-align: left;">→</td>
@@ -988,7 +990,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     </thead>
     <tbody>
     <tr class="odd">
-    <td style="text-align: left;">41 /rt/ 2D54 2D5C</td>
+    <td style="text-align: left;">41a /rt/ 2D54 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵔ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
@@ -996,10 +998,16 @@ Tifinagh in Unicode (proposed draft)</h1>
     <span class="akatab normal"
     style="font-feature-settings: &quot;cv32&quot; 1">ⵔ⵿ⵜ</span> <span
     class="akatab normal"
-    style="font-feature-settings: &quot;cv32&quot; 2">ⵔ⵿ⵜ</span> <span
-    class="utn normal"></span></td>
+    style="font-feature-settings: &quot;cv32&quot; 2">ⵔ⵿ⵜ</span></td>
     </tr>
     <tr class="even">
+    <td style="text-align: left;">41b</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
+    </tr>
+    <tr class="odd">
     <td style="text-align: left;">42 /gt/ 2D56 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵖ + ⵿ +
     ⵜ</span></td>
@@ -1007,7 +1015,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="nototif normal">ⵖ⵿ⵜ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">43 /sk/ 2D59 2D3E</td>
     <td style="text-align: left;"><span class="nototif normal">ⵙ + ⵿ +
     ⴾ</span></td>
@@ -1015,7 +1023,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵙ⵿ⴾ</span></td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
     <td style="text-align: left;">44 /sn/ 2D59 2D4F</td>
     <td style="text-align: left;"><span class="nototif normal">ⵙ + ⵿ +
     ⵏ</span></td>
@@ -1023,8 +1031,8 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="nototif normal">ⵙ⵿ⵏ</span></td>
     </tr>
-    <tr class="odd">
-    <td style="text-align: left;">45 /st/ 2D59 2D5C</td>
+    <tr class="even">
+    <td style="text-align: left;">45a /st/ 2D59 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵙ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
@@ -1034,23 +1042,35 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="akatab normal"
     style="font-feature-settings: &quot;cv33&quot; 2">ⵙ⵿ⵜ</span> <span
     class="akatab normal"
-    style="font-feature-settings: &quot;cv33&quot; 3">ⵙ⵿ⵜ</span> <span
-    class="utn normal"></span></td>
+    style="font-feature-settings: &quot;cv33&quot; 3">ⵙ⵿ⵜ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">45b</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="even">
-    <td style="text-align: left;">46 /šk/ 2D5B 2D3E</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵛ + ⵿ +
+    <td style="text-align: left;">46a /šk/ 2D5B 2D3E</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
     ⴾ</span></td>
     <td style="text-align: left;">→</td>
     <td style="text-align: left;"><span class="akatab normal">ⵛ⵿ⴾ</span>
     <span class="akatab normal"
-    style="font-feature-settings: &quot;cv47&quot; 1">ⵛ⵿ⴾ</span> <span
-    class="akatab normal"
+    style="font-feature-settings: &quot;cv47&quot; 1">ⵛ⵿ⴾ</span></td>
+    </tr>
+    <tr class="odd">
+    <td style="text-align: left;">46b</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⴾ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="akatab normal"
     style="font-feature-settings: &quot;cv47&quot; 2">ⵛ⵿ⴾ</span> <span
     class="akatab normal"
     style="font-feature-settings: &quot;cv12&quot; 1">ⵛ⵿ⴾ</span></td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
     <td style="text-align: left;">47 /šn/ 2D5B 2D4F</td>
     <td style="text-align: left;"><span class="nototif normal">ⵛ + ⵿ +
     ⵏ</span></td>
@@ -1058,15 +1078,21 @@ Tifinagh in Unicode (proposed draft)</h1>
     <td style="text-align: left;"><span
     class="akatab normal">ⵛ⵿ⵏ</span></td>
     </tr>
-    <tr class="even">
-    <td style="text-align: left;">48 /št/ 2D5B 2D5C</td>
+    <tr class="odd">
+    <td style="text-align: left;">48a /št/ 2D5B 2D5C</td>
     <td style="text-align: left;"><span class="nototif normal">ⵛ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
     <td style="text-align: left;"><span class="nototif normal">ⵛ⵿ⵜ</span>
     <span class="akatab normal">ⵛ⵿ⵜ</span> <span class="akatab normal"
-    style="font-feature-settings: &quot;cv48&quot; 1">ⵛ⵿ⵜ</span> <span
-    class="utn normal"></span></td>
+    style="font-feature-settings: &quot;cv48&quot; 1">ⵛ⵿ⵜ</span></td>
+    </tr>
+    <tr class="even">
+    <td style="text-align: left;">48b</td>
+    <td style="text-align: left;"><span class="utn normal"> + ⵿ +
+    ⵜ</span></td>
+    <td style="text-align: left;">→</td>
+    <td style="text-align: left;"><span class="utn normal"></span></td>
     </tr>
     <tr class="odd">
     <td style="text-align: left;">49 /ts/ 2D5C 2D59</td>
@@ -1094,7 +1120,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     <tr class="even">
     <td style="text-align: left;">52 /zt/ 2D63 2D5C</td>
-    <td style="text-align: left;"><span class="nototif normal">ⵣ + ⵿ +
+    <td style="text-align: left;"><span class="akatab normal">ⵣ + ⵿ +
     ⵜ</span></td>
     <td style="text-align: left;">→</td>
     <td style="text-align: left;"><span
@@ -1303,17 +1329,37 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>‮ <!-- 
     Using hard-coded directional characters in the HTML code (as illustrated above) can prevent accidental deletion of invisible characters.
     --></p>
+    <p>Each glyph would be designed for the left to right behavior as
+    well as another glyph for the right to left behavior. These could be
+    called <code>yadd-tfng</code> and <code>yadd-tfng.rtl</code>.</p>
+    <p>These would then need to be added to a GSUB lookup for
+    substitution:</p>
+    <pre><code>        sub yadd-tfng            by yadd-tfng.rtl ;            #uni2D39</code></pre>
+    <p>That lookup would then be used in the <code>rtla</code> feature
+    in GSUB.</p>
+    <p>It is beyond the scope of this document to give more detailed
+    information about OpenType support for Tifinagh.</p>
     <h3 id="directional-glyphs"><a id="dir_var"></a>Directional
     Glyphs</h3>
-    <p>Because the script can be written in multiple directions, the
-    glyphs must be mirrored for right-to-left text, turned 90° for
-    bottom-to-top text, or turned -90° for top-to-bottom text. Below is
-    a sampling of some of the different shapes required for differing
+    <p>The script can be written horizontally from left-to-right, from
+    right-to-left, vertically (bottom-to-top, top-to-bottom) or even in
+    boustrophedon, circular, or spiral. Because the script can be
+    written in multiple directions, the glyphs must be mirrored for
+    right-to-left text, turned anti-clockwise 90° for bottom-to-top
+    text, or turned clockwise 90° for top-to-bottom text. Below is a
+    sampling of some of the different shapes required for differing
     directions. Some glyphs, like a circle, could look the same in any
     direction. However, unless the glyphs are monoline, there will be
     slight variations in the glyph design. Where there are glyph
     variants, the number of glyphs required for different directions
     will increase exponentially.</p>
+    <p>For vertical writing, the glyphs should be designed on a center
+    baseline. <a href="#unknown">A Shifinagh Handbook</a> (page 3)
+    indicates that when writing top to bottom “You write away from
+    yourself. Do not imagine a base line for the letters, but a centre
+    line.” It is difficult to know where punctuation should be
+    positioned in vertical writing, since the majority of vertical
+    writing were ancient rock inscriptions.</p>
     <table>
     <colgroup>
     <col style="width: 14%" />
@@ -3620,6 +3666,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     <h4 id="glyph-variants-and-bi-consonants">Glyph variants and
     Bi-consonants</h4>
     <p>Unknown.</p>
+    <em>Sample
+    graphic</em></br><img src="assets/images/rif_NT_John1_1-4.png" title="fig:" style="width:80%;height:80%;" alt="Tarafit sample" />
+    <figcaption>
+    John 1:1-4 (<a href="#2009">Tarifit (rif) New Testament</a>).
+    </figcaption>
     <h3 id="tachelhit"><a id="shi"></a>Tachelhit</h3>
     <p><em>Source</em>: <a
     href="https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml">shi</a>
@@ -5931,6 +5982,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="akatab normal">ⵐ</span> &lt; <span class="akatab normal"
     style="font-feature-settings: &quot;cv03&quot; 1">ⴴ</span> &lt;
     <span class="akatab normal">ⴶ</span></p>
+    <em>Sample graphic
+    (right-to-left)</em></br><img src="assets/images/thv_TamahaqHoggar_1231.png" title="fig:" style="width:80%;height:80%;" alt="Tamahaq: Hoggar sample" />
+    <figcaption>
+    Mark 1:1-4 (UBS).
+    </figcaption>
     <h3
     id="tayart-tamajeq-tuareg-air-dialect-of-niger"><a id="thz"></a>Tayart
     Tamajeq, Tuareg (Aïr dialect of Niger)</h3>
@@ -6322,6 +6378,11 @@ Tifinagh in Unicode (proposed draft)</h1>
     class="nototif normal">ⵣ</span> &lt; <span
     class="nototif normal">ⵤ</span> &lt; <span
     class="nototif normal">ⵥ</span></p>
+    <em>Sample
+    graphic</em></br><img src="assets/images/thz_TamahaqAir_1230.png" title="fig:" style="width:80%;height:80%;" alt="Tamahaq: Aïr sample" />
+    <figcaption>
+    John 1:1-4 (UBS).
+    </figcaption>
     <h3 id="tawallammat-tamajaq"><a id="ttq"></a>Tawallammat
     Tamajaq</h3>
     <p><em>Source</em>: <a href="#abdoussamed">Abdoussamed</a>, and
@@ -6527,6 +6588,7 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p>SIL and APT have differing orthographies for the same
     language</p>
     <h5 id="sil"><em>SIL</em></h5>
+    <p>See sample images at bottom of this section.</p>
     <table style="width:100%;">
     <colgroup>
     <col style="width: 14%" />
@@ -7011,6 +7073,17 @@ Tifinagh in Unicode (proposed draft)</h1>
     </tr>
     </tbody>
     </table>
+    <em>Sample graphic (Reading
+    Book)</em></br><img src="assets/images/ttq_ReadingBook_1997.png" title="fig:" style="width:80%;height:80%;" alt="Lisons le Temajeq sample" />
+    <figcaption>
+    <a href="#abdoussamed">Lisons le tǝmajǝq en shifinagh vocalisé
+    (1997).</a>
+    </figcaption>
+    <em>Sample
+    graphic</em></br><img src="assets/images/ttq_Health_2005.png" title="fig:" style="width:80%;height:80%;" alt="Ahol y aɣaywan fəl ataɣalla sample" />
+    <figcaption>
+    <a href="#alhassane">Ahol y aɣaywan fəl ataɣalla (2005), p. 15.</a>
+    </figcaption>
     <h2
     id="other-languages-with-little-or-no-information"><a id="other"></a>Other
     languages with little or no information</h2>
@@ -7048,8 +7121,12 @@ Tifinagh in Unicode (proposed draft)</h1>
     <li>Temacine Tamazight <code>[tjo]</code></li>
     </ul>
     <h2 id="acknowledgements"><a id="ack"></a>Acknowledgements</h2>
-    <p>The following people have generously offered feedback for this
-    document: Jon Coblentz.</p>
+    <p>The following people have kindly offered feedback for this
+    document: Jon Coblentz, Peter Constable, Ned Holbrook, Richard
+    Ishida, Neil Patel, and Roozbeh Pournader. In addition, the author
+    is grateful to Patrick Andries and Andrew Savage for their generous
+    contributions to the extensive list of bi-consonants included in
+    this document.</p>
     <h2 id="references"><a id="ref"></a>References</h2>
     <p><a href="https://omniglot.com/writing/tamazight.htm">Omniglot -
     Central Atlas Tamazight (Tamaziɣt / ⵜⴰⵎⴰⵣⵉⵖⵜ) [tzm]</a></p>
@@ -7076,9 +7153,17 @@ Tifinagh in Unicode (proposed draft)</h1>
     href="http://hapax.qc.ca/polices/inventaire-des-oeils.pdf">Inventaire
     des oeils de la police pan-berbère Hapax Berbère</a> (accessed
     19-Jul-2024)</p>
+    <p>Blanco, Juan Luis. 2014. <a
+    href="https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script">Tifinagh
+    &amp; the IRCAM. Explorations in Cursiveness and Bicameralism in the
+    Tifinagh Script</a>. [Unpublished Master’s thesis]. University of
+    Reading. (accessed 21-Aug-2024)</p>
     <p><a id="2009"></a>DHIMH Multimedia. 2009. <a
     href="https://archive.org/details/newtestament-tarifit">Tarifit
     (rif) New Testament</a> (accessed 19-Jul-2024)</p>
+    <p><a id="alhassane"></a>Hamed-Ittyoube, Alhassane. 2005. Ahol y
+    aɣaywan fəl ataɣalla (Conseils pour la famille sur le paludisme).
+    SIL Niger.</p>
     <p><a id="ishida_zgh"></a>Ishida, Richard. <a
     href="https://r12a.github.io/scripts/tfng/zgh.html">Tamazight:
     Neo-Tifinagh orthography notes</a> (accessed 19-Jul-2024)</p>
@@ -7102,6 +7187,18 @@ Tifinagh in Unicode (proposed draft)</h1>
     <p><a id="ircam"></a><a
     href="https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html">Tifinaghe-IRCAM
     [tzm]</a> (accessed 19-Jul-2024)</p>
+    <p><a id="unicode"></a><a
+    href="https://unicode-org.github.io/core-spec/chapter-19/#G18607">Unicode
+    (chapter 19)</a> The Unicode Consortium. The Unicode Standard,
+    Version 16.0.0 (South San Francisco, CA: The Unicode Consortium,
+    2024.)</p>
+    <p>United Bible Societies. 1972. <a
+    href="https://archive.org/details/B-001-001-424/page/2/mode/2up">The
+    Book of a Thousand Tongues</a></p>
+    <p><a id="unknown"></a>Unknown. undated. A Shifinagh Handbook. Unit
+    2. An Introduction to Shifinagh, the Tamajeq Writing. (This document
+    is specifically for use in Niger. filename:Anonymous A Shifinagh
+    Handbook 1717.pdf)</p>
     <footer class="footer">
         <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Tfng/" title="" class="active">unicode-resources/Tfng</a> and is copyright © 2010-2024 SIL International.</p>
     </footer>

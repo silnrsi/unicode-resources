@@ -1,10 +1,10 @@
 ---
-title: Unicode Technical Note xx - Representing Tifinagh in Unicode (proposed draft)
+title: Unicode Technical Note xx - Representing Tifinagh in Unicode
 ---
 
-_Lorna Evans, SIL International (25-Jul-2024)_
+_Lorna Evans, SIL Global (20-Aug-2024)_
 
-_This is a work in progress. Additional information on language usage is most welcome._
+_Further information, corrections, and additions on script use, as well as information on language usage is most welcome._
 
 - <a href="#intro">Introduction</a>
 - <a href="#uni">The Unicode Model</a>
@@ -50,7 +50,7 @@ _This is a work in progress. Additional information on language usage is most we
 
 ## <a id="intro"></a>Introduction
 
-Tifinagh is encoded in the U+2D30..U+2D7F block of Unicode. The encoding in the Tifinagh block is based on the modern alphabet called Neo-Tifinagh. It also includes the characters required for modern Tuareg.
+Tifinagh is encoded in the U+2D30..U+2D7F block of Unicode. The encoding in the Tifinagh block is based on the modern alphabet called Neo-Tifinagh. It also includes characters for modern attested Tuareg.
 
 This document gives guidance on the encoding of _modern orthographies_ using the Tifinagh script (no attempt is made to document all the variants used in ancient Tifinagh orthographies). Since the script is used for a number of orthographies covering different languages, the development of this document is ongoing. In terms of the Unicode standard, this document is purely informative since it is concerned with issues not covered by that standard. 
 
@@ -64,9 +64,13 @@ The basic consonants are relatively obvious and can be discovered by viewing the
 
 **Design**: There can be some design issues related to "dotted" characters especially when the design is similar. When these characters appear together, they can be difficult to read unless care is taken by the type designer to change the size or spacing of the dots: <span class='akatab normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. The design of the Neo-Tifinagh dotted characters reduces the level of confusion when adjacent to each other: <span class='nototif normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. Sidebearings on characters are still important.
 
+In some fonts the characters do not rest on a baseline. They could be described as centered. For example <span class='akatab normal'>.&#x2D31;&#x2D30;&#x2D3E;&#x2D42;&#x2D67;&#x2D65;.</span> This design is more consistent with the traditional handwritten Tifinagh styles.
+
+Neo-Tifinagh fonts generally have a distinct baseline: <span class='nototif normal'>.&#x2D31;&#x2D30;&#x2D3E;&#x2D42;&#x2D67;&#x2D65;.</span>
+
 ### <a id="vowel"></a>Vowels
 
-Vowels are not as clearly defined. Four vowels have been encoded for Neo-Tifinagh. However, different traditional Tifinagh orthographies may demonstrate vowels using combining marks in different ways. These vowels are primarily used as an aid in learning to read.
+Vowels are not as clearly defined. Four vowels have been encoded for Neo-Tifinagh. However, different traditional Tifinagh orthographies may demonstrate vowels using combining marks in different ways. These vowels are primarily used as an aid in learning to read. Several competing systems (<a href="#Andries2004">L2/04-142</a> (pages 6, 7, & 30)) have been advocated:
 
 #### _SIL-Niger_
 
@@ -80,7 +84,7 @@ USV    | 2D30 + 0302 | 2D30 + 0306 | 2D62 + 0323 | 2D62 + 0302 | 2D53 + 0302 | 2
 Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
 Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#x2D66;</span>    | <span class='utn normal'>&#xED62;</span>    | <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xE014;</span> | <span class='utn normal'>&#xED67;</span>
-USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | not encoded? 
+USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | 2D67 
 
 #### _Hawad_
 
@@ -89,17 +93,26 @@ Vowels |     |     |     |     |     |
 Tfng | <span class='utn normal'>&#xE030;</span>    | <span class='utn normal'>&#xE031;</span>  | <span class='utn normal'>&#x2D5D;</span>  | <span class='utn normal'>&#xE032;</span>    | <span class='utn normal'>&#xE033;</span> |  
 USV  | 2D5D 0307 | 2D5D 0308 | 2D5D | 2D49 0307 | 2D49 0308 | 
 
+The combining marks required for these three systems would be:
+
+- 0302 COMBINING CIRCUMFLEX ACCENT
+- 0306 COMBINING BREVE
+- 0307 COMBINING DOT ABOVE
+- 0308 COMBINING DIAERESIS
+- 0323 COMBINING DOT BELOW
+
+There is some indication in the <a href="#unicode">Unicode Standard (chapter 19)</a> that the following two combining marks may also be used:
+
+- 0304 COMBINING MACRON
+- 0309 COMBINING HOOK ABOVE
+
 ### <a id="punct"></a>Punctuation
 
-Western-style punctuation signs are used in Tifinagh. Words are separated by a space. 
+Western-style punctuation signs are used in Tifinagh. These include: <span class='nototif normal'>. , : ; ? ! ( ) &#x00AB; &#x00BB; &#x201E; &#x201D; &#x2026;</span> 
 
-_A few languages use a special separator mark which has been encoded in the Tifinagh block._ The languages using the separator mark will be indicated in the section on that language. Otherwise, punctuation is not listed in each section.
+Modern usage separates words by a space. 
 
-
-Punctuation |      |      |      |      |      |      | | |
-:----       | :--  | :--  | :--  | :--  | :--  | :--  | :-- | :--
-Tfng        | <span class='nototif normal'>.</span>    | <span class='nototif normal'>,</span>    | <span class='nototif normal'>;</span>    | <span class='nototif normal'>:</span>    | <span class='nototif normal'>?</span>    | <span class='nototif normal'>!</span>    | <span class='nototif normal'>...</span> | <span class='nototif normal'>&#x2D70;</span>
-USV         | 002E | 002C | 003B | 003A | 003F | 0021 | 2026 | 2D70
+_A few languages use a special separator mark which has been encoded in the Tifinagh block._ That character is U+2D70 (<span class='nototif normal'>&#x2D70;</span>) The languages using the separator mark will be indicated in the section on that language. Otherwise, punctuation is not listed in each section.
 
 #### Digits
 
@@ -107,12 +120,12 @@ There is no common way to write numbers using Tifinagh script. The IRCAM Tifinag
 
 ### <a id="variant"></a>Variant Glyphs
 
-This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants. In addition, because of the issues relating to <a href="#dir">Writing Direction</a>, there are variants which are mirrored or turned for right to left text or even for vertical text. The default directional variants are included below under <a href="#dir_var">Directional Glyphs</a>.
+This chart includes a sampling of some of the possible glyph variants in current use. It does not demonstrate all of the possible historical glyph variants. In addition, because of the issues relating to <a href="#dir">Writing Direction</a>, there are variants which are mirrored or turned for right to left text or even for vertical text. The default directional variants are included below under <a href="#dir_var">Directional Glyphs</a>. In general, when a variant is used for a glyph, the same principle would apply for similar glyphs. For example, if a round glyph with a horizontal bar has a square variant, then another round glyph with a vertical bar would likely be square.
 
 Because these glyphs are taken from various fonts, the height of a particular glyph should not be considered significant.
 
 |  | 2D3     | 2D4      | 2D5      | 2D6      | 2D7    
-:- | :--     | :--      | :--      | :--      | :--
+:- | :---     | :---      | :---      | :---      | :--
 0  |<span class='utn normal'>&#x2D30;</span> <span class='utn normal'>&#xED30;</span> <span class='utn normal'>&#xE000;</span></br>_ya_| <span class='utn normal'>&#x2D40;</span> <span class='utn normal'>&#xED40;</span> <span class='utn normal'>&#xE00A;</span></br>_yah or Tuareg yab_| <span class='utn normal'>&#x2D50;</span> <span class='utn normal'>&#xED50;</span> <span class='utn normal'>&#xE010;</span> <span class='utn normal'>&#xE011;</span> <span class='utn normal'>&#xE012;</span></br>_Tuareg yagn_| <span class='utn normal'>&#x2D60;</span> <span class='utn normal'>&#xE026;</span></br>_yav_ | <span class='utn normal'>&#x2D70;</span></br>_tazarast_
 1  |<span class='utn normal'>&#x2D31;</span> <span class='utn normal'>&#xED31;</span> <span class='utn normal' >&#xE001;</span></br>_yab_| <span class='utn normal'>&#x2D41;</span></br>_Berber yah_ | <span class='utn normal'>&#x2D51;</span></br>_Tuareg yang_ | <span class='utn normal'>&#x2D61;</span></br>_yaw_ | 
 2  |<span class='utn normal'>&#x2D32;</span> <span class='utn normal'>&#xED32;</span></br>_yabh_ | <span class='utn normal'>&#x2D42;</span> <span class='utn normal'>&#xED42;</span></br>_Tuareg yah_ | <span class='utn normal'>&#x2D52;</span></br>_yap_ | <span class='utn normal'>&#x2D62;</span> <span class='utn normal'>&#xED62;</span> <span class='utn normal'>&#xE01A;</span> <span class='utn normal'>&#xE01B;</span> <span class='utn normal'>&#xE020;</span> <span class='utn normal'>&#xE01C;</span> <span class='utn normal'>&#xE03B;</span></br>_yay_| 
@@ -140,7 +153,9 @@ Some of the bi-consonants have ascenders. These should ascend above the normal h
 
 Although rare, tri-consonants do exist. This document will use the term bi-consonant even when it may be a tri-consonant.
 
-This chart does not demonstrate all of the possible historical glyph variants. Although this chart demonstrates the use of U+2D7F TIFINAGH CONSONANT JOINER, fonts should support either U+2D7F (obligatory bi-consonants) or U+200D (optional bi-consonants).
+This chart does not demonstrate all of the possible historical glyph variants. It should be noted that if the base glyph is a variant that will affect the variant for the bi-consonant. For example, if a language uses a square variant of <span class='nototif normal'>&#x2D59;</span> (<span class='utn normal'>&#xED59;</span>), then the bi-consonant should also be square (<span class='utn normal'>&#xE036;</span> instead of <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span>). Glyph variants for the base characters are not shown in the chart below.
+
+Although this chart demonstrates the use of U+2D7F TIFINAGH CONSONANT JOINER, fonts could support both U+2D7F (obligatory bi-consonants) and U+200D (optional bi-consonants).
 
 USV | 2D7F between characters | → | Glyph</br>(2D7F)
 :----- | :--  | :-- | :--
@@ -148,7 +163,10 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 2 /gʼt/ 2D33 2D5C | <span class='nototif normal'>&#x2D33; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D33;&#x2D7F;&#x2D5C;</span>
 3 /gʼt/ 2D34 2D5C | <span class='nototif normal'>&#x2D34; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D34;&#x2D7F;&#x2D5C;</span>
 4 /gt/ 2D36 2D5C | <span class='nototif normal'>&#x2D36; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D36;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE034;</span>
-5 /ft/ 2D3C 2D5C | <span class='nototif normal'>&#x2D3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 2'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv14" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
+5a /ft/ 2D3C 2D5C | <span class='nototif normal'>&#x2D3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
+5b |<span class='utn normal'>&#xED3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
+5c |<span class='utn normal'>&#xE007; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv35" 2'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
+5d |<span class='utn normal'>&#xE008; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal' style='font-feature-settings: "cv14" 1'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
 6 /bt/ 2D40 2D5C | <span class='nototif normal'>&#x2D40; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D40;&#x2D7F;&#x2D5C;</span>
 7 /yt/ 2D49 2D5C | <span class='nototif normal'>&#x2D49; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D49;&#x2D7F;&#x2D5C;</span>
 8 /ẓt/ 2D4B 2D5C | <span class='nototif normal'>&#x2D4B; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D4B;&#x2D7F;&#x2D5C;</span>
@@ -176,7 +194,7 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 27 /ns/ 2D4F 2D59 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D59;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D59;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D59;</span>
 28 /nš/ 2D4F 2D5B | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D5B;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D5B;</span>
 29 /nt/ 2D4F 2D5C | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv37" 1'>&#x2D4F;&#x2D7F;&#x2D5C;</span>
-30 /č/ 2D4F 2D5E | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D5E;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D5E;</span>
+30 /nč/ 2D4F 2D5E | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D5E;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D5E;</span>
 31 /nz/ 2D4F 2D63 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D63;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D63;</span>
 32 /nz/ 2D4F 2D64 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D64;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D64;</span>
 33 /wt/ 2D53 2D5C | <span class='nototif normal'>&#x2D53; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D53;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D53;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv39" 1'>&#x2D53;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv39" 2'>&#x2D53;&#x2D7F;&#x2D5C;</span>
@@ -190,18 +208,22 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 
 USV | 2D7F between characters | → | Glyph</br>(2D7F)
 :----- | :--  | :-- | :-- 
-41 /rt/ 2D54 2D5C | <span class='nototif normal'>&#x2D54; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 1'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 2'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE035;</span>
+41a /rt/ 2D54 2D5C | <span class='nototif normal'>&#x2D54; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 1'>&#x2D54;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv32" 2'>&#x2D54;&#x2D7F;&#x2D5C;</span>
+41b | <span class='utn normal'>&#xED54; + &#x2D7F; + &#x2D5C;</span> | → | <span class='utn normal'>&#xE035;</span>
 42 /gt/ 2D56 2D5C | <span class='nototif normal'>&#x2D56; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D56;&#x2D7F;&#x2D5C;</span>
 43 /sk/ 2D59 2D3E | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal'>&#x2D59;&#x2D7F;&#x2D3E;</span>
 44 /sn/ 2D59 2D4F | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D4F;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D4F;</span>
-45 /st/ 2D59 2D5C | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 1'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 2'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 3'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE036;</span>
-46 /šk/ 2D5B 2D3E | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv47" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv47" 2'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span>
+45a /st/ 2D59 2D5C | <span class='nototif normal'>&#x2D59; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 1'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 2'>&#x2D59;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv33" 3'>&#x2D59;&#x2D7F;&#x2D5C;</span> 
+45b | <span class='utn normal'>&#xED59; + &#x2D7F; + &#x2D5C;</span> | → | <span class='utn normal'>&#xE036;</span>
+46a /šk/ 2D5B 2D3E | <span class='utn normal'>&#xED5B; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv47" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span> 
+46b | <span class='utn normal'>&#xE016; + &#x2D7F; + &#x2D3E;</span> | → | <span class='akatab normal' style='font-feature-settings: "cv47" 2'>&#x2D5B;&#x2D7F;&#x2D3E;</span> <span class='akatab normal' style='font-feature-settings: "cv12" 1'>&#x2D5B;&#x2D7F;&#x2D3E;</span>
 47 /šn/ 2D5B 2D4F | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D4F;</span> | → | <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D4F;</span>
-48 /št/ 2D5B 2D5C | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv48" 1'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='utn normal'>&#xE037;</span>
+48a /št/ 2D5B 2D5C | <span class='nototif normal'>&#x2D5B; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal'>&#x2D5B;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv48" 1'>&#x2D5B;&#x2D7F;&#x2D5C;</span>
+48b | <span class='utn normal'>&#xE017; + &#x2D7F; + &#x2D5C;</span> | → | <span class='utn normal'>&#xE037;</span>
 49 /ts/ 2D5C 2D59 | <span class='nototif normal'>&#x2D5C; + &#x2D7F; + &#x2D59;</span> | → | <span class='nototif normal'>&#x2D5C;&#x2D7F;&#x2D59;</span>
 50 /wt/ 2D61 2D5C | <span class='nototif normal'>&#x2D61; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D61;&#x2D7F;&#x2D5C;</span>
 51 /yt/ 2D62 2D5C | <span class='nototif normal'>&#x2D62; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D62;&#x2D7F;&#x2D5C;</span>
-52 /zt/ 2D63 2D5C | <span class='nototif normal'>&#x2D63; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D63;&#x2D7F;&#x2D5C;</span>
+52 /zt/ 2D63 2D5C | <span class='akatab normal'>&#x2D63; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D63;&#x2D7F;&#x2D5C;</span>
 53 /zt/ 2D65 2D5C | <span class='nototif normal'>&#x2D65; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D65;&#x2D7F;&#x2D5C;</span>
 
 This should not be considered an exhaustive list of all bi-consonants used for Tifinagh, nor are the shapes of the bi-consonants necessarily definitive. There are a wide range of glyph variants.
@@ -249,9 +271,25 @@ Given that left-to-right directionality seems to be the most widely used one in 
 Using hard-coded directional characters in the HTML code (as illustrated above) can prevent accidental deletion of invisible characters.
 -->
 
+Each glyph would be designed for the left to right behavior as well as another glyph for the right to left behavior. These could be called `yadd-tfng` and `yadd-tfng.rtl`.
+
+These would then need to be added to a GSUB lookup for substitution:
+
+```
+    sub yadd-tfng            by yadd-tfng.rtl ;            #uni2D39
+```
+
+That lookup would then be used in the `rtla` feature in GSUB.
+
+It is beyond the scope of this document to give more detailed information about OpenType support for Tifinagh.
+
+
 ### <a id="dir_var"></a>Directional Glyphs
 
-Because the script can be written in multiple directions, the glyphs must be mirrored for right-to-left text, turned 90&#x00B0; for bottom-to-top text, or turned -90&#x00B0; for top-to-bottom text. Below is a sampling of some of the different shapes required for differing directions. Some glyphs, like a circle, could look the same in any direction. However, unless the glyphs are monoline, there will be slight variations in the glyph design. Where there are glyph variants, the number of glyphs required for different directions will increase exponentially.
+The script can be written horizontally from left-to-right, from right-to-left, vertically (bottom-to-top, top-to-bottom) or even in boustrophedon, circular, or spiral. Because the script can be written in multiple directions, the glyphs must be mirrored for right-to-left text, turned anti-clockwise 90&#x00B0; for bottom-to-top text, or turned clockwise 90&#x00B0; for top-to-bottom text. Below is a sampling of some of the different shapes required for differing directions. Some glyphs, like a circle, could look the same in any direction. However, unless the glyphs are monoline, there will be slight variations in the glyph design. Where there are glyph variants, the number of glyphs required for different directions will increase exponentially.
+
+For vertical writing, the glyphs should be designed on a center baseline. <a href="#unknown">A Shifinagh Handbook</a> (page 3) indicates that when writing top to bottom &#x201C;You write away from yourself. Do not imagine a base line for the letters, but a centre line.&#x201D; It is difficult to know where punctuation should be positioned in vertical writing, since the majority of vertical writing were ancient rock inscriptions.
+
 
 |  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
 :- | :--     | :--      | :--      | :--
@@ -598,6 +636,9 @@ Latn        | /t&#x0323;/ | /w/ | /y/ | /z/ | /z&#x0323;/ | /ʷ/ |  |  | |  |
 #### Glyph variants and Bi-consonants
 
 Unknown.
+
+_Sample graphic_</br><img src="assets/images/rif_NT_John1_1-4.png" title="fig:" style="width:80%;height:80%;" alt="Tarafit sample" />
+<figcaption>John 1:1-4 (<a href="#2009">Tarifit (rif) New Testament</a>).</figcaption>
 
 ### <a id="shi"></a>Tachelhit
 
@@ -975,6 +1016,9 @@ Unknown.
 <span class='akatab normal' style='font-feature-settings: "cv03" 1'>&#x2D34;</span> &lt;
 <span class='akatab normal'>&#x2D36;</span>
 
+_Sample graphic (right-to-left)_</br><img src="assets/images/thv_TamahaqHoggar_1231.png" title="fig:" style="width:80%;height:80%;" alt="Tamahaq: Hoggar sample" />
+<figcaption>Mark 1:1-4 (UBS).</figcaption>
+
 ### <a id="thz"></a>Tayart Tamajeq, Tuareg (Aïr dialect of Niger)
 
 _Source_: [Omniglot](https://omniglot.com/writing/tayarttamajeq.htm) and <a href="#Andries2004">L2/04-142</a> (pages 8 & 31)
@@ -1035,6 +1079,9 @@ Unknown.
 
 <span class='nototif normal'>&#x2D30;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt; <span class='nototif normal'>&#x2D36;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D66;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt; <span class='nototif normal'>&#x2D3E;</span> &lt; <span class='nototif normal'>&#x2D42;</span> &lt; <span class='nototif normal'>&#x2D46;</span> &lt; <span class='nototif normal'>&#x2D48;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4C;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D51;</span> &lt; <span class='nototif normal'>&#x2D67;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D57;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt;&lt; <span class='nototif normal'>&#x2D5C;&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D64;</span> &lt; <span class='nototif normal'>&#x2D65;</span> 
 
+_Sample graphic_</br><img src="assets/images/thz_TamahaqAir_1230.png" title="fig:" style="width:80%;height:80%;" alt="Tamahaq: Aïr sample" />
+<figcaption>John 1:1-4 (UBS).</figcaption>
+
 ### <a id="ttq"></a>Tawallammat Tamajaq
 
 _Source_: <a href="#abdoussamed">Abdoussamed</a>, and characters which are included in Tagmukay font and the keyboard below.
@@ -1066,6 +1113,8 @@ Latn | /s/  | /s&#x030c;/ | /t/   | /y/    | /z/ | /z/    | /o/    | |
 SIL and APT have differing orthographies for the same language
 
 ##### _SIL_
+
+See sample images at bottom of this section.
 
 Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
@@ -1136,6 +1185,12 @@ Contextual Shaping |     |     |     |     |     |  |
 <span class='tagmukay normal'>&#x2D4F;</span> | + | <span class='tagmukay normal'>&#x2D4F;</span>| + | <span class='tagmukay normal'>&#x2D4F;</span> | → | <span class='tagmukay normal'>&#x2D4F;&#x2D4F;&#x2D4F;</span>
 2D4F | | 2D4F | | 2D4F | |
 
+_Sample graphic (Reading Book)_</br><img src="assets/images/ttq_ReadingBook_1997.png" title="fig:" style="width:80%;height:80%;" alt="Lisons le Temajeq sample" />
+<figcaption><a href="#abdoussamed">Lisons le tǝmajǝq en shifinagh vocalisé (1997).</a></figcaption>
+
+_Sample graphic_</br><img src="assets/images/ttq_Health_2005.png" title="fig:" style="width:80%;height:80%;" alt="Ahol y aɣaywan fəl ataɣalla sample" />
+<figcaption><a href="#alhassane">Ahol y aɣaywan fəl ataɣalla (2005), p. 15.</a></figcaption>
+
 ## <a id="other"></a>Other languages with little or no information
 
 These language are reported to have used or are using Tifinagh script. However, no further information is available.
@@ -1187,7 +1242,7 @@ These are Berber languages which do not appear to have ever used the Tifinagh sc
 
 ## <a id="ack"></a>Acknowledgements
 
-The following people have generously offered feedback for this document: Jon Coblentz.
+The following people have kindly offered feedback for this document: Jon Coblentz, Peter Constable, Ned Holbrook, Richard Ishida, Neil Patel, and Roozbeh Pournader. In addition, the author is grateful to Patrick Andries and Andrew Savage for their generous contributions to the extensive list of bi-consonants included in this document.
 
 ## <a id="ref"></a>References
 
@@ -1211,7 +1266,11 @@ The following people have generously offered feedback for this document: Jon Cob
 
 ____. 2005. [Inventaire des oeils de la police pan-berbère Hapax Berbère](http://hapax.qc.ca/polices/inventaire-des-oeils.pdf) (accessed 19-Jul-2024)
 
+Blanco, Juan Luis. 2014. [Tifinagh & the IRCAM. Explorations in Cursiveness and Bicameralism in the Tifinagh Script](https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script). [Unpublished Master’s thesis]. University of Reading. (accessed 21-Aug-2024)
+
 <a id="2009"></a>DHIMH Multimedia. 2009. [Tarifit (rif) New Testament](https://archive.org/details/newtestament-tarifit) (accessed 19-Jul-2024)
+
+<a id="alhassane"></a>Hamed-Ittyoube, Alhassane. 2005. Ahol y aɣaywan fəl ataɣalla (Conseils pour la famille sur le paludisme). SIL Niger.
 
 <a id="ishida_zgh"></a>Ishida, Richard. [Tamazight: Neo-Tifinagh orthography notes](https://r12a.github.io/scripts/tfng/zgh.html) (accessed 19-Jul-2024)
 
@@ -1225,4 +1284,8 @@ ____. 2005. [Inventaire des oeils de la police pan-berbère Hapax Berbère](http
 
 <a id="ircam"></a>[Tifinaghe-IRCAM &#x5B;tzm&#x5D;](https://www.win.tue.nl/~aeb/natlang/berber/tifinagh/tifinagh-ircam.html) (accessed 19-Jul-2024)
 
+<a id="unicode"></a>[Unicode (chapter 19)](https://unicode-org.github.io/core-spec/chapter-19/#G18607) The Unicode Consortium. The Unicode Standard, Version 16.0.0 (South San Francisco, CA: The Unicode Consortium, 2024.)
 
+United Bible Societies. 1972. [The Book of a Thousand Tongues](https://archive.org/details/B-001-001-424/page/2/mode/2up)
+
+<a id="unknown"></a>Unknown. undated. A Shifinagh Handbook. Unit 2. An Introduction to Shifinagh, the Tamajeq Writing. (This document is specifically for use in Niger. filename:Anonymous A Shifinagh Handbook 1717.pdf)
