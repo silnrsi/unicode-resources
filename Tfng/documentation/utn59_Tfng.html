@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>Unicode Technical Note xx - Representing Tifinagh in Unicode</title>
+    <title>Unicode Technical Note 59 - Representing Tifinagh in Unicode</title>
     <meta name="author" content="SIL Writing Systems Technology">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link rel="stylesheet" href="./assets/css/theme.css">
@@ -12,10 +12,11 @@
 <div class="container">
 <article class="article">
     <header>
-        <h1 class="title">Unicode Technical Note xx - Representing
+        <h1 class="title">Unicode Technical Note 59 - Representing
 Tifinagh in Unicode</h1>
     </header>
-    <p><em>Lorna Evans, SIL Global (20-Aug-2024)</em></p>
+    <p><em>Lorna Evans and Jon Coblentz, SIL Global
+    (27-Aug-2024)</em></p>
     <p><em>Further information, corrections, and additions on script
     use, as well as information on language usage is most
     welcome.</em></p>
@@ -29,7 +30,7 @@ Tifinagh in Unicode</h1>
     <li><a href="digits">Digits</a></li>
     <li><a href="#variant">Variant Glyphs</a></li>
     <li><a href="#bicons">Bi- Tri-Consonants</a></li>
-    <li><a href="#contexual">Contextual Shaping</a></li>
+    <li><a href="#contextual">Contextual Shaping</a></li>
     <li><a href="#dir">Writing Direction</a></li>
     <li><a href="#dir_var">Directional Glyphs</a></li>
     </ul></li>
@@ -81,7 +82,7 @@ Tifinagh in Unicode</h1>
     encoding in the Tifinagh block is based on the modern alphabet
     called Neo-Tifinagh. It also includes characters for modern attested
     Tuareg.</p>
-    <p>This document gives guidance on the encoding of <em>modern
+    <p>This document gives some guidance on the encoding of <em>modern
     orthographies</em> using the Tifinagh script (no attempt is made to
     document all the variants used in ancient Tifinagh orthographies).
     Since the script is used for a number of orthographies covering
@@ -104,11 +105,11 @@ Tifinagh in Unicode</h1>
     class="nototif normal">ⴰⵓⴾⵆⵘⴰ</span>. Sidebearings on characters are
     still important.</p>
     <p>In some fonts the characters do not rest on a baseline. They
-    could be described as centered. For example <span
-    class="akatab normal">.ⴱⴰⴾⵂⵧⵥ.</span> This design is more consistent
-    with the traditional handwritten Tifinagh styles.</p>
+    could be described as centered. For example, the design of these
+    characters <span class="akatab normal">ⴱⴰⵓⴾⵂⵥ</span> is more
+    consistent with the traditional handwritten Tifinagh styles.</p>
     <p>Neo-Tifinagh fonts generally have a distinct baseline: <span
-    class="nototif normal">.ⴱⴰⴾⵂⵧⵥ.</span></p>
+    class="nototif normal">ⴱⴰⵓⴾⵂⵥ</span></p>
     <h3 id="vowels"><a id="vowel"></a>Vowels</h3>
     <p>Vowels are not as clearly defined. Four vowels have been encoded
     for Neo-Tifinagh. However, different traditional Tifinagh
@@ -556,20 +557,21 @@ Tifinagh in Unicode</h1>
     the term bi-consonant even when it may be a tri-consonant.</p>
     <p>This chart does not demonstrate all of the possible historical
     glyph variants. It should be noted that if the base glyph is a
-    variant that will affect the variant for the bi-consonant. For
+    variant, that will affect the variant for the bi-consonant. For
     example, if a language uses a square variant of <span
     class="nototif normal">ⵙ</span> (<span class="utn normal"></span>),
     then the bi-consonant should also be square (<span
     class="utn normal"></span> instead of <span
-    class="nototif normal">ⵙ⵿ⵜ</span>). Glyph variants for the base
-    characters are not shown in the chart below.</p>
+    class="nototif normal">ⵙ⵿ⵜ</span>). This document does not include an
+    exhaustive list of the glyph variants for the base characters used
+    in the bi-consonants below.</p>
     <p>Although this chart demonstrates the use of U+2D7F TIFINAGH
     CONSONANT JOINER, fonts could support both U+2D7F (obligatory
     bi-consonants) and U+200D (optional bi-consonants).</p>
     <table>
     <colgroup>
-    <col style="width: 40%" />
-    <col style="width: 20%" />
+    <col style="width: 26%" />
+    <col style="width: 33%" />
     <col style="width: 20%" />
     <col style="width: 20%" />
     </colgroup>
@@ -788,8 +790,8 @@ Tifinagh in Unicode</h1>
     </table>
     <table>
     <colgroup>
-    <col style="width: 40%" />
-    <col style="width: 20%" />
+    <col style="width: 26%" />
+    <col style="width: 33%" />
     <col style="width: 20%" />
     <col style="width: 20%" />
     </colgroup>
@@ -1139,23 +1141,24 @@ Tifinagh in Unicode</h1>
     <p>This should not be considered an exhaustive list of all
     bi-consonants used for Tifinagh, nor are the shapes of the
     bi-consonants necessarily definitive. There are a wide range of
-    glyph variants.</p>
+    glyph variants. Many of the variants are regional or personal
+    preference.</p>
     <p>Bi-consonants are only included in each language section when
     there are known variants.</p>
-    <h3 id="contextual-shaping"><a id="contexual"></a>Contextual
+    <h3 id="contextual-shaping"><a id="contextual"></a>Contextual
     Shaping</h3>
-    <p>Contextul shaping should be implemented when the design of U+2D4D
-    TIFINAGH LETTER YAL and U+2D4F TIFINAGH LETTER YAN are simply
+    <p>Contextual shaping should be implemented when the design of
+    U+2D4D TIFINAGH LETTER YAL and U+2D4F TIFINAGH LETTER YAN are simply
     vertical strokes.</p>
     <table>
     <colgroup>
-    <col style="width: 30%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
-    <col style="width: 11%" />
+    <col style="width: 20%" />
+    <col style="width: 12%" />
+    <col style="width: 12%" />
+    <col style="width: 12%" />
+    <col style="width: 12%" />
+    <col style="width: 12%" />
+    <col style="width: 16%" />
     </colgroup>
     <thead>
     <tr class="header">
@@ -6772,10 +6775,10 @@ Tifinagh in Unicode</h1>
     <h4 id="tri--bi-consonants">Tri- Bi-Consonants</h4>
     <table>
     <colgroup>
-    <col style="width: 40%" />
-    <col style="width: 20%" />
-    <col style="width: 20%" />
-    <col style="width: 20%" />
+    <col style="width: 21%" />
+    <col style="width: 35%" />
+    <col style="width: 21%" />
+    <col style="width: 21%" />
     </colgroup>
     <thead>
     <tr class="header">
@@ -7122,11 +7125,10 @@ Tifinagh in Unicode</h1>
     </ul>
     <h2 id="acknowledgements"><a id="ack"></a>Acknowledgements</h2>
     <p>The following people have kindly offered feedback for this
-    document: Jon Coblentz, Peter Constable, Ned Holbrook, Richard
-    Ishida, Neil Patel, and Roozbeh Pournader. In addition, the author
-    is grateful to Patrick Andries and Andrew Savage for their generous
-    contributions to the extensive list of bi-consonants included in
-    this document.</p>
+    document: Peter Constable, Ned Holbrook, Richard Ishida, Neil Patel,
+    and Roozbeh Pournader. In addition, the authors are grateful to
+    Patrick Andries and Andrew Savage for their generous help in
+    contributing to our understanding of the Tifinagh script.</p>
     <h2 id="references"><a id="ref"></a>References</h2>
     <p><a href="https://omniglot.com/writing/tamazight.htm">Omniglot -
     Central Atlas Tamazight (Tamaziɣt / ⵜⴰⵎⴰⵣⵉⵖⵜ) [tzm]</a></p>
@@ -7200,7 +7202,7 @@ Tifinagh in Unicode</h1>
     is specifically for use in Niger. filename:Anonymous A Shifinagh
     Handbook 1717.pdf)</p>
     <footer class="footer">
-        <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Tfng/" title="" class="active">unicode-resources/Tfng</a> and is copyright © 2010-2024 SIL International.</p>
+        <p>This guide is from the <a href="https://github.com/silnrsi/unicode-resources/tree/main/Tfng/" title="" class="active">unicode-resources/Tfng</a> and is copyright © 2010-2024 SIL Global.</p>
     </footer>
 </article>
 </div>

@@ -1,8 +1,8 @@
 ---
-title: Unicode Technical Note xx - Representing Tifinagh in Unicode
+title: Unicode Technical Note 59 - Representing Tifinagh in Unicode
 ---
 
-_Lorna Evans, SIL Global (20-Aug-2024)_
+_Lorna Evans and Jon Coblentz, SIL Global (27-Aug-2024)_
 
 _Further information, corrections, and additions on script use, as well as information on language usage is most welcome._
 
@@ -14,7 +14,7 @@ _Further information, corrections, and additions on script use, as well as infor
    - <a href="digits">Digits</a>
    - <a href="#variant">Variant Glyphs</a>
    - <a href="#bicons">Bi- Tri-Consonants</a>
-  - <a href="#contexual">Contextual Shaping</a>
+  - <a href="#contextual">Contextual Shaping</a>
   - <a href="#dir">Writing Direction</a>
   - <a href="#dir_var">Directional Glyphs</a>
 - <a href="#resource">Resources</a>
@@ -52,7 +52,7 @@ _Further information, corrections, and additions on script use, as well as infor
 
 Tifinagh is encoded in the U+2D30..U+2D7F block of Unicode. The encoding in the Tifinagh block is based on the modern alphabet called Neo-Tifinagh. It also includes characters for modern attested Tuareg.
 
-This document gives guidance on the encoding of _modern orthographies_ using the Tifinagh script (no attempt is made to document all the variants used in ancient Tifinagh orthographies). Since the script is used for a number of orthographies covering different languages, the development of this document is ongoing. In terms of the Unicode standard, this document is purely informative since it is concerned with issues not covered by that standard. 
+This document gives some guidance on the encoding of _modern orthographies_ using the Tifinagh script (no attempt is made to document all the variants used in ancient Tifinagh orthographies). Since the script is used for a number of orthographies covering different languages, the development of this document is ongoing. In terms of the Unicode standard, this document is purely informative since it is concerned with issues not covered by that standard. 
 
 This document also gives guidance on font development for the different _modern_ orthographies and languages.
 
@@ -64,9 +64,9 @@ The basic consonants are relatively obvious and can be discovered by viewing the
 
 **Design**: There can be some design issues related to "dotted" characters especially when the design is similar. When these characters appear together, they can be difficult to read unless care is taken by the type designer to change the size or spacing of the dots: <span class='akatab normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. The design of the Neo-Tifinagh dotted characters reduces the level of confusion when adjacent to each other: <span class='nototif normal'>&#x2D30;&#x2D53;&#x2D3E;&#x2D46;&#x2D58;&#x2D30;</span>. Sidebearings on characters are still important.
 
-In some fonts the characters do not rest on a baseline. They could be described as centered. For example <span class='akatab normal'>.&#x2D31;&#x2D30;&#x2D3E;&#x2D42;&#x2D67;&#x2D65;.</span> This design is more consistent with the traditional handwritten Tifinagh styles.
+In some fonts the characters do not rest on a baseline. They could be described as centered. For example, the design of these characters <span class='akatab normal'>&#x2D31;&#x2D30;&#x2D53;&#x2D3E;&#x2D42;&#x2D65;</span> is more consistent with the traditional handwritten Tifinagh styles.
 
-Neo-Tifinagh fonts generally have a distinct baseline: <span class='nototif normal'>.&#x2D31;&#x2D30;&#x2D3E;&#x2D42;&#x2D67;&#x2D65;.</span>
+Neo-Tifinagh fonts generally have a distinct baseline: <span class='nototif normal'>&#x2D31;&#x2D30;&#x2D53;&#x2D3E;&#x2D42;&#x2D65;</span>
 
 ### <a id="vowel"></a>Vowels
 
@@ -153,12 +153,12 @@ Some of the bi-consonants have ascenders. These should ascend above the normal h
 
 Although rare, tri-consonants do exist. This document will use the term bi-consonant even when it may be a tri-consonant.
 
-This chart does not demonstrate all of the possible historical glyph variants. It should be noted that if the base glyph is a variant that will affect the variant for the bi-consonant. For example, if a language uses a square variant of <span class='nototif normal'>&#x2D59;</span> (<span class='utn normal'>&#xED59;</span>), then the bi-consonant should also be square (<span class='utn normal'>&#xE036;</span> instead of <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span>). Glyph variants for the base characters are not shown in the chart below.
+This chart does not demonstrate all of the possible historical glyph variants. It should be noted that if the base glyph is a variant, that will affect the variant for the bi-consonant. For example, if a language uses a square variant of <span class='nototif normal'>&#x2D59;</span> (<span class='utn normal'>&#xED59;</span>), then the bi-consonant should also be square (<span class='utn normal'>&#xE036;</span> instead of <span class='nototif normal'>&#x2D59;&#x2D7F;&#x2D5C;</span>). This document does not include an exhaustive list of the glyph variants for the base characters used in the bi-consonants below.
 
 Although this chart demonstrates the use of U+2D7F TIFINAGH CONSONANT JOINER, fonts could support both U+2D7F (obligatory bi-consonants) and U+200D (optional bi-consonants).
 
 USV | 2D7F between characters | → | Glyph</br>(2D7F)
-:----- | :--  | :-- | :--
+:--- | :----  | :-- | :--
 1 /bt/ 2D31 2D5C | <span class='nototif normal'>&#x2D31; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D31;&#x2D7F;&#x2D5C;</span> <span class='akatab normal' style='font-feature-settings: "cv31" 1'>&#x2D31;&#x2D7F;&#x2D5C;</span>
 2 /gʼt/ 2D33 2D5C | <span class='nototif normal'>&#x2D33; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D33;&#x2D7F;&#x2D5C;</span>
 3 /gʼt/ 2D34 2D5C | <span class='nototif normal'>&#x2D34; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D34;&#x2D7F;&#x2D5C;</span>
@@ -184,7 +184,7 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 20 /nd/ 2D4F 2D39 | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D39;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D39;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D39;</span>
 
 USV | 2D7F between characters | → | Glyph</br>(2D7F)
-:----- | :--  | :-- | :--
+:--- | :----  | :-- | :--
 21 /nf/ 2D4F 2D3C | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D3C;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D3C;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv42" 1'>&#x2D4F;&#x2D7F;&#x2D3C;</span> <span class='akatab normal' style='font-feature-settings: "cv14" 1'>&#x2D4F;&#x2D7F;&#x2D3C;</span>
 22 /nft/ 2D4F 2D3C 2D5C | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D3C;&#x2D7F;&#x2D5C;</span>
 23 /nk/ 2D4F 2D3E | <span class='nototif normal'>&#x2D4F; + &#x2D7F; + &#x2D3E;</span> | → | <span class='nototif normal'>&#x2D4F;&#x2D7F;&#x2D3E;</span> <span class='akatab normal'>&#x2D4F;&#x2D7F;&#x2D3E;</span>
@@ -226,17 +226,17 @@ USV | 2D7F between characters | → | Glyph</br>(2D7F)
 52 /zt/ 2D63 2D5C | <span class='akatab normal'>&#x2D63; + &#x2D7F; + &#x2D5C;</span> | → | <span class='akatab normal'>&#x2D63;&#x2D7F;&#x2D5C;</span>
 53 /zt/ 2D65 2D5C | <span class='nototif normal'>&#x2D65; + &#x2D7F; + &#x2D5C;</span> | → | <span class='nototif normal'>&#x2D65;&#x2D7F;&#x2D5C;</span>
 
-This should not be considered an exhaustive list of all bi-consonants used for Tifinagh, nor are the shapes of the bi-consonants necessarily definitive. There are a wide range of glyph variants.
+This should not be considered an exhaustive list of all bi-consonants used for Tifinagh, nor are the shapes of the bi-consonants necessarily definitive. There are a wide range of glyph variants. Many of the variants are regional or personal preference.
 
 Bi-consonants are only included in each language section when there are known variants.
 
 
-### <a id="contexual"></a>Contextual Shaping
+### <a id="contextual"></a>Contextual Shaping
 
-Contextul shaping should be implemented when the design of U+2D4D TIFINAGH LETTER YAL and U+2D4F TIFINAGH LETTER YAN are simply vertical strokes. 
+Contextual shaping should be implemented when the design of U+2D4D TIFINAGH LETTER YAL and U+2D4F TIFINAGH LETTER YAN are simply vertical strokes. 
 
 Contextual Shaping |     |     |     |     |     |  |
-:-------   | :-- | :-- | :-- | :-- | :-- | :--
+:----   | :-- | :-- | :-- | :-- | :-- | :---
 <span class='akatab normal'>&#x2D4D;</span> | + | <span class='akatab normal'>&#x2D4D;</span> | + | <span class='akatab normal'>&#x2D4D;</span> | → | <span class='akatab normal'>&#x2D4D;&#x2D4D;&#x2D4D;</span> or <span class='akatab normal' style='font-feature-settings: "cv19" 1'>&#x2D4D;&#x2D4D;&#x2D4D;</span>
 2D4D | | 2D4D | | 2D4D | | |
 | | | | | |
@@ -1149,7 +1149,7 @@ USV |&#x0020; | &#x0020; | &#x0020;
 #### Tri- Bi-Consonants
 
 USV | 2D7F between characters | → | Glyph 
-:----- | :--  | :-- | :-- 
+:-- | :----  | :-- | :-- 
 2D3C 2D5C | <span class='tagmukay normal'>&#x2D3C; + &#x2D7F; + &#x2D5C;</span> | → | <span class='tagmukay normal'>&#x2D3C;&#x2D7F;&#x2D5C;</span>
 2D4D 2D5C | <span class='tagmukay normal'>&#x2D4D; + &#x2D7F; + &#x2D5C;</span> | → | <span class='tagmukay normal'>&#x2D4D;&#x2D7F;&#x2D5C;</span>
 2D4E 2D40 | <span class='tagmukay normal'>&#x2D4E; + &#x2D7F; + &#x2D40;</span> | → | <span class='tagmukay normal'>&#x2D4E;&#x2D7F;&#x2D40;</span>
@@ -1242,7 +1242,7 @@ These are Berber languages which do not appear to have ever used the Tifinagh sc
 
 ## <a id="ack"></a>Acknowledgements
 
-The following people have kindly offered feedback for this document: Jon Coblentz, Peter Constable, Ned Holbrook, Richard Ishida, Neil Patel, and Roozbeh Pournader. In addition, the author is grateful to Patrick Andries and Andrew Savage for their generous contributions to the extensive list of bi-consonants included in this document.
+The following people have kindly offered feedback for this document: Peter Constable, Ned Holbrook, Richard Ishida, Neil Patel, and Roozbeh Pournader. In addition, the authors are grateful to Patrick Andries and Andrew Savage for their generous help in contributing to our understanding of the Tifinagh script.
 
 ## <a id="ref"></a>References
 
