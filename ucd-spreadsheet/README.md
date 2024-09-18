@@ -37,14 +37,8 @@ The [license](LICENSE) is from [Unicode, Inc](https://www.unicode.org/copyright.
 
 ## Downloads
 
-### Current
-
-Unicode 15.0.0
+Unicode 16.0.0
 
 - LibreOffice Calc [ucd.ods](ucd.ods)
 - Microsoft Excel [ucd.xlsx](ucd.xlsx)
 - CSV [ucd.csv](ucd.csv)
-
-### Previous versions
-
-https://scripts.sil.org/ExcelUnicodeData
