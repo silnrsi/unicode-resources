@@ -2,7 +2,7 @@
 title: Unicode Technical Note 56 - Representing Miao in Unicode
 ---
 
-_Lorna Evans, SIL International (08-Jul-2024)_
+_Lorna Evans, SIL International (10-Oct-2024)_
 
 _Additional information is most welcome._
 
@@ -303,10 +303,8 @@ Baseline tone marks | &#x0020; |&#x0020;|&#x0020;|&#x0020;|&#x0020;|&#x0020;
 &#x26;<span class='hmdd normal'>&#x16F23;</span> &lt; <span class='hmdd normal'>&#x16F24;</span> &lt;&lt; <span class='hmdd normal'>&#x16F23;&#x16F51;</span><br/>
 &#x26;<span class='hmdd normal'>&#x16F28;</span> &lt; <span class='hmdd normal'>&#x16F29;</span> &lt;&lt; <span class='hmdd normal'>&#x16F28;&#x16F51;</span><br/>
 &#x26;<span class='hmdd normal'>&#x16F33;</span> &lt; <span class='hmdd normal'>&#x16F34;</span> &lt; <span class='hmdd normal'>&#x16F3A;</span> &lt; <span class='hmdd normal'>&#x16F07;</span> &lt; <span class='hmdd normal'>&#x16F26;</span> &lt; <span class='hmdd normal'>&#x16F35;</span> &lt; <span class='hmdd normal'>&#x16F42;</span><br/>
-&#x26; <span class='hmdd normal'>&#x16F54;</span><br/>
-&#x26; <span class='hmdd normal'>&#x16F59;</span> &lt;&lt; <span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F6A;</span> &lt;&lt; <span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F7E;</span><br/>
-&#x26; <span class='hmdd normal'>&#x16F73;</span><br/>
-&#x26; <span class='hmdd normal'>&#x16F61;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F59;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F57;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F5E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F57;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F7B;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F60;</span><br/>
+&#x26; <span class='hmdd normal'>&#x16F54;</span> &lt; <span class='hmdd normal'>&#x16F59;</span> &lt;&lt; <span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F6A;</span> &lt;&lt; <span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F7E;</span><br/>
+&#x26; <span class='hmdd normal'>&#x16F73;</span> &lt; <span class='hmdd normal'>&#x16F61;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F59;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F57;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F5E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F57;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F59;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F7B;</span> &lt;&lt; <span class='hmdd normal'>&#x16F61;</span><span class='hmdd normal'>&#x16F60;</span><br/>
 &#x26; <span class='hmdd normal'>&#x16F6A;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F59;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F79;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F7A;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F57;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F5E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F57;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F6A;</span><span class='hmdd normal'>&#x16F5F;</span><br/>
 &#x26; <span class='hmdd normal'>&#x16F71;</span> &lt;&lt; <span class='hmdd normal'>&#x16F71;</span><span class='hmdd normal'>&#x16F57;</span> &lt;&lt; <span class='hmdd normal'>&#x16F71;</span><span class='hmdd normal'>&#x16F7E;</span> &lt;&lt; <span class='hmdd normal'>&#x16F71;</span><span class='hmdd normal'>&#x16F7A;</span><br/>
 &#x26; <span class='hmdd normal'>&#x16F79;</span> &lt; <span class='hmdd normal'>&#x16F7A;</span> &lt; <span class='hmdd normal'>&#x16F7B;</span> &lt; <span class='hmdd normal'>&#x16F60;</span> &lt; <span class='hmdd normal'>&#x16F5C;</span><br/>
@@ -488,8 +486,7 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 _Ordering of vowel digraphs is not the same as the chart, but it seemed to make the most sense to the author._
 
 &#x26;<span class='sfm normal'>&#x16F2E;</span> &lt;&lt;<span class='sfm normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F2F;</span> &lt;&lt;<span class='sfm normal'>&#x16F50;&#x16F2E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F2F;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F07;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F26;</span> &lt;&lt; <span class='sfm normal'>&#x16F26;&#x16F51;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F07;</span> &lt; <span class='sfm normal'>&#x16F26;</span> &lt;&lt; <span class='sfm normal'>&#x16F26;&#x16F51;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F28;</span> &lt;&lt;<span class='sfm normal'>&#x16F28;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F29;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F28;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F43;</span> &lt; <span class='sfm normal'>&#x16F35;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F1E;</span> &lt;&lt; <span class='sfm normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F1F;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F1F;</span></br> 
@@ -503,15 +500,12 @@ _Ordering of vowel digraphs is not the same as the chart, but it seemed to make 
 &#x26;<span class='sfm normal'>&#x16F00;</span> &lt;&lt; <span class='sfm normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F01;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F00;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F00;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F01;
 </span></br> 
 &#x26;<span class='sfm normal'>&#x16F33;</span> &lt;&lt; <span class='sfm normal'>&#x16F46;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F3A;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0B;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0B;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0F;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0F;
-</span></br> 
+&#x26;<span class='sfm normal'>&#x16F3A;</span> &lt; <span class='sfm normal'>&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0B;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0B;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F0F;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F0F;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F37;</span> &lt;&lt; <span class='sfm normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F38;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F37;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F38;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F42;</span> &lt; <span class='sfm normal'>&#x16F08;</span> &lt; <span class='sfm normal'>&#x16F3D;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F32;</span> &lt;&lt; <span class='sfm normal'>&#x16F32;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F47;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F32;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F32;&#x16F51;</span> &lt;&lt; <span class='sfm normal'>&#x16F50;&#x16F47;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F54;</span> &lt; <span class='sfm normal'>&#x16F79;</span> &lt; <span class='sfm normal'>&#x16F7B;</span></br> 
-&#x26;<span class='sfm normal'>&#x16F5D;&#x16F66;</span></br> 
+&#x26;<span class='sfm normal'>&#x16F54;</span> &lt; <span class='sfm normal'>&#x16F79;</span> &lt; <span class='sfm normal'>&#x16F7B;</span> &lt; <span class='sfm normal'>&#x16F5D;&#x16F66;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F7A;</span> &lt; <span class='sfm normal'>&#x16F5C;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F61;</span> &lt;&lt; <span class='sfm normal'>&#x16F64;</span> (<span class='sfm normal'>&#x16F61;&#x16F58;</span>) &lt;&lt; <span class='sfm normal'>&#x16F63;</span> (<span class='sfm normal'>&#x16F61;&#x16F57;</span>) &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5D;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5C;</span> &lt;&lt; <span class='sfm normal'>&#x16F69;</span>(<span class='sfm normal'>&#x16F61;&#x16F59;</span>) &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F83;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F7E;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5E;</span> &lt;&lt; <span class='sfm normal'>&#x16F61;&#x16F5F;</span></br> 
 &#x26;<span class='sfm normal'>&#x16F78;</span> &lt; <span class='sfm normal'>&#x16F77;</span> &lt; <span class='sfm normal'>&#x16F75;</span></br>
@@ -588,21 +582,17 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE
 &#x26;<span class='ygp normal'>&#x16F00;</span> &lt;&lt; <span class='ygp normal'>&#x16F00;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F00;</span></br>
 &#x26;<span class='ygp normal'>&#x16F02;</span> &lt; <span class='ygp normal'>&#x16F48;</span></br>
 &#x26;<span class='ygp normal'>&#x16F0A;</span> &lt;&lt; <span class='ygp normal'>&#x16F0A;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F49;</span></br>
-&#x26;<span class='ygp normal'>&#x16F37;</span> &lt;&lt; <span class='ygp normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F37;</span></br>
+&#x26;<span class='ygp normal'>&#x16F49;</span> &lt; <span class='ygp normal'>&#x16F37;</span> &lt;&lt; <span class='ygp normal'>&#x16F37;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F37;</span></br>
 &#x26;<span class='ygp normal'>&#x16F07;</span> &lt; <span class='ygp normal'>&#x16F18;</span> &lt; <span class='ygp normal'>&#x16F32;</span></br>
 &#x26;<span class='ygp normal'>&#x16F2E;</span> &lt;&lt; <span class='ygp normal'>&#x16F2E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F2E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F2A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F1E;</span> &lt;&lt; <span class='ygp normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F1E;</span></br>
-&#x26;<span class='ygp normal'>&#x16F4A;</span></br>
-&#x26;<span class='ygp normal'>&#x16F0E;</span> &lt;&lt; <span class='ygp normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F2A;</span> &lt; <span class='ygp normal'>&#x16F1E;</span> &lt;&lt; <span class='ygp normal'>&#x16F1E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F1E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F4A;</span> &lt; <span class='ygp normal'>&#x16F0E;</span> &lt;&lt; <span class='ygp normal'>&#x16F0E;&#x16F51;</span> &lt;&lt; <span class='ygp normal'>&#x16F50;&#x16F0E;</span></br>
 &#x26;<span class='ygp normal'>&#x16F08;</span> &lt; <span class='ygp normal'>&#x16F3D;</span> &lt; <span class='ygp normal'>&#x16F42;</span> &lt; <span class='ygp normal'>&#x16F04;</span> &lt; <span class='ygp normal'>&#x16F10;</span> &lt; <span class='ygp normal'>&#x16F14;</span> &lt; <span class='ygp normal'>&#x16F12;</span> &lt; <span class='ygp normal'>&#x16F3B;</span> &lt; <span class='ygp normal'>&#x16F3A;</span> &lt; <span class='ygp normal'>&#x16F33;</span></br>
 &#x26;<span class='ygp normal'>&#x16F26;</span> &lt;&lt; <span class='ygp normal'>&#x16F26;&#x16F51;</span></br>
 &#x26;<span class='ygp normal'>&#x16F28;</span> &lt; <span class='ygp normal'>&#x16F23;</span> &lt; <span class='ygp normal'>&#x16F35;</span></br>
 &#x26;<span class='ygp normal'>&#x16F54;</span> &lt; <span class='ygp normal'>&#x16F7A;</span></br>
 &#x26;<span class='ygp normal'>&#x16F61;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F61;&#x16F7E; </span></br>
-&#x26;<span class='ygp normal'>&#x16F79; </span></br>
-&#x26;<span class='ygp normal'>&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F59;&#x16F7E;</span></br>
+&#x26;<span class='ygp normal'>&#x16F79; </span> &lt; <span class='ygp normal'>&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F59;&#x16F7E;</span></br>
 &#x26;<span class='ygp normal'>&#x16F6A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F54;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7A;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F79;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F59;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7B;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F66;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F57;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F58;</span> &lt;&lt; <span class='ygp normal'>&#x16F6A;&#x16F7E; </span></br>
 &#x26;<span class='ygp normal'>&#x16F71;</span> &lt; <span class='ygp normal'>&#x16F5D;</span></br>
 &#x26;<span class='ygp normal'>&#x16F5C;</span> &lt;&lt; <span class='ygp normal'>&#x16F5C;&#x16F5D;</span></br>
@@ -679,11 +669,9 @@ MIAO TONE RIGHT | MIAO TONE TOP RIGHT | MIAO TONE ABOVE | MIAO TONE BELOW
 &#x26;<span class='yna normal'>&#x16F1E;</span> &lt;&lt; <span class='yna normal'>&#x16F20;</span> &lt;&lt; <span class='yna normal'>&#x16F1E;&#x16F51;</span><br/>
 &#x26;<span class='yna normal'>&#x16F2E;</span> &lt;&lt; <span class='yna normal'>&#x16F0E;</span> &lt;&lt; <span class='yna normal'>&#x16F2E;&#x16F51;</span><br/>
 &#x26;<span class='yna normal'>&#x16F37;</span> &lt;&lt; <span class='yna normal'>&#x16F39;</span> &lt;&lt; <span class='yna normal'>&#x16F37;&#x16F51;</span><br/>
-&#x26;<span class='yna normal'>&#x16F08;</span><br/>
-&#x26;<span class='yna normal'>&#x16F07;</span><br/>
+&#x26;<span class='yna normal'>&#x16F08;</span> &lt; <span class='yna normal'>&#x16F07;</span><br/>
 &#x26;<span class='yna normal'>&#x16F26;</span> &lt;&lt; <span class='yna normal'>&#x16F26;&#x16F51;</span><br/>
-&#x26;<span class='yna normal'>&#x16F04;</span><br/>
-&#x26;<span class='yna normal'>&#x16F10;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F51;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F4F;</span><br/>
+&#x26;<span class='yna normal'>&#x16F04;</span> &lt; <span class='yna normal'>&#x16F10;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F51;</span> &lt;&lt; <span class='yna normal'>&#x16F10;&#x16F4F;</span><br/>
 &#x26;<span class='yna normal'>&#x16F16;</span> &lt; <span class='yna normal'>&#x16F18;</span> &lt; <span class='yna normal'>&#x16F23;</span> &lt; <span class='yna normal'>&#x16F42;</span> &lt; <span class='yna normal'>&#x16F35;</span> &lt; <span class='yna normal'>&#x16F33;</span> &lt; <span class='yna normal'>&#x16F3B;</span> &lt; <span class='yna normal'>&#x16F3A;</span> &lt; <span class='yna normal'>&#x16F3D;</span> &lt; <span class='yna normal'>&#x16F43;</span> &lt; <span class='yna normal'>&#x16F28;</span><br/>
 &#x26;<span class='yna normal'>&#x16F0E;&#x16F4F;</span> &lt;&lt; <span class='yna normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='yna normal'>&#x16F0E;&#x16F51;</span><br/>
 &#x26;<span class='yna normal'>&#x16F54;</span> &lt; <span class='yna normal'>&#x16F7B;</span> &lt; <span class='yna normal'>&#x16F5C;</span> &lt; <span class='yna normal'>&#x16F5D;</span> &lt; <span class='yna normal'>&#x16F74;</span> &lt; <span class='yna normal'>&#x16F73;</span> &lt; <span class='yna normal'>&#x16F62;</span><br/>
@@ -766,8 +754,7 @@ _Some of the vowel "digraphs" are what made sense to the author, not as the char
 &#x26;<span class='shim normal'>&#x16F21;</span> &lt; <span class='shim normal'>&#x16F30;</span></br>
 &#x26;<span class='shim normal'>&#x16F31;</span> &lt;&lt; <span class='shim normal'>&#x16F31;&#x16F51;</span></br>
 &#x26;<span class='shim normal'>&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0E;</span> &lt;&lt; <span class='shim normal'>&#x16F0E;&#x16F51;</span></br>
-&#x26;<span class='shim normal'>&#x16F39;</span></br>
-&#x26;<span class='shim normal'>&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F37;&#x16F51;</span></br>
+&#x26;<span class='shim normal'>&#x16F39;</span> &lt; <span class='shim normal'>&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F37;</span> &lt;&lt; <span class='shim normal'>&#x16F37;&#x16F51;</span></br>
 &#x26;<span class='shim normal'>&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F50;&#x16F0A;</span> &lt;&lt; <span class='shim normal'>&#x16F0A;&#x16F51;</span></br>
 &#x26;<span class='shim normal'>&#x16F0D;</span> &lt; <span class='shim normal'>&#x16F0C;</span> &lt; <span class='shim normal'><font color="red">&#x16F2F;</font></span> &lt; <span class='shim normal'><font color="red">&#x16F12;&#x16F2E;</font></span> &lt; <span class='shim normal'>&#x16F04;</span> &lt; <span class='shim normal'>&#x16F10;</span> &lt; <span class='shim normal'>&#x16F12;</span> &lt; <span class='shim normal'>&#x16F14;</span> &lt; <span class='shim normal'>&#x16F33;</span> &lt; <span class='shim normal'>&#x16F34;</span> &lt; <span class='shim normal'>&#x16F23;</span> &lt; <span class='shim normal'>&#x16F3A;</span> &lt; <span class='shim normal'>&#x16F42;</span> &lt; <span class='shim normal'>&#x16F08;</span> &lt; <span class='shim normal'>&#x16F3D;</span> &lt; <span class='shim normal'>&#x16F3B;</span> &lt; <span class='shim normal'>&#x16F35;</span></br>
 &#x26;<span class='shim normal'>&#x16F54;</span> &lt; <span class='shim normal'>&#x16F79;</span> &lt; <span class='shim normal'>&#x16F66;</span> &lt; <span class='shim normal'>&#x16F7B;</span> &lt; <span class='shim normal'>&#x16F5C;</span></br>
