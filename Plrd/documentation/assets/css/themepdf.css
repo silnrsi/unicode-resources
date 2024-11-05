@@ -210,3 +210,10 @@ footer {
     /* used for all product site web font example spans to remove inherited styling  */
     font-size: 1.5rem;
 }
+
+@page {
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+  }
+  
