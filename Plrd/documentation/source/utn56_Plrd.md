@@ -2,7 +2,7 @@
 title: Unicode Technical Note 56 - Representing Miao in Unicode
 ---
 
-_Lorna Evans, SIL International (10-Oct-2024)_
+_Lorna Evans, SIL International (05-Nov-2024)_
 
 _Additional information is most welcome._
 
@@ -336,7 +336,7 @@ _Language tag:_ `hmz-Plrd`
 
 _Opentype language system tag:_ `HMZ `
 
-_SLDR:_ none
+_SLDR:_ [hmz_Plrd](https://github.com/silnrsi/sldr/blob/master/sldr/h/hmz_Plrd.xml)
 
 _Keyboard:_ none
 
@@ -443,7 +443,7 @@ _Language tag:_ `sfm`
 
 _Opentype language system tag:_ `SFM `
 
-_SLDR:_ none
+_SLDR:_ [sfm](https://github.com/silnrsi/sldr/blob/master/sldr/s/sfm.xml)
 
 _Keyman keyboard:_ none
 
@@ -540,7 +540,7 @@ _Language tag:_ `ygp`
 
 _Opentype language system tag:_ `YGP `
 
-_SLDR:_ none
+_SLDR:_ [ygp](https://github.com/silnrsi/sldr/blob/master/sldr/y/ygp.xml)
 
 _Keyman keyboard:_ [ygp](https://keyman.com/keyboards/sil_ygp_plrd)
 
@@ -626,7 +626,7 @@ _Language tag:_ `yna`
 
 _Opentype language system tag:_ `YNA `
 
-_SLDR:_ none
+_SLDR:_ [yna](https://github.com/silnrsi/sldr/blob/master/sldr/y/yna.xml)
 
 _Keyman keyboard:_ [yna](https://keyman.com/keyboards/sil_yna_plrd)
 
@@ -703,7 +703,7 @@ _Language tag:_ `ywq`
 
 _Opentype language system tag:_ `YWQ `
 
-_SLDR:_ none
+_SLDR:_ [ywq](https://github.com/silnrsi/sldr/blob/master/sldr/y/ywq.xml)
 
 _Keyman keyboard:_ [ywq](https://keyman.com/keyboards/sil_ywq_plrd)
 
