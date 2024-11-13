@@ -315,6 +315,17 @@ F267|&#x1DF06;|1DF06 LATIN SMALL LETTER TURNED Y WITH BELT|[L2/20-266](https://w
 F268|&#x1DF04;|1DF04 LATIN LETTER SMALL CAPITAL L WITH BELT|[L2/20-266](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/20-266)
 F269|&#x1DF08;|1DF08 LATIN SMALL LETTER TURNED R WITH LONG LEG AND HOOK|[L2/20-266](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/20-266)
 
+## PUA characters added to Unicode 15.0
+
+None.
+
+## PUA characters added to Unicode 16.0
+
+PUA Code | Glyph | Unicode replacement | Proposal
+:--- | :--- | :--- | :---
+F26E| &#xA7CB;|LATIN CAPITAL LETTER RAMS HORN|[L2/22-045](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/22-045)
+
+
 <- [Back to Intro](https://github.com/silnrsi/silpua/)
 
 -> [Forward to SIL Corporate PUA characters that have not been added to Unicode](pua-nondeprecated.md)]

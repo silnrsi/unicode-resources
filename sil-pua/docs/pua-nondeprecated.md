@@ -22,7 +22,6 @@ F20D| &#xF20D;|LATIN CAPITAL LETTER D WITH STROKE AND HOOK|(never found evidence
 F258| &#xF258;|LATIN LETTER SMALL CAPITAL I OVER SMALL SCHWA|[L2/03-190](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/03-190) (rejected)
 F259| &#xF259;|LATIN LETTER SMALL UPSILON OVER SMALL SCHWA|[L2/03-190](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/03-190) (rejected)
 F26D| &#xF26D;|LATIN SMALL LETTER B WITH LEFT HOOK|(not yet proposed)
-F26E| &#xA7CB;|LATIN CAPITAL LETTER RAMS HORN|[L2/22-045](https://www.unicode.org/cgi-bin/GetMatchingDocs.pl?L2/22-045) (in pipeline for Unicode 16.0)
 F326| &#xF326;|CYRILLIC CAPITAL LETTER GHE WITH STROKE AND DESCENDER|(never proposed, U+04FA is the preferred character for Nivkh)
 F327| &#xF327;|CYRILLIC SMALL LETTER GHE WITH STROKE AND DESCENDER|(never proposed, U+04FB is the preferred character for Nivkh)
 
