@@ -2,7 +2,7 @@
 title: Unicode Technical Note 56 - Representing Miao in Unicode
 ---
 
-_Lorna Evans, SIL International (05-Nov-2024)_
+_Lorna Evans, SIL International (25-Nov-2024)_
 
 _Additional information is most welcome._
 
@@ -195,7 +195,7 @@ _SLDR:_ [hmd](https://github.com/silnrsi/sldr/blob/master/sldr/h/hmd.xml)
 
 _[A-Hmao (draft): Pollard/Miao script orthography notes](https://r12a.github.io/scripts/plrd/hmd.html)_
 
-_Keyman keyboard:_ [hmd](https://keyman.com/keyboards/sil_hmd_plrd)
+_Keyman keyboard:_ [Ahmao (SIL)](https://keyman.com/keyboards/sil_hmd_plrd)
 
 _Picker:_ [A-Hmao picker](https://r12a.github.io/pickers/plrd-hmd/index.html)
 
