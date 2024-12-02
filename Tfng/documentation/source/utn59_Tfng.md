@@ -2,7 +2,7 @@
 title: Unicode Technical Note 59 - Representing Tifinagh in Unicode
 ---
 
-_Lorna Evans and Jon Coblentz, SIL Global (25-Nov-2024)_
+_Lorna Evans and Jon Coblentz, SIL Global (2-Dec-2024)_
 
 _Further information, corrections, and additions on script use, as well as information on language usage is most welcome._
 
@@ -403,6 +403,8 @@ _Source_: [Omniglot](https://omniglot.com/writing/shilha.htm)
 
 _Language tag_: `gho-Tfng`
 
+_SLDR:_ [gho_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/g/gho_Tfng.xml)
+
 _Opentype language system tag:_ `BBR `
 
 Characters | | | | | | | | | &#x0020;
@@ -445,6 +447,8 @@ _Source_: [Omniglot](https://omniglot.com/writing/kabyle.php) and <a href="#snim
 
 _Language tag_: `kab-Tfng`
 
+_SLDR:_ [kab_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/k/kab_Tfng.xml)
+
 _Opentype language system tag:_ `BBR `
 
 Characters | | | | | | | | | &#x0020;
@@ -483,6 +487,8 @@ Bi-consonants are not “required” in Neo-Tifinagh. If a font supports bi-cons
 _Source_: [Omniglot](https://omniglot.com/writing/riffian.htm) and <a href="#2009">Tarifit New Testament</a>
 
 _Language tag:_ `rif-Tfng`
+
+_SLDR:_ [rif_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/r/rif_Tfng.xml)
 
 _Opentype language system tag:_ `BBR `
 
@@ -526,7 +532,7 @@ _Sample graphic_</br><img src="assets/images/rif_NT_John1_1-4.png" title="fig:" 
 
 ### <a id="shi"></a>Tachelhit
 
-_Source_: [shi](https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml) (SLDR)
+_SLDR_: [shi](https://github.com/silnrsi/sldr/blob/master/sldr/s/shi.xml)
 
 _Language tag:_ `shi`
 
@@ -618,6 +624,8 @@ Neo-Tifinagh does not use contextual shaping for the “l” and “n”. This i
 
 _Source_: [Savage, 2003 pages 2-3](#savage2003)
 
+_SLDR:_ [cnu_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/c/cnu_Tfng.xml)
+
 This source lists a set of characters that are used in a Algerian school text book entitled “Adlis” printed in 1988 (pages 12,13). It is unknown how widely used this book (or the characters) are actually used.
 
 _Language tag_: `cnu-Tfng`
@@ -662,6 +670,9 @@ This source lists a set of characters that are used in a Algerian school text bo
 
 _Language tag_: `mzb-Tfng`
 
+_SLDR:_ [mzb_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/m/mzb_Tfng.xml)
+
+
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Tfng | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xED3B;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span>
@@ -702,6 +713,8 @@ This source lists a set of characters that are used in a Algerian school text bo
 
 _Language tag_: `shy-Tfng`
 
+_SLDR:_ [shy_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/s/shy_Tfng.xml)
+
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Tfng | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='nototif normal'>&#x2D33;</span> | <span class='nototif normal'>&#x2D35;</span> | <span class='nototif normal'>&#x2D37;</span> | <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xED3B;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='nototif normal'>&#x2D3D;</span>
@@ -740,6 +753,8 @@ _Source_: [Omniglot](https://omniglot.com/writing/siwi.htm)
 
 _Language tag_: `siz-Tfng`
 
+_SLDR:_ [siz_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/s/siz_Tfng.xml)
+
 _Opentype language system tag:_ `BBR `
 
 Characters | | | | | | | | | &#x0020;
@@ -774,13 +789,15 @@ Unknown.
 
 #### Collation
 
-<span class='nototif normal'>&#x2D30;</span> &lt;&lt; <span class='nototif normal'>&#x2D30;&#x2D49;</span> &lt;&lt; <span class='nototif normal'>&#x2D30;&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt;&lt; <span class='nototif normal'>&#x2D31;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D36;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt;&lt; <span class='nototif normal'>&#x2D3C;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt;&lt; <span class='nototif normal'>&#x2D45;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt;&lt; <span class='nototif normal'>&#x2D4D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4E;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt;&lt; <span class='nototif normal'>&#x2D54;&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt;&lt; <span class='nototif normal'>&#x2D56; &#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5E;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span> 
+<span class='nototif normal'>&#x2D30;</span> &lt;&lt; <span class='nototif normal'>&#x2D30;&#x2D49;</span> &lt;&lt; <span class='nototif normal'>&#x2D30;&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D31;</span> &lt;&lt; <span class='nototif normal'>&#x2D31;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D33;</span> &lt;&lt; <span class='nototif normal'>&#x2D33;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D37;</span> &lt; <span class='nototif normal'>&#x2D36;</span> &lt; <span class='nototif normal'>&#x2D39;</span> &lt; <span class='nototif normal'>&#x2D3B;</span> &lt; <span class='nototif normal'>&#x2D3C;</span> &lt;&lt; <span class='nototif normal'>&#x2D3C;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D3D;</span> &lt; <span class='nototif normal'>&#x2D3D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D40;</span> &lt; <span class='nototif normal'>&#x2D43;</span> &lt; <span class='nototif normal'>&#x2D44;</span> &lt; <span class='nototif normal'>&#x2D45;</span> &lt;&lt; <span class='nototif normal'>&#x2D45;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D47;</span> &lt; <span class='nototif normal'>&#x2D49;</span> &lt; <span class='nototif normal'>&#x2D4D;</span> &lt;&lt; <span class='nototif normal'>&#x2D4D;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D4E;</span> &lt; <span class='nototif normal'>&#x2D4E;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D4F;</span> &lt; <span class='nototif normal'>&#x2D53;</span> &lt; <span class='nototif normal'>&#x2D54;</span> &lt;&lt; <span class='nototif normal'>&#x2D54;&#x2D54;</span> &lt; <span class='nototif normal'>&#x2D55;</span> &lt; <span class='nototif normal'>&#x2D56;</span> &lt;&lt; <span class='nototif normal'>&#x2D56;&#x2D6F;</span> &lt; <span class='nototif normal'>&#x2D59;</span> &lt; <span class='nototif normal'>&#x2D5A;</span> &lt; <span class='nototif normal'>&#x2D5B;</span> &lt; <span class='nototif normal'>&#x2D5C;</span> &lt; <span class='nototif normal'>&#x2D5E;</span> &lt; <span class='nototif normal'>&#x2D5F;</span> &lt; <span class='nototif normal'>&#x2D61;</span> &lt; <span class='nototif normal'>&#x2D62;</span> &lt; <span class='nototif normal'>&#x2D63;</span> &lt; <span class='nototif normal'>&#x2D65;</span> 
 
 ### <a id="taq"></a>Tamasheq
 
 _Source_: [Omniglot](https://omniglot.com/writing/tamasheq.htm)
 
 _Language tag_: `taq-Tfng`
+
+_SLDR:_ [taq_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/t/taq_Tfng.xml)
 
 _Opentype language system tag:_ `TAQ ` (preferred) or `TMH `
 
@@ -916,6 +933,8 @@ _Source_: <a href="#Andries2004">L2/04-142</a> (pages 8 & 31)
 
 _Language tag_: `tda-Tfng`
 
+_SLDR:_ [tda_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/t/tda_Tfng.xml)
+
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
 Tfng       | <span class='akatab normal'>&#x2D30;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D39;</span> | <span class='akatab normal'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> |<span class='akatab normal'>&#x2D40;</span> | <span class='akatab normal'>&#x2D42;</span> | <span class='akatab normal'>&#x2D46;</span> | <span class='akatab normal'>&#x2D48;</span> 
@@ -973,6 +992,8 @@ Unknown.
 _Source_: Alphabet Chart (personal files)
 
 _Language tag:_ `thv-Tfng`
+
+_SLDR:_ [thv_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/t/thv_Tfng.xml)
 
 _Opentype language system tag:_ `THV ` (preferred) or `TMH `
 
@@ -1050,6 +1071,8 @@ _Source_: [Omniglot](https://omniglot.com/writing/tayarttamajeq.htm) and <a href
 
 _Language tag_: `thz-Tfng`
 
+_SLDR:_ [thz_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/t/thz_Tfng.xml)
+
 _Opentype language system tag:_ `THZ ` (preferred) or `TMH `
 
 The order of these characters is based on Unicode codepoints, not on the order listed in the sources. The two sources have an inconsistent character set. This is a combination of the two. 
@@ -1112,6 +1135,8 @@ _Sample graphic_</br><img src="assets/images/thz_TamahaqAir_1230.png" title="fig
 _Source_: <a href="#abdoussamed">Abdoussamed</a>, and characters which are included in Tagmukay font and the keyboard below.
 
 _Language tag_: `ttq-Tfng`, `tmh-Tfng` (macrolanguage)
+
+_SLDR:_ [ttq_Tfng](https://github.com/silnrsi/sldr/blob/master/sldr/t/ttq_Tfng.xml)
 
 _Opentype language system tag:_ `TTQ ` (preferred) or `TMH `
 
