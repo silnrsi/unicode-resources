@@ -2,7 +2,7 @@
 title: Unicode Technical Note 59 - Representing Tifinagh in Unicode
 ---
 
-_Lorna Evans and Jon Coblentz, SIL Global (2-Dec-2024)_
+_Lorna Evans and Jon Coblentz, SIL Global (26-Mar-2025)_
 
 _Further information, corrections, and additions on script use, as well as information on language usage is most welcome._
 
@@ -78,19 +78,26 @@ Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
 Tfng   | <span class='akatab normal'>&#x2D30;&#x0302;</span> | <span class='akatab normal'>&#x2D30;&#x0306;</span> | <span class='akatab normal'>&#x2D62;&#x0323;</span> | <span class='akatab normal'>&#x2D62;&#x0302;</span> | <span class='akatab normal'>&#x2D53;&#x0302;</span> | <span class='akatab normal'>&#x2D67;&#x0302;</span>
 USV    | 2D30 + 0302 | 2D30 + 0306 | 2D62 + 0323 | 2D62 + 0302 | 2D53 + 0302 | 2D67 + 0302
+Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
+
 
 #### _APT_
 
+_Source_: <a href="#amanar">Amanar</a>
+
 Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
-Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#x2D66;</span>    | <span class='utn normal'>&#xED62;</span>    | <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xE014;</span> | <span class='utn normal'>&#xED67;</span>
-USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | 2D67 
+Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#xE014;</span>     | <span class='utn normal'>&#xED62;</span>    | <span class='nototif normal'>&#x2D66;</span> | <span class='utn normal'>&#xED67;</span> | <span class='nototif normal'>&#x2D67;</span>
+USV  | 2D30 | 2D3B | 2D62 | 2D66 | 2D53 | 2D67 
+Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
+
+_APT also uses U+0302 COMBINING CIRCUMFLEX ACCENT on all the vowels with the exception of on schwa._
 
 #### _Hawad_
 
 Vowels |     |     |     |     |     |
 :-------   | :-- | :-- | :-- | :-- | :-- | :--
-Tfng | <span class='utn normal'>&#xE030;</span>    | <span class='utn normal'>&#xE031;</span>  | <span class='utn normal'>&#x2D5D;</span>  | <span class='utn normal'>&#xE032;</span>    | <span class='utn normal'>&#xE033;</span> |  
+Tfng | <span class='utn normal'>&#xE030;</span>    | <span class='utn normal'>&#xE031;</span>  | <span class='nototif normal'>&#x2D5D;</span>  | <span class='utn normal'>&#xE032;</span>    | <span class='utn normal'>&#xE033;</span> |  
 USV  | 2D5D 0307 | 2D5D 0308 | 2D5D | 2D49 0307 | 2D49 0308 | 
 
 The combining marks required for these three systems would be:
@@ -126,22 +133,22 @@ Because these glyphs are taken from various fonts, the height of a particular gl
 
 |  | 2D3     | 2D4      | 2D5      | 2D6      | 2D7    
 :- | :---     | :---      | :---      | :---      | :--
-0  |<span class='utn normal'>&#x2D30;</span> <span class='utn normal'>&#xED30;</span> <span class='utn normal'>&#xE000;</span></br>_ya_| <span class='utn normal'>&#x2D40;</span> <span class='utn normal'>&#xED40;</span> <span class='utn normal'>&#xE00A;</span></br>_yah or Tuareg yab_| <span class='utn normal'>&#x2D50;</span> <span class='utn normal'>&#xED50;</span> <span class='utn normal'>&#xE010;</span> <span class='utn normal'>&#xE011;</span> <span class='utn normal'>&#xE012;</span></br>_Tuareg yagn_| <span class='utn normal'>&#x2D60;</span> <span class='utn normal'>&#xE026;</span></br>_yav_ | <span class='utn normal'>&#x2D70;</span></br>_tazarast_
-1  |<span class='utn normal'>&#x2D31;</span> <span class='utn normal'>&#xED31;</span> <span class='utn normal' >&#xE001;</span></br>_yab_| <span class='utn normal'>&#x2D41;</span></br>_Berber yah_ | <span class='utn normal'>&#x2D51;</span></br>_Tuareg yang_ | <span class='utn normal'>&#x2D61;</span></br>_yaw_ | 
-2  |<span class='utn normal'>&#x2D32;</span> <span class='utn normal'>&#xED32;</span></br>_yabh_ | <span class='utn normal'>&#x2D42;</span> <span class='utn normal'>&#xED42;</span></br>_Tuareg yah_ | <span class='utn normal'>&#x2D52;</span></br>_yap_ | <span class='utn normal'>&#x2D62;</span> <span class='utn normal'>&#xED62;</span> <span class='utn normal'>&#xE01A;</span> <span class='utn normal'>&#xE01B;</span> <span class='utn normal'>&#xE020;</span> <span class='utn normal'>&#xE01C;</span> <span class='utn normal'>&#xE03B;</span></br>_yay_| 
-3  |<span class='utn normal'>&#x2D33;</span> <span class='utn normal'>&#xED33;</span></br>_yag_| <span class='utn normal'>&#x2D43;</span></br>_yahh_ | <span class='utn normal'>&#x2D53;</span> <span class='utn normal'>&#xED53;</span> <span class='utn normal'>&#xE013;</span> <span class='utn normal'>&#xE014;</span></br>_yu or Tuareg yaw_| <span class='utn normal'>&#x2D63;</span> <span class='utn normal'>&#xED63;</span> <span class='utn normal'>&#xE01D;</span> <span class='utn normal'>&#xE01E;</span></br>_yaz_| 
-4  |<span class='utn normal'>&#x2D34;</span> <span class='utn normal'>&#xED34;</span> <span class='utn normal'>&#xE002;</span> <span class='utn normal'>&#xE003;</span> <span class='utn normal'>&#xE004;</span> <span class='utn normal'>&#xE024;</span></br>_yaghh_| <span class='utn normal'>&#x2D44;</span> <span class='utn normal'>&#xED44;</span></br>_yaa_| <span class='utn normal'>&#x2D54;</span> <span class='utn normal'>&#xED54;</span></br>_yar_ | <span class='utn normal'>&#x2D64;</span> <span class='utn normal'>&#xE01F;</span></br>_Tawellemet yaz_| 
-5  |<span class='utn normal'>&#x2D35;</span></br>_Berber yaj_ | <span class='utn normal'>&#x2D45;</span></br>_yakh_ | <span class='utn normal'>&#x2D55;</span> <span class='utn normal'>&#xED55;</span></br>_yarr_| <span class='utn normal'>&#x2D65;</span> <span class='utn normal'>&#xED65;</span></br>_yazz_| 
-6  |<span class='utn normal'>&#x2D36;</span> <span class='utn normal'>&#xED36;</span></br>_yaj_| <span class='utn normal'>&#x2D46;</span></br>_Tuareg yakh_ | <span class='utn normal'>&#x2D56;</span></br>_yagh_ | <span class='utn normal'>&#x2D66;</span></br>_ye_ | 
-7  |<span class='utn normal'>&#x2D37;</span> <span class='utn normal'>&#xED37;</span></br>_yad_ | <span class='utn normal'>&#x2D47;</span></br>_yaq_ | <span class='utn normal'>&#x2D57;</span> <span class='utn normal'>&#xED57;</span></br>_Tuareg yagh_| <span class='utn normal'>&#x2D67;</span> <span class='utn normal'>&#xED67;</span></br>_yo_| 
-8  |<span class='utn normal'>&#x2D38;</span> <span class='utn normal'>&#xED38;</span></br>_yadh_| <span class='utn normal'>&#x2D48;</span> <span class='utn normal'>&#xED48;</span></br>_Tuareg yaq_| <span class='utn normal'>&#x2D58;</span></br>_Ayer yagh or Adrar yaj_ |  | 
-9  |<span class='utn normal'>&#x2D39;</span> <span class='utn normal'>&#xED39;</span> <span class='utn normal'>&#xE005;</span></br>_yadd_| <span class='utn normal'>&#x2D49;</span> <span class='utn normal'>&#xED49;</span> <span class='utn normal'>&#xE00B;</span></br>_yi_ | <span class='utn normal'>&#x2D59;</span> <span class='utn normal'>&#xED59;</span></br>_yas_ |  | 
-A  |<span class='utn normal'>&#x2D3A;</span> <span class='utn normal'>&#xED3A;</span> <span class='utn normal'>&#xE006;</span></br>_yaddh_ | <span class='utn normal'>&#x2D4A;</span></br>_yazh_ | <span class='utn normal'>&#x2D5A;</span> <span class='utn normal'>&#xED5A;</span> <span class='utn normal'>&#xE015;</span></br>_yass_|  | 
-B  |<span class='utn normal'>&#x2D3B;</span> <span class='utn normal'>&#xED3B;</span></br>_yey_| <span class='utn normal'>&#x2D4B;</span> <span class='utn normal'>&#xED4B;</span> <span class='utn normal'>&#xE00C;</span></br>_Ahaggar yazh_| <span class='utn normal'>&#x2D5B;</span> <span class='utn normal'>&#xED5B;</span> <span class='utn normal'>&#xE017;</span> <span class='utn normal'>&#xE023;</span> <span class='utn normal'>&#xE016;</span></br>_yash_|  | 
-C  |<span class='utn normal'>&#x2D3C;</span> <span class='utn normal'>&#xED3C;</span> <span class='utn normal'>&#xE007;</span> <span class='utn normal'>&#xE008;</span></br>_yaf_| <span class='utn normal'>&#x2D4C;</span></br>_Tuareg yazh_ | <span class='utn normal'>&#x2D5C;</span> <span class='utn normal'>&#xED5C;</span></br>_yat_|  | 
-D  |<span class='utn normal'>&#x2D3D;</span></br>_yak_ | <span class='utn normal'>&#x2D4D;</span> <span class='utn normal'>&#xED4D;</span> <span class='utn normal'>&#xE00E;</span></br>_yal_| <span class='utn normal'>&#x2D5D;</span></br>_yath_ |  | 
-E  |<span class='utn normal'>&#x2D3E;</span> <span class='utn normal'>&#xED3E;</span> <span class='utn normal'>&#xE009;</span> <span class='utn normal'>&#xE021;</span> <span class='utn normal'>&#xE022;</span></br>_Tuareg yak_ | <span class='utn normal'>&#x2D4E;</span> <span class='utn normal'>&#xED4E;</span> <span class='utn normal'>&#xE00F;</span></br>_yam_ | <span class='utn normal'>&#x2D5E;</span> <span class='utn normal'>&#xED5E;</span> <span class='utn normal'>&#xE025;</span></br>_yach_|  | 
-F  |<span class='utn normal'>&#x2D3F;</span></br>_yakhh_ | <span class='utn normal'>&#x2D4F;</span></br>_yan_ | <span class='utn normal'>&#x2D5F;</span> <span class='utn normal'>&#xED5F;</span> <span class='utn normal'>&#xE018;</span> <span class='utn normal'>&#xE019;</span></br>_yatt_| <span class='utn normal'>&#x2D6F;</span> <span class='utn normal'>&#xED6F;</span></br>_tamatart_| <span class='utn normal'>&#x2D7F;</span></br>_joiner_
+0  |<span class='nototif normal'>&#x2D30;</span> <span class='utn normal'>&#xED30;</span> <span class='utn normal'>&#xE000;</span></br>_ya_| <span class='nototif normal'>&#x2D40;</span> <span class='utn normal'>&#xED40;</span> <span class='utn normal'>&#xE00A;</span></br>_yah or Tuareg yab_| <span class='nototif normal'>&#x2D50;</span> <span class='utn normal'>&#xED50;</span> <span class='utn normal'>&#xE010;</span> <span class='utn normal'>&#xE011;</span> <span class='utn normal'>&#xE012;</span></br>_Tuareg yagn_| <span class='nototif normal'>&#x2D60;</span> <span class='utn normal'>&#xE026;</span></br>_yav_ | <span class='nototif normal'>&#x2D70;</span></br>_tazarast_
+1  |<span class='nototif normal'>&#x2D31;</span> <span class='utn normal'>&#xED31;</span> <span class='utn normal' >&#xE001;</span></br>_yab_| <span class='nototif normal'>&#x2D41;</span></br>_Berber yah_ | <span class='nototif normal'>&#x2D51;</span></br>_Tuareg yang_ | <span class='nototif normal'>&#x2D61;</span></br>_yaw_ | 
+2  |<span class='nototif normal'>&#x2D32;</span> <span class='utn normal'>&#xED32;</span></br>_yabh_ | <span class='nototif normal'>&#x2D42;</span> <span class='utn normal'>&#xED42;</span></br>_Tuareg yah_ | <span class='nototif normal'>&#x2D52;</span></br>_yap_ | <span class='nototif normal'>&#x2D62;</span> <span class='utn normal'>&#xED62;</span> <span class='utn normal'>&#xE01A;</span> <span class='utn normal'>&#xE01B;</span> <span class='utn normal'>&#xE020;</span> <span class='utn normal'>&#xE01C;</span> <span class='utn normal'>&#xE03B;</span></br>_yay_| 
+3  |<span class='nototif normal'>&#x2D33;</span> <span class='utn normal'>&#xED33;</span></br>_yag_| <span class='nototif normal'>&#x2D43;</span></br>_yahh_ | <span class='nototif normal'>&#x2D53;</span> <span class='utn normal'>&#xED53;</span> <span class='utn normal'>&#xE013;</span> <span class='utn normal'>&#xED67;</span></br>_yu or Tuareg yaw_| <span class='nototif normal'>&#x2D63;</span> <span class='utn normal'>&#xED63;</span> <span class='utn normal'>&#xE01D;</span> <span class='utn normal'>&#xE01E;</span></br>_yaz_| 
+4  |<span class='nototif normal'>&#x2D34;</span> <span class='utn normal'>&#xED34;</span> <span class='utn normal'>&#xE002;</span> <span class='utn normal'>&#xE003;</span> <span class='utn normal'>&#xE004;</span> <span class='utn normal'>&#xE024;</span></br>_yaghh_| <span class='nototif normal'>&#x2D44;</span> <span class='utn normal'>&#xED44;</span></br>_yaa_| <span class='nototif normal'>&#x2D54;</span> <span class='utn normal'>&#xED54;</span></br>_yar_ | <span class='nototif normal'>&#x2D64;</span> <span class='utn normal'>&#xE01F;</span></br>_Tawellemet yaz_| 
+5  |<span class='nototif normal'>&#x2D35;</span></br>_Berber yaj_ | <span class='nototif normal'>&#x2D45;</span></br>_yakh_ | <span class='nototif normal'>&#x2D55;</span> <span class='utn normal'>&#xED55;</span></br>_yarr_| <span class='nototif normal'>&#x2D65;</span> <span class='utn normal'>&#xED65;</span></br>_yazz_| 
+6  |<span class='nototif normal'>&#x2D36;</span> <span class='utn normal'>&#xED36;</span></br>_yaj_| <span class='nototif normal'>&#x2D46;</span></br>_Tuareg yakh_ | <span class='nototif normal'>&#x2D56;</span></br>_yagh_ | <span class='nototif normal'>&#x2D66;</span></br>_ye_ | 
+7  |<span class='nototif normal'>&#x2D37;</span> <span class='utn normal'>&#xED37;</span></br>_yad_ | <span class='nototif normal'>&#x2D47;</span></br>_yaq_ | <span class='nototif normal'>&#x2D57;</span> <span class='utn normal'>&#xED57;</span></br>_Tuareg yagh_| <span class='nototif normal'>&#x2D67;</span></br>_yo_| 
+8  |<span class='nototif normal'>&#x2D38;</span> <span class='utn normal'>&#xED38;</span></br>_yadh_| <span class='nototif normal'>&#x2D48;</span> <span class='utn normal'>&#xED48;</span></br>_Tuareg yaq_| <span class='nototif normal'>&#x2D58;</span></br>_Ayer yagh or Adrar yaj_ |  | 
+9  |<span class='utn normal'>&#x2D39;</span> <span class='utn normal'>&#xED39;</span> <span class='utn normal'>&#xE005;</span></br>_yadd_| <span class='nototif normal'>&#x2D49;</span> <span class='utn normal'>&#xED49;</span> <span class='utn normal'>&#xE00B;</span></br>_yi_ | <span class='nototif normal'>&#x2D59;</span> <span class='utn normal'>&#xED59;</span></br>_yas_ |  | 
+A  |<span class='nototif normal'>&#x2D3A;</span> <span class='utn normal'>&#xED3A;</span> <span class='utn normal'>&#xE006;</span></br>_yaddh_ | <span class='nototif normal'>&#x2D4A;</span></br>_yazh_ | <span class='nototif normal'>&#x2D5A;</span> <span class='utn normal'>&#xED5A;</span> <span class='utn normal'>&#xE015;</span></br>_yass_|  | 
+B  |<span class='nototif normal'>&#x2D3B;</span> <span class='utn normal'>&#xED3B;</span> <span class='utn normal'>&#xE014;</span></br>_yey_| <span class='nototif normal'>&#x2D4B;</span> <span class='utn normal'>&#xED4B;</span> <span class='utn normal'>&#xE00C;</span></br>_Ahaggar yazh_| <span class='nototif normal'>&#x2D5B;</span> <span class='utn normal'>&#xED5B;</span> <span class='utn normal'>&#xE017;</span> <span class='utn normal'>&#xE023;</span> <span class='utn normal'>&#xE016;</span></br>_yash_|  | 
+C  |<span class='nototif normal'>&#x2D3C;</span> <span class='utn normal'>&#xED3C;</span> <span class='utn normal'>&#xE007;</span> <span class='utn normal'>&#xE008;</span></br>_yaf_| <span class='nototif normal'>&#x2D4C;</span></br>_Tuareg yazh_ | <span class='nototif normal'>&#x2D5C;</span> <span class='utn normal'>&#xED5C;</span></br>_yat_|  | 
+D  |<span class='nototif normal'>&#x2D3D;</span></br>_yak_ | <span class='nototif normal'>&#x2D4D;</span> <span class='utn normal'>&#xED4D;</span> <span class='utn normal'>&#xE00E;</span></br>_yal_| <span class='nototif normal'>&#x2D5D;</span></br>_yath_ |  | 
+E  |<span class='nototif normal'>&#x2D3E;</span> <span class='utn normal'>&#xED3E;</span> <span class='utn normal'>&#xE009;</span> <span class='utn normal'>&#xE021;</span> <span class='utn normal'>&#xE022;</span></br>_Tuareg yak_ | <span class='nototif normal'>&#x2D4E;</span> <span class='utn normal'>&#xED4E;</span> <span class='utn normal'>&#xE00F;</span></br>_yam_ | <span class='nototif normal'>&#x2D5E;</span> <span class='utn normal'>&#xED5E;</span> <span class='utn normal'>&#xE025;</span></br>_yach_|  | 
+F  |<span class='nototif normal'>&#x2D3F;</span></br>_yakhh_ | <span class='nototif normal'>&#x2D4F;</span></br>_yan_ | <span class='nototif normal'>&#x2D5F;</span> <span class='utn normal'>&#xED5F;</span> <span class='utn normal'>&#xE018;</span> <span class='utn normal'>&#xE019;</span></br>_yatt_| <span class='nototif normal'>&#x2D6F;</span> <span class='utn normal'>&#xED6F;</span></br>_tamatart_| <span class='nototif normal'>&#x2D7F;</span></br>_joiner_
 
 ### <a id="bicons"></a>Bi- Tri-consonants
 
@@ -293,70 +300,70 @@ For vertical writing, the glyphs should be designed on a center baseline. <a hre
 
 |  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
 :- | :--     | :--      | :--      | :--
-2D30  |<span class='utn normal'>&#x2D30;</span>| <span class='utn normal'>&#x2D30;</span> | <span class='utn normal'>&#x2D30;</span>|<span class='utn normal'>&#x2D30;</span>
-2D31  |<span class='utn normal'>&#x2D31;</span>| <span class='utn normal'>&#x2D31;</span> | <span class='utn normal'>&#xF031;</span>|<span class='utn normal'>&#xF031;</span>
-2D32  |<span class='utn normal'>&#x2D32;</span>| <span class='utn normal'>&#x2D32;</span> | <span class='utn normal'>&#xF032;</span>|<span class='utn normal'>&#xF032;</span>
-2D33  |<span class='utn normal'>&#x2D33;</span>| <span class='utn normal'>&#x2D33;</span> | <span class='utn normal'>&#xF033;</span>|<span class='utn normal'>&#xF034;</span>
-2D34  |<span class='utn normal'>&#x2D34;</span>| <span class='utn normal'>&#x2D34;</span> | <span class='utn normal'>&#xF034;</span>|<span class='utn normal'>&#xF033;</span>
-2D35  |<span class='utn normal'>&#x2D35;</span>| <span class='utn normal'>&#x2D35;</span> | <span class='utn normal'>&#xF035;</span>|<span class='utn normal'>&#xF035;</span>
-2D36  |<span class='utn normal'>&#x2D36;</span>| <span class='utn normal'>&#x2D36;</span> | <span class='utn normal'>&#xF036;</span>|<span class='utn normal'>&#xF136;</span>
-2D37  |<span class='utn normal'>&#x2D37;</span>| <span class='utn normal'>&#x2D37;</span> | <span class='utn normal'>&#xF037;</span>|<span class='utn normal'>&#xF038;</span>
-2D38  |<span class='utn normal'>&#x2D38;</span>| <span class='utn normal'>&#x2D38;</span> | <span class='utn normal'>&#xF038;</span>|<span class='utn normal'>&#xF037;</span>
+2D30  |<span class='nototif normal'>&#x2D30;</span>| <span class='nototif normal'>&#x2D30;</span> | <span class='nototif normal'>&#x2D30;</span>|<span class='nototif normal'>&#x2D30;</span>
+2D31  |<span class='nototif normal'>&#x2D31;</span>| <span class='nototif normal'>&#x2D31;</span> | <span class='utn normal'>&#xF031;</span>|<span class='utn normal'>&#xF031;</span>
+2D32  |<span class='nototif normal'>&#x2D32;</span>| <span class='nototif normal'>&#x2D32;</span> | <span class='utn normal'>&#xF032;</span>|<span class='utn normal'>&#xF032;</span>
+2D33  |<span class='nototif normal'>&#x2D33;</span>| <span class='nototif normal'>&#x2D33;</span> | <span class='utn normal'>&#xF033;</span>|<span class='utn normal'>&#xF034;</span>
+2D34  |<span class='nototif normal'>&#x2D34;</span>| <span class='nototif normal'>&#x2D34;</span> | <span class='utn normal'>&#xF034;</span>|<span class='utn normal'>&#xF033;</span>
+2D35  |<span class='nototif normal'>&#x2D35;</span>| <span class='nototif normal'>&#x2D35;</span> | <span class='utn normal'>&#xF035;</span>|<span class='utn normal'>&#xF035;</span>
+2D36  |<span class='nototif normal'>&#x2D36;</span>| <span class='nototif normal'>&#x2D36;</span> | <span class='utn normal'>&#xF036;</span>|<span class='utn normal'>&#xF136;</span>
+2D37  |<span class='nototif normal'>&#x2D37;</span>| <span class='nototif normal'>&#x2D37;</span> | <span class='utn normal'>&#xF037;</span>|<span class='utn normal'>&#xF038;</span>
+2D38  |<span class='nototif normal'>&#x2D38;</span>| <span class='nototif normal'>&#x2D38;</span> | <span class='utn normal'>&#xF038;</span>|<span class='utn normal'>&#xF037;</span>
 2D39  |<span class='utn normal'>&#x2D39;</span>| <span class='utn normal'>&#xED3A;</span> | <span class='utn normal'>&#xF039;</span>|<span class='utn normal'>&#xF139;</span>
 
 &#x00A0;
 
 |  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
 :- | :--     | :--      | :--      | :--
-2D3A  |<span class='utn normal'>&#x2D3A;</span>| <span class='utn normal'>&#xED39;</span> | <span class='utn normal'>&#xF03A;</span>|<span class='utn normal'>&#xF13A;</span>
-2D3B  |<span class='utn normal'>&#x2D3B;</span>| <span class='utn normal'>&#x2D3B;</span> | <span class='utn normal'>&#xF03B;</span>|<span class='utn normal'>&#xF03B;</span>
-2D3C  |<span class='utn normal'>&#x2D3C;</span>| <span class='utn normal'>&#x2D3C;</span> | <span class='utn normal'>&#xF03C;</span>|<span class='utn normal'>&#xF03C;</span>
-2D3D  |<span class='utn normal'>&#x2D3D;</span>| <span class='utn normal'>&#xFD3D;</span> | <span class='utn normal'>&#xF03D;</span>|<span class='utn normal'>&#xF13D;</span>
-2D3E  |<span class='utn normal'>&#x2D3E;</span>| <span class='utn normal'>&#xFD3E;</span> | <span class='utn normal'>&#xF03E;</span>|<span class='utn normal'>&#xF13E;</span>
-2D3F  |<span class='utn normal'>&#x2D3F;</span>| <span class='utn normal'>&#xFD3F;</span> | <span class='utn normal'>&#xF03F;</span>|<span class='utn normal'>&#xF13F;</span>
-2D40  |<span class='utn normal'>&#x2D40;</span>| <span class='utn normal'>&#x2D40;</span> | <span class='utn normal'>&#xF040;</span>|<span class='utn normal'>&#xF040;</span>
-2D41  |<span class='utn normal'>&#x2D41;</span>| <span class='utn normal'>&#xFD41;</span> | <span class='utn normal'>&#xF041;</span>|<span class='utn normal'>&#xF041;</span>
-2D42  |<span class='utn normal'>&#x2D42;</span>| <span class='utn normal'>&#x2D42;</span> | <span class='utn normal'>&#xF042;</span>|<span class='utn normal'>&#xF042;</span>
-2D43  |<span class='utn normal'>&#x2D43;</span>| <span class='utn normal'>&#xFD43;</span> | <span class='utn normal'>&#xF043;</span>|<span class='utn normal'>&#xF143;</span>
-2D44  |<span class='utn normal'>&#x2D44;</span>| <span class='utn normal'>&#x2D44;</span> | <span class='utn normal'>&#xF044;</span>|<span class='utn normal'>&#xF056;</span>
-2D45  |<span class='utn normal'>&#x2D45;</span>| <span class='utn normal'>&#x2D45;</span> | <span class='utn normal'>&#xF045;</span>|<span class='utn normal'>&#xF145;</span>
-2D46  |<span class='utn normal'>&#x2D46;</span>| <span class='utn normal'>&#x2D46;</span> | <span class='utn normal'>&#xF046;</span>|<span class='utn normal'>&#xF046;</span>
-2D47  |<span class='utn normal'>&#x2D47;</span>| <span class='utn normal'>&#xFD47;</span> | <span class='utn normal'>&#xF047;</span>|<span class='utn normal'>&#xF147;</span>
-2D48  |<span class='utn normal'>&#x2D48;</span>| <span class='utn normal'>&#x2D48;</span> | <span class='utn normal'>&#xF048;</span>|<span class='utn normal'>&#xF048;</span>
-2D49  |<span class='utn normal'>&#x2D49;</span>| <span class='utn normal'>&#xFD49;</span> | <span class='utn normal'>&#xF049;</span>|<span class='utn normal'>&#xF149;</span>
-2D4A  |<span class='utn normal'>&#x2D4A;</span>| <span class='utn normal'>&#x2D4A;</span> | <span class='utn normal'>&#xF04A;</span>|<span class='utn normal'>&#xF04A;</span>
-2D4B  |<span class='utn normal'>&#x2D4B;</span>| <span class='utn normal'>&#x2D4B;</span> | <span class='utn normal'>&#xF04B;</span>|<span class='utn normal'>&#xF04B;</span>
-2D4C  |<span class='utn normal'>&#x2D4C;</span>| <span class='utn normal'>&#x2D4C;</span> | <span class='utn normal'>&#xF04C;</span>|<span class='utn normal'>&#xF04C;</span>
-2D4D  |<span class='utn normal'>&#x2D4D;</span>| <span class='utn normal'>&#xFD4D;</span> | <span class='utn normal'>&#xF04D;</span>|<span class='utn normal'>&#xF04D;</span>
-2D4E  |<span class='utn normal'>&#x2D4E;</span>| <span class='utn normal'>&#xFD4E;</span> | <span class='utn normal'>&#xF04E;</span>|<span class='utn normal'>&#xF14E;</span>
-2D4F  |<span class='utn normal'>&#x2D4F;</span>| <span class='utn normal'>&#x2D4F;</span> | <span class='utn normal'>&#xF04F;</span>|<span class='utn normal'>&#xF04F;</span>
+2D3A  |<span class='nototif normal'>&#x2D3A;</span>| <span class='nototif normal'>&#x2D39;</span> | <span class='utn normal'>&#xF03A;</span>|<span class='utn normal'>&#xF13A;</span>
+2D3B  |<span class='nototif normal'>&#x2D3B;</span>| <span class='nototif normal'>&#x2D3B;</span> | <span class='utn normal'>&#xF03B;</span>|<span class='utn normal'>&#xF03B;</span>
+2D3C  |<span class='nototif normal'>&#x2D3C;</span>| <span class='nototif normal'>&#x2D3C;</span> | <span class='utn normal'>&#xF03C;</span>|<span class='utn normal'>&#xF03C;</span>
+2D3D  |<span class='nototif normal'>&#x2D3D;</span>| <span class='utn normal'>&#xFD3D;</span> | <span class='utn normal'>&#xF03D;</span>|<span class='utn normal'>&#xF13D;</span>
+2D3E  |<span class='nototif normal'>&#x2D3E;</span>| <span class='utn normal'>&#xFD3E;</span> | <span class='utn normal'>&#xF03E;</span>|<span class='utn normal'>&#xF13E;</span>
+2D3F  |<span class='nototif normal'>&#x2D3F;</span>| <span class='utn normal'>&#xFD3F;</span> | <span class='utn normal'>&#xF03F;</span>|<span class='utn normal'>&#xF13F;</span>
+2D40  |<span class='nototif normal'>&#x2D40;</span>| <span class='nototif normal'>&#x2D40;</span> | <span class='utn normal'>&#xF040;</span>|<span class='utn normal'>&#xF040;</span>
+2D41  |<span class='nototif normal'>&#x2D41;</span>| <span class='utn normal'>&#xFD41;</span> | <span class='utn normal'>&#xF041;</span>|<span class='utn normal'>&#xF041;</span>
+2D42  |<span class='nototif normal'>&#x2D42;</span>| <span class='nototif normal'>&#x2D42;</span> | <span class='utn normal'>&#xF042;</span>|<span class='utn normal'>&#xF042;</span>
+2D43  |<span class='nototif normal'>&#x2D43;</span>| <span class='utn normal'>&#xFD43;</span> | <span class='utn normal'>&#xF043;</span>|<span class='utn normal'>&#xF143;</span>
+2D44  |<span class='nototif normal'>&#x2D44;</span>| <span class='nototif normal'>&#x2D44;</span> | <span class='utn normal'>&#xF044;</span>|<span class='utn normal'>&#xF056;</span>
+2D45  |<span class='nototif normal'>&#x2D45;</span>| <span class='nototif normal'>&#x2D45;</span> | <span class='utn normal'>&#xF045;</span>|<span class='utn normal'>&#xF145;</span>
+2D46  |<span class='nototif normal'>&#x2D46;</span>| <span class='nototif normal'>&#x2D46;</span> | <span class='nototif normal'>&#x2D46;</span>|<span class='nototif normal'>&#x2D46;</span>
+2D47  |<span class='nototif normal'>&#x2D47;</span>| <span class='utn normal'>&#xFD47;</span> | <span class='utn normal'>&#xF047;</span>|<span class='utn normal'>&#xF147;</span>
+2D48  |<span class='nototif normal'>&#x2D48;</span>| <span class='nototif normal'>&#x2D48;</span> | <span class='utn normal'>&#xF048;</span>|<span class='utn normal'>&#xF048;</span>
+2D49  |<span class='nototif normal'>&#x2D49;</span>| <span class='utn normal'>&#xFD49;</span> | <span class='utn normal'>&#xF049;</span>|<span class='utn normal'>&#xF149;</span>
+2D4A  |<span class='nototif normal'>&#x2D4A;</span>| <span class='nototif normal'>&#x2D4A;</span> | <span class='utn normal'>&#xF04A;</span>|<span class='utn normal'>&#xF04A;</span>
+2D4B  |<span class='nototif normal'>&#x2D4B;</span>| <span class='nototif normal'>&#x2D4B;</span> | <span class='utn normal'>&#xF04B;</span>|<span class='utn normal'>&#xF04B;</span>
+2D4C  |<span class='nototif normal'>&#x2D4C;</span>| <span class='nototif normal'>&#x2D4C;</span> | <span class='nototif normal'>&#x2D4C;</span>|<span class='nototif normal'>&#x2D4C;</span>
+2D4D  |<span class='nototif normal'>&#x2D4D;</span>| <span class='utn normal'>&#xFD4D;</span> | <span class='utn normal'>&#xF04D;</span>|<span class='utn normal'>&#xF04D;</span>
+2D4E  |<span class='nototif normal'>&#x2D4E;</span>| <span class='utn normal'>&#xFD4E;</span> | <span class='utn normal'>&#xF04E;</span>|<span class='utn normal'>&#xF14E;</span>
+2D4F  |<span class='nototif normal'>&#x2D4F;</span>| <span class='nototif normal'>&#x2D4F;</span> | <span class='utn normal'>&#xF04F;</span>|<span class='utn normal'>&#xF04F;</span>
 
 |  | <span class='normal'>&#x2192;</span>     | <span class='normal'>&#x2190;</span>      | <span class='normal'>&#x2191;</span>      | <span class='normal'>&#x2193;</span>    
 :- | :--     | :--      | :--      | :--
-2D50  |<span class='utn normal'>&#x2D50;</span>| <span class='utn normal'>&#x2D50;</span> | <span class='utn normal'>&#xF050;</span>|<span class='utn normal'>&#xF050;</span>
-2D51  |<span class='utn normal'>&#x2D51;</span>| <span class='utn normal'>&#x2D51;</span> | <span class='utn normal'>&#xF051;</span>|<span class='utn normal'>&#xF151;</span>
-2D52  |<span class='utn normal'>&#x2D52;</span>| <span class='utn normal'>&#xFD52;</span> | <span class='utn normal'>&#xF052;</span>|<span class='utn normal'>&#xF152;</span>
-2D53  |<span class='utn normal'>&#x2D53;</span>| <span class='utn normal'>&#x2D53;</span> | <span class='utn normal'>&#xF053;</span>|<span class='utn normal'>&#xF053;</span>
-2D54  |<span class='utn normal'>&#x2D54;</span>| <span class='utn normal'>&#x2D54;</span> | <span class='utn normal'>&#xF054;</span>|<span class='utn normal'>&#xF054;</span>
-2D55  |<span class='utn normal'>&#x2D55;</span>| <span class='utn normal'>&#xFD55;</span> | <span class='utn normal'>&#xF055;</span>|<span class='utn normal'>&#xF155;</span>
-2D56  |<span class='utn normal'>&#x2D56;</span>| <span class='utn normal'>&#x2D56;</span> | <span class='utn normal'>&#xF056;</span>|<span class='utn normal'>&#xF044;</span>
-2D57  |<span class='utn normal'>&#x2D57;</span>| <span class='utn normal'>&#x2D57;</span> | <span class='utn normal'>&#xF057;</span>|<span class='utn normal'>&#xF057;</span>
-2D58  |<span class='utn normal'>&#x2D58;</span>| <span class='utn normal'>&#x2D58;</span> | <span class='utn normal'>&#xF058;</span>|<span class='utn normal'>&#xF058;</span>
-2D59  |<span class='utn normal'>&#x2D59;</span>| <span class='utn normal'>&#x2D59;</span> | <span class='utn normal'>&#xF059;</span>|<span class='utn normal'>&#xF059;</span>
-2D5A  |<span class='utn normal'>&#x2D5A;</span>| <span class='utn normal'>&#xFD5A;</span> | <span class='utn normal'>&#xF05A;</span>|<span class='utn normal'>&#xF15A;</span>
-2D5B  |<span class='utn normal'>&#x2D5B;</span>| <span class='utn normal'>&#xFD5B;</span> | <span class='utn normal'>&#xF05B;</span>|<span class='utn normal'>&#xF15B;</span>
-2D5C  |<span class='utn normal'>&#x2D5C;</span>| <span class='utn normal'>&#x2D5C;</span> | <span class='utn normal'>&#xF05C;</span>|<span class='utn normal'>&#xF05C;</span>
-2D5D  |<span class='utn normal'>&#x2D5D;</span>| <span class='utn normal'>&#x2D5D;</span> | <span class='utn normal'>&#xF05D;</span>|<span class='utn normal'>&#xF05D;</span>
-2D5E  |<span class='utn normal'>&#x2D5E;</span>| <span class='utn normal'>&#xFD5E;</span> | <span class='utn normal'>&#xF05E;</span>|<span class='utn normal'>&#xF15E;</span>
-2D5F  |<span class='utn normal'>&#x2D5F;</span>| <span class='utn normal'>&#xFD5F;</span> | <span class='utn normal'>&#xF05F;</span>|<span class='utn normal'>&#xF15F;</span>
-2D60  |<span class='utn normal'>&#x2D60;</span>| <span class='utn normal'>&#x2D60;</span> | <span class='utn normal'>&#xF060;</span>|<span class='utn normal'>&#xF160;</span>
-2D61  |<span class='utn normal'>&#x2D61;</span>| <span class='utn normal'>&#x2D61;</span> | <span class='utn normal'>&#xF061;</span>|<span class='utn normal'>&#xF161;</span>
-2D62  |<span class='utn normal'>&#x2D62;</span>| <span class='utn normal'>&#xFD62;</span> | <span class='utn normal'>&#xF062;</span>|<span class='utn normal'>&#xF162;</span>
-2D63  |<span class='utn normal'>&#x2D63;</span>| <span class='utn normal'>&#x2D63;</span> | <span class='utn normal'>&#xF063;</span>|<span class='utn normal'>&#xF063;</span>
-2D64  |<span class='utn normal'>&#x2D64;</span>| <span class='utn normal'>&#xFD64;</span> | <span class='utn normal'>&#xF064;</span>|<span class='utn normal'>&#xF164;</span>
-2D65  |<span class='utn normal'>&#x2D65;</span>| <span class='utn normal'>&#x2D65;</span> | <span class='utn normal'>&#xF065;</span>|<span class='utn normal'>&#xF065;</span>
-2D66  |<span class='utn normal'>&#x2D66;</span>| <span class='utn normal'>&#xFD66;</span> | <span class='utn normal'>&#xF066;</span>|<span class='utn normal'>&#xF166;</span>
-2D67  |<span class='utn normal'>&#x2D67;</span>| <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xF067;</span>|<span class='utn normal'>&#xF067;</span>
+2D50  |<span class='nototif normal'>&#x2D50;</span>| <span class='nototif normal'>&#x2D50;</span> | <span class='utn normal'>&#xF050;</span>|<span class='utn normal'>&#xF050;</span>
+2D51  |<span class='nototif normal'>&#x2D51;</span>| <span class='nototif normal'>&#x2D51;</span> | <span class='utn normal'>&#xF051;</span>|<span class='utn normal'>&#xF151;</span>
+2D52  |<span class='nototif normal'>&#x2D52;</span>| <span class='utn normal'>&#xFD52;</span> | <span class='utn normal'>&#xF052;</span>|<span class='utn normal'>&#xF152;</span>
+2D53  |<span class='nototif normal'>&#x2D53;</span>| <span class='nototif normal'>&#x2D53;</span> | <span class='utn normal'>&#xF053;</span>|<span class='utn normal'>&#xF053;</span>
+2D54  |<span class='nototif normal'>&#x2D54;</span>| <span class='nototif normal'>&#x2D54;</span> | <span class='utn normal'>&#xF054;</span>|<span class='utn normal'>&#xF054;</span>
+2D55  |<span class='nototif normal'>&#x2D55;</span>| <span class='utn normal'>&#xFD55;</span> | <span class='utn normal'>&#xF055;</span>|<span class='utn normal'>&#xF155;</span>
+2D56  |<span class='nototif normal'>&#x2D56;</span>| <span class='nototif normal'>&#x2D56;</span> | <span class='utn normal'>&#xF056;</span>|<span class='utn normal'>&#xF044;</span>
+2D57  |<span class='nototif normal'>&#x2D57;</span>| <span class='nototif normal'>&#x2D57;</span> | <span class='utn normal'>&#xF057;</span>|<span class='utn normal'>&#xF057;</span>
+2D58  |<span class='nototif normal'>&#x2D58;</span>| <span class='nototif normal'>&#x2D58;</span> | <span class='utn normal'>&#xF058;</span>|<span class='utn normal'>&#xF058;</span>
+2D59  |<span class='nototif normal'>&#x2D59;</span>| <span class='nototif normal'>&#x2D59;</span> | <span class='utn normal'>&#xF059;</span>|<span class='utn normal'>&#xF059;</span>
+2D5A  |<span class='nototif normal'>&#x2D5A;</span>| <span class='utn normal'>&#xFD5A;</span> | <span class='utn normal'>&#xF05A;</span>|<span class='utn normal'>&#xF15A;</span>
+2D5B  |<span class='nototif normal'>&#x2D5B;</span>| <span class='utn normal'>&#xFD5B;</span> | <span class='utn normal'>&#xF05B;</span>|<span class='utn normal'>&#xF15B;</span>
+2D5C  |<span class='nototif normal'>&#x2D5C;</span>| <span class='nototif normal'>&#x2D5C;</span> | <span class='utn normal'>&#xF05C;</span>|<span class='utn normal'>&#xF05C;</span>
+2D5D  |<span class='nototif normal'>&#x2D5D;</span>| <span class='nototif normal'>&#x2D5D;</span> | <span class='utn normal'>&#xF05D;</span>|<span class='utn normal'>&#xF05D;</span>
+2D5E  |<span class='nototif normal'>&#x2D5E;</span>| <span class='utn normal'>&#xFD5E;</span> | <span class='utn normal'>&#xF05E;</span>|<span class='utn normal'>&#xF15E;</span>
+2D5F  |<span class='nototif normal'>&#x2D5F;</span>| <span class='utn normal'>&#xFD5F;</span> | <span class='utn normal'>&#xF05F;</span>|<span class='utn normal'>&#xF15F;</span>
+2D60  |<span class='nototif normal'>&#x2D60;</span>| <span class='nototif normal'>&#x2D60;</span> | <span class='utn normal'>&#xF060;</span>|<span class='utn normal'>&#xF160;</span>
+2D61  |<span class='nototif normal'>&#x2D61;</span>| <span class='nototif normal'>&#x2D61;</span> | <span class='utn normal'>&#xF061;</span>|<span class='utn normal'>&#xF161;</span>
+2D62  |<span class='nototif normal'>&#x2D62;</span>| <span class='utn normal'>&#xFD62;</span> | <span class='utn normal'>&#xF062;</span>|<span class='utn normal'>&#xF162;</span>
+2D63  |<span class='nototif normal'>&#x2D63;</span>| <span class='nototif normal'>&#x2D63;</span> | <span class='utn normal'>&#xF063;</span>|<span class='utn normal'>&#xF063;</span>
+2D64  |<span class='nototif normal'>&#x2D64;</span>| <span class='utn normal'>&#xFD64;</span> | <span class='utn normal'>&#xF064;</span>|<span class='utn normal'>&#xF164;</span>
+2D65  |<span class='nototif normal'>&#x2D65;</span>| <span class='nototif normal'>&#x2D65;</span> | <span class='utn normal'>&#xF065;</span>|<span class='utn normal'>&#xF065;</span>
+2D66  |<span class='nototif normal'>&#x2D66;</span>| <span class='utn normal'>&#xFD66;</span> | <span class='utn normal'>&#xF066;</span>|<span class='utn normal'>&#xF166;</span>
+2D67  |<span class='nototif normal'>&#x2D67;</span>| <span class='nototif normal'>&#x2D67;</span> | <span class='utn normal'>&#xF067;</span>|<span class='utn normal'>&#xF067;</span>
 
 ## <a id="resource"></a>Resources
 
@@ -837,7 +844,7 @@ _Opentype language system tag:_ `TAQ ` (preferred) or `TMH `
 
 Characters | | | | | | | | | &#x0020;
 :------- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :--
-Tfng       | <span class='akatab normal' style='font-feature-settings: "cv01" 1'>&#x2D30;</span> | <span class='akatab normal'>&#x2D31;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D37;</span> | <span class='akatab normal'>&#x2D39;</span> |<span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> | <span class='akatab normal'>&#x2D42;</span> | <span class='utn normal'>&#x2D46;</span> 
+Tfng       | <span class='akatab normal' style='font-feature-settings: "cv01" 1'>&#x2D30;</span> | <span class='akatab normal'>&#x2D31;</span> | <span class='akatab normal'>&#x2D36;</span> | <span class='akatab normal'>&#x2D37;</span> | <span class='akatab normal'>&#x2D39;</span> |<span class='akatab normal' style='font-feature-settings: "cv02" 1'>&#x2D3C;</span> | <span class='akatab normal'>&#x2D3E;</span> | <span class='akatab normal'>&#x2D42;</span> | <span class='nototif normal'>&#x2D46;</span> 
 USV        | 2D30 | 2D31 | 2D36 | 2D37 | 2D39 | 2D3C | 2D3E | 2D42 | 2D46
 Latn        | /&#x0251;/ | /b/ | /&#x0261;/ | /d/ | /ḍ/ | /f/ | /k/ | /h/ | /x/ 
 | | | | | | | | |
@@ -1177,9 +1184,11 @@ Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
 
 Vowels |     |     |     |     |     |
 :--    | :-- | :-- | :-- | :-- | :-- | :--
-Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#x2D66;</span>    | <span class='utn normal'>&#xED62;</span>    | <span class='utn normal'>&#x2D67;</span> | <span class='utn normal'>&#xE014;</span> | <span class='utn normal'>&#xED67;</span>
-USV  | 2D30 | 2D66 | 2D62 | 2D67 | 2D53 | not encoded? 
+Tfng   | <span class='utn normal'>&#xED30;</span>    | <span class='utn normal'>&#xE014;</span>     | <span class='utn normal'>&#xED62;</span>    | <span class='nototif normal'>&#x2D66;</span> | <span class='utn normal'>&#xED67;</span> | <span class='nototif normal'>&#x2D67;</span>
+USV  | 2D30 | 2D3B | 2D62 | 2D66 | 2D53 | 2D67 
 Latn | /ɑ/ | /ǝ/ | /i/ | /e/ | /u/ | /o/
+
+_APT also uses U+0302 COMBINING CIRCUMFLEX ACCENT on all the vowels with the exception of on schwa._
 
 #### Punctuation
 
@@ -1315,6 +1324,8 @@ The following people have kindly offered feedback for this document: Juan Luis B
 [Omniglot - Tayart Tamajeq &#x28;Tamajeq, ⵜⵎⵌⵆ, ثمجق&#x200e;&#x29; &#x5B;thz&#x5D;](https://omniglot.com/writing/tayarttamajeq.htm)
 
 <a id="abdoussamed"></a>Abdoussamed, Ghomar; Weber, Christiane. 1997. Lisons le tǝmajǝq en shifinagh vocalisé.
+
+<a id="amanar"></a>[Amanar (_magazine_)](http://alma.matrix.msu.edu/wp-content/uploads/2009/03/amanar.pdf) (2004. Agadez. Niger).
 
 <a id="Andries2004"></a>Andries, P (on behalf of Morocco-Canada-France). 2004-06-06. Proposal to add the Tifinagh Script. [L2/04-142](https://www.unicode.org/L2/L2004/04142r-n2739r-tifinagh.pdf) (accessed 19-Jul-2024)
 

@@ -1,6 +1,6 @@
 /*
 This file is from the SIL Fontdocs project (https://github.com/silnrsi/fontdocs).
-Copyright (c) 2010-2024 SIL Global (http://www.sil.org/). This Font Software is
+Copyright (c) 2010-2025 SIL Global (http://www.sil.org/). This Font Software is
 released under the MIT license (http://opensource.org/licenses/MIT).
 */
 @font-face {
@@ -13,11 +13,7 @@ released under the MIT license (http://opensource.org/licenses/MIT).
 }
 @font-face {
     font-family: Akatab-R-new;
-    src: url("../../references/Akatab-Regular.ttf") format("truetype");
-}
-@font-face {
-    font-family: Akatab-R-old;
-    src: url("../../references/old/Akatab-Regular.ttf") format("truetype");
+    src: url("https://fonts.languagetechnology.org/fonts/sil/akatab/Akatab-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: NotoSansTifinagh-R;
@@ -26,7 +22,6 @@ released under the MIT license (http://opensource.org/licenses/MIT).
 
 
 .akatab  { font-family: Akatab-R-new; }
-.akatab-v2  { font-family: Akatab-R-old; }
 .tagmukay  { font-family: Tagmukay-R; }
 .nototif  { font-family: NotoSansTifinagh-R; }
 .utn  { font-family: TifinaghUTN-R;}
