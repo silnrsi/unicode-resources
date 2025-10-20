@@ -37,7 +37,7 @@ The [license](LICENSE) is from [Unicode, Inc](https://www.unicode.org/copyright.
 
 ## Downloads
 
-Unicode 17.0.0-beta
+Unicode 17.0.0
 
 - LibreOffice Calc [ucd.ods](ucd.ods)
 - Microsoft Excel [ucd.xlsx](ucd.xlsx)
